@@ -1,0 +1,346 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.service-section {
+  position: relative;
+  min-height: 720px;
+  display: flex;
+  align-items: flex-end;
+  padding: 4.5rem 0;
+  color: #fff;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(46px);
+  transition: opacity 0.9s $transition,
+    transform 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.service-section__media {
+  position: absolute;
+  inset: 0;
+}
+.service-section__image,
+.service-section__video {
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+.service-section__video {
+  width: 100%;
+  height: 100%;
+}
+.service-section__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(10, 12, 14, 0.55), rgba(10, 12, 14, 0.75));
+}
+.service-section__inner {
+  position: relative;
+  width: 100%;
+  @include container;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  // Delay inner elements slightly for layered effect
+  > .eyebrow,
+  > .title,
+  > .subheading,
+  > .btn {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  > .title {
+    transition-delay: 0.05s;
+  }
+  > .subheading {
+    transition-delay: 0.1s;
+  }
+  > .btn {
+    transition-delay: 0.15s;
+  }
+}
+
+.service-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.service-section.is-visible .service-section__inner > .eyebrow,
+.service-section.is-visible .service-section__inner > .title,
+.service-section.is-visible .service-section__inner > .subheading,
+.service-section.is-visible .service-section__inner > .btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-section,
+  .service-section__inner > .eyebrow,
+  .service-section__inner > .title,
+  .service-section__inner > .subheading,
+  .service-section__inner > .btn {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+// Explicit left alignment (was relying on defaults) for consistency
+.service-section.align-left .service-section__inner {
+  text-align: left;
+  align-items: flex-start;
+  max-width: 1200px; // slightly narrower for better visual balance
+}
+
+.service-section.align-center .service-section__inner {
+  text-align: center;
+  align-items: center;
+}
+.service-section.align-right .service-section__inner {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $brand-accent-alt;
+}
+.title {
+  font-size: clamp(1.9rem, 5.5vw, 3.2rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+.subheading {
+  font-size: 0.8rem;
+  letter-spacing: 0.35em;
+  color: #e0e3e6;
+}
+
+.btn.white {
+  background: #fff;
+  color: #111;
+  padding: 0.9rem 1.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  border-radius: $radius-pill;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  transition: $transition, transform 0.3s ease;
+  transform: translateY(0);
+}
+.btn.white:hover {
+  background: linear-gradient(90deg, $brand-accent 0%, $brand-accent-alt 90%);
+  color: #111;
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+.btn.white:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px -4px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 900px) {
+  .service-section {
+    min-height: 440px;
+  }
+  .title {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+    letter-spacing: 0.08em;
+  }
+  .subheading {
+    letter-spacing: 0.25em;
+  }
+}
+
+// Luxury variant (wrapping hero) for a more premium aesthetic
+.service-section.variant-luxury .eyebrow {
+  color: $brand-accent;
+  letter-spacing: 0.4em;
+  position: relative;
+  padding-left: 0.75rem;
+}
+.service-section.variant-luxury .eyebrow:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 34px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    $brand-accent 60%,
+    $brand-accent-alt 100%
+  );
+  transform: translateY(-50%);
+}
+.service-section.variant-luxury .title {
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  background: linear-gradient(
+    100deg,
+    #fff 0%,
+    #f4f0e6 28%,
+    $brand-accent 55%,
+    $brand-accent-alt 75%,
+    #d9d2c2 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; // ensure Safari/WebKit properly clips
+  color: transparent;
+  filter: drop-shadow(0 6px 22px rgba(0, 0, 0, 0.55));
+  position: relative;
+  display: inline-block; // prevent full-width block causing background artifacts
+  width: auto;
+  font-family: var(--font-luxury), serif;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.service-section.variant-luxury .subheading {
+  font-size: 0.78rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #d8dadc;
+  max-width: 48ch;
+  line-height: 1.35;
+}
+.service-section.variant-luxury .btn.white {
+  background: linear-gradient(95deg, $brand-accent 0%, $brand-accent-alt 70%);
+  color: #111;
+  border: none;
+  box-shadow: 0 6px 24px -8px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+}
+.service-section.variant-luxury .btn.white:hover {
+  background: linear-gradient(95deg, $brand-accent-alt 0%, $brand-accent 70%);
+  transform: translateY(-3px);
+}
+.service-section.variant-luxury .service-section__overlay {
+  background: linear-gradient(rgba(8, 9, 10, 0.72), rgba(8, 9, 10, 0.88));
+}
+
+@media (max-width: 900px) {
+  .service-section.variant-luxury .title {
+    letter-spacing: 0.12em;
+  }
+  .service-section.variant-luxury .subheading {
+    letter-spacing: 0.32em;
+  }
+}
+
+/* Services Showcase (restored) */
+.services-showcase {
+  position: relative;
+  width: 100%;
+  padding: clamp(2.8rem, 6vw, 4.2rem) 0 clamp(3rem, 7vw, 4.5rem);
+  @include container;
+  z-index: 2; /* ensure above underlying backgrounds but below sticky header */
+}
+.services-showcase__grid {
+  display: grid;
+  gap: clamp(1.1rem, 2.2vw, 1.6rem);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+.services-showcase__item {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4; /* portrait ratio */
+  border-radius: $radius-md;
+  overflow: hidden;
+  text-decoration: none;
+  isolation: isolate;
+  background: #121417;
+  box-shadow: 0 10px 30px -14px rgba(0, 0, 0, 0.65),
+    0 2px 8px -2px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  transition-delay: 0ms;
+}
+.services-showcase.is-visible .services-showcase__item {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: var(--delay);
+}
+.services-showcase__item:hover .services-showcase__overlay {
+  opacity: 0.35;
+}
+.services-showcase__img {
+  object-fit: cover;
+  filter: brightness(0.8) saturate(1.5);
+  opacity: 0.85;
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1),
+    filter 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.services-showcase__item:hover .services-showcase__img {
+  transform: scale(1.06);
+}
+.services-showcase__overlay {
+  position: absolute;
+  inset: 0;
+  /* Bottom-up fade: fully dark at bottom, transparent by ~50% */
+  background: linear-gradient(
+    0deg,
+    rgba(10, 11, 13, 1) 0%,
+    rgba(10, 11, 13, 0.9) 20%,
+    rgba(10, 11, 13, 0.8) 25%,
+    rgba(10, 11, 13, 0.45) 38%,
+    rgba(10, 11, 13, 0.22) 48%,
+    rgba(10, 11, 13, 0.05) 52%,
+    rgba(10, 11, 13, 0) 55%,
+    rgba(10, 11, 13, 0) 100%
+  );
+  mix-blend-mode: normal;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+  opacity: 1;
+}
+.services-showcase__title {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+  color: $brand-accent-alt;
+  text-transform: uppercase;
+  z-index: 2;
+  pointer-events: none;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+}
+.services-showcase__item:focus-visible {
+  outline: 2px solid $brand-accent;
+  outline-offset: 3px;
+}
+@media (min-width: 1100px) {
+  .services-showcase__grid {
+    /* Force exactly 4 columns when enough width */
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .services-showcase__item {
+    aspect-ratio: 3 / 4;
+  }
+}
+@media (max-width: 640px) {
+  .services-showcase__grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .services-showcase__item {
+    aspect-ratio: 3 / 4;
+  }
+  .services-showcase__title {
+    letter-spacing: 0.22em;
+  }
+}

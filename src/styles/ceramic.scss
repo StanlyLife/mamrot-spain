@@ -1,0 +1,293 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.ceramic-page {
+  --pad: clamp(1.2rem, 2.5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  background: linear-gradient(180deg, #f8f8f8 0%, #f2f2f2 100%);
+  color: #111;
+}
+.ceramic-animate {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.ceramic-animate.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+.ceramic-stagger > .ceramic-animate {
+  transition-delay: var(--delay, 0ms);
+}
+
+.ceramic-overview,
+.ceramic-process,
+.ceramic-gallery {
+  width: 100%;
+  position: relative;
+}
+.ceramic-overview__inner,
+.ceramic-process__inner,
+.ceramic-gallery__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+.ceramic-overview__header .lede {
+  font-size: clamp(1rem, 1.2rem + 0.4vw, 1.35rem);
+  line-height: 1.5;
+  opacity: 0.85;
+  margin-top: 1rem;
+  color: #222;
+  max-width: 62ch;
+}
+
+.ceramic-feature-list {
+  list-style: none;
+  margin: 1.2rem 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+.ceramic-feature-list li {
+  position: relative;
+  padding-left: 1.05rem;
+  color: #333;
+}
+.ceramic-feature-list li:before {
+  content: "";
+  position: absolute;
+  left: 0.25rem;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #ffbf40, #ff6f20);
+  opacity: 0.85;
+}
+
+.ceramic-media-grid {
+  margin: 1.4rem 0 1.2rem;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.ceramic-media-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid #dadada;
+  background: #fafafa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.ceramic-media-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.ceramic-pricing {
+  margin-top: 3.5rem;
+  background: linear-gradient(145deg, #ffffff 0%, #f4f4f4 75%);
+  border: 1px solid #d9d9d9;
+  padding: 1.6rem 1.5rem 2.2rem;
+  border-radius: 18px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.ceramic-pricing:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, #d8b25e, #f5e3b0, #cfa347 70%, #ffdd66);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.65;
+}
+.ceramic-pricing h2 {
+  font-size: 1.35rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.9rem;
+  color: #111;
+}
+
+.pricing-note {
+  font-size: 0.75rem;
+  opacity: 0.75;
+  margin-bottom: 1rem;
+  max-width: 720px;
+  color: #444;
+}
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.pricing-table thead {
+  background: linear-gradient(135deg, #f0f0f0, #e5e5e5);
+}
+.pricing-table th,
+.pricing-table td {
+  padding: 0.75rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid #e1e1e1;
+  color: #222;
+}
+.pricing-table th {
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: #111;
+}
+.pricing-table tbody tr:last-child th,
+.pricing-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.pricing-table tbody tr:nth-child(even) {
+  background: #f7f7f7;
+}
+.pricing-table tbody tr.highlight-row {
+  background: linear-gradient(120deg, #f5f5f5, #ededed);
+}
+.price-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.price-cell span {
+  font-weight: 500;
+  color: #111;
+}
+.price-cell small {
+  font-size: 0.65rem;
+  opacity: 0.65;
+  color: #555;
+}
+.pricing-disclaimer {
+  margin-top: 0.9rem;
+  font-size: 0.65rem;
+  opacity: 0.65;
+  line-height: 1.3;
+  color: #555;
+}
+
+.process-steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 0.9rem;
+}
+.process-steps li {
+  background: #fff;
+  border: 1px solid #d5d5d5;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  color: #222;
+}
+.process-steps strong {
+  color: #111;
+}
+
+.gallery-grid {
+  margin-top: 1.8rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fafafa;
+  border: 1px solid #dadada;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: scale 0.85s cubic-bezier(0.16, 0.8, 0.3, 1);
+  filter: brightness(0.95) contrast(1.05);
+}
+.gallery-item:hover img {
+  scale: 1.05;
+}
+
+/* Section dividers */
+.ceramic-page section:not(:first-of-type) {
+  position: relative;
+}
+.ceramic-page section:not(:first-of-type):before {
+  content: "";
+  position: absolute;
+  top: -2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    #d7b564 20%,
+    #ffdd66 50%,
+    #d7b564 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0.55;
+}
+
+/* Heading underline */
+.ceramic-overview__header h1 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+.ceramic-overview__header h1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #d5b15f, #ffdd66);
+  border-radius: 3px;
+}
+
+@media (min-width: 900px) {
+  .process-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ceramic-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+.ceramic-process .ceramic-animate,
+.ceramic-gallery .ceramic-animate {
+  transition: opacity 0.55s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 0.55s cubic-bezier(0.19, 1, 0.22, 1);
+}

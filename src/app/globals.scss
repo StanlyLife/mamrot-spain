@@ -1,0 +1,72 @@
+@use "../styles/variables" as *;
+@use "../styles/mixins" as *;
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $font-stack;
+  background: #090b0d;
+  color: #fff;
+}
+
+a {
+  cursor: pointer;
+}
+
+::selection {
+  background: $brand-accent;
+  color: #000;
+}
+
+// Global footer styles (moved from home.scss so all pages including wrapping display correctly)
+.footer {
+  background: #0a0d10;
+  padding: 2.75rem 0 2.25rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+
+  .inner {
+    @include container;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  h4 {
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 0.75rem;
+    color: $brand-accent;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  a {
+    color: #c7ccd0;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    transition: 0.25s ease;
+    &:hover {
+      color: $brand-accent-alt;
+    }
+  }
+  .copyright {
+    grid-column: 1/-1;
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #6a7076;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+  }
+}
