@@ -27,7 +27,7 @@ export default function Header() {
       <div className="nav-bar">
         <div className="nav-bar__inner">
           <Link href="/" className="logo">
-            MAMROT CAR SPA
+            CarSpa Marbella Wraps & PPF
           </Link>
           <nav
             className={`primary-nav ${open ? "open" : ""}`}

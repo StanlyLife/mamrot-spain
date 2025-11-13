@@ -67,13 +67,13 @@ export default function USPSection() {
       <div className="usp-section__inner">
         <div className="eyebrow">OUR STANDARD</div>
         <h2 id="usp-heading" className="usp-title">
-          Uncompromising Finish Quality
+          Uncompromising Quality. Unrivaled Precision.
         </h2>
         <p className="usp-lede">
-          Refinement and protection executed with OEM-level precision:
-          surgically clean prep, edge-wrapped film installs, multi-stage
-          correction and high-solid ceramic layering for lasting clarity and
-          gloss.
+          Every project is executed with OEM-level craftsmanship - from
+          surgically clean preparation and seamless, edge-wrapped film
+          installation to multi-stage paint correction and advanced ceramic
+          layering. The result: lasting clarity, depth, and brilliance.
         </p>
         <ul className="usp-points" aria-label="Quality highlights">
           <li>Paint correction maps & measured defect removal</li>
@@ -81,7 +81,6 @@ export default function USPSection() {
           <li>
             Multi-layer ceramic synergy: gloss, slickness & chemical resistance
           </li>
-          <li>Meticulous interior & leather preservation protocols</li>
           <li>Aftercare guidance for sustained showroom presence</li>
         </ul>
       </div>

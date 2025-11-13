@@ -44,8 +44,19 @@ export default function QuoteRequest({
     if (!instantReveal) return;
     const root = sectionRef.current;
     if (!root) return;
-    const els = root.querySelectorAll(".wrap-animate");
-    els.forEach((el) => el.classList.add("is-visible", "in-view"));
+
+    // Use requestAnimationFrame to ensure DOM is ready
+    const revealElements = () => {
+      const els = root.querySelectorAll(".wrap-animate");
+      els.forEach((el, index) => {
+        const element = el as HTMLElement;
+        // Add staggered delay
+        element.style.setProperty("--delay", `${index * 100}ms`);
+        element.classList.add("is-visible", "in-view");
+      });
+    };
+
+    requestAnimationFrame(revealElements);
   }, [instantReveal]);
 
   function update<K extends keyof QuoteFormState>(key: K, value: string) {

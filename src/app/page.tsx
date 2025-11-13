@@ -4,12 +4,14 @@ import Hero from "../components/Hero";
 import ServiceSection from "../components/ServiceSection";
 import ServicesShowcase from "../components/ServicesShowcase";
 import USPSection from "../components/USPSection";
+import ReviewsSection from "../components/ReviewsSection";
 import QuoteRequest from "../components/QuoteRequest";
 
 export default function Home() {
   return (
     <div className="home-page">
       <Hero />
+      <ReviewsSection />
       <ServiceSection
         eyebrow="PAINT PROTECTION"
         title="PPF Redefined"

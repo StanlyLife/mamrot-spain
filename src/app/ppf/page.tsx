@@ -5,28 +5,28 @@ import RevealProvider from "@/components/RevealProvider";
 import "@/styles/ppf.scss";
 
 export const metadata = {
-  title: "Paint Protection Film | Elite PPF Installation & Packages",
+  title: "Paint Protection Film | GSWF Defender Platinum PPF",
   description:
-    "Premium 200µm self-healing paint protection film (PPF): full vehicle, full front, most exposed panels & hybrid packages with ceramic coating integration.",
+    "Advanced GSWF Defender Platinum PPF with self-healing layer and lifetime warranty. Up to 45% more gloss with comprehensive protection packages.",
 };
 
 // Package definitions (adapted from Norwegian site content)
 const PACKAGES: Array<{ name: string; desc: string }> = [
   {
     name: "Full Front",
-    desc: "Bonnet, front bumper, headlights (optionally front fenders). Impact + chip defence where it matters most.",
+    desc: "Includes hood, front bumper, and headlights, with optional coverage for front fenders upon request. Ideal for protecting the most exposed areas from stone chips and road debris.",
   },
   {
-    name: "Most Exposed Areas",
-    desc: "Full Front + front fenders, A-pillars, side sills, door thresholds, rear loading edge, mirrors, rear wheel arches.",
+    name: "Most Vulnerable Places - Ultimate Package",
+    desc: "Covers all major exposed panels: hood, bumper, front fenders, headlights, A-pillars, side skirts, door edges, rear loading area, mirror caps, and rear wheel arches. Comprehensive protection for vehicles used year-round.",
   },
   {
-    name: "ULTIMATE",
-    desc: "Most Exposed Areas + pro ceramic coating (36 months / 40,000 km) applied to remaining un-filmed painted panels.",
+    name: "ULTIMATE with Ceramic Coating",
+    desc: "Includes Premium Ceramic Coating from GYEON applied to all unwrapped painted surfaces. This coating provides up to 36 months / 40,000 km of durable protection and exceptional gloss.",
   },
   {
-    name: "Full Vehicle (Gloss / Matte)",
-    desc: "Complete exterior coverage in transparent high gloss or matte finish film preserving OEM color while elevating texture & resilience.",
+    name: "Full Vehicle Coverage",
+    desc: "Complete exterior coverage available in multiple finishes: Transparent PPF Gloss, Colored PPF, Satin PPF, Matte PPF, Black Matte PPF, Black Piano PPF, or Carbon PPF.",
   },
 ];
 
@@ -53,36 +53,6 @@ const FILM_VARIANTS: Array<{ title: string; note: string }> = [
   },
 ];
 
-interface PricingRow {
-  label: string;
-  value?: number;
-  altValue?: number; // second value for size variant
-  from?: boolean;
-}
-
-const NOK_TO_USD = 10.5;
-const PRICING: PricingRow[] = [
-  { label: "Full Vehicle (Gloss)", value: 45000, from: true },
-  { label: "Full Vehicle (Matte)", value: 50000 },
-  { label: "Full Front", value: 19000, altValue: 22000 },
-  { label: "Most Exposed Areas", value: 27000 },
-  { label: "ULTIMATE", value: 28000 },
-  { label: "Side Sills (Channels)", value: 6000 },
-  { label: "Door Threshold", value: 2500 },
-  { label: "Wheel Arches (Front & Rear)", value: 3500 },
-  { label: "Loading Edge", value: 2000 },
-  { label: "Lights (2x Front OR Rear)", value: 3000 },
-  { label: "Lights (4x Front & Rear)", value: 5000 },
-];
-
-function formatNok(v: number) {
-  return `${v.toLocaleString("en-US")} NOK`;
-}
-function formatUsd(v: number) {
-  const usd = v / NOK_TO_USD;
-  return `$${usd.toLocaleString("en-US", { maximumFractionDigits: 0 })} USD`;
-}
-
 export default function Page() {
   return (
     <main className="ppf-page" aria-labelledby="ppf-heading" data-page="ppf">
@@ -105,19 +75,20 @@ export default function Page() {
         <div className="ppf-overview__inner">
           <header className="ppf-overview__header ppf-animate">
             <h1 id="ppf-heading" className="ppf-animate">
-              Paint Protection Film (PPF)
+              Paint Protection Film (PPF) – GSWF Defender Platinum
             </h1>
             <p className="lede ppf-animate">
-              Premium polyurethane film engineered for impact, abrasion and
-              chemical resistance. Self-healing top layer erases wash marring &
-              fine scratches with heat. Hydrophobic performance reduces
-              contamination & keeps gloss elevated.
+              We install the most advanced paint protection films on the market
+              - GSWF Defender Platinum, with a special self-healing layer, and
+              backed by a lifetime manufacturer warranty. This type of film also
+              offers up to 45% more gloss, providing a stunning crystal-gloss
+              finish that enhances the depth and shine of your vehicle's paint.
             </p>
             <p className="lede ppf-animate">
-              Strategic coverage eliminates stone chips, sandblasting, parking
-              scuffs & bird-dropping etching while stabilising long-term
-              clarity. Packages scale from targeted high-risk zones to full-body
-              preservation with optional ceramic synergy.
+              This innovative technology keeps your paint flawless and free from
+              scratches caused by everyday use. The premium-quality film can
+              even conceal minor parking damage and virtually eliminate the risk
+              of stone chips.
             </p>
             <ul
               className="ppf-feature-list ppf-stagger"
@@ -169,55 +140,6 @@ export default function Page() {
                 <p>{v.note}</p>
               </div>
             ))}
-          </div>
-          <div
-            className="ppf-pricing ppf-animate"
-            aria-labelledby="ppf-pricing-heading"
-          >
-            <h2 id="ppf-pricing-heading">Indicative PPF Pricing</h2>
-            <p className="pricing-note">
-              Values reflect typical premium film installs (200µm) & may vary by
-              panel complexity and selected brand. USD values approximate (1 USD
-              ≈ 10.5 NOK).
-            </p>
-            <table
-              className="pricing-table"
-              aria-describedby="ppf-pricing-disclaimer"
-            >
-              <thead>
-                <tr>
-                  <th scope="col">Package / Component</th>
-                  <th scope="col">NOK</th>
-                  <th scope="col">USD</th>
-                </tr>
-              </thead>
-              <tbody>
-                {PRICING.map((r, i) => (
-                  <tr key={r.label} className={i === 0 ? "highlight-row" : ""}>
-                    <th scope="row">{r.label}</th>
-                    <td className="price-cell">
-                      <span>
-                        {r.from ? "From " : ""}
-                        {formatNok(r.value!)}
-                        {r.altValue && ` / ${formatNok(r.altValue)}`}
-                      </span>
-                      <small>
-                        {formatUsd(r.value!)}
-                        {r.altValue && ` / ${formatUsd(r.altValue)}`}
-                      </small>
-                    </td>
-                    <td className="price-cell">
-                      <span>Self-healing 200µm</span>
-                      <small>Install warranty up to 5–10yr*</small>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <p id="ppf-pricing-disclaimer" className="pricing-disclaimer">
-              *Manufacturer warranty varies by film system; includes resistance
-              to yellowing, cracking & adhesive failure under documented care.
-            </p>
           </div>
         </div>
       </section>

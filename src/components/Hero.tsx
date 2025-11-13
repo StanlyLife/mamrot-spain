@@ -41,16 +41,15 @@ export function Hero() {
           <source src="/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
         <div className="hero__overlay" />
       </div>
       <div className="hero__content">
-        <div className="hero__eyebrow">PAINT ENHANCEMENT EXCELLENCE</div>
-        <h1 id="hero-heading">Paint Enhancement Excellence</h1>
+        <div className="hero__eyebrow">CarSpa Marbella Wraps & PPF</div>
+        <h1 id="hero-heading">Precision protection and perfection</h1>
         <p className="lede">
-          Precision protection and enhancement solutions engineered to preserve
-          finish and elevate presence. Film, correction, coating, wrap & tint
-          specialists.
+          in every detail. Specialists in detailing, wrapping, and Paint
+          Protection Film (PPF). D'elivering world-class protection and a
+          flawless finish for cars, trucks, boats, and motorhomes.
         </p>
         <div className="hero__actions">
           <a
@@ -73,6 +72,33 @@ export function Hero() {
           >
             Request Quote
           </a>
+        </div>
+      </div>
+
+      {/* Trust badges */}
+      <div className="hero__trust-badges">
+        <div className="hero__trust-fade"></div>
+        <div className="hero__trust-content">
+          <p className="hero__trust-label">
+            Trusted by professionals worldwide
+          </p>
+          <div className="hero__trust-logos">
+            <img
+              src="/logos/gswf_logo_800.webp"
+              alt="GSWF - Global Standards Wrapping Films"
+              className="hero__trust-logo"
+            />
+            <img
+              src="/logos/gswf-logo-hero.webp"
+              alt="GSWF Professional Partner"
+              className="hero__trust-logo"
+            />
+            <img
+              src="/logos/gyeon.png"
+              alt="Gyeon - Premium Car Care Products"
+              className="hero__trust-logo"
+            />
+          </div>
         </div>
       </div>
     </section>

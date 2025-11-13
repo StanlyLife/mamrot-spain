@@ -39,11 +39,11 @@ export default function AboutPage() {
         </div>
         <div className="about-hero__inner">
           <h1 id="about-heading" className="about-animate">
-            Mamrot Car Spa
+            About Us — From the Bottom to the Top
           </h1>
           <p className="lede about-animate">
-            Premium wrap, paint protection & refinement studio driven by vision,
-            precision and measurable results.
+            The story of passion, persistence, and rising to excellence through
+            dedication and warrior spirit.
           </p>
         </div>
       </section>
@@ -87,96 +87,107 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Pillars */}
+      {/* Dedication */}
       <section
         className="pillars about-animate"
         aria-labelledby="pillars-heading"
       >
         <div className="section-inner">
-          <h2 id="pillars-heading">Quality Pillars</h2>
-          <ul className="pillars-list" aria-label="Studio quality pillars">
-            <li>
-              <strong>Arbeid av høy kvalitet</strong>
-              <span>
-                {" "}
-                – repeatable, documented process: inspection → decontamination →
-                defect mapping → precision correction → protection.
-              </span>
-            </li>
-            <li>
-              <strong>Premium produkter</strong>
-              <span>
-                {" "}
-                – elite PPF (GSWF Defender Platinum), advanced ceramic
-                chemistry, high clarity wrap films & pro interior care systems.
-              </span>
-            </li>
-            <li>
-              <strong>Kundetilfredshet</strong>
-              <span>
-                {" "}
-                – transparent recommendations, clear pricing scopes, photo
-                updates & practical aftercare training.
-              </span>
-            </li>
-          </ul>
+          <h2 id="pillars-heading">Total Dedication</h2>
+          <div className="dedication-content">
+            <p>
+              <strong>Every aspect of his work</strong> — from using{" "}
+              <strong>premium materials</strong> to{" "}
+              <strong>styling every part of the studio</strong> — reflects a
+              deep commitment to quality and detail. Every day,{" "}
+              <strong>Patrik puts his energy into design</strong>,{" "}
+              <strong>
+                project planning, marketing, creativity, and photography
+              </strong>{" "}
+              — <strong>building everything step by step</strong>.
+            </p>
+            <p>
+              From small{" "}
+              <strong>detailing jobs to large-scale wrapping projects</strong>,
+              his dedication remains the same. Among his proudest achievements
+              are some of the{" "}
+              <strong>finest and most valuable Scania trucks in Norway</strong>,
+              each receiving <strong>nearly full PPF installations</strong> —{" "}
+              <strong>
+                around 100 painted panels wrapped and protected in just six days
+              </strong>
+              , completed entirely <strong>on his own</strong>.
+            </p>
+            <p>
+              <strong>These projects pushed every limit</strong> and{" "}
+              <strong>
+                helped inspire the detailing and PPF industry in Norway
+              </strong>
+              , earning widespread recognition in record time.{" "}
+              <strong>Mamrot CarSpa</strong> quickly became a respected name in
+              both the <strong>truck and car markets</strong>, attracting{" "}
+              <strong>customers</strong> who <strong>traveled</strong> more than{" "}
+              <strong>1,000 km to experience his work first-hand.</strong>
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Clients */}
+      {/* New Studio */}
       <section
         className="clients about-animate"
         aria-labelledby="clients-heading"
       >
         <div className="section-inner">
-          <h2 id="clients-heading">Clients & Vehicles</h2>
+          <h2 id="clients-heading">CarSpa Marbella – Wraps & PPF</h2>
           <p>
-            Work spans daily drivers, performance platforms, trucks, marine
-            surfaces and corporate fleets. Assignments have included major
-            dealer networks and national transport brands alongside enthusiast
-            builds and first‑time owners wanting durable protection from day
-            one.
+            Now, with that <strong>same passion and experience,</strong>{" "}
+            <strong>Patrik</strong> has established{" "}
+            <strong>his new studio</strong> —{" "}
+            <strong>CarSpa Marbella – Wraps & PPF</strong>.
           </p>
           <p>
-            Whether a fresh delivery vehicle, a long‑distance touring car or a
-            weekend sports coupe—our process scales while maintaining the same
-            microscopic surface standards.
+            The <strong>studio welcomes projects of every kind</strong> —{" "}
+            <strong>cars, trucks, boats, and caravans</strong>. From{" "}
+            <strong>older vehicles in need of new life</strong> to{" "}
+            <strong>premium and luxury models</strong> seeking a finish beyond
+            ordinary <strong>market standards</strong>, every assignment
+            receives <strong>full attention and craftsmanship</strong>.
           </p>
         </div>
       </section>
 
-      {/* Technique */}
+      {/* Experience & Mission */}
       <section
         className="technique about-animate"
         aria-labelledby="technique-heading"
       >
         <div className="section-inner">
-          <h2 id="technique-heading">Process & Technique</h2>
-          <ol className="process-list" aria-label="Summary of studio process">
-            <li>
-              <strong>Assessment & Mapping</strong> – identify defects, exposure
-              zones & client usage profile.
-            </li>
-            <li>
-              <strong>Deep Prep</strong> – multi-stage wash, chemical decon,
-              mechanical decon & precision masking.
-            </li>
-            <li>
-              <strong>Correction</strong> – staged compounding & polishing using
-              controlled heat and panel tracking.
-            </li>
-            <li>
-              <strong>Protection</strong> – edge‑wrapped PPF, calibrated coating
-              layering or colour transformation wrap install.
-            </li>
-            <li>
-              <strong>Finish & Aftercare</strong> – curing window management,
-              inspection, client handover & maintenance guide.
-            </li>
-          </ol>
+          <h2 id="technique-heading">15 Years of Mastery</h2>
           <p>
-            The result: tangible gloss depth, consistent panel texture and
-            resilient protection against impact, UV & chemical exposure.
+            With{" "}
+            <strong>
+              around 15 years of experience in professional detailing
+            </strong>
+            , <strong>Patrik</strong> has{" "}
+            <strong>
+              mastered his craft through dedication, advanced training
+            </strong>
+            , and collaboration with{" "}
+            <strong>some of the best in the industry</strong>. He has{" "}
+            <strong>
+              completed specialist wrapping courses with true masters
+            </strong>{" "}
+            — and along the way, has helped others in the field without ever
+            asking for anything in return.
+          </p>
+          <p>
+            <strong>His goal is simple:</strong> to take the{" "}
+            <strong>market to the next level once again</strong> —{" "}
+            <strong>
+              raising standards, inspiring others, and proving that passion
+            </strong>{" "}
+            and <strong>quality will always rise above the ordinary</strong>.
           </p>
         </div>
       </section>

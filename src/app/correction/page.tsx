@@ -5,36 +5,10 @@ import RevealProvider from "@/components/RevealProvider";
 import "@/styles/correction.scss";
 
 export const metadata = {
-  title: "Paint Correction | Multi-Stage Defect Removal & Gloss Restoration",
+  title: "Paint Correction & Polishing | Professional Paint Restoration",
   description:
-    "Professional one-step, two-step & full multi-stage paint correction removing swirls, RDS & oxidation while restoring depth & clarity.",
+    "Experience the art of high-end paint correction. One-Step, Two-Step, or Full Correction with up to 90% defect removal and premium GYEON ceramic coating.",
 };
-
-interface PricingRow {
-  label: string;
-  std?: number | string;
-  large?: number | string;
-  note?: string;
-}
-
-const NOK_TO_USD = 10.5;
-const PRICING: PricingRow[] = [
-  { label: "Full Multi-Stage Correction*", std: 15000, large: 15000 },
-  { label: "Film Ceramic Seal (PPF)", std: 4000, large: 4000 },
-  { label: "70% Defect Removal (2-Step)", std: 7000, large: 9000 },
-  { label: "90% Defect Removal (3-Step)", std: 10000, large: 11000 },
-];
-
-function formatValue(v: number | string | undefined) {
-  if (v === undefined) return "";
-  if (typeof v === "string") return v;
-  return `${v.toLocaleString("en-US")} NOK`;
-}
-function formatUsd(v: number | string | undefined) {
-  if (v === undefined || typeof v === "string") return "";
-  const usd = v / NOK_TO_USD;
-  return `$${usd.toLocaleString("en-US", { maximumFractionDigits: 0 })} USD`;
-}
 
 const BENEFITS: string[] = [
   "Removes swirls, wash marring & light scratches",
@@ -97,20 +71,26 @@ export default function Page() {
         <div className="correction-overview__inner">
           <header className="correction-overview__header correction-animate">
             <h1 id="correction-heading" className="correction-animate">
-              Professional Paint Correction
+              Paint Correction & Polishing
             </h1>
             <p className="lede correction-animate">
-              Purpose-built machine polishing stages eliminate swirl marks,
-              Random Deep Scratches (RDS), oxidation & wash-induced haze.
-              Packages scale from enhancement (two-step) to comprehensive
-              multi-stage correction targeting up to ~90% defect removal where
-              safe.
+              Experience the art of high-end paint correction, where precision
+              meets perfection. Our specialists restore your vehicle's paint to
+              a flawless, mirror-like finish, eliminating swirls, scratches, and
+              imperfections with meticulous care.
             </p>
             <p className="lede correction-animate">
-              Every vehicle receives thorough inspection: paint depth readings &
-              defect pattern analysis ensure preservation of OEM clear while
-              maximizing clarity. Correction is the ideal foundation before
-              ceramic coating or PPF installation.
+              We specialize in professional paint correction that removes
+              swirls, scratches, and imperfections - restoring your car's paint
+              to a flawless, mirror-like finish. Using advanced techniques and
+              premium compounds, our experts achieve results that exceed factory
+              standards. Whether it's a One-Step, Two-Step, or Full Correction
+              (Three-Step), we ensure a deep, lasting gloss and up to 90% defect
+              removal.
+            </p>
+            <p className="lede correction-animate">
+              For long-term protection and shine, we recommend finishing with
+              our durable Premium Ceramic Coating from GYEON.
             </p>
             <ul
               className="correction-feature-list correction-stagger"
@@ -150,61 +130,6 @@ export default function Page() {
               ))}
             </div>
           </header>
-          <div
-            className="correction-pricing correction-animate"
-            aria-labelledby="correction-pricing-heading"
-          >
-            <h2 id="correction-pricing-heading">Indicative Pricing</h2>
-            <p className="pricing-note">
-              *Includes spa wash, multi-stage polishing & 36m / 40,000km ceramic
-              coating. USD approximate (1 USD ≈ 10.5 NOK). Final quote after
-              inspection & paint depth evaluation.
-            </p>
-            <table
-              className="pricing-table"
-              aria-describedby="correction-pricing-disclaimer"
-            >
-              <thead>
-                <tr>
-                  <th scope="col">Package</th>
-                  <th scope="col">Std / Sedan</th>
-                  <th scope="col">Large / Complex</th>
-                  <th scope="col">USD Approx (Std)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {PRICING.map((r, i) => (
-                  <tr key={r.label} className={i === 0 ? "highlight-row" : ""}>
-                    <th scope="row">{r.label}</th>
-                    <td className="price-cell">
-                      <span>{formatValue(r.std)}</span>
-                      <small>{formatUsd(r.std)}</small>
-                    </td>
-                    <td className="price-cell">
-                      <span>{formatValue(r.large)}</span>
-                      <small>{formatUsd(r.large)}</small>
-                    </td>
-                    <td className="price-cell">
-                      <span>{formatUsd(r.std)}</span>
-                      <small>
-                        {r.std && typeof r.std === "number"
-                          ? "200µm clearcoat safe strategy"
-                          : ""}
-                      </small>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <p
-              id="correction-pricing-disclaimer"
-              className="pricing-disclaimer"
-            >
-              Defect percentage removal estimates depend on paint hardness,
-              prior repairs & safe thickness. Areas with thin readings may
-              receive partial correction only.
-            </p>
-          </div>
         </div>
       </section>
       <section

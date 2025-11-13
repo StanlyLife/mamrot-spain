@@ -15,6 +15,7 @@ interface GalleryImage {
   cat: string;
   w: number;
   h: number;
+  folder?: string;
 }
 // Expanded set: include all transfer1 images to better fill page (approx dimensions for aspect ratio only)
 const IMAGES: GalleryImage[] = [
@@ -130,6 +131,142 @@ const IMAGES: GalleryImage[] = [
     w: 1000,
     h: 680,
   },
+  {
+    file: "20250414_103016_0000.jpg",
+    alt: "Professional wrap installation",
+    cat: "Wrap",
+    w: 900,
+    h: 600,
+    folder: "transfer2",
+  },
+  {
+    file: "20250509_143903_0000.jpg",
+    alt: "Precision paint protection",
+    cat: "PPF",
+    w: 850,
+    h: 650,
+    folder: "transfer2",
+  },
+  {
+    file: "20250516_095019_0000.jpg",
+    alt: "Surface preparation detail",
+    cat: "Preparation",
+    w: 900,
+    h: 700,
+    folder: "transfer2",
+  },
+  {
+    file: "20250516_095305_0000.jpg",
+    alt: "Advanced wrap technique",
+    cat: "Wrap",
+    w: 920,
+    h: 580,
+    folder: "transfer2",
+  },
+  {
+    file: "FB_IMG_1722070201433.jpg",
+    alt: "Premium finish showcase",
+    cat: "Showcase",
+    w: 800,
+    h: 800,
+    folder: "transfer2",
+  },
+  {
+    file: "FB_IMG_1722070627838.jpg",
+    alt: "Color transformation result",
+    cat: "Wrap",
+    w: 750,
+    h: 950,
+    folder: "transfer2",
+  },
+  {
+    file: "FB_IMG_1727782543969.jpg",
+    alt: "High-quality detailing work",
+    cat: "Detailing",
+    w: 880,
+    h: 660,
+    folder: "transfer2",
+  },
+  {
+    file: "FB_IMG_1736778385159.jpg",
+    alt: "Professional automotive care",
+    cat: "Care",
+    w: 720,
+    h: 900,
+    folder: "transfer2",
+  },
+  {
+    file: "FB_IMG_1736778520854.jpg",
+    alt: "Expert application technique",
+    cat: "Application",
+    w: 950,
+    h: 620,
+    folder: "transfer2",
+  },
+  {
+    file: "FB_IMG_1736778526403.jpg",
+    alt: "Precision workmanship detail",
+    cat: "Detail",
+    w: 800,
+    h: 1000,
+    folder: "transfer2",
+  },
+  {
+    file: "FB_IMG_1739709035344.jpg",
+    alt: "Superior protection finish",
+    cat: "Protection",
+    w: 900,
+    h: 750,
+    folder: "transfer2",
+  },
+  {
+    file: "FB_IMG_1739709318523.jpg",
+    alt: "Advanced coating application",
+    cat: "Ceramic",
+    w: 850,
+    h: 680,
+    folder: "transfer2",
+  },
+  {
+    file: "FB_IMG_1739709351540.jpg",
+    alt: "Professional grade results",
+    cat: "Results",
+    w: 780,
+    h: 920,
+    folder: "transfer2",
+  },
+  {
+    file: "FB_IMG_1745441544004.jpg",
+    alt: "Excellence in automotive care",
+    cat: "Excellence",
+    w: 900,
+    h: 600,
+    folder: "transfer2",
+  },
+  {
+    file: "FB_IMG_1747825473471.jpg",
+    alt: "Premium service delivery",
+    cat: "Service",
+    w: 820,
+    h: 820,
+    folder: "transfer2",
+  },
+  {
+    file: "IMG_1336.jpeg",
+    alt: "Quality craftsmanship showcase",
+    cat: "Craftsmanship",
+    w: 700,
+    h: 950,
+    folder: "transfer2",
+  },
+  {
+    file: "IMG_20241013_120636_838.jpg",
+    alt: "Recent project completion",
+    cat: "Completion",
+    w: 950,
+    h: 650,
+    folder: "transfer2",
+  },
 ];
 
 export default function Page() {
@@ -160,12 +297,12 @@ export default function Page() {
         <div className="gallery-masonry" data-gallery>
           {IMAGES.map((img, i) => (
             <figure
-              key={img.file}
+              key={`${img.folder || "transfer1"}/${img.file}`}
               className="gallery-item gallery-animate"
               style={{ ["--order" as any]: i }}
             >
               <Image
-                src={`/mamrot/transfer1/${img.file}`}
+                src={`/mamrot/${img.folder || "transfer1"}/${img.file}`}
                 alt={img.alt}
                 width={img.w}
                 height={img.h}

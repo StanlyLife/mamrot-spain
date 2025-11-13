@@ -5,40 +5,10 @@ import RevealProvider from "@/components/RevealProvider";
 import "@/styles/ceramic.scss";
 
 export const metadata = {
-  title: "Ceramic Coating | Long-Term Hydrophobic Paint Protection",
+  title: "GYEON Ceramic Coating | Advanced Paint Protection",
   description:
-    "Advanced ceramic coating systems: 36 month / 40,000 km single layer & 4 year / 50,000 km dual-layer 9H protection, gloss enhancement & hydrophobic resilience.",
+    "Professional GYEON ceramic coating with up to 4 years protection. Single or double-layer application with official certificate. Marine coatings available.",
 };
-
-interface PricingRow {
-  label: string;
-  base?: number | string;
-  large?: number | string;
-  note?: string;
-}
-
-const NOK_TO_USD = 10.5;
-const PRICING: PricingRow[] = [
-  { label: "Ceramic Film Seal (PPF Top Coat)", base: 4000, large: 4000 },
-  { label: "Ceramic Coating (36m / 40,000km)*", base: 10000, large: 11000 },
-  { label: "New Car Spa Treatment**", base: 7000, large: 8000 },
-  { label: "Wheel Set Treatment (Faces + Barrels)", base: 3000, large: 3000 },
-  { label: "Glass Treatment (+ Polishing)", base: 4000, large: 4000 },
-  { label: "Truck / Commercial / Decor", base: "By Quote", large: "By Quote" },
-  { label: "Motorcycle", base: "By Quote", large: "By Quote" },
-  { label: "Snowmobile", base: "By Quote", large: "By Quote" },
-  { label: "Motorhome", base: "By Quote", large: "By Quote" },
-];
-
-function formatValue(v: number | string) {
-  if (typeof v === "string") return v;
-  return `${v.toLocaleString("en-US")} NOK`;
-}
-function formatUsd(v: number | string) {
-  if (typeof v === "string") return "—";
-  const usd = v / NOK_TO_USD;
-  return `$${usd.toLocaleString("en-US", { maximumFractionDigits: 0 })} USD`;
-}
 
 const STEPS: Array<[string, string]> = [
   [
@@ -102,19 +72,33 @@ export default function Page() {
         <div className="ceramic-overview__inner">
           <header className="ceramic-overview__header ceramic-animate">
             <h1 id="ceramic-heading" className="ceramic-animate">
-              Ceramic Coating Systems
+              GYEON Ceramic Coating
             </h1>
             <p className="lede ceramic-animate">
-              Single & dual-layer professional ceramic coatings engineered for
-              durable gloss retention, UV filtering & hydrophobic self-cleaning.
-              Layered nano-structure creates a dense, cross-linked barrier
-              reducing wash marring & chemical etching.
+              Our trusted and long-lasting GYEON Ceramic Coating stands among
+              the world's most advanced paint protection technologies,
+              delivering unmatched brilliance and durability.
             </p>
             <p className="lede ceramic-animate">
-              Our flagship 36 month / 40,000 km solution delivers certified
-              protection under documented care. The enhanced dual-layer (base +
-              topcoat) configuration extends durability toward 4 years / 50,000
-              km with amplified slickness and mar resistance.
+              For maximum durability and gloss, we can apply it in two layers
+              (Base + Top Coat), achieving an impressive hardness - a level
+              typically applied only by certified professionals. Our most chosen
+              and popular option is also available in a single-layer
+              application, offering durability up to 3 years / 40,000 km or up
+              to 4 years / 50,000 km (with proper maintenance).
+            </p>
+            <p className="lede ceramic-animate">
+              Both options deliver a stunning mirror-like finish and an
+              extremely hydrophobic surface, keeping your vehicle protected and
+              easier to maintain. Comes with an official certificate of
+              application.
+            </p>
+            <p className="lede ceramic-animate">
+              We also offer Premium Ceramic Coatings and protection for Boats
+              and Yachts, providing exceptional resistance against saltwater,
+              oxidation, and sun exposure while maintaining a deep, mirror-like
+              shine. Experience the ultimate protection up to 2 seasons - on
+              land and at sea.
             </p>
             <ul
               className="ceramic-feature-list ceramic-stagger"
@@ -154,62 +138,6 @@ export default function Page() {
               ))}
             </div>
           </header>
-          <div
-            className="ceramic-pricing ceramic-animate"
-            aria-labelledby="ceramic-pricing-heading"
-          >
-            <h2 id="ceramic-pricing-heading">Indicative Pricing</h2>
-            <p className="pricing-note">
-              Values reflect typical passenger car vs larger / complex vehicle.
-              USD is approximate (1 USD ≈ 10.5 NOK). *Includes spa wash, wheel
-              cleaner, 2-step polishing. **Includes spa wash, 1-step high-gloss
-              polish & single-layer coating.
-            </p>
-            <table
-              className="pricing-table"
-              aria-describedby="ceramic-pricing-disclaimer"
-            >
-              <thead>
-                <tr>
-                  <th scope="col">Service</th>
-                  <th scope="col">Std / Sedan</th>
-                  <th scope="col">Large / Complex</th>
-                  <th scope="col">USD Approx</th>
-                </tr>
-              </thead>
-              <tbody>
-                {PRICING.map((r, i) => (
-                  <tr key={r.label} className={i === 0 ? "highlight-row" : ""}>
-                    <th scope="row">{r.label}</th>
-                    <td className="price-cell">
-                      <span>{formatValue(r.base!)}</span>
-                      <small>
-                        {typeof r.base === "number" ? formatUsd(r.base) : ""}
-                      </small>
-                    </td>
-                    <td className="price-cell">
-                      <span>{formatValue(r.large!)}</span>
-                      <small>
-                        {typeof r.large === "number" ? formatUsd(r.large) : ""}
-                      </small>
-                    </td>
-                    <td className="price-cell">
-                      <span>
-                        {typeof r.base === "number" ? formatUsd(r.base) : "—"}
-                      </span>
-                      <small>
-                        {typeof r.large === "number" ? formatUsd(r.large) : ""}
-                      </small>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <p id="ceramic-pricing-disclaimer" className="pricing-disclaimer">
-              Durability assumes documented maintenance; multi-layer option &
-              commercial / marine applications by quotation.
-            </p>
-          </div>
         </div>
       </section>
       <section

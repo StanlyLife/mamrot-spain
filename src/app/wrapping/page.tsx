@@ -6,9 +6,9 @@ import RevealProvider from "@/components/RevealProvider";
 import "@/styles/wrapping.scss";
 
 export const metadata = {
-  title: "Vehicle Wrapping | Premium Color & Finish Transformations",
+  title: "Full Car Wrapping & Color Change | Premium Wrap Films",
   description:
-    "Premium vehicle wrapping: matte, satin, gloss, color-shift, textured, chrome delete, hybrid PPF color films and custom graphics.",
+    "Transform your car with exclusive wrap colors from PWF, 3M, HEXIS, and KPMF. Professional installation with 3-year warranty and premium materials.",
 };
 
 const WRAP_VARIANTS = [
@@ -79,7 +79,6 @@ export default function Page() {
         subheading="Advanced vinyl & PPF hybrid installations"
         ctaLabel="Request Consultation"
         ctaHref="#wrap-contact"
-        backgroundImage="/mamrot/transfer1/20250731_231618.jpg"
         align="center"
         variant="luxury"
       />
@@ -91,35 +90,34 @@ export default function Page() {
         <div className="wrap-overview__inner">
           <header className="wrap-overview__header wrap-animate">
             <h1 id="wrap-heading" className="wrap-animate">
-              Premium Vehicle Wrapping
+              Full Car Wrapping & Color Change
             </h1>
             <p className="lede wrap-animate">
-              A full body color change preserves OEM paint while giving your
-              vehicle a fresh, distinctive identity and added protection.
+              Transform your car with some of the market's most exclusive wrap
+              colors - carefully selected to offer everything from timeless
+              classics to unique, custom-imported finishes that elevate your
+              car's visual identity.
             </p>
             <ul
               className="wrap-feature-list wrap-stagger"
               aria-label="Available finish types"
             >
               {[
-                ["Matte", "Stealth tone reducing reflections."],
-                ["Satin", "Balanced sheen that highlights body lines."],
-                ["Gloss", "Factory-like depth & wet look."],
-                [
-                  "Pearl / Color Shift",
-                  "Dynamic multi-tone effect under changing light.",
-                ],
-                [
-                  "Textured / Brushed",
-                  "Unique tactile surface & visual grain.",
-                ],
+                ["Gloss", "Timeless classics with vibrant color depth."],
+                ["Matte", "Sophisticated non-reflective finish."],
+                ["Metallic", "Eye-catching shimmer and depth."],
+                ["Satin", "Balanced sheen highlighting body lines."],
                 [
                   "Chrome Delete",
-                  "Modernizes bright trim & simplifies the profile.",
+                  "Modern styling removing distracting brightwork.",
                 ],
                 [
-                  "Hybrid Color PPF",
-                  "Self-healing impact & stain resistance + color.",
+                  "Custom Graphics",
+                  "Personalized designs and branding solutions.",
+                ],
+                [
+                  "Light Tinting",
+                  "Premium headlight and taillight protection films.",
                 ],
               ].map(([title, desc], i) => (
                 <li
@@ -155,20 +153,24 @@ export default function Page() {
               ))}
             </div>
             <p className="lede wrap-animate">
-              Premium films: Avery Dennison Supreme, 3M 2080, PWF Platinum,
-              Oracal 970RA & select colored PPF systems. Typical vinyl thickness
-              is 70–100µm; hybrid PPF adds self-healing and enhanced chip &
-              stain resistance.
+              We provide tailor-made solutions, expert advice, and use only
+              top-quality materials from PWF - Platinum Wrapping Film - most
+              exclusive wrapping brand from Germany, 3M, HEXIS, and KPMF. Our
+              premium films protect your original paint from dirt, car washes,
+              and UV rays while giving your vehicle a distinctive, high-end
+              look.
             </p>
             <p className="lede wrap-animate">
-              Installation workflow includes decontamination, detailed prep,
-              selective disassembly, tension & relief management, edge
-              detailing, calibrated post-heating and multi-point inspection.
+              Style, protection, and perfection in one layer. We strongly
+              recommend adding a ceramic coating to your vinyl wrap to enhance
+              durability and UV protection.
             </p>
             <p className="lede wrap-animate">
-              A 5 year installation warranty backs qualifying premium film
-              projects.* Proper wash technique and maintenance products preserve
-              finish and warranty validity.
+              We offer a 3-year installation warranty. The warranty does not
+              cover self-inflicted damage or issues caused by poor maintenance.
+              We always provide training and care guidance for wrapped and
+              coated vehicles, and you can purchase premium maintenance products
+              from GYEON directly from us.
             </p>
             <p className="fine-note wrap-animate">
               *Warranty subject to manufacturer guidelines & documented
@@ -187,75 +189,6 @@ export default function Page() {
                 <p>{v.desc}</p>
               </div>
             ))}
-          </div>
-          <div
-            className="wrap-pricing wrap-animate"
-            aria-labelledby="wrap-pricing-heading"
-          >
-            <h2 id="wrap-pricing-heading">Indicative Full Wrap Pricing</h2>
-            <p className="pricing-note">
-              Pricing varies by vehicle complexity, film brand & finish; USD
-              values are approximate (1 USD ≈ 10.5 NOK) and for guidance only.
-            </p>
-            <div className="guarantee-seal" aria-label="Satisfaction guarantee">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="10" stroke="currentColor" />
-                <path d="M8 12l3 3 5-5" stroke="currentColor" />
-              </svg>
-              <span className="guarantee-text">
-                <span className="guarantee-line">SATISFACTION</span>
-                <span className="guarantee-line">GUARANTEE</span>
-              </span>
-            </div>
-            <table
-              className="pricing-table"
-              aria-describedby="pricing-disclaimer"
-            >
-              <thead>
-                <tr>
-                  <th scope="col">Film Brand / System</th>
-                  <th scope="col">Standard Sedan / Mid SUV</th>
-                  <th scope="col">Large / Complex Vehicle</th>
-                </tr>
-              </thead>
-              <tbody>
-                {pricingRows.map((r, i) => (
-                  <tr key={r.label} className={i === 0 ? "highlight-row" : ""}>
-                    <th scope="row">{r.label}</th>
-                    {r.colSpan ? (
-                      <td colSpan={2} className="price-cell">
-                        <span>
-                          {formatNok(r.sedan!)} {r.note && `(${r.note})`}
-                        </span>
-                        <small>{formatUsd(r.sedan!)}</small>
-                      </td>
-                    ) : (
-                      <>
-                        <td className="price-cell">
-                          <span>{formatNok(r.sedan!)}</span>
-                          <small>{formatUsd(r.sedan!)}</small>
-                        </td>
-                        <td className="price-cell">
-                          <span>{formatNok(r.large!)}</span>
-                          <small>{formatUsd(r.large!)}</small>
-                        </td>
-                      </>
-                    )}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <p id="pricing-disclaimer" className="pricing-disclaimer">
-              Guidance values exclude specialty / custom printed finishes &
-              complex disassembly. Final quotation provided after inspection &
-              design consultation.
-            </p>
           </div>
         </div>
       </section>

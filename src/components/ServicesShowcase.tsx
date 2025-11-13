@@ -17,7 +17,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "wrapping",
     title: "CAR WRAPPING",
-    image: "/mamrot/transfer1/20250712_211653.jpg",
+    image: "/mamrot/transfer2/FB_IMG_1739709318523.jpg",
     href: "/wrapping",
     alt: "Full vehicle color change wrap installation",
   },
@@ -65,7 +65,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "tinting",
     title: "WINDOW & LIGHT TINTING",
-    image: "/mamrot/transfer1/20250907_131915.jpg",
+    image: "/mamrot/transfer2/FB_IMG_1736778385159.jpg",
     href: "#contact",
     alt: "Tint film being applied to vehicle window",
   },
@@ -73,7 +73,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "interior",
     title: "INTERIOR & LEATHER CARE",
-    image: "/mamrot/transfer1/20250526_123920_0000.jpg",
+    image: "/mamrot/transfer2/IMG_1336.jpeg",
     href: "#contact",
     alt: "Detailing interior leather seat cleaning",
   },
