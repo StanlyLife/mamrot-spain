@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import "../styles/home.scss"; // ensure styles are available
 
-function smoothScroll(id: string) {
+function instantScroll(id: string) {
   const el = document.querySelector(id);
   if (!el) return;
-  el.scrollIntoView({ behavior: "smooth", block: "start" });
+  el.scrollIntoView({ behavior: "auto", block: "start" });
 }
 
 export function Hero() {
@@ -38,7 +38,16 @@ export function Hero() {
           preload="auto"
           poster="/mamrot/transfer1/20250731_231618.jpg"
         >
-          <source src="/hero.mp4" type="video/mp4" />
+          <source
+            src="/videos/vask-front-vertikal.mp4"
+            type="video/mp4"
+            media="(orientation: portrait)"
+          />
+          <source
+            src="/videos/vask-front-horisontal.mp4"
+            type="video/mp4"
+            media="(orientation: landscape)"
+          />
           Your browser does not support the video tag.
         </video>
         <div className="hero__overlay" />
@@ -48,7 +57,7 @@ export function Hero() {
         <h1 id="hero-heading">Precision protection and perfection</h1>
         <p className="lede">
           in every detail. Specialists in detailing, wrapping, and Paint
-          Protection Film (PPF). D'elivering world-class protection and a
+          Protection Film (PPF). D&rsquo;elivering world-class protection and a
           flawless finish for cars, trucks, boats, and motorhomes.
         </p>
         <div className="hero__actions">
@@ -57,7 +66,7 @@ export function Hero() {
             className="btn"
             onClick={(e) => {
               e.preventDefault();
-              smoothScroll("#services");
+              instantScroll("#services");
             }}
           >
             Explore Services
@@ -67,7 +76,7 @@ export function Hero() {
             className="btn outline"
             onClick={(e) => {
               e.preventDefault();
-              smoothScroll("#contact");
+              instantScroll("#contact");
             }}
           >
             Request Quote
@@ -89,13 +98,23 @@ export function Hero() {
               className="hero__trust-logo"
             />
             <img
-              src="/logos/gswf-logo-hero.webp"
+              src="/logos/PWF-Logo.png"
               alt="GSWF Professional Partner"
               className="hero__trust-logo"
             />
             <img
               src="/logos/gyeon.png"
               alt="Gyeon - Premium Car Care Products"
+              className="hero__trust-logo"
+            />
+            <img
+              src="/logos/3m.png"
+              alt="3M - Premium Car Care Products"
+              className="hero__trust-logo"
+            />
+            <img
+              src="/logos/swiss.svg"
+              alt="swiss - Premium Car Care Products"
               className="hero__trust-logo"
             />
           </div>

@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import "../styles/service-sections.scss";
 
 interface ShowcaseItem {
@@ -50,7 +49,7 @@ const ITEMS: ShowcaseItem[] = [
     key: "truck",
     title: "TRUCK TREATMENT",
     image: "/mamrot/transfer1/20250920_122216.jpg",
-    href: "#contact",
+    href: "/truck-treatment",
     alt: "Protective treatment on truck exterior",
   },
   // Chrome Delete
@@ -58,68 +57,36 @@ const ITEMS: ShowcaseItem[] = [
     key: "chrome-delete",
     title: "CHROME DELETE",
     image: "/mamrot/transfer1/20250905_224202.jpg",
-    href: "#contact",
+    href: "/chrome-delete",
     alt: "Black finish applied over chrome trim",
   },
   // Toning av Bilruter og Lykt / Window & Light Tinting
   {
     key: "tinting",
-    title: "WINDOW & LIGHT TINTING",
+    title: "Headlight Tinting & Sunroof Protection Film",
     image: "/mamrot/transfer2/FB_IMG_1736778385159.jpg",
-    href: "#contact",
+    href: "/headlight-tinting",
     alt: "Tint film being applied to vehicle window",
   },
   // Interiørrens, Skinnpleie & Skinnreperasjon / Interior & Leather Care
   {
-    key: "interior",
-    title: "INTERIOR & LEATHER CARE",
+    key: "boat",
+    title: "Boat & Yacht Treatment",
     image: "/mamrot/transfer2/IMG_1336.jpeg",
-    href: "#contact",
+    href: "/boat-treatment",
     alt: "Detailing interior leather seat cleaning",
   },
 ];
 
 export default function ServicesShowcase() {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (prefersReduced) {
-      setVisible(true);
-      return;
-    }
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            setVisible(true);
-            obs.disconnect();
-          }
-        });
-      },
-      { threshold: 0.25 }
-    );
-    obs.observe(node);
-    return () => obs.disconnect();
-  }, []);
-
   return (
-    <div
-      ref={ref}
-      className={`services-showcase ${visible ? "is-visible" : ""}`}
-    >
+    <div className="services-showcase">
       <div className="services-showcase__grid">
-        {ITEMS.map((item, i) => (
+        {ITEMS.map((item) => (
           <Link
             key={item.key}
             href={item.href}
             className="services-showcase__item"
-            style={{ ["--delay" as any]: `${i * 80}ms` }}
           >
             <Image
               src={item.image}

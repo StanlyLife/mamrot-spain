@@ -1,11 +1,10 @@
 import Image from "next/image";
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
-import RevealProvider from "@/components/RevealProvider";
 import "@/styles/ppf.scss";
 
 export const metadata = {
-  title: "Paint Protection Film | GSWF Defender Platinum PPF",
+  title: "Paint Correction & Polishing | GSWF Defender Platinum PPF",
   description:
     "Advanced GSWF Defender Platinum PPF with self-healing layer and lifetime warranty. Up to 45% more gloss with comprehensive protection packages.",
 };
@@ -56,7 +55,6 @@ const FILM_VARIANTS: Array<{ title: string; note: string }> = [
 export default function Page() {
   return (
     <main className="ppf-page" aria-labelledby="ppf-heading" data-page="ppf">
-      <RevealProvider />
       <ServiceSection
         eyebrow="PAINT PROTECTION FILM"
         title="PPF Elite Defense"
@@ -75,7 +73,8 @@ export default function Page() {
         <div className="ppf-overview__inner">
           <header className="ppf-overview__header ppf-animate">
             <h1 id="ppf-heading" className="ppf-animate">
-              Paint Protection Film (PPF) – GSWF Defender Platinum
+              Paint Correction & Polishing in Marbella & Málaga - Restore Gloss,
+              Color & Clarity
             </h1>
             <p className="lede ppf-animate">
               We install the most advanced paint protection films on the market

@@ -33,7 +33,7 @@ export default function AboutPage() {
             preload="auto"
             poster="/mamrot/transfer1/20250712_211653.jpg"
           >
-            <source src="/about.mp4" type="video/mp4" />
+            <source src="/videos/vask-horisontal.mp4" type="video/mp4" />
           </video>
           <div className="about-hero__overlay" />
         </div>

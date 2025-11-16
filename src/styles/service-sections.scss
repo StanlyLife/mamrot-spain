@@ -9,10 +9,8 @@
   padding: 4.5rem 0;
   color: #fff;
   overflow: hidden;
-  opacity: 0;
-  transform: translateY(46px);
-  transition: opacity 0.9s $transition,
-    transform 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 1;
+  transform: none;
 }
 .service-section__media {
   position: absolute;
@@ -21,7 +19,7 @@
 .service-section__image,
 .service-section__video {
   object-fit: cover;
-  filter: brightness(0.85);
+  filter: brightness(0.85) saturate(1.5);
 }
 .service-section__video {
   width: 100%;
@@ -30,7 +28,7 @@
 .service-section__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(10, 12, 14, 0.55), rgba(10, 12, 14, 0.75));
+  background: linear-gradient(rgba(10, 12, 14, 0.15), rgba(10, 12, 14, 0.75));
 }
 .service-section__inner {
   position: relative;
@@ -45,31 +43,9 @@
   > .title,
   > .subheading,
   > .btn {
-    opacity: 0;
-    transform: translateY(14px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 1;
+    transform: none;
   }
-  > .title {
-    transition-delay: 0.05s;
-  }
-  > .subheading {
-    transition-delay: 0.1s;
-  }
-  > .btn {
-    transition-delay: 0.15s;
-  }
-}
-
-.service-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.service-section.is-visible .service-section__inner > .eyebrow,
-.service-section.is-visible .service-section__inner > .title,
-.service-section.is-visible .service-section__inner > .subheading,
-.service-section.is-visible .service-section__inner > .btn {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -262,23 +238,15 @@
   background: #121417;
   box-shadow: 0 10px 30px -14px rgba(0, 0, 0, 0.65),
     0 2px 8px -2px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1),
-    transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-  transition-delay: 0ms;
-}
-.services-showcase.is-visible .services-showcase__item {
   opacity: 1;
-  transform: translateY(0);
-  transition-delay: var(--delay);
+  transform: none;
 }
 .services-showcase__item:hover .services-showcase__overlay {
   opacity: 0.35;
 }
 .services-showcase__img {
   object-fit: cover;
-  filter: brightness(0.8) saturate(1.5);
+  filter: brightness(0.8) saturate(2.5);
   opacity: 0.85;
   transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1),
     filter 1.4s cubic-bezier(0.19, 1, 0.22, 1),
@@ -290,7 +258,6 @@
 .services-showcase__overlay {
   position: absolute;
   inset: 0;
-  /* Bottom-up fade: fully dark at bottom, transparent by ~50% */
   background: linear-gradient(
     0deg,
     rgba(10, 11, 13, 1) 0%,

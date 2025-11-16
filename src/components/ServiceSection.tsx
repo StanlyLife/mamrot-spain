@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
 import "../styles/service-sections.scss";
 
 export interface ServiceSectionProps {
@@ -31,40 +30,8 @@ export function ServiceSection({
   darkOverlay = true,
   variant = "default",
 }: ServiceSectionProps) {
-  const ref = useRef<HTMLElement | null>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (prefersReduced) {
-      setVisible(true);
-      return;
-    }
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            setVisible(true);
-            obs.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.3, rootMargin: "-10% 0px -10% 0px" }
-    );
-    obs.observe(node);
-    return () => obs.disconnect();
-  }, []);
   return (
-    <section
-      ref={ref}
-      className={`service-section align-${align} variant-${variant} ${
-        visible ? "is-visible" : ""
-      }`}
-    >
+    <section className={`service-section align-${align} variant-${variant}`}>
       <div className="service-section__media" aria-hidden="true">
         {backgroundVideo ? (
           <video

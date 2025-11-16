@@ -22,14 +22,6 @@ export default function Home() {
         align="left"
       />
       <ServiceSection
-        eyebrow="DETAILING & CORRECTION"
-        title="Depth & Clarity"
-        subheading="Meticulous multi-stage refinement"
-        ctaLabel="Detailing"
-        backgroundImage="/mamrot/transfer1/20250603_160042_0000.jpg"
-        align="center"
-      />
-      <ServiceSection
         eyebrow="CUSTOM WRAPS"
         title="Transform Aesthetics"
         subheading="Precision color & finish changes"
@@ -38,6 +30,15 @@ export default function Home() {
         backgroundImage="/mamrot/transfer1/20250908_225618.jpg"
         align="right"
       />
+      <ServiceSection
+        eyebrow="DETAILING & CORRECTION"
+        title="Depth & Clarity"
+        subheading="Meticulous multi-stage refinement"
+        ctaLabel="Detailing"
+        backgroundImage="/mamrot/services/car-wrap.webp"
+        align="center"
+      />
+
       <USPSection />
       <section
         id="services"

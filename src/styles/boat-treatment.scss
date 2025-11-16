@@ -1,0 +1,232 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.boat-page {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background: linear-gradient(160deg, #020a1a, #041329 60%, #061a34);
+  color: #f4f7fb;
+}
+
+.boat-overview,
+.boat-protection,
+.boat-interior,
+.boat-process,
+.boat-gallery {
+  width: 100%;
+}
+
+.boat-overview__inner,
+.boat-protection__inner,
+.boat-interior__inner,
+.boat-process__inner,
+.boat-gallery__inner {
+  @include container;
+  max-width: 1180px;
+  padding: 0 clamp(1rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.boat-overview__header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.boat-overview__header .lede {
+  line-height: 1.6;
+  color: rgba(244, 247, 251, 0.85);
+}
+
+.boat-services {
+  background: rgba(2, 12, 30, 0.6);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.6rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.boat-services h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+}
+
+.boat-services ul {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.boat-services li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #6fd6ff;
+}
+
+.boat-protection {
+  background: #f6f7fa;
+  color: #08162b;
+  padding: 3rem 0;
+}
+
+.boat-protection__inner {
+  gap: 1.8rem;
+}
+
+.boat-protection__inner h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.boat-protection__grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.boat-card {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1.4rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.boat-card h3 {
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #0f1e36;
+  margin-bottom: 0.4rem;
+}
+
+.boat-interior__inner {
+  gap: 1.8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+  gap: 2rem;
+}
+
+.boat-interior__content h2 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.boat-interior__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1rem;
+}
+
+.interior-card {
+  background: rgba(2, 12, 30, 0.55);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.1rem;
+}
+
+.boat-interior__media {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  aspect-ratio: 4 / 3;
+}
+
+.boat-interior__media img {
+  object-fit: cover;
+}
+
+.boat-process {
+  background: #f2f4f8;
+  color: #0b1930;
+  padding: 3rem 0;
+}
+
+.boat-process__inner h2 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.boat-process__inner ol {
+  counter-reset: step;
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.boat-process__inner li {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1.2rem 1.4rem;
+  line-height: 1.5;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.boat-gallery {
+  padding: 3rem 0 1.5rem;
+}
+
+.boat-gallery__inner h2 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.boat-gallery .gallery-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.boat-gallery .gallery-item {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  aspect-ratio: 13 / 8;
+}
+
+.boat-gallery .gallery-item img {
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .boat-overview__inner,
+  .boat-protection__inner,
+  .boat-interior__inner,
+  .boat-process__inner,
+  .boat-gallery__inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .boat-services ul {
+    grid-template-columns: 1fr;
+  }
+}

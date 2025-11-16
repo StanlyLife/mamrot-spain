@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import "../styles/quote-request.scss";
 
 interface QuoteFormState {
@@ -23,7 +23,6 @@ export interface QuoteRequestProps {
   submitLabel?: string;
   successMessage?: string;
   className?: string;
-  instantReveal?: boolean; // bypass IntersectionObserver delays
 }
 
 export default function QuoteRequest({
@@ -33,31 +32,9 @@ export default function QuoteRequest({
   submitLabel = "Send Request",
   successMessage = "Thanks — we'll respond shortly.",
   className = "",
-  instantReveal = true,
 }: QuoteRequestProps) {
   const [data, setData] = useState<QuoteFormState>(initialState);
   const [submitted, setSubmitted] = useState(false);
-  const sectionRef = useRef<HTMLElement | null>(null);
-
-  // Immediately reveal form elements to avoid delayed / missing animation
-  useEffect(() => {
-    if (!instantReveal) return;
-    const root = sectionRef.current;
-    if (!root) return;
-
-    // Use requestAnimationFrame to ensure DOM is ready
-    const revealElements = () => {
-      const els = root.querySelectorAll(".wrap-animate");
-      els.forEach((el, index) => {
-        const element = el as HTMLElement;
-        // Add staggered delay
-        element.style.setProperty("--delay", `${index * 100}ms`);
-        element.classList.add("is-visible", "in-view");
-      });
-    };
-
-    requestAnimationFrame(revealElements);
-  }, [instantReveal]);
 
   function update<K extends keyof QuoteFormState>(key: K, value: string) {
     setData((d) => ({ ...d, [key]: value }));
@@ -72,18 +49,15 @@ export default function QuoteRequest({
 
   return (
     <section
-      ref={sectionRef}
       id="contact"
-      className={`contact wrap-animate ${className}`.trim()}
+      className={`contact ${className}`.trim()}
       aria-labelledby="contact-heading"
       data-component="quote-request"
     >
       <div className="contact__inner">
-        <div className="contact__intro wrap-animate" data-col="intro">
-          <h2 id="contact-heading" className="wrap-animate">
-            {heading}
-          </h2>
-          {intro && <p className="lede wrap-animate">{intro}</p>}
+        <div className="contact__intro" data-col="intro">
+          <h2 id="contact-heading">{heading}</h2>
+          {intro && <p className="lede">{intro}</p>}
         </div>
         <form
           className={`quote-form ${submitted ? "is-submitted" : ""}`.trim()}
@@ -92,11 +66,8 @@ export default function QuoteRequest({
           aria-describedby={submitted ? "form-success" : undefined}
           data-col="form"
         >
-          <div
-            className="fields wrap-stagger"
-            data-columns={showVehicleField ? 3 : 2}
-          >
-            <label className="wrap-animate">
+          <div className="fields" data-columns={showVehicleField ? 3 : 2}>
+            <label>
               <span className="field-label">Name *</span>
               <input
                 type="text"
@@ -108,7 +79,7 @@ export default function QuoteRequest({
                 aria-required="true"
               />
             </label>
-            <label className="wrap-animate">
+            <label>
               <span className="field-label">Email *</span>
               <input
                 type="email"
@@ -121,7 +92,7 @@ export default function QuoteRequest({
               />
             </label>
             {showVehicleField && (
-              <label className="wrap-animate">
+              <label>
                 <span className="field-label">Vehicle</span>
                 <input
                   type="text"
@@ -132,7 +103,7 @@ export default function QuoteRequest({
                 />
               </label>
             )}
-            <label className="wide wrap-animate">
+            <label className="wide">
               <span className="field-label">Service Details</span>
               <textarea
                 name="message"

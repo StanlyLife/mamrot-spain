@@ -1,7 +1,6 @@
 import Image from "next/image";
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
-import RevealProvider from "@/components/RevealProvider";
 import "@/styles/correction.scss";
 
 export const metadata = {
@@ -53,7 +52,6 @@ export default function Page() {
       aria-labelledby="correction-heading"
       data-page="correction"
     >
-      <RevealProvider />
       <ServiceSection
         eyebrow="PAINT CORRECTION"
         title="Defect Removal & Gloss Revival"

@@ -10,15 +10,9 @@
   padding: clamp(3rem, 6vw, 5rem) 0;
   color: #fff;
   overflow: hidden;
-  opacity: 0;
-  transform: translateY(38px);
-  transition: opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1),
-    transform 0.9s cubic-bezier(0.19, 1, 0.22, 1);
-  font-family: var(--font-sans, system-ui, Arial, sans-serif);
-}
-.usp-section.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  font-family: var(--font-sans, system-ui, Arial, sans-serif);
 }
 .usp-section__media {
   position: absolute;
@@ -97,12 +91,5 @@
   }
   .usp-points {
     grid-template-columns: 1fr;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .usp-section {
-    transition: none !important;
-    transform: none !important;
-    opacity: 1 !important;
   }
 }

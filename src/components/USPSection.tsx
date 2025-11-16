@@ -1,36 +1,9 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "../styles/usp.scss";
 
 export default function USPSection() {
-  const ref = useRef<HTMLElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (prefersReduced) {
-      setVisible(true);
-      return;
-    }
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            setVisible(true);
-            obs.disconnect();
-          }
-        });
-      },
-      { threshold: 0.35 }
-    );
-    obs.observe(node);
-    return () => obs.disconnect();
-  }, []);
 
   useEffect(() => {
     const v = videoRef.current;
@@ -43,12 +16,7 @@ export default function USPSection() {
   }, []);
 
   return (
-    <section
-      ref={ref}
-      id="usp"
-      className={`usp-section ${visible ? "is-visible" : ""}`}
-      aria-labelledby="usp-heading"
-    >
+    <section id="usp" className="usp-section" aria-labelledby="usp-heading">
       <div className="usp-section__media" aria-hidden="true">
         <video
           ref={videoRef}

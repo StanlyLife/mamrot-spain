@@ -12,22 +12,6 @@
   position: relative;
 }
 
-/* Reveal base (distinct classes to avoid collision) */
-.ppf-animate {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1),
-    transform 0.9s cubic-bezier(0.19, 1, 0.22, 1);
-  will-change: opacity, transform;
-}
-.ppf-animate.in-view {
-  opacity: 1;
-  transform: translateY(0);
-}
-.ppf-stagger > .ppf-animate {
-  transition-delay: var(--delay, 0ms);
-}
-
 .ppf-overview,
 .ppf-process,
 .ppf-gallery {
@@ -296,20 +280,6 @@
   .process-steps {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-@media (prefers-reduced-motion: reduce) {
-  .ppf-animate {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
-}
-
-/* Speed up animation for process & gallery sections */
-.ppf-process .ppf-animate,
-.ppf-gallery .ppf-animate {
-  transition: opacity 0.55s cubic-bezier(0.19, 1, 0.22, 1),
-    transform 0.55s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 /* Process & gallery styles (mirroring wrapping page so PPF page isn't blank) */

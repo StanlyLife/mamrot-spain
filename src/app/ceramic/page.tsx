@@ -1,7 +1,6 @@
 import Image from "next/image";
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
-import RevealProvider from "@/components/RevealProvider";
 import "@/styles/ceramic.scss";
 
 export const metadata = {
@@ -54,7 +53,6 @@ export default function Page() {
       aria-labelledby="ceramic-heading"
       data-page="ceramic"
     >
-      <RevealProvider />
       <ServiceSection
         eyebrow="CERAMIC COATING"
         title="Long-Term Gloss & Defense"
@@ -72,7 +70,8 @@ export default function Page() {
         <div className="ceramic-overview__inner">
           <header className="ceramic-overview__header ceramic-animate">
             <h1 id="ceramic-heading" className="ceramic-animate">
-              GYEON Ceramic Coating
+              GYEON Ceramic Coating in Marbella & Málaga - Premium Paint
+              Protection & High-Gloss Finish
             </h1>
             <p className="lede ceramic-animate">
               Our trusted and long-lasting GYEON Ceramic Coating stands among

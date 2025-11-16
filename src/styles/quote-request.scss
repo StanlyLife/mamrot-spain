@@ -8,10 +8,6 @@
   position: relative;
   background: linear-gradient(160deg, #0e1013 0%, #14181d 65%);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  /* Faster initial reveal */
-  .wrap-animate {
-    transition-duration: 0.45s;
-  }
 }
 
 .contact__inner {
@@ -112,10 +108,6 @@
   text-transform: uppercase;
   font-weight: 600;
   color: $brand-accent-alt;
-  /* Ensure visible sooner */
-  &.wrap-animate {
-    transition-duration: 0.4s;
-  }
 }
 
 .quote-form label.wide {
@@ -158,9 +150,6 @@
   font-size: 0.95rem;
   transition: $transition;
   position: relative;
-  &.wrap-animate {
-    transition-duration: 0.4s;
-  }
 }
 
 .quote-form .btn.submit:hover:not(:disabled) {

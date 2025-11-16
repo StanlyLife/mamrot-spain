@@ -1,8 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
-import RevealProvider from "@/components/RevealProvider";
 import "@/styles/wrapping.scss";
 
 export const metadata = {
@@ -41,38 +39,12 @@ const WRAP_VARIANTS = [
 ];
 
 export default function Page() {
-  const RATE_NOK_TO_USD = 10.5; // approximate, for guidance only
-  const pricingRows: Array<{
-    label: string;
-    sedan?: number;
-    large?: number;
-    note?: string;
-    colSpan?: boolean;
-  }> = [
-    { label: "PWF Platinum Wrapping Film", sedan: 40000, large: 45000 },
-    { label: "3M 2080 Series", sedan: 33000, large: 35000 },
-    { label: "Avery Dennison Supreme", sedan: 33000, large: 35000 },
-    { label: "Oracal 970RA", sedan: 33000, large: 35000 },
-    {
-      label: "Tesla (Model S / X / Y)",
-      sedan: 30000,
-      note: "typical",
-      colSpan: true,
-    },
-    { label: "Interior Door Sills (add-on)", sedan: 3000, large: 4000 },
-  ];
-  const formatNok = (v: number) => `${v.toLocaleString("en-US")} NOK`;
-  const formatUsd = (v: number) => {
-    const usd = v / RATE_NOK_TO_USD;
-    return `$${usd.toLocaleString("en-US", { maximumFractionDigits: 0 })} USD`;
-  };
   return (
     <main
       className="wrapping-page"
       aria-labelledby="wrap-heading"
       data-page="wrapping"
     >
-      <RevealProvider />
       <ServiceSection
         eyebrow="CAR WRAPPING"
         title="Color Change & Finish Transformation"
@@ -81,25 +53,24 @@ export default function Page() {
         ctaHref="#wrap-contact"
         align="center"
         variant="luxury"
+        backgroundImage="/mamrot/services/car-wrap.webp"
       />
 
-      <section
-        className="wrap-overview wrap-animate"
-        aria-labelledby="wrap-heading"
-      >
+      <section className="wrap-overview" aria-labelledby="wrap-heading">
         <div className="wrap-overview__inner">
-          <header className="wrap-overview__header wrap-animate">
-            <h1 id="wrap-heading" className="wrap-animate">
-              Full Car Wrapping & Color Change
+          <header className="wrap-overview__header">
+            <h1 id="wrap-heading">
+              Full Car Wrapping & Color Change in Marbella & Málaga - Premium
+              Vinyl Wrap Specialists
             </h1>
-            <p className="lede wrap-animate">
-              Transform your car with some of the market's most exclusive wrap
-              colors - carefully selected to offer everything from timeless
+            <p className="lede">
+              Transform your car with some of the market&rsquo;s most exclusive
+              wrap colors - carefully selected to offer everything from timeless
               classics to unique, custom-imported finishes that elevate your
-              car's visual identity.
+              car&rsquo;s visual identity.
             </p>
             <ul
-              className="wrap-feature-list wrap-stagger"
+              className="wrap-feature-list"
               aria-label="Available finish types"
             >
               {[
@@ -119,30 +90,19 @@ export default function Page() {
                   "Light Tinting",
                   "Premium headlight and taillight protection films.",
                 ],
-              ].map(([title, desc], i) => (
-                <li
-                  key={title}
-                  className="wrap-animate"
-                  style={{ ["--order" as any]: i }}
-                >
+              ].map(([title, desc]) => (
+                <li key={title}>
                   <strong>{title}:</strong> {desc}
                 </li>
               ))}
             </ul>
-            <div
-              className="wrap-media-grid wrap-stagger"
-              aria-label="Finish examples"
-            >
+            <div className="wrap-media-grid" aria-label="Finish examples">
               {[
                 "20250902_155106.jpg",
                 "20250909_000951.jpg",
                 "20250731_231618.jpg",
-              ].map((f, i) => (
-                <figure
-                  key={f}
-                  className="wrap-media-item wrap-animate"
-                  style={{ ["--order" as any]: i }}
-                >
+              ].map((f) => (
+                <figure key={f} className="wrap-media-item">
                   <Image
                     src={`/mamrot/transfer1/${f}`}
                     alt="Wrapped vehicle finish example"
@@ -152,7 +112,7 @@ export default function Page() {
                 </figure>
               ))}
             </div>
-            <p className="lede wrap-animate">
+            <p className="lede">
               We provide tailor-made solutions, expert advice, and use only
               top-quality materials from PWF - Platinum Wrapping Film - most
               exclusive wrapping brand from Germany, 3M, HEXIS, and KPMF. Our
@@ -160,31 +120,26 @@ export default function Page() {
               and UV rays while giving your vehicle a distinctive, high-end
               look.
             </p>
-            <p className="lede wrap-animate">
+            <p className="lede">
               Style, protection, and perfection in one layer. We strongly
               recommend adding a ceramic coating to your vinyl wrap to enhance
               durability and UV protection.
             </p>
-            <p className="lede wrap-animate">
+            <p className="lede">
               We offer a 3-year installation warranty. The warranty does not
               cover self-inflicted damage or issues caused by poor maintenance.
               We always provide training and care guidance for wrapped and
               coated vehicles, and you can purchase premium maintenance products
               from GYEON directly from us.
             </p>
-            <p className="fine-note wrap-animate">
+            <p className="fine-note">
               *Warranty subject to manufacturer guidelines & documented
               maintenance.
             </p>
           </header>
-          <div className="wrap-grid wrap-stagger" role="list">
-            {WRAP_VARIANTS.map((v, i) => (
-              <div
-                key={v.name}
-                className="wrap-card wrap-animate"
-                role="listitem"
-                style={{ ["--order" as any]: i }}
-              >
+          <div className="wrap-grid" role="list">
+            {WRAP_VARIANTS.map((v) => (
+              <div key={v.name} className="wrap-card" role="listitem">
                 <h3>{v.name}</h3>
                 <p>{v.desc}</p>
               </div>
@@ -192,15 +147,10 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section
-        className="wrap-process wrap-animate"
-        aria-labelledby="wrap-process-heading"
-      >
+      <section className="wrap-process" aria-labelledby="wrap-process-heading">
         <div className="wrap-process__inner">
-          <h2 id="wrap-process-heading" className="wrap-animate">
-            Our Process
-          </h2>
-          <div className="process-duration wrap-animate">
+          <h2 id="wrap-process-heading">Our Process</h2>
+          <div className="process-duration">
             <span>Process Duration</span>
             <div className="process-duration__track">
               <div className="process-duration__fill" />
@@ -208,7 +158,7 @@ export default function Page() {
             </div>
             <span>3–5 Days</span>
           </div>
-          <ol className="process-steps wrap-stagger">
+          <ol className="process-steps">
             {[
               [
                 "Consult & Design",
@@ -231,38 +181,25 @@ export default function Page() {
                 "Aftercare Guidance",
                 "Maintenance schedule & product recommendations.",
               ],
-            ].map(([title, desc], i) => (
-              <li
-                key={title}
-                className="wrap-animate"
-                style={{ ["--order" as any]: i }}
-              >
+            ].map(([title, desc]) => (
+              <li key={title}>
                 <strong>{title}:</strong> {desc}
               </li>
             ))}
           </ol>
         </div>
       </section>
-      <section
-        className="wrap-gallery wrap-animate"
-        aria-labelledby="wrap-gallery-heading"
-      >
+      <section className="wrap-gallery" aria-labelledby="wrap-gallery-heading">
         <div className="wrap-gallery__inner">
-          <h2 id="wrap-gallery-heading" className="wrap-animate">
-            Recent Projects
-          </h2>
-          <div className="gallery-grid wrap-stagger">
+          <h2 id="wrap-gallery-heading">Recent Projects</h2>
+          <div className="gallery-grid">
             {[
               "20250902_155106.jpg",
               "20250712_211653.jpg",
               "20250731_231618.jpg",
               "20250909_000951.jpg",
-            ].map((f, i) => (
-              <figure
-                key={f}
-                className="gallery-item wrap-animate"
-                style={{ ["--order" as any]: i }}
-              >
+            ].map((f) => (
+              <figure key={f} className="gallery-item">
                 <Image
                   src={`/mamrot/transfer1/${f}`}
                   alt="Wrapped vehicle"
@@ -274,7 +211,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <div id="wrap-contact" className="wrap-animate">
+      <div id="wrap-contact">
         <QuoteRequest />
       </div>
     </main>

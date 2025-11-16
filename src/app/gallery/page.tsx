@@ -1,5 +1,4 @@
 import Image from "next/image";
-import RevealProvider from "@/components/RevealProvider";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/gallery.scss";
 
@@ -276,29 +275,20 @@ export default function Page() {
       aria-labelledby="gallery-heading"
       data-page="gallery"
     >
-      <RevealProvider />
-      <section
-        className="gallery-hero gallery-animate"
-        aria-labelledby="gallery-heading"
-      >
+      <section className="gallery-hero" aria-labelledby="gallery-heading">
         <div className="gallery-hero__inner">
-          <h1 id="gallery-heading" className="gallery-animate">
-            Gallery
-          </h1>
-          <p className="lede gallery-animate">
+          <h1 id="gallery-heading">Gallery</h1>
+          <p className="lede">
             Recent wraps, PPF installs, correction & coating highlights.
           </p>
         </div>
       </section>
-      <section
-        className="gallery-grid-section gallery-animate"
-        aria-label="Image gallery"
-      >
+      <section className="gallery-grid-section" aria-label="Image gallery">
         <div className="gallery-masonry" data-gallery>
           {IMAGES.map((img, i) => (
             <figure
               key={`${img.folder || "transfer1"}/${img.file}`}
-              className="gallery-item gallery-animate"
+              className="gallery-item"
               style={{ ["--order" as any]: i }}
             >
               <Image
@@ -313,7 +303,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <div id="gallery-contact" className="gallery-animate">
+      <div id="gallery-contact">
         <QuoteRequest
           heading="Request Project Quote"
           intro="Interested in a similar result? Share vehicle & goals—we'll tailor recommendations."
