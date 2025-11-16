@@ -23,6 +23,9 @@ export interface QuoteRequestProps {
   submitLabel?: string;
   successMessage?: string;
   className?: string;
+  whatsappNumber?: string;
+  whatsappLabel?: string;
+  whatsappMessage?: string;
 }
 
 export default function QuoteRequest({
@@ -32,9 +35,19 @@ export default function QuoteRequest({
   submitLabel = "Send Request",
   successMessage = "Thanks — we'll respond shortly.",
   className = "",
+  whatsappNumber = "+47 939 91 633",
+  whatsappLabel = "Chat on WhatsApp",
+  whatsappMessage = "Hi! I'd like to schedule detailing at Mamrot.",
 }: QuoteRequestProps) {
   const [data, setData] = useState<QuoteFormState>(initialState);
   const [submitted, setSubmitted] = useState(false);
+
+  const normalizedWhatsApp = whatsappNumber?.replace(/[^0-9]/g, "");
+  const whatsappHref = normalizedWhatsApp
+    ? `https://wa.me/${normalizedWhatsApp}${
+        whatsappMessage ? `?text=${encodeURIComponent(whatsappMessage)}` : ""
+      }`
+    : null;
 
   function update<K extends keyof QuoteFormState>(key: K, value: string) {
     setData((d) => ({ ...d, [key]: value }));
@@ -118,6 +131,17 @@ export default function QuoteRequest({
             <button type="submit" className="btn submit" disabled={submitted}>
               {submitted ? "Sent" : submitLabel}
             </button>
+            {whatsappHref && (
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn whatsapp"
+                aria-label={`${whatsappLabel} ${whatsappNumber}`.trim()}
+              >
+                {whatsappLabel}
+              </a>
+            )}
           </div>
           <div id="form-success" className="form-hint" aria-live="polite">
             {submitted && successMessage}

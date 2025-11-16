@@ -1,0 +1,33 @@
+import Link from "next/link";
+import Image from "next/image";
+import "@/styles/whatsapp-bubble.scss";
+
+const WHATSAPP_NUMBER = "+47 939 91 633";
+const DEFAULT_MESSAGE = "Hi! I'd like to book detailing at Mamrot.";
+const ICON_SRC = "/logos/WhatsApp.svg";
+
+const normalizedNumber = WHATSAPP_NUMBER.replace(/[^0-9]/g, "");
+const whatsappHref = `https://wa.me/${normalizedNumber}?text=${encodeURIComponent(
+  DEFAULT_MESSAGE
+)}`;
+
+export default function WhatsAppBubble() {
+  return (
+    <Link
+      href={whatsappHref}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="whatsapp-bubble"
+      aria-label={`Chat on WhatsApp ${WHATSAPP_NUMBER}`}
+    >
+      <Image
+        src={ICON_SRC}
+        alt=""
+        width={28}
+        height={28}
+        className="whatsapp-bubble__icon"
+        priority
+      />
+    </Link>
+  );
+}

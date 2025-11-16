@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import WhatsAppBubble from "../components/WhatsAppBubble";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -55,6 +56,7 @@ export default function RootLayout({
         <Header />
         <div className="app-shell">{children}</div>
         <Footer />
+        <WhatsAppBubble />
       </body>
     </html>
   );

@@ -137,6 +137,9 @@
 
 .quote-form .actions {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  align-items: center;
 }
 
 .quote-form .btn.submit {
@@ -158,6 +161,26 @@
 .quote-form .btn.submit:disabled {
   opacity: 0.65;
   cursor: not-allowed;
+}
+
+.quote-form .btn.whatsapp {
+  background: transparent;
+  color: #25d366;
+  border: 1px solid rgba(37, 211, 102, 0.5);
+  border-radius: $radius-pill;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  transition: $transition;
+}
+
+.quote-form .btn.whatsapp:hover {
+  border-color: #25d366;
+  color: #1faa56;
 }
 
 .form-hint {
