@@ -9,23 +9,11 @@ export const metadata = {
     "Comprehensive truck treatment for Scania, Volvo & heavy-duty fleets in Marbella, Málaga & Costa del Sol. Premium PPF, polishing, ceramic coatings & guidance.",
 };
 
-const PROTECTION_PACKAGES = [
-  {
-    title: "Full Front Shield",
-    desc: "Hood, bumper, headlights, A-pillars & mirrors wrapped in Defender Platinum PPF to stop stone chips on long-haul routes across Costa del Sol.",
-  },
-  {
-    title: "Most Vulnerable Places",
-    desc: "Side skirts, fuel tanks, steps, door edges and rear loading zones protected to keep Scania and Volvo rigs work-ready without constant touch-ups.",
-  },
-  {
-    title: "Ceramic Coating + Hardwax",
-    desc: "We coat the uncovered panels with high-temp ceramic layers or premium hardwax, sealing in gloss while making washdowns faster.",
-  },
-  {
-    title: "Full Vehicle Coverage",
-    desc: "Complete exterior wrap in gloss or satin Defender Platinum PPF. Delivers up to 45% more gloss, self-healing topcoat and lifetime manufacturer warranty.",
-  },
+const POPULAR_PPF_PACKAGES = [
+  "Full Front",
+  "Most Vulnerable Places",
+  "Ceramic Coating / Hardwaxing - on the uncovered areas not protected by the film",
+  "Full Vehicle Coverage",
 ];
 
 const BENEFITS = [
@@ -75,7 +63,7 @@ export default function Page() {
     >
       <ServiceSection
         eyebrow="TRUCK TREATMENT"
-        title="PPF, Polishing & Protection for Heavy Duty Rigs"
+        title="Truck Treatment in Málaga & Marbella – Premium PPF, Polishing & Protection for Scania & Volvo"
         subheading="Specialists in Scania & Volvo fleets across Marbella & Málaga"
         ctaLabel="Plan My Truck Treatment"
         ctaHref="#truck-contact"
@@ -87,30 +75,32 @@ export default function Page() {
       <section className="truck-overview" aria-labelledby="truck-heading">
         <div className="truck-overview__inner">
           <header className="truck-overview__header">
-            <h1 id="truck-heading">
+            {/* <h1 id="truck-heading">
               Truck Treatment in Málaga & Marbella – Premium PPF, Polishing &
               Protection for Scania & Volvo
-            </h1>
+            </h1> */}
             <p className="lede">
-              Upgrade and protect your truck in Marbella, Málaga, and the entire
-              Costa del Sol with tailored treatment programs. We combine
-              heavy-duty experience from Norway with local climate expertise to
-              deliver world-class PPF installation, polishing, color
-              restoration, and exterior protection for every Scania, Volvo, MAN
-              or custom-built rig.
+              Give your new truck the ultimate protection against stone chips
+              and scratches. We provide professional guidance and expert advice
+              on protective film wrapping (PPF) for trucks. As specialists, we
+              have wrapped many trucks in Norway — including models with over
+              100 individual body panels.
             </p>
             <p className="lede">
-              Give your new truck the ultimate defense against stone chips,
-              abrasion, UV damage, and salt air. Our team provides professional
-              guidance on the correct film thickness, coverage strategy, and
-              maintenance plan so your fleet stays sharp and profitable.
+              Choose from our most popular PPF Packages and experience
+              world-class wrapping with premium paint protection film. All work
+              is performed by a true truck enthusiast with a lifelong passion
+              for heavy vehicles.
+            </p>
+            <p className="lede">
+              We install the most advanced paint protection films on the market
+              - GSWF Defender Platinum - invisible shield (Gloss), with a
+              special self-healing layer, and backed by a lifetime manufacturer
+              warranty. This type of film also offers up to 45% more gloss,
+              providing a stunning crystal-gloss finish that enhances the depth
+              and shine of your vehicle's paint.
             </p>
           </header>
-          <ul className="truck-benefits" aria-label="Key program benefits">
-            {BENEFITS.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
         </div>
       </section>
 
@@ -119,21 +109,14 @@ export default function Page() {
         aria-labelledby="truck-packages-heading"
       >
         <div className="truck-packages__inner">
-          <h2 id="truck-packages-heading">Popular PPF Packages</h2>
-          <p className="lede">
-            Choose the coverage that matches your workload. All packages are
-            installed with GSWF Defender Platinum films featuring invisible
-            self-healing layers, lifetime manufacturer warranties, and crystal
-            gloss that amplifies paint depth.
-          </p>
-          <div className="truck-packages__grid" role="list">
-            {PROTECTION_PACKAGES.map((pkg) => (
-              <article key={pkg.title} className="truck-card" role="listitem">
-                <h3>{pkg.title}</h3>
-                <p>{pkg.desc}</p>
-              </article>
+          <h2 id="truck-packages-heading">
+            Our most popular PPF packages are:
+          </h2>
+          <ul className="truck-packages__list">
+            {POPULAR_PPF_PACKAGES.map((pkg) => (
+              <li key={pkg}>{pkg}</li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
@@ -143,14 +126,32 @@ export default function Page() {
       >
         <div className="truck-restore__inner">
           <h2 id="truck-restore-heading">
-            Restore Your Truck&rsquo;s Color & Shine
+            Restore Your Truck’s Color and Shine
           </h2>
           <p className="lede">
-            Sun-faded cabins, oxidized tanks, and dull bodywork make even the
-            best truck look tired. Our polishing, hardwax, and ceramic coating
-            services bring back a deep, showroom-worthy gloss while sealing the
-            surface against future damage.
+            Is the color on your truck fading or losing its original gloss?
+            Bring back a deep, beautiful shine with our professional polishing,
+            hardwaxing, and ceramic coating services.
           </p>
+          <p className="lede">
+            We restore dull, oxidized, or sun-damaged paintwork and return your
+            truck to a rich, glossy, showroom-quality finish. Whether you want a
+            quick gloss boost or long-term protection, we offer solutions
+            tailored for Scania, Volvo, and all heavy-duty trucks.
+          </p>
+          <p className="lede">
+            We restore dull, oxidized, or sun-damaged paintwork and return your
+            truck to a rich, glossy, showroom-quality finish. Whether you want a
+            quick gloss boost or long-term protection, we offer solutions
+            tailored for Scania, Volvo, and all heavy-duty trucks.
+          </p>
+          <p className="lede">
+            We restore dull, oxidized, or sun-damaged paintwork and return your
+            truck to a rich, glossy, showroom-quality finish. Whether you want a
+            quick gloss boost or long-term protection, we offer solutions
+            tailored for Scania, Volvo, and all heavy-duty trucks.
+          </p>
+          <p className="lede">Our Professional Services Include:</p>
           <div className="truck-restore__grid" role="list">
             {RESTORE_SERVICES.map((service) => (
               <article
@@ -163,10 +164,14 @@ export default function Page() {
               </article>
             ))}
           </div>
+          <p className="lede">
+            Protect your investment and make your truck look new, vibrant, and
+            professionally detailed again.
+          </p>
         </div>
       </section>
 
-      <section
+      {/* <section
         className="truck-process"
         aria-labelledby="truck-process-heading"
       >
@@ -204,7 +209,7 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <div id="truck-contact">
         <QuoteRequest
