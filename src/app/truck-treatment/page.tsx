@@ -16,6 +16,8 @@ const POPULAR_PPF_PACKAGES = [
   "Full Vehicle Coverage",
 ];
 
+const HERO_IMAGE = "/mamrot/truck/20250725_203730.webp";
+
 const BENEFITS = [
   "Protection programs created for Scania, Volvo, MAN, DAF and custom rigs operating in Marbella, Málaga and the entire Costa del Sol.",
   "Guidance from a truck enthusiast who has wrapped complex cabins with 100+ individual panels in Norway and Spain.",
@@ -48,10 +50,13 @@ const PROCESS_STEPS = [
 ];
 
 const GALLERY_IMAGES = [
-  "20250920_122216.jpg",
-  "20250907_131915.jpg",
-  "20250917_153410.jpg",
-  "20250910_134629.jpg",
+  "/mamrot/truck/20250509_143903_0000.webp",
+  "/mamrot/truck/20250526_122735_0000.webp",
+  "/mamrot/truck/20250526_122811_0000.webp",
+  "/mamrot/truck/20250712_210148.webp",
+  "/mamrot/truck/20250725_203730.webp",
+  "/mamrot/truck/20250726_161956.webp",
+  "/mamrot/truck/20250920_201236 (1).webp",
 ];
 
 export default function Page() {
@@ -67,7 +72,7 @@ export default function Page() {
         subheading="Specialists in Scania & Volvo fleets across Marbella & Málaga"
         ctaLabel="Plan My Truck Treatment"
         ctaHref="#truck-contact"
-        backgroundImage="/mamrot/transfer1/20250920_122216.jpg"
+        backgroundImage={HERO_IMAGE}
         align="center"
         variant="luxury"
       />
@@ -188,7 +193,7 @@ export default function Page() {
             ))}
           </ol>
         </div>
-      </section>
+      </section> */}
 
       <section
         className="truck-gallery"
@@ -196,11 +201,15 @@ export default function Page() {
       >
         <div className="truck-gallery__inner">
           <h2 id="truck-gallery-heading">Recent Truck Treatments</h2>
+          <p className="lede">
+            Fresh wraps, PPF installs, and correction work captured across
+            Marbella, Málaga, and the wider Costa del Sol fleet scene.
+          </p>
           <div className="gallery-grid">
             {GALLERY_IMAGES.map((img) => (
               <figure key={img} className="gallery-item">
                 <Image
-                  src={`/mamrot/transfer1/${img}`}
+                  src={img}
                   alt="Truck treatment example in Marbella"
                   width={640}
                   height={360}
@@ -209,7 +218,7 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       <div id="truck-contact">
         <QuoteRequest

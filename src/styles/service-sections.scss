@@ -19,7 +19,7 @@
 .service-section__image,
 .service-section__video {
   object-fit: cover;
-  filter: brightness(0.85) saturate(1.5);
+  filter: brightness(0.85) saturate(1);
 }
 .service-section__video {
   width: 100%;
@@ -246,7 +246,7 @@
 }
 .services-showcase__img {
   object-fit: cover;
-  filter: brightness(0.8) saturate(2.5);
+  filter: brightness(0.8) saturate(1);
   opacity: 0.85;
   transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1),
     filter 1.4s cubic-bezier(0.19, 1, 0.22, 1),

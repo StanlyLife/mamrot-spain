@@ -61,7 +61,20 @@ const PROCESS_STEPS = [
   "Final walk-through, maintenance plan, and optional monthly care scheduling",
 ];
 
-const GALLERY = ["IMG_1336.jpeg"];
+const BASE_IMAGE = "/mamrot/boat/FB_IMG_1739710587447.jpg";
+
+const GALLERY = [
+  BASE_IMAGE,
+  "/mamrot/boat/FB_IMG_1739710587447.jpg",
+  "/mamrot/boat/FB_IMG_1739710589695.jpg",
+  "/mamrot/boat/FB_IMG_1739710592720.jpg",
+  "/mamrot/boat/FB_IMG_1739710595396.jpg",
+  "/mamrot/boat/FB_IMG_1763036064845.jpg",
+  "/mamrot/boat/FB_IMG_1763036067333.jpg",
+  "/mamrot/boat/FB_IMG_1763036073107.jpg",
+  "/mamrot/boat/FB_IMG_1763036077093.jpg",
+  "/mamrot/boat/FB_IMG_1763036079033.jpg",
+];
 
 export default function Page() {
   return (
@@ -72,7 +85,7 @@ export default function Page() {
         subheading="Nordic-level restoration now serving marinas in Marbella, Málaga, and the Costa del Sol"
         ctaLabel="Book Marine Restoration"
         ctaHref="#boat-contact"
-        backgroundImage="/mamrot/transfer2/IMG_1336.jpeg"
+        backgroundImage={BASE_IMAGE}
         align="left"
         variant="luxury"
       />
@@ -168,7 +181,7 @@ export default function Page() {
           </div>
           <div className="boat-interior__media" aria-hidden="true">
             <Image
-              src="/mamrot/transfer2/IMG_1336.jpeg"
+              src={BASE_IMAGE}
               alt="Detailing leather interior on a yacht in Marbella"
               fill
               sizes="(max-width: 900px) 100vw, 45vw"
@@ -195,7 +208,7 @@ export default function Page() {
             {GALLERY.map((img) => (
               <figure key={img} className="gallery-item">
                 <Image
-                  src={`/mamrot/transfer2/${img}`}
+                  src={img}
                   alt="Boat and yacht treatment project on the Costa del Sol"
                   fill
                   sizes="(max-width: 900px) 100vw, 30vw"

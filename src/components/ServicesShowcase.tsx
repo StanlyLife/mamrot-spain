@@ -16,15 +16,15 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "wrapping",
     title: "CAR WRAPPING",
-    image: "/mamrot/transfer2/FB_IMG_1739709318523.jpg",
+    image: "/mamrot/wrapping/main.jpg",
     href: "/wrapping",
     alt: "Full vehicle color change wrap installation",
   },
   // Lakkbeskyttelse / PPF
   {
     key: "ppf",
-    title: "PAINT PROTECTION (PPF)",
-    image: "/mamrot/transfer1/20250917_153410.jpg",
+    title: "Paint protection film (PPF)",
+    image: "/mamrot/ppf/20251021_231430.jpg",
     href: "/ppf",
     alt: "Paint protection film applied to front panel",
   },
@@ -48,7 +48,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "truck",
     title: "TRUCK TREATMENT",
-    image: "/mamrot/transfer1/20250920_122216.jpg",
+    image: "/mamrot/truck/20250725_203730.webp",
     href: "/truck-treatment",
     alt: "Protective treatment on truck exterior",
   },
@@ -72,7 +72,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "boat",
     title: "Boat & Yacht Treatment",
-    image: "/mamrot/transfer2/IMG_1336.jpeg",
+    image: "/mamrot/boat/FB_IMG_1739710587447.jpg",
     href: "/boat-treatment",
     alt: "Detailing interior leather seat cleaning",
   },

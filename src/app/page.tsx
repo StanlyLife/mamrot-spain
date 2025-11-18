@@ -13,6 +13,14 @@ export default function Home() {
       <Hero />
       <ReviewsSection />
       <ServiceSection
+        eyebrow="DETAILING & CORRECTION"
+        title="Depth & Clarity"
+        subheading="Meticulous multi-stage refinement"
+        ctaLabel="Detailing"
+        backgroundImage="/mamrot/transfer1/20250908_225618.jpg"
+        align="center"
+      />
+      <ServiceSection
         eyebrow="PAINT PROTECTION"
         title="PPF Redefined"
         subheading="Shield. Preserve. Elevate."
@@ -27,16 +35,8 @@ export default function Home() {
         subheading="Precision color & finish changes"
         ctaLabel="Wrap Options"
         ctaHref="/wrapping"
-        backgroundImage="/mamrot/transfer1/20250908_225618.jpg"
+        backgroundImage="/mamrot/wrapping/main.jpg"
         align="right"
-      />
-      <ServiceSection
-        eyebrow="DETAILING & CORRECTION"
-        title="Depth & Clarity"
-        subheading="Meticulous multi-stage refinement"
-        ctaLabel="Detailing"
-        backgroundImage="/mamrot/services/car-wrap.webp"
-        align="center"
       />
 
       <USPSection />

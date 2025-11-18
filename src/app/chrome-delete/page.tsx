@@ -50,11 +50,15 @@ const PROCESS_STEPS = [
   "Final quality check and care instructions for Marbella & Málaga climate",
 ];
 
+const HERO_IMAGE = "/mamrot/chromedelete/IMG_20241013_120636_838.webp";
+
 const GALLERY = [
-  "20250905_224202.jpg",
-  "20250907_131915.jpg",
-  "20250414_103016_0000.jpg",
-  "20250516_095305_0000.jpg",
+  "20240710_001240.webp",
+  "20250423_202826.webp",
+  "FB_IMG_1763375967171.webp",
+  "FB_IMG_1763376073726.webp",
+  "FB_IMG_1763376103170.webp",
+  "IMG_20241013_120636_838.webp",
 ];
 
 export default function Page() {
@@ -66,7 +70,7 @@ export default function Page() {
         subheading="3M 2080 gloss, satin & matte films for a modern finish"
         ctaLabel="Request Chrome Delete"
         ctaHref="#chrome-contact"
-        backgroundImage="/mamrot/transfer1/20250905_224202.jpg"
+        backgroundImage={HERO_IMAGE}
         align="center"
         variant="luxury"
       />
@@ -150,16 +154,26 @@ export default function Page() {
         aria-labelledby="chrome-gallery-heading"
       >
         <div className="chrome-gallery__inner">
-          <h2 id="chrome-gallery-heading">Recent Chrome Delete Projects</h2>
+          <header className="chrome-gallery__header">
+            <h2 id="chrome-gallery-heading">Recent Chrome Delete Projects</h2>
+            <p className="gallery-subtitle">
+              Premium transformations across Marbella, Málaga &amp; Costa del
+              Sol
+            </p>
+          </header>
           <div className="gallery-grid">
-            {GALLERY.map((img) => (
+            {GALLERY.map((img, idx) => (
               <figure key={img} className="gallery-item">
-                <Image
-                  src={`/mamrot/transfer1/${img}`}
-                  alt="Chrome delete example in Marbella"
-                  width={640}
-                  height={360}
-                />
+                <div className="gallery-item__image">
+                  <Image
+                    src={`/mamrot/chromedelete/${img}`}
+                    alt={`Chrome delete transformation ${
+                      idx + 1
+                    } - Marbella detailing`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
               </figure>
             ))}
           </div>

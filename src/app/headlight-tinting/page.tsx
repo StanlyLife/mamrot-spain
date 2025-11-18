@@ -10,6 +10,9 @@ export const metadata = {
     "GSWF smoke tint film, ImpactVue windshield protection, and UV-blocking sunroof film for Marbella & Málaga vehicles. Style upgrades with long-lasting clarity.",
 };
 
+const HERO_IMAGE = "/mamrot/lighttint/20240417_223612.webp";
+const SUNROOF_IMAGE = "/mamrot/lighttint/IMG_20241013_123356_912.webp";
+
 const PROTECTION_POINTS = [
   "Self-healing PPF keeps lenses crystal clear and resistant to micro-scratches",
   "Shields against stone chips generated on Costa del Sol motorways",
@@ -66,7 +69,14 @@ const PROCESS_STEPS = [
   "Heat-set edges, sealant application, and aftercare briefing for Marbella & Málaga conditions",
 ];
 
-const GALLERY = ["FB_IMG_1736778385159.jpg", "FB_IMG_1739709318523.jpg"];
+const GALLERY = [
+  "/mamrot/lighttint/600x600_Banner_SPF70_6b6b77db-046a-45d3-95a4-026811fd8716.webp",
+  "/mamrot/lighttint/20240417_223612.webp",
+  "/mamrot/lighttint/FB_IMG_1727782717448.webp",
+  "/mamrot/lighttint/FB_IMG_1736778385159.webp",
+  "/mamrot/lighttint/IMG_20241013_123356_893.webp",
+  "/mamrot/lighttint/IMG_20241013_123356_912.webp",
+];
 
 export default function Page() {
   return (
@@ -77,7 +87,7 @@ export default function Page() {
         subheading="GSWF smoke tint, ImpactVue windshield protection, and UV blocking roof film for Costa del Sol vehicles"
         ctaLabel="Request Tinting Quote"
         ctaHref="#tinting-contact"
-        backgroundImage="/mamrot/transfer2/FB_IMG_1736778385159.jpg"
+        backgroundImage={HERO_IMAGE}
         align="left"
         variant="luxury"
       />
@@ -158,7 +168,7 @@ export default function Page() {
           </div>
           <div className="tinting-sunroof__media" aria-hidden="true">
             <Image
-              src="/mamrot/transfer2/FB_IMG_1739709318523.jpg"
+              src={SUNROOF_IMAGE}
               alt="Sunroof protection film being applied in Marbella"
               fill
               sizes="(max-width: 900px) 100vw, 45vw"
@@ -217,7 +227,7 @@ export default function Page() {
             {GALLERY.map((img) => (
               <figure key={img} className="gallery-item">
                 <Image
-                  src={`/mamrot/transfer2/${img}`}
+                  src={img}
                   alt="Headlight tinting and protection project in Marbella"
                   fill
                   sizes="(max-width: 900px) 100vw, 30vw"

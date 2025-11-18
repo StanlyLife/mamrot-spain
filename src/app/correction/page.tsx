@@ -45,6 +45,20 @@ const STEPS: Array<[string, string]> = [
   ],
 ];
 
+const HERO_IMAGE = "/mamrot/correction/eejegvgbyenkl5uwgvvj.webp";
+
+const MEDIA_IMAGES = [
+  "/mamrot/correction/cp6tciodxzzldhjur4cb.webp",
+  "/mamrot/correction/eejegvgbyenkl5uwgvvj.webp",
+  "/mamrot/correction/fawcnfjqzahb74kuuljg.webp",
+];
+
+const GALLERY_IMAGES = [
+  "/mamrot/correction/isimbqapnhwhfr9sruly.webp",
+  "/mamrot/correction/uablfscoc1zspnaccbje.webp",
+  "/mamrot/correction/z2ldh2sxerh1fv9jrjv9.webp",
+];
+
 export default function Page() {
   return (
     <main
@@ -58,7 +72,7 @@ export default function Page() {
         subheading="Structured multi-stage refinement"
         ctaLabel="Request Correction Assessment"
         ctaHref="#correction-contact"
-        backgroundImage="/mamrot/transfer1/20250603_160042_0000.jpg"
+        backgroundImage={HERO_IMAGE}
         align="center"
         variant="luxury"
       />
@@ -108,18 +122,14 @@ export default function Page() {
               className="correction-media-grid correction-stagger"
               aria-label="Correction examples"
             >
-              {[
-                "20250603_160042_0000.jpg",
-                "20250731_231618.jpg",
-                "20250909_000951.jpg",
-              ].map((f, i) => (
+              {MEDIA_IMAGES.map((img, i) => (
                 <figure
-                  key={f}
+                  key={img}
                   className="correction-media-item correction-animate"
                   style={{ ["--order" as any]: i }}
                 >
                   <Image
-                    src={`/mamrot/transfer1/${f}`}
+                    src={img}
                     alt="Paint correction example"
                     width={520}
                     height={300}
@@ -160,18 +170,14 @@ export default function Page() {
             Recent Correction Projects
           </h2>
           <div className="gallery-grid correction-stagger">
-            {[
-              "20250603_160042_0000.jpg",
-              "20250909_000951.jpg",
-              "20250731_231618.jpg",
-            ].map((f, i) => (
+            {GALLERY_IMAGES.map((img, i) => (
               <figure
-                key={f}
+                key={img}
                 className="gallery-item correction-animate"
                 style={{ ["--order" as any]: i }}
               >
                 <Image
-                  src={`/mamrot/transfer1/${f}`}
+                  src={img}
                   alt="Corrected paint finish"
                   width={640}
                   height={360}

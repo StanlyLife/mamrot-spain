@@ -46,6 +46,25 @@ const BENEFITS: string[] = [
   "Easier maintenance: reduced need for aggressive polishing",
 ];
 
+const HERO_IMAGE = "/mamrot/transfer1/20250909_000951.jpg";
+
+const MEDIA_IMAGES = [
+  "/mamrot/ceramic/a9vdkipputny9ce5mhrp.webp",
+  "/mamrot/ceramic/f89tpgjzyqjybwpfrqpy.webp",
+  "/mamrot/ceramic/fkuioa6x8gwiwdkm085u.webp",
+];
+
+const GALLERY_IMAGES = [
+  "/mamrot/ceramic/a5ntlofieoegxlswash1.webp",
+  "/mamrot/ceramic/a9vdkipputny9ce5mhrp.webp",
+  "/mamrot/ceramic/f89tpgjzyqjybwpfrqpy.webp",
+  "/mamrot/ceramic/fkuioa6x8gwiwdkm085u.webp",
+  "/mamrot/ceramic/salprq2kizloz32cuzda.webp",
+  "/mamrot/ceramic/uth2mwaqtma8t9tpjzuo.webp",
+  "/mamrot/ceramic/wvm16r0ugpejpuhkdslm.webp",
+  "/mamrot/ceramic/zhakd13l91vgwjw7sxqj.webp",
+];
+
 export default function Page() {
   return (
     <main
@@ -59,7 +78,7 @@ export default function Page() {
         subheading="Multi-year hydrophobic 9H surface protection"
         ctaLabel="Request Ceramic Assessment"
         ctaHref="#ceramic-contact"
-        backgroundImage="/mamrot/transfer1/20250909_000951.jpg"
+        backgroundImage={HERO_IMAGE}
         align="center"
         variant="luxury"
       />
@@ -117,18 +136,14 @@ export default function Page() {
               className="ceramic-media-grid ceramic-stagger"
               aria-label="Coating examples"
             >
-              {[
-                "20250909_000951.jpg",
-                "20250902_155106.jpg",
-                "20250603_160042_0000.jpg",
-              ].map((f, i) => (
+              {MEDIA_IMAGES.map((img, i) => (
                 <figure
-                  key={f}
+                  key={img}
                   className="ceramic-media-item ceramic-animate"
                   style={{ ["--order" as any]: i }}
                 >
                   <Image
-                    src={`/mamrot/transfer1/${f}`}
+                    src={img}
                     alt="Ceramic coating gloss example"
                     width={520}
                     height={300}
@@ -169,19 +184,14 @@ export default function Page() {
             Recent Ceramic Projects
           </h2>
           <div className="gallery-grid ceramic-stagger">
-            {[
-              "20250909_000951.jpg",
-              "20250731_231618.jpg",
-              "20250908_225618.jpg",
-              "20250917_153410.jpg",
-            ].map((f, i) => (
+            {GALLERY_IMAGES.map((img, i) => (
               <figure
-                key={f}
+                key={img}
                 className="gallery-item ceramic-animate"
                 style={{ ["--order" as any]: i }}
               >
                 <Image
-                  src={`/mamrot/transfer1/${f}`}
+                  src={img}
                   alt="Ceramic coated vehicle"
                   width={640}
                   height={360}

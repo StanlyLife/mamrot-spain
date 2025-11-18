@@ -38,6 +38,24 @@ const WRAP_VARIANTS = [
   },
 ];
 
+const HERO_IMAGE = "/mamrot/wrapping/main.jpg";
+
+const MEDIA_IMAGES = [
+  "/mamrot/wrapping/20250907_131915.jpg",
+  "/mamrot/wrapping/20250712_211653.jpg",
+  "/mamrot/wrapping/20250810_190720_0000.jpg",
+];
+
+const GALLERY_IMAGES = [
+  "/mamrot/wrapping/20250603_160042_0000.jpg",
+  "/mamrot/wrapping/20250712_211653.jpg",
+  "/mamrot/wrapping/20250904_222522.jpg",
+  "/mamrot/wrapping/20250907_131915.jpg",
+  "/mamrot/wrapping/FB_IMG_1736778385159.jpg",
+  "/mamrot/wrapping/FB_IMG_1739710033030 (1).jpg",
+  "/mamrot/wrapping/20250810_190720_0000.jpg",
+];
+
 export default function Page() {
   return (
     <main
@@ -53,7 +71,7 @@ export default function Page() {
         ctaHref="#wrap-contact"
         align="center"
         variant="luxury"
-        backgroundImage="/mamrot/services/car-wrap.webp"
+        backgroundImage={HERO_IMAGE}
       />
 
       <section className="wrap-overview" aria-labelledby="wrap-heading">
@@ -97,14 +115,10 @@ export default function Page() {
               ))}
             </ul>
             <div className="wrap-media-grid" aria-label="Finish examples">
-              {[
-                "20250902_155106.jpg",
-                "20250909_000951.jpg",
-                "20250731_231618.jpg",
-              ].map((f) => (
-                <figure key={f} className="wrap-media-item">
+              {MEDIA_IMAGES.map((img) => (
+                <figure key={img} className="wrap-media-item">
                   <Image
-                    src={`/mamrot/transfer1/${f}`}
+                    src={img}
                     alt="Wrapped vehicle finish example"
                     width={520}
                     height={300}
@@ -193,15 +207,10 @@ export default function Page() {
         <div className="wrap-gallery__inner">
           <h2 id="wrap-gallery-heading">Recent Projects</h2>
           <div className="gallery-grid">
-            {[
-              "20250902_155106.jpg",
-              "20250712_211653.jpg",
-              "20250731_231618.jpg",
-              "20250909_000951.jpg",
-            ].map((f) => (
-              <figure key={f} className="gallery-item">
+            {GALLERY_IMAGES.map((img) => (
+              <figure key={img} className="gallery-item">
                 <Image
-                  src={`/mamrot/transfer1/${f}`}
+                  src={img}
                   alt="Wrapped vehicle"
                   width={640}
                   height={360}

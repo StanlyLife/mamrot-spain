@@ -52,6 +52,24 @@ const FILM_VARIANTS: Array<{ title: string; note: string }> = [
   },
 ];
 
+const HERO_IMAGE = "/mamrot/ppf/20251021_231430.jpg";
+
+const MEDIA_IMAGES = [
+  "/mamrot/ppf/20250902_155106.jpg",
+  "/mamrot/ppf/20250918_001006.jpg",
+  "/mamrot/ppf/20251021_231430.jpg",
+];
+
+const GALLERY_IMAGES = [
+  "/mamrot/ppf/20250117_203531.jpg",
+  "/mamrot/ppf/20250906_200515 (1).jpg",
+  "/mamrot/ppf/20250918_001006.jpg",
+  "/mamrot/ppf/20251021_231430.jpg",
+  "/mamrot/ppf/20251103_135933 (1).jpg",
+  "/mamrot/ppf/480488282_594748413412441_5599466613609433861_n.jpg",
+  "/mamrot/ppf/IMG_20251027_141229_861.jpg",
+];
+
 export default function Page() {
   return (
     <main className="ppf-page" aria-labelledby="ppf-heading" data-page="ppf">
@@ -61,7 +79,7 @@ export default function Page() {
         subheading="Advanced 200µm self-healing polyurethane systems"
         ctaLabel="Request PPF Assessment"
         ctaHref="#ppf-contact"
-        backgroundImage="/mamrot/transfer1/20250917_153410.jpg"
+        backgroundImage={HERO_IMAGE}
         align="center"
         variant="luxury"
       />
@@ -107,18 +125,14 @@ export default function Page() {
               className="ppf-media-grid ppf-stagger"
               aria-label="Installation examples"
             >
-              {[
-                "20250917_153410.jpg",
-                "20250908_225618.jpg",
-                "20250603_160042_0000.jpg",
-              ].map((f, i) => (
+              {MEDIA_IMAGES.map((img, i) => (
                 <figure
-                  key={f}
+                  key={img}
                   className="ppf-media-item ppf-animate"
                   style={{ ["--order" as any]: i }}
                 >
                   <Image
-                    src={`/mamrot/transfer1/${f}`}
+                    src={img}
                     alt="PPF installation example"
                     width={520}
                     height={300}
@@ -199,19 +213,14 @@ export default function Page() {
             Recent PPF Projects
           </h2>
           <div className="gallery-grid ppf-stagger">
-            {[
-              "20250908_225618.jpg",
-              "20250603_160042_0000.jpg",
-              "20250917_153410.jpg",
-              "20250920_122216.jpg",
-            ].map((f, i) => (
+            {GALLERY_IMAGES.map((img, i) => (
               <figure
-                key={f}
+                key={img}
                 className="gallery-item ppf-animate"
                 style={{ ["--order" as any]: i }}
               >
                 <Image
-                  src={`/mamrot/transfer1/${f}`}
+                  src={img}
                   alt="Vehicle protected by PPF"
                   width={640}
                   height={360}
