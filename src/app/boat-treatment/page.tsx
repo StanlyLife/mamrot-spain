@@ -65,7 +65,6 @@ const BASE_IMAGE = "/mamrot/boat/FB_IMG_1739710587447.jpg";
 
 const GALLERY = [
   BASE_IMAGE,
-  "/mamrot/boat/FB_IMG_1739710587447.jpg",
   "/mamrot/boat/FB_IMG_1739710589695.jpg",
   "/mamrot/boat/FB_IMG_1739710592720.jpg",
   "/mamrot/boat/FB_IMG_1739710595396.jpg",

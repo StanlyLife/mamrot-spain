@@ -39,8 +39,8 @@ const ITEMS: ShowcaseItem[] = [
   // Lakkorrigering / Paint Correction
   {
     key: "correction",
-    title: "PAINT CORRECTION",
-    image: "/mamrot/transfer1/20250603_160042_0000.jpg",
+    title: "Paint Correction & Polishing",
+    image: "/mamrot/correction/last ned.png",
     href: "/correction",
     alt: "Machine polishing during paint correction",
   },

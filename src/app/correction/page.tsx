@@ -45,7 +45,7 @@ const STEPS: Array<[string, string]> = [
   ],
 ];
 
-const HERO_IMAGE = "/mamrot/correction/eejegvgbyenkl5uwgvvj.webp";
+const HERO_IMAGE = "/mamrot/correction/last ned.png";
 
 const MEDIA_IMAGES = [
   "/mamrot/correction/cp6tciodxzzldhjur4cb.webp",
