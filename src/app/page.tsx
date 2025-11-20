@@ -26,7 +26,7 @@ export default function Home() {
         subheading="Shield. Preserve. Elevate."
         ctaLabel="PPF Services"
         ctaHref="#services"
-        backgroundImage="/mamrot/transfer1/20250917_153410.jpg"
+        backgroundImage="/mamrot/ppf/porche.jpg"
         align="left"
       />
       <ServiceSection
@@ -35,7 +35,7 @@ export default function Home() {
         subheading="Precision color & finish changes"
         ctaLabel="Wrap Options"
         ctaHref="/wrapping"
-        backgroundImage="/mamrot/wrapping/main.jpg"
+        backgroundImage="/mamrot/wrapping/20250810_190720_0000.jpg"
         align="right"
       />
 

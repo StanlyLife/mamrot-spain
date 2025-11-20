@@ -209,8 +209,8 @@ export default function Page() {
                 <Image
                   src={img}
                   alt="Boat and yacht treatment project on the Costa del Sol"
-                  fill
-                  sizes="(max-width: 900px) 100vw, 30vw"
+                  width={400}
+                  height={300}
                 />
               </figure>
             ))}

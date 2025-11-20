@@ -40,7 +40,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "correction",
     title: "Paint Correction & Polishing",
-    image: "/mamrot/correction/last ned.png",
+    image: "/mamrot/transfer1/20250909_000951.jpg",
     href: "/correction",
     alt: "Machine polishing during paint correction",
   },

@@ -198,21 +198,23 @@
 }
 
 .boat-gallery .gallery-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: flex-start;
 }
 
 .boat-gallery .gallery-item {
-  position: relative;
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-  aspect-ratio: 13 / 8;
+  height: 300px;
 }
 
 .boat-gallery .gallery-item img {
+  height: 300px;
+  width: auto;
   object-fit: cover;
 }
 
