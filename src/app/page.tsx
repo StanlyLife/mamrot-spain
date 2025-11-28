@@ -17,7 +17,8 @@ export default function Home() {
         title="Depth & Clarity"
         subheading="Meticulous multi-stage refinement"
         ctaLabel="Detailing"
-        backgroundImage="/mamrot/transfer1/20250908_225618.jpg"
+        backgroundImage="/mamrot/depthandclaritydesktop.webp"
+        backgroundImageMobile="/mamrot/depthandclarity.webp"
         align="center"
       />
       <ServiceSection

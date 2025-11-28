@@ -10,6 +10,7 @@ export interface ServiceSectionProps {
   ctaLabel?: string;
   ctaHref?: string;
   backgroundImage?: string; // path in /public
+  backgroundImageMobile?: string; // optional mobile-specific image
   backgroundVideo?: string; // optional video path
   poster?: string; // video poster
   align?: "left" | "center" | "right";
@@ -24,12 +25,18 @@ export function ServiceSection({
   ctaLabel = "Learn More",
   ctaHref = "#contact",
   backgroundImage,
+  backgroundImageMobile,
   backgroundVideo,
   poster,
   align = "left",
   darkOverlay = true,
   variant = "default",
 }: ServiceSectionProps) {
+  const desktopImage = backgroundImage ?? backgroundImageMobile;
+  const showMobileAlternative = Boolean(
+    backgroundImage && backgroundImageMobile
+  );
+
   return (
     <section className={`service-section align-${align} variant-${variant}`}>
       <div className="service-section__media" aria-hidden="true">
@@ -44,14 +51,30 @@ export function ServiceSection({
           >
             <source src={backgroundVideo} type="video/mp4" />
           </video>
-        ) : backgroundImage ? (
-          <Image
-            src={backgroundImage}
-            alt=""
-            fill
-            priority
-            className="service-section__image"
-          />
+        ) : desktopImage ? (
+          <>
+            {desktopImage && (
+              <Image
+                src={desktopImage}
+                alt=""
+                fill
+                priority
+                className={`service-section__image${
+                  showMobileAlternative
+                    ? " service-section__image--desktop"
+                    : ""
+                }`}
+              />
+            )}
+            {showMobileAlternative && backgroundImageMobile && (
+              <Image
+                src={backgroundImageMobile}
+                alt=""
+                fill
+                className="service-section__image service-section__image--mobile"
+              />
+            )}
+          </>
         ) : null}
         {darkOverlay && <div className="service-section__overlay" />}
       </div>

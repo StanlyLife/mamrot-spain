@@ -61,7 +61,8 @@ const PROCESS_STEPS = [
   "Final walk-through, maintenance plan, and optional monthly care scheduling",
 ];
 
-const BASE_IMAGE = "/mamrot/boat/FB_IMG_1739710587447.jpg";
+const HERO_IMAGE = "/mamrot/boat/FB_IMG_1739710587447.jpg";
+const BASE_IMAGE = "/mamrot/boat/FB_IMG_1763036073107.jpg";
 
 const GALLERY = [
   BASE_IMAGE,
@@ -70,7 +71,7 @@ const GALLERY = [
   "/mamrot/boat/FB_IMG_1739710595396.jpg",
   "/mamrot/boat/FB_IMG_1763036064845.jpg",
   "/mamrot/boat/FB_IMG_1763036067333.jpg",
-  "/mamrot/boat/FB_IMG_1763036073107.jpg",
+  // "/mamrot/boat/FB_IMG_1763036073107.jpg",
   "/mamrot/boat/FB_IMG_1763036077093.jpg",
   "/mamrot/boat/FB_IMG_1763036079033.jpg",
 ];
@@ -84,7 +85,7 @@ export default function Page() {
         subheading="Nordic-level restoration now serving marinas in Marbella, Málaga, and the Costa del Sol"
         ctaLabel="Book Marine Restoration"
         ctaHref="#boat-contact"
-        backgroundImage={BASE_IMAGE}
+        backgroundImage={HERO_IMAGE}
         align="left"
         variant="luxury"
       />

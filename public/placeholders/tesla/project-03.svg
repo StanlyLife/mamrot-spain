@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="grad03" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050b15" />
+      <stop offset="100%" stop-color="#162338" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad03)" />
+  <path d="M80 320 Q400 120 720 320" stroke="#2f4d6f" stroke-width="2" fill="none" opacity="0.5" />
+  <path d="M80 380 Q400 180 720 380" stroke="#2a4564" stroke-width="2" fill="none" opacity="0.5" />
+  <path d="M80 440 Q400 240 720 440" stroke="#233c58" stroke-width="2" fill="none" opacity="0.5" />
+  <text x="50%" y="52%" text-anchor="middle" fill="#f0d9a1" font-family="Arial, Helvetica, sans-serif" font-size="30" letter-spacing="0.4em">
+    PROJECT 03
+  </text>
+  <text x="50%" y="60%" text-anchor="middle" fill="#a8b8cf" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="0.3em">
+    PLACEHOLDER
+  </text>
+</svg>

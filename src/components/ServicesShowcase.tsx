@@ -7,11 +7,22 @@ interface ShowcaseItem {
   key: string;
   title: string;
   image: string;
+  mobileImage?: string;
   href: string;
   alt: string;
+  disableFilter?: boolean;
 }
 
 const ITEMS: ShowcaseItem[] = [
+  {
+    key: "tesla-specialists",
+    title: "TESLA SPECIALISTS",
+    image: "/mamrot/tesla/tesla_showcase.webp",
+    mobileImage: "/mamrot/tesla/tesla_showcase_mobile.webp",
+    href: "/tesla-specialists",
+    alt: "Tesla PPF and wrap specialist placeholder",
+    disableFilter: true,
+  },
   // Helfoliering / Car Wrapping
   {
     key: "wrapping",
@@ -32,25 +43,32 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "ceramic",
     title: "CERAMIC COATING",
-    image: "/mamrot/transfer1/20250909_000951.jpg",
+    mobileImage: "/mamrot/ceramic/ceramiccoating_service_showcase.webp",
+    image: "/mamrot/ceramic/ceramiccoating_service_showcase_mobile.webp",
     href: "/ceramic",
     alt: "Water beading on ceramic coated surface",
+    disableFilter: true,
   },
   // Lakkorrigering / Paint Correction
   {
     key: "correction",
     title: "Paint Correction & Polishing",
-    image: "/mamrot/transfer1/20250909_000951.jpg",
+    mobileImage:
+      "/mamrot/correction/paintcorrection_service_showcase_mobile.webp",
+    image: "/mamrot/correction/paintcorrection_service_showcase.webp",
     href: "/correction",
     alt: "Machine polishing during paint correction",
+    disableFilter: true,
   },
   // Lastebilbehandling / Truck Treatment
   {
     key: "truck",
     title: "TRUCK TREATMENT",
+    mobileImage: "/mamrot/depthandclaritydesktop.webp",
     image: "/mamrot/truck/20250725_203730.webp",
     href: "/truck-treatment",
     alt: "Protective treatment on truck exterior",
+    disableFilter: true,
   },
   // Chrome Delete
   {
@@ -86,16 +104,31 @@ export default function ServicesShowcase() {
           <Link
             key={item.key}
             href={item.href}
-            className="services-showcase__item"
+            className={`services-showcase__item${
+              item.disableFilter ? " services-showcase__item--no-filter" : ""
+            }`}
           >
             <Image
               src={item.image}
               alt={item.alt}
               fill
               sizes="(max-width: 900px) 100vw, 25vw"
-              className="services-showcase__img"
+              className={`services-showcase__img${
+                item.mobileImage ? " services-showcase__img--desktop" : ""
+              }`}
             />
-            <div className="services-showcase__overlay" />
+            {item.mobileImage && (
+              <Image
+                src={item.mobileImage}
+                alt={item.alt}
+                fill
+                sizes="100vw"
+                className="services-showcase__img services-showcase__img--mobile"
+              />
+            )}
+            {!item.disableFilter && (
+              <div className="services-showcase__overlay" />
+            )}
             <span className="services-showcase__title">{item.title}</span>
           </Link>
         ))}

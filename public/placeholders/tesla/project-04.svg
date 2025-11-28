@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="grad04" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#15273c" />
+      <stop offset="100%" stop-color="#060b13" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad04)" />
+  <g opacity="0.4" stroke="#2c4a6b" stroke-width="2" fill="none">
+    <polygon points="0,480 200,360 400,420 600,300 800,360 800,600 0,600" />
+    <polygon points="0,360 160,280 360,340 520,240 680,300 800,240 800,600 0,600" />
+  </g>
+  <text x="50%" y="50%" text-anchor="middle" fill="#e7c980" font-family="Arial, Helvetica, sans-serif" font-size="30" letter-spacing="0.42em">
+    PROJECT 04
+  </text>
+  <text x="50%" y="58%" text-anchor="middle" fill="#90a4c0" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="0.28em">
+    PLACEHOLDER
+  </text>
+</svg>

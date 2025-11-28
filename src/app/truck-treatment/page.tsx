@@ -54,7 +54,7 @@ const GALLERY_IMAGES = [
   "/mamrot/truck/20250526_122735_0000.webp",
   "/mamrot/truck/20250526_122811_0000.webp",
   "/mamrot/truck/20250712_210148.webp",
-  "/mamrot/truck/20250725_203730.webp",
+  // "/mamrot/truck/20250725_203730.webp",
   "/mamrot/truck/20250726_161956.webp",
   "/mamrot/truck/20250920_201236 (1).webp",
 ];

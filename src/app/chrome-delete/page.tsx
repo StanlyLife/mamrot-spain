@@ -58,7 +58,7 @@ const GALLERY = [
   "FB_IMG_1763375967171.webp",
   "FB_IMG_1763376073726.webp",
   "FB_IMG_1763376103170.webp",
-  "IMG_20241013_120636_838.webp",
+  // "IMG_20241013_120636_838.webp",
 ];
 
 export default function Page() {

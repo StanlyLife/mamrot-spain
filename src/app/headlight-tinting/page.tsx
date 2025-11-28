@@ -13,6 +13,15 @@ export const metadata = {
 const HERO_IMAGE = "/mamrot/lighttint/20240417_223612.webp";
 const SUNROOF_IMAGE = "/mamrot/lighttint/IMG_20241013_123356_912.webp";
 
+const GALLERY = [
+  "/mamrot/lighttint/600x600_Banner_SPF70_6b6b77db-046a-45d3-95a4-026811fd8716.webp",
+  // "/mamrot/lighttint/20240417_223612.webp",
+  "/mamrot/lighttint/FB_IMG_1727782717448.webp",
+  "/mamrot/lighttint/FB_IMG_1736778385159.webp",
+  "/mamrot/lighttint/IMG_20241013_123356_893.webp",
+  // "/mamrot/lighttint/IMG_20241013_123356_912.webp",
+];
+
 const PROTECTION_POINTS = [
   "Self-healing PPF keeps lenses crystal clear and resistant to micro-scratches",
   "Shields against stone chips generated on Costa del Sol motorways",
@@ -67,15 +76,6 @@ const PROCESS_STEPS = [
   "Multi-stage wash, clay, and polish to maximize adhesion and clarity",
   "Computer-cut GSWF Premium Protection Smoke Film or hand-trimmed coverage for custom housings",
   "Heat-set edges, sealant application, and aftercare briefing for Marbella & Málaga conditions",
-];
-
-const GALLERY = [
-  "/mamrot/lighttint/600x600_Banner_SPF70_6b6b77db-046a-45d3-95a4-026811fd8716.webp",
-  "/mamrot/lighttint/20240417_223612.webp",
-  "/mamrot/lighttint/FB_IMG_1727782717448.webp",
-  "/mamrot/lighttint/FB_IMG_1736778385159.webp",
-  "/mamrot/lighttint/IMG_20241013_123356_893.webp",
-  "/mamrot/lighttint/IMG_20241013_123356_912.webp",
 ];
 
 export default function Page() {

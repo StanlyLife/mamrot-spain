@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="grad05" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#04070d" />
+      <stop offset="100%" stop-color="#1c2b3e" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad05)" />
+  <g opacity="0.45">
+    <line x1="120" y1="120" x2="680" y2="120" stroke="#2c4b6d" stroke-width="2" />
+    <line x1="80" y1="200" x2="720" y2="200" stroke="#2c4b6d" stroke-width="2" />
+    <line x1="60" y1="280" x2="740" y2="280" stroke="#2c4b6d" stroke-width="2" />
+    <line x1="40" y1="360" x2="760" y2="360" stroke="#2c4b6d" stroke-width="2" />
+    <line x1="20" y1="440" x2="780" y2="440" stroke="#2c4b6d" stroke-width="2" />
+  </g>
+  <text x="50%" y="52%" text-anchor="middle" fill="#f8dca7" font-family="Arial, Helvetica, sans-serif" font-size="30" letter-spacing="0.36em">
+    PROJECT 05
+  </text>
+  <text x="50%" y="60%" text-anchor="middle" fill="#9eb2cc" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="0.32em">
+    PLACEHOLDER
+  </text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="grad02" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f1b2b" />
+      <stop offset="60%" stop-color="#1c2e46" />
+      <stop offset="100%" stop-color="#0a121d" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad02)" />
+  <circle cx="400" cy="300" r="220" stroke="#2e4b6d" stroke-width="3" fill="none" opacity="0.65" />
+  <circle cx="400" cy="300" r="170" stroke="#1f3650" stroke-width="2" fill="none" opacity="0.45" />
+  <text x="50%" y="47%" text-anchor="middle" fill="#f5d593" font-family="Arial, Helvetica, sans-serif" font-size="30" letter-spacing="0.45em">
+    PROJECT 02
+  </text>
+  <text x="50%" y="57%" text-anchor="middle" fill="#b6c4d7" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="0.35em">
+    PLACEHOLDER
+  </text>
+</svg>

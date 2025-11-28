@@ -56,9 +56,9 @@ const MEDIA_IMAGES = [
 
 const GALLERY_IMAGES = [
   "/mamrot/ceramic/a5ntlofieoegxlswash1.webp",
-  "/mamrot/ceramic/a9vdkipputny9ce5mhrp.webp",
-  "/mamrot/ceramic/f89tpgjzyqjybwpfrqpy.webp",
-  "/mamrot/ceramic/fkuioa6x8gwiwdkm085u.webp",
+  // "/mamrot/ceramic/a9vdkipputny9ce5mhrp.webp",
+  // "/mamrot/ceramic/f89tpgjzyqjybwpfrqpy.webp",
+  // "/mamrot/ceramic/fkuioa6x8gwiwdkm085u.webp",
   "/mamrot/ceramic/salprq2kizloz32cuzda.webp",
   "/mamrot/ceramic/uth2mwaqtma8t9tpjzuo.webp",
   "/mamrot/ceramic/wvm16r0ugpejpuhkdslm.webp",

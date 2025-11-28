@@ -48,12 +48,12 @@ const MEDIA_IMAGES = [
 
 const GALLERY_IMAGES = [
   "/mamrot/wrapping/20250603_160042_0000.jpg",
-  "/mamrot/wrapping/20250712_211653.jpg",
+  // "/mamrot/wrapping/20250712_211653.jpg",
   "/mamrot/wrapping/20250904_222522.jpg",
-  "/mamrot/wrapping/20250907_131915.jpg",
+  // "/mamrot/wrapping/20250907_131915.jpg",
   "/mamrot/wrapping/FB_IMG_1736778385159.jpg",
   "/mamrot/wrapping/FB_IMG_1739710033030 (1).jpg",
-  "/mamrot/wrapping/20250810_190720_0000.jpg",
+  // "/mamrot/wrapping/20250810_190720_0000.jpg",
 ];
 
 export default function Page() {

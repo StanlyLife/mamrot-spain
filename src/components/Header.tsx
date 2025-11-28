@@ -49,6 +49,9 @@ export default function Header() {
               <li>
                 <Link href="/about">About</Link>
               </li>
+              <li>
+                <Link href="/tesla-specialists">Tesla Specialists</Link>
+              </li>
             </ul>
           </nav>
           <button

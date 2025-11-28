@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050b13" />
+      <stop offset="50%" stop-color="#0f1b2b" />
+      <stop offset="100%" stop-color="#04070c" />
+    </linearGradient>
+    <linearGradient id="heroOverlay" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0.65)" />
+      <stop offset="50%" stop-color="rgba(14,20,30,0.4)" />
+      <stop offset="100%" stop-color="rgba(10,14,20,0.2)" />
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#heroGradient)" />
+  <g opacity="0.45">
+    <circle cx="960" cy="540" r="420" fill="none" stroke="#162941" stroke-width="2" />
+    <circle cx="960" cy="540" r="520" fill="none" stroke="#1a2f4c" stroke-width="2" />
+    <circle cx="960" cy="540" r="640" fill="none" stroke="#1e3556" stroke-width="2" />
+    <circle cx="960" cy="540" r="780" fill="none" stroke="#233d63" stroke-width="2" />
+  </g>
+  <rect width="1920" height="1080" fill="url(#heroOverlay)" />
+  <text x="50%" y="88%" text-anchor="middle" fill="#d4af37" font-size="56" font-family="Arial, Helvetica, sans-serif" letter-spacing="0.4em" opacity="0.5">
+    TESLA HERO PLACEHOLDER
+  </text>
+</svg>

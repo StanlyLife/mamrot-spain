@@ -57,14 +57,15 @@ const HERO_IMAGE = "/mamrot/ppf/20251021_231430.jpg";
 const MEDIA_IMAGES = [
   "/mamrot/ppf/20250902_155106.jpg",
   "/mamrot/ppf/20250918_001006.jpg",
-  "/mamrot/ppf/20251021_231430.jpg",
+  // "/mamrot/ppf/20251021_231430.jpg",
+  "/mamrot/ppf/20250906_200515 (1).jpg",
 ];
 
 const GALLERY_IMAGES = [
   "/mamrot/ppf/20250117_203531.jpg",
-  "/mamrot/ppf/20250906_200515 (1).jpg",
-  "/mamrot/ppf/20250918_001006.jpg",
-  "/mamrot/ppf/20251021_231430.jpg",
+  // "/mamrot/ppf/20250906_200515 (1).jpg",
+  // "/mamrot/ppf/20250918_001006.jpg",
+  // "/mamrot/ppf/20251021_231430.jpg",
   "/mamrot/ppf/20251103_135933 (1).jpg",
   "/mamrot/ppf/480488282_594748413412441_5599466613609433861_n.jpg",
   "/mamrot/ppf/IMG_20251027_141229_861.jpg",
