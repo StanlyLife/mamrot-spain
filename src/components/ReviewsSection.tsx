@@ -162,6 +162,7 @@ export default function ReviewsSection() {
 
   return (
     <section
+      id="reviews"
       ref={sectionRef}
       className="reviews-section is-visible"
       aria-labelledby="reviews-heading"
@@ -169,12 +170,12 @@ export default function ReviewsSection() {
       <div className="reviews-background" aria-hidden="true">
         <img
           src="/mamrot/transfer1/20250917_153410.jpg"
-          alt=""
+          alt="Luxury detailing studio background"
           className="reviews-bg-image"
         />
         <img
           src="/mamrot/transfer2/20250516_095019_0000.jpg"
-          alt=""
+          alt="Paint protection film project highlight"
           className="reviews-bg-image2"
         />
         <div className="reviews-bg-overlay" />

@@ -1,4 +1,4 @@
-"use client";
+import type { Metadata } from "next";
 import "../styles/home.scss";
 import Hero from "../components/Hero";
 import ServiceSection from "../components/ServiceSection";
@@ -6,6 +6,12 @@ import ServicesShowcase from "../components/ServicesShowcase";
 import USPSection from "../components/USPSection";
 import ReviewsSection from "../components/ReviewsSection";
 import QuoteRequest from "../components/QuoteRequest";
+
+export const metadata: Metadata = {
+  title: "CarSpa Marbella | Luxury Wraps, PPF & Detailing",
+  description:
+    "Premium wraps, self-healing PPF, correction and ceramic coating for performance cars, Teslas, trucks and yachts across Marbella & Málaga.",
+};
 
 export default function Home() {
   return (

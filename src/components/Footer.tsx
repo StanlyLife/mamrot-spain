@@ -10,20 +10,20 @@ const GROUPS: FooterLinkGroup[] = [
   {
     heading: "Services",
     links: [
-      { label: "Paint Protection", href: "#services" },
+      { label: "Paint Protection Film", href: "/ppf" },
       { label: "Wrapping", href: "/wrapping" },
-      { label: "Ceramic Coating", href: "#services" },
-      { label: "Detailing", href: "#services" },
-      { label: "Tinting", href: "#services" },
+      { label: "Ceramic Coating", href: "/ceramic" },
+      { label: "Correction & Polishing", href: "/correction" },
+      { label: "Headlight Tinting", href: "/headlight-tinting" },
     ],
   },
   {
     heading: "Company",
     links: [
-      { label: "About", href: "#" },
-      { label: "Gallery", href: "#" },
-      { label: "Contact", href: "#contact" },
-      { label: "Blog", href: "#" },
+      { label: "About", href: "/about" },
+      { label: "Gallery", href: "/gallery" },
+      { label: "Contact", href: "/#contact" },
+      { label: "Client Reviews", href: "/#reviews" },
     ],
   },
   {
@@ -42,7 +42,7 @@ export default function Footer() {
       <div className="inner">
         {GROUPS.map((group) => (
           <nav key={group.heading} aria-label={group.heading}>
-            <h4>{group.heading}</h4>
+            <h3>{group.heading}</h3>
             <ul>
               {group.links.map((l) => (
                 <li key={l.label}>

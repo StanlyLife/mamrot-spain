@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef } from "react";
 import "../styles/home.scss"; // ensure styles are available
 
@@ -36,7 +38,7 @@ export function Hero() {
           loop
           playsInline
           preload="auto"
-          poster="/mamrot/transfer1/20250731_231618.jpg"
+          poster="/videos/vask-front-horisontal_placeholder.webp"
         >
           <source
             src="/videos/vask-front-vertikal.mp4"
