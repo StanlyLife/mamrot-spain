@@ -35,6 +35,15 @@
   max-width: 62ch;
 }
 
+.ppf-page .page-subtitle {
+  font-family: var(--font-luxury, "Playfair Display"), serif;
+  font-size: clamp(1.1rem, 2.8vw, 1.5rem);
+  font-style: italic;
+  letter-spacing: 0.12em;
+  color: $brand-accent;
+  margin: 0.2rem 0 0.8rem;
+}
+
 .ppf-feature-list {
   list-style: none;
   margin: 1.2rem 0;

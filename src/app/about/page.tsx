@@ -31,7 +31,7 @@ export default function AboutPage() {
             loop
             playsInline
             preload="auto"
-            poster="/mamrot/transfer1/20250712_211653.jpg"
+            poster="/videos/vask-horisontal-f1.png"
           >
             <source src="/videos/vask-horisontal.mp4" type="video/mp4" />
           </video>

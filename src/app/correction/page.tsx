@@ -83,13 +83,22 @@ export default function Page() {
         <div className="correction-overview__inner">
           <header className="correction-overview__header correction-animate">
             <h1 id="correction-heading" className="correction-animate">
-              Paint Correction & Polishing
+              Paint Correction & Polishing – Marbella & Málaga
             </h1>
+            <p className="page-subtitle correction-animate">
+              Restore clarity. Reveal true shine.
+            </p>
             <p className="lede correction-animate">
               Experience the art of high-end paint correction, where precision
               meets perfection. Our specialists restore your vehicle's paint to
               a flawless, mirror-like finish, eliminating swirls, scratches, and
               imperfections with meticulous care.
+            </p>
+            <p>
+              We offer advanced Paint Correction and Professional Polishing for
+              all types of vehicles across Marbella and Málaga - including daily
+              drivers, rental cars, premium cars, supercars, trucks, boats, and
+              caravans
             </p>
             <p className="lede correction-animate">
               We specialize in professional paint correction that removes

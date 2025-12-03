@@ -92,15 +92,16 @@ export default function Page() {
         <div className="ppf-overview__inner">
           <header className="ppf-overview__header ppf-animate">
             <h1 id="ppf-heading" className="ppf-animate">
-              Paint Correction & Polishing in Marbella & Málaga - Restore Gloss,
-              Color & Clarity
+              Paint Protection Film (PPF) Marbella & Málaga
             </h1>
+            <p className="page-subtitle ppf-animate">
+              Protect your paint. Preserve perfection.
+            </p>
             <p className="lede ppf-animate">
-              We install the most advanced paint protection films on the market
-              - GSWF Defender Platinum, with a special self-healing layer, and
-              backed by a lifetime manufacturer warranty. This type of film also
-              offers up to 45% more gloss, providing a stunning crystal-gloss
-              finish that enhances the depth and shine of your vehicle's paint.
+              We install the most advanced Paint Protection Films (PPF) on the
+              market - GSWF - with a special self-healing layer and backed by
+              lifetime manufacturer warranty. Installation for cars, SUVs,
+              trucks across Marbella and Málaga.
             </p>
             <p className="lede ppf-animate">
               This innovative technology keeps your paint flawless and free from
