@@ -31,12 +31,13 @@
 }
 
 .boat-overview__header h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: $heading-page;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
 .boat-overview__header .lede {
+  font-size: $text-lede;
   line-height: 1.6;
   color: rgba(244, 247, 251, 0.85);
 }

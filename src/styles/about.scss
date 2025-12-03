@@ -1,3 +1,6 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
 .about-page {
   --pad: clamp(0.9rem, 2vw, 2.2rem);
   display: flex;
@@ -38,7 +41,7 @@
   gap: 1.1rem;
 }
 .about-hero__inner h1 {
-  font-size: clamp(2rem, 6vw, 3.6rem);
+  font-size: $heading-page;
   letter-spacing: 0.14em;
   font-weight: 600;
   background: linear-gradient(90deg, #fff, #f4f0e6, #c9a858, #e0bb63);
@@ -48,7 +51,7 @@
   filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.55));
 }
 .about-hero__inner .lede {
-  font-size: clamp(1rem, 1.1rem + 0.4vw, 1.3rem);
+  font-size: $text-lede;
   max-width: 62ch;
   line-height: 1.5;
   opacity: 0.9;
@@ -63,14 +66,14 @@
   gap: 1rem;
 }
 .section-inner h2 {
-  font-size: clamp(1.4rem, 3.8vw, 2.4rem);
+  font-size: $heading-section;
   letter-spacing: 0.12em;
   font-weight: 600;
   margin-bottom: 0.2rem;
 }
 .section-inner p {
   line-height: 1.55;
-  font-size: 0.95rem;
+  font-size: $text-body;
   letter-spacing: 0.03em;
 }
 

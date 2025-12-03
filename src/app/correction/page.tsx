@@ -90,11 +90,14 @@ export default function Page() {
             </p>
             <p className="lede correction-animate">
               Experience the art of high-end paint correction, where precision
-              meets perfection. Our specialists restore your vehicle's paint to
-              a flawless, mirror-like finish, eliminating swirls, scratches, and
+              meets perfection. Polishing for all types of vehicles across
+              Marbella and Málaga - including daily drivers, rental cars,
+              premium cars, supercars, trucks, boats, and caravans. Our
+              specialists restore your vehicle's paint to a flawless,
+              mirror-like finish, eliminating swirls, scratches, and
               imperfections with meticulous care.
             </p>
-            <p>
+            <p className="lede correction-animate">
               We offer advanced Paint Correction and Professional Polishing for
               all types of vehicles across Marbella and Málaga - including daily
               drivers, rental cars, premium cars, supercars, trucks, boats, and

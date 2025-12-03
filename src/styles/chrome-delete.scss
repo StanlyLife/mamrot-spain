@@ -31,13 +31,13 @@
 }
 
 .chrome-overview__header h1 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: $heading-page;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .chrome-overview__header .lede {
-  font-size: 1.05rem;
+  font-size: $text-lede;
   line-height: 1.6;
   color: #333;
 }

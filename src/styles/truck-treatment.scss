@@ -33,14 +33,14 @@
 }
 
 .truck-overview__header h1 {
-  font-size: clamp(2rem, 5.4vw, 3.2rem);
+  font-size: $heading-page;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin: 0;
 }
 
 .truck-overview__header .lede {
-  font-size: clamp(1rem, 1.1rem + 0.35vw, 1.3rem);
+  font-size: $text-lede;
   line-height: 1.55;
   color: #2d2d2d;
 }
@@ -71,7 +71,7 @@
 
 .truck-packages__inner .lede,
 .truck-restore__inner .lede {
-  font-size: 1.05rem;
+  font-size: $text-lede;
   line-height: 1.6;
   color: #343434;
 }

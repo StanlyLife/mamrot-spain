@@ -23,7 +23,7 @@
   padding: 0 var(--pad);
 }
 .ceramic-overview__header .lede {
-  font-size: clamp(1rem, 1.2rem + 0.4vw, 1.35rem);
+  font-size: $text-lede;
   line-height: 1.5;
   opacity: 0.85;
   margin-top: 1rem;
