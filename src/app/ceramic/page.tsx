@@ -51,17 +51,13 @@ const HERO_IMAGE = "/mamrot/transfer1/20250909_000951.jpg";
 const MEDIA_IMAGES = [
   "/mamrot/ceramic/a9vdkipputny9ce5mhrp.webp",
   "/mamrot/ceramic/f89tpgjzyqjybwpfrqpy.webp",
-  "/mamrot/ceramic/fkuioa6x8gwiwdkm085u.webp",
+  "/mamrot/ceramic/wvm16r0ugpejpuhkdslm.webp",
 ];
 
 const GALLERY_IMAGES = [
   "/mamrot/ceramic/a5ntlofieoegxlswash1.webp",
-  // "/mamrot/ceramic/a9vdkipputny9ce5mhrp.webp",
-  // "/mamrot/ceramic/f89tpgjzyqjybwpfrqpy.webp",
-  // "/mamrot/ceramic/fkuioa6x8gwiwdkm085u.webp",
   "/mamrot/ceramic/salprq2kizloz32cuzda.webp",
   "/mamrot/ceramic/uth2mwaqtma8t9tpjzuo.webp",
-  "/mamrot/ceramic/wvm16r0ugpejpuhkdslm.webp",
   "/mamrot/ceramic/zhakd13l91vgwjw7sxqj.webp",
 ];
 
@@ -194,7 +190,8 @@ export default function Page() {
                   src={img}
                   alt="Ceramic coated vehicle"
                   width={640}
-                  height={360}
+                  height={480}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </figure>
             ))}
