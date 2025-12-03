@@ -54,7 +54,14 @@ const MEDIA_IMAGES = [
 ];
 
 const GALLERY_IMAGES = [
-  "/mamrot/correction/last ned.png",
+  "/mamrot/correction/pc031225 (1).jpg",
+  "/mamrot/correction/pc031225 (2).jpg",
+  "/mamrot/correction/pc031225 (3).jpg",
+  "/mamrot/correction/pc031225 (4).jpg",
+  "/mamrot/correction/pc031225 (5).jpg",
+  "/mamrot/correction/pc031225 (6).jpg",
+  "/mamrot/correction/pc031225 (7).jpg",
+  "/mamrot/correction/pc031225 (8).jpg",
   "/mamrot/correction/uablfscoc1zspnaccbje.webp",
   "/mamrot/correction/z2ldh2sxerh1fv9jrjv9.webp",
 ];
@@ -192,7 +199,8 @@ export default function Page() {
                   src={img}
                   alt="Corrected paint finish"
                   width={640}
-                  height={360}
+                  height={480}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </figure>
             ))}
