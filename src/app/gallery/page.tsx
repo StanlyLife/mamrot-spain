@@ -1,12 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/gallery.scss";
-
-export const metadata = {
-  title: "Gallery | Recent Projects & Finishes",
-  description:
-    "Browse recent wrap, PPF, correction & ceramic coating projects showcasing finish quality & protection details.",
-};
 
 interface GalleryImage {
   file: string;
@@ -154,14 +151,7 @@ const IMAGES: GalleryImage[] = [
     h: 700,
     folder: "transfer2",
   },
-  {
-    file: "20250516_095305_0000.jpg",
-    alt: "Advanced wrap technique",
-    cat: "Wrap",
-    w: 920,
-    h: 580,
-    folder: "transfer2",
-  },
+
   {
     file: "FB_IMG_1722070201433.jpg",
     alt: "Premium finish showcase",
@@ -266,9 +256,109 @@ const IMAGES: GalleryImage[] = [
     h: 650,
     folder: "transfer2",
   },
+  {
+    file: "galleri (1).jpg",
+    alt: "Premium vehicle finish",
+    cat: "Showcase",
+    w: 900,
+    h: 600,
+    folder: "galleri",
+  },
+  {
+    file: "galleri (2).jpg",
+    alt: "Professional detailing result",
+    cat: "Detailing",
+    w: 900,
+    h: 600,
+    folder: "galleri",
+  },
+  {
+    file: "galleri (3).jpg",
+    alt: "Quality craftsmanship",
+    cat: "Craftsmanship",
+    w: 900,
+    h: 600,
+    folder: "galleri",
+  },
+  {
+    file: "galleri (4).jpg",
+    alt: "Expert automotive care",
+    cat: "Care",
+    w: 900,
+    h: 600,
+    folder: "galleri",
+  },
+  {
+    file: "galleri (5).jpg",
+    alt: "Precision work detail",
+    cat: "Detail",
+    w: 900,
+    h: 600,
+    folder: "galleri",
+  },
+  {
+    file: "galleri (6).jpg",
+    alt: "Showroom quality finish",
+    cat: "Finish",
+    w: 900,
+    h: 600,
+    folder: "galleri",
+  },
+  {
+    file: "galleri (7).jpg",
+    alt: "Professional results",
+    cat: "Results",
+    w: 900,
+    h: 600,
+    folder: "galleri",
+  },
+  {
+    file: "galleri (8).jpg",
+    alt: "High-end vehicle treatment",
+    cat: "Treatment",
+    w: 900,
+    h: 600,
+    folder: "galleri",
+  },
+  {
+    file: "galleri (9).jpg",
+    alt: "Superior protection applied",
+    cat: "Protection",
+    w: 900,
+    h: 600,
+    folder: "galleri",
+  },
+  {
+    file: "galleri (10).jpg",
+    alt: "Exceptional automotive work",
+    cat: "Work",
+    w: 900,
+    h: 600,
+    folder: "galleri",
+  },
+  {
+    file: "galleri (11).jpg",
+    alt: "Premium service showcase",
+    cat: "Service",
+    w: 900,
+    h: 600,
+    folder: "galleri",
+  },
 ];
 
 export default function Page() {
+  const [copiedFile, setCopiedFile] = useState<string | null>(null);
+
+  const handleCopyFileName = async (fileName: string) => {
+    try {
+      await navigator.clipboard.writeText(fileName);
+      setCopiedFile(fileName);
+      setTimeout(() => setCopiedFile(null), 1500);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
+
   return (
     <main
       className="gallery-page"
@@ -285,22 +375,35 @@ export default function Page() {
       </section>
       <section className="gallery-grid-section" aria-label="Image gallery">
         <div className="gallery-masonry" data-gallery>
-          {IMAGES.map((img, i) => (
-            <figure
-              key={`${img.folder || "transfer1"}/${img.file}`}
-              className="gallery-item"
-              style={{ ["--order" as any]: i }}
-            >
-              <Image
-                src={`/mamrot/${img.folder || "transfer1"}/${img.file}`}
-                alt={img.alt}
-                width={img.w}
-                height={img.h}
-                className="gallery-img"
-                loading="lazy"
-              />
-            </figure>
-          ))}
+          {IMAGES.map((img, i) => {
+            const basePath = img.folder === "galleri" ? "" : "/mamrot";
+            const folder = img.folder || "transfer1";
+            return (
+              <figure
+                key={`${folder}/${img.file}`}
+                className="gallery-item"
+                style={{ ["--order" as any]: i }}
+                onClick={() => handleCopyFileName(img.file)}
+                title={`Click to copy: ${img.file}`}
+              >
+                <Image
+                  src={`${basePath}/${folder}/${img.file}`}
+                  alt={img.alt}
+                  width={img.w}
+                  height={img.h}
+                  className="gallery-img"
+                  loading="lazy"
+                />
+                <span
+                  className={`copy-toast ${
+                    copiedFile === img.file ? "show" : ""
+                  }`}
+                >
+                  Copied!
+                </span>
+              </figure>
+            );
+          })}
         </div>
       </section>
       <div id="gallery-contact">

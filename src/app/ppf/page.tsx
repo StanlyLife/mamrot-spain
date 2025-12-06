@@ -4,7 +4,7 @@ import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/ppf.scss";
 
 export const metadata = {
-  title: "Paint Correction & Polishing | GSWF Defender Platinum PPF",
+  title: "Paint Protection Film (PPF) | Premium PPF GSWF Marbella & Málaga",
   description:
     "Advanced GSWF Defender Platinum PPF with self-healing layer and lifetime warranty. Up to 45% more gloss with comprehensive protection packages.",
 };
@@ -62,13 +62,13 @@ const MEDIA_IMAGES = [
 ];
 
 const GALLERY_IMAGES = [
+  "/mamrot/ppf/IMG_20251027_141229_861.jpg",
   "/mamrot/ppf/20250117_203531.jpg",
   // "/mamrot/ppf/20250906_200515 (1).jpg",
   // "/mamrot/ppf/20250918_001006.jpg",
   // "/mamrot/ppf/20251021_231430.jpg",
   "/mamrot/ppf/20251103_135933 (1).jpg",
   "/mamrot/ppf/480488282_594748413412441_5599466613609433861_n.jpg",
-  "/mamrot/ppf/IMG_20251027_141229_861.jpg",
 ];
 
 export default function Page() {
@@ -178,10 +178,6 @@ export default function Page() {
                 "Single-stage high-gloss refinement (included in all packages).",
               ],
               [
-                "Panel Mapping & Template",
-                "Digital pattern calibration / custom bulk where needed.",
-              ],
-              [
                 "Precision Application",
                 "Tension management, edge wrapping & relief cuts minimised.",
               ],
@@ -225,7 +221,8 @@ export default function Page() {
                   src={img}
                   alt="Vehicle protected by PPF"
                   width={640}
-                  height={360}
+                  height={480}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </figure>
             ))}

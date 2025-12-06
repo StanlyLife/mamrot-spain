@@ -4,7 +4,8 @@ import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/ceramic.scss";
 
 export const metadata = {
-  title: "GYEON Ceramic Coating | Advanced Paint Protection",
+  title:
+    "GYEON Ceramic Coating in Marbella & Málaga | Premium Paint Protection",
   description:
     "Professional GYEON ceramic coating with up to 4 years protection. Single or double-layer application with official certificate. Marine coatings available.",
 };
@@ -26,10 +27,6 @@ const STEPS: Array<[string, string]> = [
   [
     "Coating Application",
     "Layered chemistry leveled & cured to manufacturer spec.",
-  ],
-  [
-    "IR / Controlled Cure",
-    "Optional infrared assistance, high-precision flashing window.",
   ],
   [
     "Aftercare Guidance",

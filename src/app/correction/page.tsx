@@ -4,7 +4,7 @@ import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/correction.scss";
 
 export const metadata = {
-  title: "Paint Correction & Polishing | Professional Paint Restoration",
+  title: "Paint Correction & Polishing | Cars Boats Marbella & Málaga",
   description:
     "Experience the art of high-end paint correction. One-Step, Two-Step, or Full Correction with up to 90% defect removal and premium GYEON ceramic coating.",
 };
@@ -62,9 +62,13 @@ const GALLERY_IMAGES = [
   "/mamrot/correction/pc031225 (6).jpg",
   "/mamrot/correction/pc031225 (7).jpg",
   "/mamrot/correction/pc031225 (8).jpg",
+  "/mamrot/correction/azyepp59txoodruwlyrb.webp",
   "/mamrot/correction/uablfscoc1zspnaccbje.webp",
   "/mamrot/correction/z2ldh2sxerh1fv9jrjv9.webp",
+  "/mamrot/correction/last ned.png",
 ];
+
+const isDev = process.env.NODE_ENV === "development";
 
 export default function Page() {
   return (
@@ -194,6 +198,7 @@ export default function Page() {
                 key={img}
                 className="gallery-item correction-animate"
                 style={{ ["--order" as any]: i }}
+                title={isDev ? img.split("/").pop() : undefined}
               >
                 <Image
                   src={img}
@@ -202,6 +207,9 @@ export default function Page() {
                   height={480}
                   style={{ width: "100%", height: "auto" }}
                 />
+                {isDev && (
+                  <span className="dev-image-name">{img.split("/").pop()}</span>
+                )}
               </figure>
             ))}
           </div>

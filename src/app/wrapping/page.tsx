@@ -4,7 +4,8 @@ import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/wrapping.scss";
 
 export const metadata = {
-  title: "Full Car Wrapping & Color Change | Premium Wrap Films",
+  title:
+    "Full Car Wrapping & Color Change in Marbella & Málaga | Premium Vinyl Wrap",
   description:
     "Transform your car with exclusive wrap colors from PWF, 3M, HEXIS, and KPMF. Professional installation with 3-year warranty and premium materials.",
 };
@@ -47,11 +48,11 @@ const MEDIA_IMAGES = [
 ];
 
 const GALLERY_IMAGES = [
+  "/mamrot/wrapping/FB_IMG_1736778385159.jpg",
   "/mamrot/wrapping/20250603_160042_0000.jpg",
   // "/mamrot/wrapping/20250712_211653.jpg",
   "/mamrot/wrapping/20250904_222522.jpg",
   // "/mamrot/wrapping/20250907_131915.jpg",
-  "/mamrot/wrapping/FB_IMG_1736778385159.jpg",
   "/mamrot/wrapping/FB_IMG_1739710033030 (1).jpg",
   // "/mamrot/wrapping/20250810_190720_0000.jpg",
 ];
@@ -213,7 +214,8 @@ export default function Page() {
                   src={img}
                   alt="Wrapped vehicle"
                   width={640}
-                  height={360}
+                  height={480}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </figure>
             ))}

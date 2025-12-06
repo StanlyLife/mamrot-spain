@@ -240,6 +240,25 @@
   scale: 1.05;
 }
 
+/* Dev-only image name overlay */
+.dev-image-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 0.65rem;
+  font-family: monospace;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  word-break: break-all;
+}
+.gallery-item:hover .dev-image-name {
+  opacity: 1;
+}
+
 .correction-page section:not(:first-of-type) {
   position: relative;
 }
