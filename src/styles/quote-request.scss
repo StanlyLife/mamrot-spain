@@ -189,6 +189,10 @@
   color: $brand-accent-alt;
 }
 
+.form-error {
+  color: #ff6b6b;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .quote-form input,
   .quote-form textarea {

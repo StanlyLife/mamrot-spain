@@ -2,6 +2,8 @@
 import { useState } from "react";
 import "../styles/quote-request.scss";
 
+const FORMSPARK_ACTION = "https://submit-form.com/b9JfFWthO";
+
 interface QuoteFormState {
   name: string;
   email: string;
@@ -41,6 +43,8 @@ export default function QuoteRequest({
 }: QuoteRequestProps) {
   const [data, setData] = useState<QuoteFormState>(initialState);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const normalizedWhatsApp = whatsappNumber?.replace(/[^0-9]/g, "");
   const whatsappHref = normalizedWhatsApp
@@ -53,11 +57,40 @@ export default function QuoteRequest({
     setData((d) => ({ ...d, [key]: value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!data.name || !data.email) return; // rudimentary required check
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3500);
+    if (!data.name || !data.email) return;
+
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch(FORMSPARK_ACTION, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          vehicle: data.vehicle,
+          message: data.message,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setData(initialState);
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Failed to send. Please try again or contact us via WhatsApp.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -128,8 +161,12 @@ export default function QuoteRequest({
             </label>
           </div>
           <div className="actions">
-            <button type="submit" className="btn submit" disabled={submitted}>
-              {submitted ? "Sent" : submitLabel}
+            <button
+              type="submit"
+              className="btn submit"
+              disabled={isSubmitting || submitted}
+            >
+              {isSubmitting ? "Sending..." : submitted ? "Sent!" : submitLabel}
             </button>
             {whatsappHref && (
               <a
@@ -145,6 +182,7 @@ export default function QuoteRequest({
           </div>
           <div id="form-success" className="form-hint" aria-live="polite">
             {submitted && successMessage}
+            {error && <span className="form-error">{error}</span>}
           </div>
         </form>
       </div>
