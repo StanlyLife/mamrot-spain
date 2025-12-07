@@ -30,7 +30,11 @@ const GROUPS: FooterLinkGroup[] = [
     heading: "Contact",
     links: [
       { label: "Phone", href: "tel:+441234567890", external: true },
-      { label: "Email", href: "mailto:info@example.com", external: true },
+      {
+        label: "Email",
+        href: "mailto:carspamarbella@gmail.com",
+        external: true,
+      },
       { label: "Request Quote", href: "#contact" },
     ],
   },

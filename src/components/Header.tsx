@@ -20,7 +20,9 @@ export default function Header() {
           </span>
           <span className="divider" />
           <span className="contact-item">
-            <a href="mailto:info@example.com">mamrot.carspanord@gmail.com</a>
+            <a href="mailto:carspamarbella@gmail.com">
+              carspamarbella@gmail.com
+            </a>
           </span>
         </div>
       </div>
