@@ -2,6 +2,7 @@ import Image from "next/image";
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/wrapping.scss";
+import { cdn } from "@/lib/cdn";
 
 export const metadata = {
   title:
@@ -42,19 +43,19 @@ const WRAP_VARIANTS = [
 const HERO_IMAGE = "/mamrot/wrapping/main.jpg";
 
 const MEDIA_IMAGES = [
-  "/mamrot/wrapping/20250907_131915.jpg",
-  "/mamrot/wrapping/20250712_211653.jpg",
-  "/mamrot/wrapping/20250810_190720_0000.jpg",
+  cdn("/mamrot/wrapping/20250907_131915.jpg"),
+  cdn("/mamrot/wrapping/20250712_211653.jpg"),
+  cdn("/mamrot/wrapping/20250810_190720_0000.jpg"),
 ];
 
 const GALLERY_IMAGES = [
-  "/mamrot/wrapping/FB_IMG_1736778385159.jpg",
-  "/mamrot/wrapping/20250603_160042_0000.jpg",
-  // "/mamrot/wrapping/20250712_211653.jpg",
-  "/mamrot/wrapping/20250904_222522.jpg",
-  // "/mamrot/wrapping/20250907_131915.jpg",
-  "/mamrot/wrapping/FB_IMG_1739710033030 (1).jpg",
-  // "/mamrot/wrapping/20250810_190720_0000.jpg",
+  cdn("/mamrot/wrapping/FB_IMG_1736778385159.jpg"),
+  cdn("/mamrot/wrapping/20250603_160042_0000.jpg"),
+  // cdn("/mamrot/wrapping/20250712_211653.jpg"),
+  cdn("/mamrot/wrapping/20250904_222522.jpg"),
+  // cdn("/mamrot/wrapping/20250907_131915.jpg"),
+  cdn("/mamrot/wrapping/FB_IMG_1739710033030 (1).jpg"),
+  // cdn("/mamrot/wrapping/20250810_190720_0000.jpg"),
 ];
 
 export default function Page() {

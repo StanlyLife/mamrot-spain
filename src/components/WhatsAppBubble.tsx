@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import "@/styles/whatsapp-bubble.scss";
+import { cdn } from "@/lib/cdn";
 
 const WHATSAPP_NUMBER = "+47 939 91 633";
 const DEFAULT_MESSAGE = "Hi! I'd like to book detailing at Mamrot.";
-const ICON_SRC = "/logos/WhatsApp.svg";
+const ICON_SRC = cdn("/logos/WhatsApp.svg");
 
 const normalizedNumber = WHATSAPP_NUMBER.replace(/[^0-9]/g, "");
 const whatsappHref = `https://wa.me/${normalizedNumber}?text=${encodeURIComponent(

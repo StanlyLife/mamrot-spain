@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Image from "next/image";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/gallery.scss";
+import { cdn } from "@/lib/cdn";
 
 interface GalleryImage {
   file: string;
@@ -12,6 +13,52 @@ interface GalleryImage {
   w: number;
   h: number;
   folder?: string;
+}
+
+// Individual gallery image with loading state
+function GalleryImageItem({
+  img,
+  index,
+  onCopy,
+  isCopied,
+}: {
+  img: GalleryImage;
+  index: number;
+  onCopy: (fileName: string) => void;
+  isCopied: boolean;
+}) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const basePath = img.folder === "galleri" ? "" : "/mamrot";
+  const folder = img.folder || "transfer1";
+  const imagePath = cdn(`${basePath}/${folder}/${img.file}`);
+
+  // First 6 images load eagerly for better LCP
+  const priority = index < 6;
+
+  return (
+    <figure
+      className={`gallery-item ${isLoaded ? "is-loaded" : ""}`}
+      style={{ ["--order" as any]: index }}
+      onClick={() => onCopy(img.file)}
+      title={`Click to copy: ${img.file}`}
+    >
+      <div className="gallery-skeleton">
+        <div className="gallery-skeleton__shimmer" />
+      </div>
+      <Image
+        src={imagePath}
+        alt={img.alt}
+        width={img.w}
+        height={img.h}
+        className={`gallery-img ${isLoaded ? "is-visible" : ""}`}
+        loading={priority ? "eager" : "lazy"}
+        priority={priority}
+        sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 33vw"
+        onLoad={() => setIsLoaded(true)}
+      />
+      <span className={`copy-toast ${isCopied ? "show" : ""}`}>Copied!</span>
+    </figure>
+  );
 }
 // Expanded set: include all transfer1 images to better fill page (approx dimensions for aspect ratio only)
 const IMAGES: GalleryImage[] = [
@@ -349,7 +396,7 @@ const IMAGES: GalleryImage[] = [
 export default function Page() {
   const [copiedFile, setCopiedFile] = useState<string | null>(null);
 
-  const handleCopyFileName = async (fileName: string) => {
+  const handleCopyFileName = useCallback(async (fileName: string) => {
     try {
       await navigator.clipboard.writeText(fileName);
       setCopiedFile(fileName);
@@ -357,7 +404,7 @@ export default function Page() {
     } catch (err) {
       console.error("Failed to copy:", err);
     }
-  };
+  }, []);
 
   return (
     <main
@@ -375,35 +422,15 @@ export default function Page() {
       </section>
       <section className="gallery-grid-section" aria-label="Image gallery">
         <div className="gallery-masonry" data-gallery>
-          {IMAGES.map((img, i) => {
-            const basePath = img.folder === "galleri" ? "" : "/mamrot";
-            const folder = img.folder || "transfer1";
-            return (
-              <figure
-                key={`${folder}/${img.file}`}
-                className="gallery-item"
-                style={{ ["--order" as any]: i }}
-                onClick={() => handleCopyFileName(img.file)}
-                title={`Click to copy: ${img.file}`}
-              >
-                <Image
-                  src={`${basePath}/${folder}/${img.file}`}
-                  alt={img.alt}
-                  width={img.w}
-                  height={img.h}
-                  className="gallery-img"
-                  loading="lazy"
-                />
-                <span
-                  className={`copy-toast ${
-                    copiedFile === img.file ? "show" : ""
-                  }`}
-                >
-                  Copied!
-                </span>
-              </figure>
-            );
-          })}
+          {IMAGES.map((img, i) => (
+            <GalleryImageItem
+              key={`${img.folder || "transfer1"}/${img.file}`}
+              img={img}
+              index={i}
+              onCopy={handleCopyFileName}
+              isCopied={copiedFile === img.file}
+            />
+          ))}
         </div>
       </section>
       <div id="gallery-contact">

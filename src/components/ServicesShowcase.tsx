@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import "../styles/service-sections.scss";
+import { cdn } from "@/lib/cdn";
 
 interface ShowcaseItem {
   key: string;
@@ -17,8 +18,8 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "tesla-specialists",
     title: "TESLA SPECIALISTS",
-    image: "/mamrot/tesla/tesla_showcase.webp",
-    mobileImage: "/mamrot/tesla/tesla_showcase_mobile.webp",
+    image: cdn("/mamrot/tesla/tesla_showcase.webp"),
+    mobileImage: cdn("/mamrot/tesla/tesla_showcase_mobile.webp"),
     href: "/tesla-specialists",
     alt: "Tesla PPF and wrap specialist placeholder",
     disableFilter: true,
@@ -27,7 +28,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "wrapping",
     title: "CAR WRAPPING",
-    image: "/mamrot/wrapping/main.jpg",
+    image: cdn("/mamrot/wrapping/main.jpg"),
     href: "/wrapping",
     alt: "Full vehicle color change wrap installation",
   },
@@ -35,7 +36,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "ppf",
     title: "Paint protection film (PPF)",
-    image: "/mamrot/ppf/20251021_231430.jpg",
+    image: cdn("/mamrot/ppf/20251021_231430.jpg"),
     href: "/ppf",
     alt: "Paint protection film applied to front panel",
   },
@@ -43,8 +44,8 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "ceramic",
     title: "CERAMIC COATING",
-    mobileImage: "/mamrot/ceramic/ceramiccoating_service_showcase.webp",
-    image: "/mamrot/ceramic/ceramiccoating_service_showcase_mobile.webp",
+    mobileImage: cdn("/mamrot/ceramic/ceramiccoating_service_showcase.webp"),
+    image: cdn("/mamrot/ceramic/ceramiccoating_service_showcase_mobile.webp"),
     href: "/ceramic",
     alt: "Water beading on ceramic coated surface",
     disableFilter: true,
@@ -53,9 +54,10 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "correction",
     title: "Paint Correction & Polishing",
-    mobileImage:
-      "/mamrot/correction/paintcorrection_service_showcase_mobile.webp",
-    image: "/mamrot/correction/paintcorrection_service_showcase.webp",
+    mobileImage: cdn(
+      "/mamrot/correction/paintcorrection_service_showcase_mobile.webp"
+    ),
+    image: cdn("/mamrot/correction/paintcorrection_service_showcase.webp"),
     href: "/correction",
     alt: "Machine polishing during paint correction",
     disableFilter: true,
@@ -64,8 +66,8 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "truck",
     title: "TRUCK TREATMENT",
-    mobileImage: "/mamrot/depthandclaritydesktop.webp",
-    image: "/mamrot/truck/20250725_203730.webp",
+    mobileImage: cdn("/mamrot/depthandclaritydesktop.webp"),
+    image: cdn("/mamrot/truck/20250725_203730.webp"),
     href: "/truck-treatment",
     alt: "Protective treatment on truck exterior",
     disableFilter: true,
@@ -74,7 +76,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "chrome-delete",
     title: "CHROME DELETE",
-    image: "/mamrot/transfer1/20250905_224202.jpg",
+    image: cdn("/mamrot/transfer1/20250905_224202.jpg"),
     href: "/chrome-delete",
     alt: "Black finish applied over chrome trim",
   },
@@ -82,7 +84,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "tinting",
     title: "Headlight Tinting & Sunroof Protection Film",
-    image: "/mamrot/transfer2/FB_IMG_1736778385159.jpg",
+    image: cdn("/mamrot/transfer2/FB_IMG_1736778385159.jpg"),
     href: "/headlight-tinting",
     alt: "Tint film being applied to vehicle window",
   },
@@ -90,7 +92,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "boat",
     title: "Boat & Yacht Treatment",
-    image: "/mamrot/boat/FB_IMG_1739710587447.jpg",
+    image: cdn("/mamrot/boat/FB_IMG_1739710587447.jpg"),
     href: "/boat-treatment",
     alt: "Detailing interior leather seat cleaning",
   },

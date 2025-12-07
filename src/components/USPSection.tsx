@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import "../styles/usp.scss";
+import { cdn } from "@/lib/cdn";
 
 export default function USPSection() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -26,9 +27,9 @@ export default function USPSection() {
           loop
           playsInline
           preload="auto"
-          poster="/mamrot/transfer1/20250603_160042_0000.jpg"
+          poster={cdn("/mamrot/transfer1/20250603_160042_0000.jpg")}
         >
-          <source src="/usp.mp4" type="video/mp4" />
+          <source src={cdn("/usp.mp4")} type="video/mp4" />
         </video>
         <div className="usp-section__overlay" />
       </div>

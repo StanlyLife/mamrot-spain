@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import "../styles/service-sections.scss";
+import { cdn } from "@/lib/cdn";
 
 export interface ServiceSectionProps {
   eyebrow?: string;
@@ -32,24 +33,33 @@ export function ServiceSection({
   darkOverlay = true,
   variant = "default",
 }: ServiceSectionProps) {
-  const desktopImage = backgroundImage ?? backgroundImageMobile;
+  const desktopImage = backgroundImage
+    ? cdn(backgroundImage)
+    : backgroundImageMobile
+    ? cdn(backgroundImageMobile)
+    : undefined;
+  const mobileImage = backgroundImageMobile
+    ? cdn(backgroundImageMobile)
+    : undefined;
   const showMobileAlternative = Boolean(
     backgroundImage && backgroundImageMobile
   );
+  const videoPoster = poster ? cdn(poster) : undefined;
+  const videoSrc = backgroundVideo ? cdn(backgroundVideo) : undefined;
 
   return (
     <section className={`service-section align-${align} variant-${variant}`}>
       <div className="service-section__media" aria-hidden="true">
-        {backgroundVideo ? (
+        {videoSrc ? (
           <video
             className="service-section__video"
             autoPlay
             muted
             loop
             playsInline
-            poster={poster}
+            poster={videoPoster}
           >
-            <source src={backgroundVideo} type="video/mp4" />
+            <source src={videoSrc} type="video/mp4" />
           </video>
         ) : desktopImage ? (
           <>
@@ -66,9 +76,9 @@ export function ServiceSection({
                 }`}
               />
             )}
-            {showMobileAlternative && backgroundImageMobile && (
+            {showMobileAlternative && mobileImage && (
               <Image
-                src={backgroundImageMobile}
+                src={mobileImage}
                 alt=""
                 fill
                 className="service-section__image service-section__image--mobile"

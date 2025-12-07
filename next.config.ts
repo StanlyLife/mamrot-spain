@@ -8,6 +8,16 @@ const nextConfig: NextConfig = {
     // Use timestamp for unique build ID on each deploy
     return `build-${Date.now()}`;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "mamrotspain.b-cdn.net",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

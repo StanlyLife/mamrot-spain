@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/home.scss"; // ensure styles are available
+import { cdn } from "@/lib/cdn";
 
 function instantScroll(id: string) {
   const el = document.querySelector(id);
@@ -11,6 +12,19 @@ function instantScroll(id: string) {
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isPortrait, setIsPortrait] = useState(false);
+
+  useEffect(() => {
+    // Check orientation on mount and on resize
+    const checkOrientation = () => {
+      setIsPortrait(window.innerHeight > window.innerWidth);
+    };
+
+    checkOrientation();
+    window.addEventListener("resize", checkOrientation);
+
+    return () => window.removeEventListener("resize", checkOrientation);
+  }, []);
 
   useEffect(() => {
     const v = videoRef.current;
@@ -25,31 +39,27 @@ export function Hero() {
       }
     };
     attempt();
-  }, []);
+  }, [isPortrait]); // Re-attempt play when video source changes
+
+  const videoSrc = isPortrait
+    ? cdn("/videos/vask-front-vertikal.mp4")
+    : cdn("/videos/vask-front-horisontal.mp4");
 
   return (
     <section className="hero" aria-labelledby="hero-heading">
       <div className="hero__media" aria-hidden="true">
         <video
           ref={videoRef}
+          key={videoSrc} // Force re-render when source changes
           className="hero__video"
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
-          poster="/videos/vask-front-horisontal_placeholder.webp"
+          poster={cdn("/videos/vask-front-horisontal_placeholder.webp")}
         >
-          <source
-            src="/videos/vask-front-vertikal.mp4"
-            type="video/mp4"
-            media="(orientation: portrait)"
-          />
-          <source
-            src="/videos/vask-front-horisontal.mp4"
-            type="video/mp4"
-            media="(orientation: landscape)"
-          />
+          <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="hero__overlay" />
@@ -95,27 +105,27 @@ export function Hero() {
           </p>
           <div className="hero__trust-logos">
             <img
-              src="/logos/gswf_logo_800.webp"
+              src={cdn("/logos/gswf_logo_800.webp")}
               alt="GSWF - Global Standards Wrapping Films"
               className="hero__trust-logo"
             />
             <img
-              src="/logos/PWF-Logo.png"
+              src={cdn("/logos/PWF-Logo.png")}
               alt="GSWF Professional Partner"
               className="hero__trust-logo"
             />
             <img
-              src="/logos/gyeon.png"
+              src={cdn("/logos/gyeon.png")}
               alt="Gyeon - Premium Car Care Products"
               className="hero__trust-logo"
             />
             <img
-              src="/logos/3m.png"
+              src={cdn("/logos/3m.png")}
               alt="3M - Premium Car Care Products"
               className="hero__trust-logo"
             />
             <img
-              src="/logos/swiss.svg"
+              src={cdn("/logos/swiss.svg")}
               alt="swiss - Premium Car Care Products"
               className="hero__trust-logo"
             />

@@ -2,6 +2,7 @@ import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
 import Image from "next/image";
 import "@/styles/headlight-tinting.scss";
+import { cdn } from "@/lib/cdn";
 
 export const metadata = {
   title:
@@ -11,15 +12,17 @@ export const metadata = {
 };
 
 const HERO_IMAGE = "/mamrot/lighttint/20240417_223612.webp";
-const SUNROOF_IMAGE = "/mamrot/lighttint/IMG_20241013_123356_912.webp";
+const SUNROOF_IMAGE = cdn("/mamrot/lighttint/IMG_20241013_123356_912.webp");
 
 const GALLERY = [
-  "/mamrot/lighttint/600x600_Banner_SPF70_6b6b77db-046a-45d3-95a4-026811fd8716.webp",
-  // "/mamrot/lighttint/20240417_223612.webp",
-  "/mamrot/lighttint/FB_IMG_1727782717448.webp",
-  "/mamrot/lighttint/FB_IMG_1736778385159.webp",
-  "/mamrot/lighttint/IMG_20241013_123356_893.webp",
-  // "/mamrot/lighttint/IMG_20241013_123356_912.webp",
+  cdn(
+    "/mamrot/lighttint/600x600_Banner_SPF70_6b6b77db-046a-45d3-95a4-026811fd8716.webp"
+  ),
+  // cdn("/mamrot/lighttint/20240417_223612.webp"),
+  cdn("/mamrot/lighttint/FB_IMG_1727782717448.webp"),
+  cdn("/mamrot/lighttint/FB_IMG_1736778385159.webp"),
+  cdn("/mamrot/lighttint/IMG_20241013_123356_893.webp"),
+  // cdn("/mamrot/lighttint/IMG_20241013_123356_912.webp"),
 ];
 
 const PROTECTION_POINTS = [

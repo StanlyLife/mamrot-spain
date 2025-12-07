@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import "../styles/reviews.scss";
+import { cdn } from "@/lib/cdn";
 
 interface Review {
   id: string;
@@ -169,12 +170,12 @@ export default function ReviewsSection() {
     >
       <div className="reviews-background" aria-hidden="true">
         <img
-          src="/mamrot/transfer1/20250917_153410.jpg"
+          src={cdn("/mamrot/transfer1/20250917_153410.jpg")}
           alt="Luxury detailing studio background"
           className="reviews-bg-image"
         />
         <img
-          src="/mamrot/transfer2/20250516_095019_0000.jpg"
+          src={cdn("/mamrot/transfer2/20250516_095019_0000.jpg")}
           alt="Paint protection film project highlight"
           className="reviews-bg-image2"
         />

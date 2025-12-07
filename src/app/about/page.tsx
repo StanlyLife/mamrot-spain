@@ -3,6 +3,7 @@ import QuoteRequest from "@/components/QuoteRequest";
 import RevealProvider from "@/components/RevealProvider";
 import "@/styles/about.scss";
 import Link from "next/link";
+import { cdn } from "@/lib/cdn";
 
 export const metadata = {
   title: "About | Mamrot Car Spa & Detailing Studio",
@@ -31,9 +32,9 @@ export default function AboutPage() {
             loop
             playsInline
             preload="auto"
-            poster="/videos/vask-horisontal-f1.png"
+            poster={cdn("/videos/vask-horisontal-f1.png")}
           >
-            <source src="/videos/vask-horisontal.mp4" type="video/mp4" />
+            <source src={cdn("/videos/vask-horisontal.mp4")} type="video/mp4" />
           </video>
           <div className="about-hero__overlay" />
         </div>
@@ -77,7 +78,7 @@ export default function AboutPage() {
             aria-label="Founder profile image"
           >
             <Image
-              src="/mamrot/transfer1/20250905_224202.jpg"
+              src={cdn("/mamrot/transfer1/20250905_224202.jpg")}
               alt="Founder Patrik performing precision paint correction"
               width={640}
               height={820}

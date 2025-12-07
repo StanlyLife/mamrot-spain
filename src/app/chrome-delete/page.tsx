@@ -2,6 +2,7 @@ import ServiceSection from "@/components/ServiceSection";
 import Image from "next/image";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/chrome-delete.scss";
+import { cdn } from "@/lib/cdn";
 
 export const metadata = {
   title: "Chrome Delete in Marbella & Málaga | Premium Vinyl Wrap",
@@ -53,12 +54,12 @@ const PROCESS_STEPS = [
 const HERO_IMAGE = "/mamrot/chromedelete/IMG_20241013_120636_838.webp";
 
 const GALLERY = [
-  "20240710_001240.webp",
-  "20250423_202826.webp",
-  "FB_IMG_1763375967171.webp",
-  "FB_IMG_1763376073726.webp",
-  "FB_IMG_1763376103170.webp",
-  // "IMG_20241013_120636_838.webp",
+  cdn("/mamrot/chromedelete/20240710_001240.webp"),
+  cdn("/mamrot/chromedelete/20250423_202826.webp"),
+  cdn("/mamrot/chromedelete/FB_IMG_1763375967171.webp"),
+  cdn("/mamrot/chromedelete/FB_IMG_1763376073726.webp"),
+  cdn("/mamrot/chromedelete/FB_IMG_1763376103170.webp"),
+  // cdn("/mamrot/chromedelete/IMG_20241013_120636_838.webp"),
 ];
 
 export default function Page() {
@@ -166,7 +167,7 @@ export default function Page() {
               <figure key={img} className="gallery-item">
                 <div className="gallery-item__image">
                   <Image
-                    src={`/mamrot/chromedelete/${img}`}
+                    src={img}
                     alt={`Chrome delete transformation ${
                       idx + 1
                     } - Marbella detailing`}

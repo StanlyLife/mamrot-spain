@@ -2,6 +2,7 @@ import Image from "next/image";
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/ceramic.scss";
+import { cdn } from "@/lib/cdn";
 
 export const metadata = {
   title:
@@ -46,16 +47,16 @@ const BENEFITS: string[] = [
 const HERO_IMAGE = "/mamrot/transfer1/20250909_000951.jpg";
 
 const MEDIA_IMAGES = [
-  "/mamrot/ceramic/a9vdkipputny9ce5mhrp.webp",
-  "/mamrot/ceramic/f89tpgjzyqjybwpfrqpy.webp",
-  "/mamrot/ceramic/wvm16r0ugpejpuhkdslm.webp",
+  cdn("/mamrot/ceramic/a9vdkipputny9ce5mhrp.webp"),
+  cdn("/mamrot/ceramic/f89tpgjzyqjybwpfrqpy.webp"),
+  cdn("/mamrot/ceramic/wvm16r0ugpejpuhkdslm.webp"),
 ];
 
 const GALLERY_IMAGES = [
-  "/mamrot/ceramic/a5ntlofieoegxlswash1.webp",
-  "/mamrot/ceramic/salprq2kizloz32cuzda.webp",
-  "/mamrot/ceramic/uth2mwaqtma8t9tpjzuo.webp",
-  "/mamrot/ceramic/zhakd13l91vgwjw7sxqj.webp",
+  cdn("/mamrot/ceramic/a5ntlofieoegxlswash1.webp"),
+  cdn("/mamrot/ceramic/salprq2kizloz32cuzda.webp"),
+  cdn("/mamrot/ceramic/uth2mwaqtma8t9tpjzuo.webp"),
+  cdn("/mamrot/ceramic/zhakd13l91vgwjw7sxqj.webp"),
 ];
 
 export default function Page() {

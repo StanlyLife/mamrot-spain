@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "@/styles/tesla-specialists.scss";
+import { cdn } from "@/lib/cdn";
 
 export const metadata = {
   title: "Tesla Specialists PPF & Wraps | Marbella & Malaga",
@@ -9,95 +10,95 @@ export const metadata = {
 
 const TESLA_GALLERY = [
   {
-    src: "/mamrot/tesla/tesla_showcase_mobile.webp",
+    src: cdn("/mamrot/tesla/tesla_showcase_mobile.webp"),
     alt: "Close-up Tesla detailing of PPF application",
   },
   {
-    src: "/mamrot/tesla/wetransfer (1).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (1).jpg"),
     alt: "Tesla PPF & wrap project 1",
   },
   {
-    src: "/mamrot/tesla/wetransfer (2).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (2).jpg"),
     alt: "Tesla PPF & wrap project 2",
   },
   {
-    src: "/mamrot/tesla/wetransfer (3).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (3).jpg"),
     alt: "Tesla PPF & wrap project 3",
   },
   {
-    src: "/mamrot/tesla/wetransfer (4).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (4).jpg"),
     alt: "Tesla PPF & wrap project 4",
   },
   {
-    src: "/mamrot/tesla/wetransfer (5).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (5).jpg"),
     alt: "Tesla PPF & wrap project 5",
   },
   {
-    src: "/mamrot/tesla/wetransfer (6).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (6).jpg"),
     alt: "Tesla PPF & wrap project 6",
   },
   {
-    src: "/mamrot/tesla/wetransfer (7).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (7).jpg"),
     alt: "Tesla PPF & wrap project 7",
   },
   {
-    src: "/mamrot/tesla/wetransfer (8).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (8).jpg"),
     alt: "Tesla PPF & wrap project 8",
   },
   {
-    src: "/mamrot/tesla/wetransfer (9).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (9).jpg"),
     alt: "Tesla PPF & wrap project 9",
   },
   {
-    src: "/mamrot/tesla/wetransfer (10).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (10).jpg"),
     alt: "Tesla PPF & wrap project 10",
   },
   {
-    src: "/mamrot/tesla/wetransfer (11).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (11).jpg"),
     alt: "Tesla PPF & wrap project 11",
   },
   {
-    src: "/mamrot/tesla/wetransfer (12).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (12).jpg"),
     alt: "Tesla PPF & wrap project 12",
   },
   {
-    src: "/mamrot/tesla/wetransfer (13).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (13).jpg"),
     alt: "Tesla PPF & wrap project 13",
   },
   {
-    src: "/mamrot/tesla/wetransfer (14).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (14).jpg"),
     alt: "Tesla PPF & wrap project 14",
   },
   {
-    src: "/mamrot/tesla/wetransfer (15).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (15).jpg"),
     alt: "Tesla PPF & wrap project 15",
   },
   {
-    src: "/mamrot/tesla/wetransfer (16).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (16).jpg"),
     alt: "Tesla PPF & wrap project 16",
   },
   {
-    src: "/mamrot/tesla/wetransfer (17).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (17).jpg"),
     alt: "Tesla PPF & wrap project 17",
   },
   {
-    src: "/mamrot/tesla/wetransfer (18).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (18).jpg"),
     alt: "Tesla PPF & wrap project 18",
   },
   {
-    src: "/mamrot/tesla/wetransfer (19).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (19).jpg"),
     alt: "Tesla PPF & wrap project 19",
   },
   {
-    src: "/mamrot/tesla/wetransfer (20).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (20).jpg"),
     alt: "Tesla PPF & wrap project 20",
   },
   {
-    src: "/mamrot/tesla/wetransfer (21).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (21).jpg"),
     alt: "Tesla PPF & wrap project 21",
   },
   {
-    src: "/mamrot/tesla/wetransfer (22).jpg",
+    src: cdn("/mamrot/tesla/wetransfer (22).jpg"),
     alt: "Tesla PPF & wrap project 22",
   },
 ];
@@ -108,7 +109,7 @@ export default function Page() {
       <section className="tesla-hero" aria-labelledby="tesla-heading">
         <div className="tesla-hero__media" aria-hidden="true">
           <Image
-            src="/mamrot/tesla/tesla_showcase.webp"
+            src={cdn("/mamrot/tesla/tesla_showcase.webp")}
             alt="Abstract Tesla themed placeholder"
             fill
             priority

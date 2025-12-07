@@ -2,6 +2,7 @@ import Image from "next/image";
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/correction.scss";
+import { cdn } from "@/lib/cdn";
 
 export const metadata = {
   title: "Paint Correction & Polishing | Cars Boats Marbella & Málaga",
@@ -48,24 +49,23 @@ const STEPS: Array<[string, string]> = [
 const HERO_IMAGE = "/mamrot/correction/isimbqapnhwhfr9sruly.webp";
 
 const MEDIA_IMAGES = [
-  "/mamrot/correction/cp6tciodxzzldhjur4cb.webp",
-  "/mamrot/correction/eejegvgbyenkl5uwgvvj.webp",
-  "/mamrot/correction/fawcnfjqzahb74kuuljg.webp",
+  cdn("/mamrot/correction/cp6tciodxzzldhjur4cb.webp"),
+  cdn("/mamrot/correction/eejegvgbyenkl5uwgvvj.webp"),
+  cdn("/mamrot/correction/fawcnfjqzahb74kuuljg.webp"),
 ];
 
 const GALLERY_IMAGES = [
-  "/mamrot/correction/pc031225 (1).jpg",
-  "/mamrot/correction/pc031225 (2).jpg",
-  "/mamrot/correction/pc031225 (3).jpg",
-  "/mamrot/correction/pc031225 (4).jpg",
-  "/mamrot/correction/pc031225 (5).jpg",
-  "/mamrot/correction/pc031225 (6).jpg",
-  "/mamrot/correction/pc031225 (7).jpg",
-  "/mamrot/correction/pc031225 (8).jpg",
-  "/mamrot/correction/azyepp59txoodruwlyrb.webp",
-  "/mamrot/correction/uablfscoc1zspnaccbje.webp",
-  "/mamrot/correction/z2ldh2sxerh1fv9jrjv9.webp",
-  "/mamrot/correction/last ned.png",
+  cdn("/mamrot/correction/pc031225 (1).jpg"),
+  cdn("/mamrot/correction/pc031225 (2).jpg"),
+  cdn("/mamrot/correction/pc031225 (3).jpg"),
+  cdn("/mamrot/correction/pc031225 (4).jpg"),
+  cdn("/mamrot/correction/pc031225 (5).jpg"),
+  cdn("/mamrot/correction/pc031225 (6).jpg"),
+  cdn("/mamrot/correction/pc031225 (7).jpg"),
+  cdn("/mamrot/correction/pc031225 (8).jpg"),
+  cdn("/mamrot/correction/azyepp59txoodruwlyrb.webp"),
+  cdn("/mamrot/correction/uablfscoc1zspnaccbje.webp"),
+  cdn("/mamrot/correction/z2ldh2sxerh1fv9jrjv9.webp"),
 ];
 
 const isDev = process.env.NODE_ENV === "development";
@@ -107,12 +107,6 @@ export default function Page() {
               specialists restore your vehicle's paint to a flawless,
               mirror-like finish, eliminating swirls, scratches, and
               imperfections with meticulous care.
-            </p>
-            <p className="lede correction-animate">
-              We offer advanced Paint Correction and Professional Polishing for
-              all types of vehicles across Marbella and Málaga - including daily
-              drivers, rental cars, premium cars, supercars, trucks, boats, and
-              caravans
             </p>
             <p className="lede correction-animate">
               We specialize in professional paint correction that removes

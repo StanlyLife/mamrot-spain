@@ -2,6 +2,7 @@ import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
 import Image from "next/image";
 import "@/styles/boat-treatment.scss";
+import { cdn } from "@/lib/cdn";
 
 export const metadata = {
   title:
@@ -62,18 +63,18 @@ const PROCESS_STEPS = [
 ];
 
 const HERO_IMAGE = "/mamrot/boat/FB_IMG_1739710587447.jpg";
-const BASE_IMAGE = "/mamrot/boat/FB_IMG_1763036073107.jpg";
+const BASE_IMAGE = cdn("/mamrot/boat/FB_IMG_1763036073107.jpg");
 
 const GALLERY = [
   BASE_IMAGE,
-  "/mamrot/boat/FB_IMG_1739710589695.jpg",
-  "/mamrot/boat/FB_IMG_1739710592720.jpg",
-  "/mamrot/boat/FB_IMG_1739710595396.jpg",
-  "/mamrot/boat/FB_IMG_1763036064845.jpg",
-  "/mamrot/boat/FB_IMG_1763036067333.jpg",
-  // "/mamrot/boat/FB_IMG_1763036073107.jpg",
-  "/mamrot/boat/FB_IMG_1763036077093.jpg",
-  "/mamrot/boat/FB_IMG_1763036079033.jpg",
+  cdn("/mamrot/boat/FB_IMG_1739710589695.jpg"),
+  cdn("/mamrot/boat/FB_IMG_1739710592720.jpg"),
+  cdn("/mamrot/boat/FB_IMG_1739710595396.jpg"),
+  cdn("/mamrot/boat/FB_IMG_1763036064845.jpg"),
+  cdn("/mamrot/boat/FB_IMG_1763036067333.jpg"),
+  // cdn("/mamrot/boat/FB_IMG_1763036073107.jpg"),
+  cdn("/mamrot/boat/FB_IMG_1763036077093.jpg"),
+  cdn("/mamrot/boat/FB_IMG_1763036079033.jpg"),
 ];
 
 export default function Page() {

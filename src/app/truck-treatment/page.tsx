@@ -2,6 +2,7 @@ import Image from "next/image";
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/truck-treatment.scss";
+import { cdn } from "@/lib/cdn";
 
 export const metadata = {
   title: "Truck Treatment in Marbella & Málaga | Premium PPF & Polishing",
@@ -50,13 +51,13 @@ const PROCESS_STEPS = [
 ];
 
 const GALLERY_IMAGES = [
-  "/mamrot/truck/20250509_143903_0000.webp",
-  "/mamrot/truck/20250526_122735_0000.webp",
-  "/mamrot/truck/20250526_122811_0000.webp",
-  "/mamrot/truck/20250712_210148.webp",
-  // "/mamrot/truck/20250725_203730.webp",
-  "/mamrot/truck/20250726_161956.webp",
-  "/mamrot/truck/20250920_201236 (1).webp",
+  cdn("/mamrot/truck/20250509_143903_0000.webp"),
+  cdn("/mamrot/truck/20250526_122735_0000.webp"),
+  cdn("/mamrot/truck/20250526_122811_0000.webp"),
+  cdn("/mamrot/truck/20250712_210148.webp"),
+  // cdn("/mamrot/truck/20250725_203730.webp"),
+  cdn("/mamrot/truck/20250726_161956.webp"),
+  cdn("/mamrot/truck/20250920_201236 (1).webp"),
 ];
 
 export default function Page() {
