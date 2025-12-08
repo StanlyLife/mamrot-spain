@@ -15,10 +15,10 @@ export const metadata = {
       "GSWF smoke tint film, ImpactVue windshield protection, and UV-blocking sunroof film for Marbella & Málaga vehicles.",
     images: [
       {
-        url: "/mamrot/lighttint/20240417_223612.webp",
+        url: "/logos/carspamarbellalogo.svg",
         width: 1200,
         height: 630,
-        alt: "Headlight Tinting - CarSpa Marbella",
+        alt: "CarSpa Marbella Logo",
       },
     ],
   },
@@ -27,7 +27,7 @@ export const metadata = {
     title: "Headlight Tinting & Sunroof Protection | CarSpa Marbella",
     description:
       "GSWF smoke tint film and UV-blocking sunroof film for Marbella & Málaga vehicles.",
-    images: ["/mamrot/lighttint/20240417_223612.webp"],
+    images: ["/logos/carspamarbellalogo.svg"],
   },
 };
 

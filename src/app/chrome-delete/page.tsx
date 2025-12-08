@@ -14,10 +14,10 @@ export const metadata = {
       "Modernize chrome trim with 3M 2080 gloss, satin, or matte films. Professional installation in Marbella & Málaga.",
     images: [
       {
-        url: "/mamrot/chromedelete/IMG_20241013_120636_838.webp",
+        url: "/logos/carspamarbellalogo.svg",
         width: 1200,
         height: 630,
-        alt: "Chrome Delete - CarSpa Marbella",
+        alt: "CarSpa Marbella Logo",
       },
     ],
   },
@@ -26,7 +26,7 @@ export const metadata = {
     title: "Chrome Delete | CarSpa Marbella",
     description:
       "Modernize chrome trim with 3M 2080 gloss, satin, or matte films.",
-    images: ["/mamrot/chromedelete/IMG_20241013_120636_838.webp"],
+    images: ["/logos/carspamarbellalogo.svg"],
   },
 };
 

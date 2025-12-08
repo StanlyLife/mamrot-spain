@@ -38,10 +38,10 @@ export const metadata: Metadata = {
       "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars, trucks, boats across Marbella & Málaga.",
     images: [
       {
-        url: "/videos/vask-front-horisontal_placeholder.webp",
-        width: 1920,
-        height: 1080,
-        alt: "CarSpa Marbella - Premium Car Detailing",
+        url: "/logos/carspamarbellalogo.svg",
+        width: 1200,
+        height: 630,
+        alt: "CarSpa Marbella Logo",
       },
     ],
   },
