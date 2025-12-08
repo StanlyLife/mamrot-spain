@@ -69,11 +69,12 @@ export function Hero() {
       </div>
       <div className="hero__content">
         <div className="hero__eyebrow">CarSpa Marbella Wraps & PPF</div>
-        <h1 id="hero-heading">Precision protection and perfection</h1>
+        <h1 id="hero-heading">Luxury Wraps, PPF & Detailing in Marbella</h1>
         <p className="lede">
-          in every detail. Specialists in detailing, wrapping, and Paint
-          Protection Film (PPF). D&rsquo;elivering world-class protection and a
-          flawless finish for cars, trucks, boats, and motorhomes.
+          Precision protection and perfection in every detail. Specialists in
+          luxury car detailing, wrapping, and Paint Protection Film (PPF).
+          Delivering world-class protection and a flawless finish for cars,
+          trucks, boats, and motorhomes across Marbella & Málaga.
         </p>
         <div className="hero__actions">
           <a

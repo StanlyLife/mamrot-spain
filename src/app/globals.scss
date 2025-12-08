@@ -126,20 +126,32 @@ a {
 .loading-image-container {
   position: relative;
   overflow: hidden;
+  // Default min-height for skeleton while loading
+  min-height: 200px;
 
   &.fill-mode {
     width: 100%;
     height: 100%;
+    min-height: unset;
   }
 
   &.sized-mode {
     width: 100%;
+    display: inline-block;
+
+    // Once loaded, let the image determine the height
+    &.is-loaded {
+      min-height: unset;
+    }
   }
 }
 
 .loading-image {
   opacity: 0;
   transition: opacity 0.4s ease;
+  width: 100%;
+  height: auto;
+  display: block;
 
   &.loaded {
     opacity: 1;

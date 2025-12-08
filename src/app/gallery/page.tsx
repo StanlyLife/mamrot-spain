@@ -418,9 +418,10 @@ export default function Page() {
     >
       <section className="gallery-hero" aria-labelledby="gallery-heading">
         <div className="gallery-hero__inner">
-          <h1 id="gallery-heading">Gallery</h1>
+          <h1 id="gallery-heading">Gallery — Recent Projects & Finishes</h1>
           <p className="lede">
-            Recent wraps, PPF installs, correction & coating highlights.
+            Browse our recent wraps, PPF installs, paint correction & ceramic
+            coating projects in Marbella & Málaga.
           </p>
         </div>
       </section>

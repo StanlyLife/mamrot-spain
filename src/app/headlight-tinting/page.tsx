@@ -6,7 +6,7 @@ import { cdn } from "@/lib/cdn";
 
 export const metadata = {
   title:
-    "Headlight Tinting & Sunroof Protection Film in Marbella | Premium PPF",
+    "Headlight Tinting & Sunroof Protection Film in Marbella & Málaga | Premium PPF",
   description:
     "GSWF smoke tint film, ImpactVue windshield protection, and UV-blocking sunroof film for Marbella & Málaga vehicles. Style upgrades with long-lasting clarity.",
   openGraph: {

@@ -3,13 +3,13 @@ import "@/styles/tesla-specialists.scss";
 import { cdn } from "@/lib/cdn";
 
 export const metadata = {
-  title: "Tesla Specialists PPF & Wraps | Marbella & Malaga",
+  title: "Tesla Specialists PPF & Wraps | Marbella & Málaga",
   description:
-    "Premium Tesla-focused PPF and wrapping studio in Marbella & Malaga. Showcase of recent Tesla PPF & wrap executions.",
+    "Premium Tesla-focused PPF and wrapping studio in Marbella & Málaga. Showcase of recent Tesla PPF & wrap executions.",
   openGraph: {
     title: "Tesla Specialists PPF & Wraps | CarSpa Marbella",
     description:
-      "Premium Tesla-focused PPF and wrapping studio in Marbella & Malaga. Experts in Model 3, Model Y, Model S, and Model X.",
+      "Premium Tesla-focused PPF and wrapping studio in Marbella & Málaga. Experts in Model 3, Model Y, Model S, and Model X.",
     images: [
       {
         url: "/mamrot/tesla/tesla_showcase.webp",
@@ -23,7 +23,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Tesla Specialists PPF & Wraps | CarSpa Marbella",
     description:
-      "Premium Tesla-focused PPF and wrapping studio in Marbella & Malaga.",
+      "Premium Tesla-focused PPF and wrapping studio in Marbella & Málaga.",
     images: ["/mamrot/tesla/tesla_showcase.webp"],
   },
 };

@@ -14,6 +14,7 @@ export default function LoadingImage({
   fill,
   width,
   height,
+  alt,
   ...props
 }: LoadingImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -25,20 +26,19 @@ export default function LoadingImage({
     }
   };
 
-  // For non-fill images, we need a wrapper with aspect ratio
+  // For fill mode images, use 100% width/height
+  // For sized mode, let the image determine the size naturally
   const isFillMode = fill === true;
-  const aspectRatio =
-    !isFillMode && width && height ? Number(width) / Number(height) : undefined;
 
   return (
     <div
       className={`loading-image-container ${
         isFillMode ? "fill-mode" : "sized-mode"
-      } ${containerClassName}`}
-      style={aspectRatio ? { aspectRatio } : undefined}
+      } ${isLoaded ? "is-loaded" : ""} ${containerClassName}`}
     >
       <Image
         {...props}
+        alt={alt}
         fill={fill}
         width={isFillMode ? undefined : width}
         height={isFillMode ? undefined : height}

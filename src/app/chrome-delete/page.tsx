@@ -103,8 +103,8 @@ export default function Page() {
         <div className="chrome-overview__inner">
           <header className="chrome-overview__header">
             <h1 id="chrome-heading">
-              Chrome Delete Service – Premium Vinyl Wrap to Upgrade Your
-              Vehicle&rsquo;s Style
+              Chrome Delete in Marbella & Málaga – Premium Vinyl Wrap to Upgrade
+              Your Vehicle&rsquo;s Style
             </h1>
             <p className="lede">
               Give your vehicle a modern, premium look with our specialized

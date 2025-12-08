@@ -104,10 +104,10 @@ export default function Page() {
       <section className="truck-overview" aria-labelledby="truck-heading">
         <div className="truck-overview__inner">
           <header className="truck-overview__header">
-            {/* <h1 id="truck-heading">
+            <h1 id="truck-heading">
               Truck Treatment in Málaga & Marbella – Premium PPF, Polishing &
               Protection for Scania & Volvo
-            </h1> */}
+            </h1>
             <p className="lede">
               Give your new truck the ultimate protection against stone chips
               and scratches. We provide professional guidance and expert advice
