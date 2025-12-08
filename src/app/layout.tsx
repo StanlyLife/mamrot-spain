@@ -9,11 +9,13 @@ import Script from "next/script";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const playfair = Playfair_Display({
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
       "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars, trucks, boats across Marbella & Málaga.",
     images: [
       {
-        url: "/logos/carspamarbellalogo.svg",
+        url: "/logos/carspamarbellalogo.jpg",
         width: 1200,
         height: 630,
         alt: "CarSpa Marbella Logo",
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
     title: "CarSpa Marbella | Wraps, PPF & Detailing",
     description:
       "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars, trucks, boats across Marbella & Málaga.",
-    images: ["/videos/vask-front-horisontal_placeholder.webp"],
+    images: ["/logos/carspamarbellalogo.jpg"],
   },
 };
 
@@ -61,6 +63,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect to CDN for faster image loading */}
+        <link rel="preconnect" href="https://mamrotspain.b-cdn.net" />
+        <link rel="dns-prefetch" href="https://mamrotspain.b-cdn.net" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}`}
       >

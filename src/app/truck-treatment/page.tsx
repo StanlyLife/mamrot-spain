@@ -14,7 +14,7 @@ export const metadata = {
       "Comprehensive truck treatment for Scania, Volvo & heavy-duty fleets. Premium PPF, polishing, and ceramic coatings.",
     images: [
       {
-        url: "/logos/carspamarbellalogo.svg",
+        url: "/logos/carspamarbellalogo.jpg",
         width: 1200,
         height: 630,
         alt: "CarSpa Marbella Logo",
@@ -26,7 +26,7 @@ export const metadata = {
     title: "Truck Treatment | CarSpa Marbella",
     description:
       "Comprehensive truck treatment for Scania, Volvo & heavy-duty fleets in Marbella & Málaga.",
-    images: ["/logos/carspamarbellalogo.svg"],
+    images: ["/logos/carspamarbellalogo.jpg"],
   },
 };
 

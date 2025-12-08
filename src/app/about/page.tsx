@@ -15,7 +15,7 @@ export const metadata = {
       "Learn about Mamrot Car Spa: vision, craft standards, premium materials, and why enthusiasts trust our wrap, PPF, correction & coating expertise.",
     images: [
       {
-        url: "/logos/carspamarbellalogo.svg",
+        url: "/logos/carspamarbellalogo.jpg",
         width: 1200,
         height: 630,
         alt: "CarSpa Marbella Logo",
@@ -27,7 +27,7 @@ export const metadata = {
     title: "About Us | CarSpa Marbella",
     description:
       "Learn about Mamrot Car Spa: vision, craft standards, and premium materials.",
-    images: ["/logos/carspamarbellalogo.svg"],
+    images: ["/logos/carspamarbellalogo.jpg"],
   },
 };
 

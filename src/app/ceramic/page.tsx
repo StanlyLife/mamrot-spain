@@ -15,7 +15,7 @@ export const metadata = {
       "Professional GYEON ceramic coating with up to 4 years protection. Single or double-layer application with official certificate.",
     images: [
       {
-        url: "/logos/carspamarbellalogo.svg",
+        url: "/logos/carspamarbellalogo.jpg",
         width: 1200,
         height: 630,
         alt: "CarSpa Marbella Logo",
@@ -27,7 +27,7 @@ export const metadata = {
     title: "GYEON Ceramic Coating | CarSpa Marbella",
     description:
       "Professional GYEON ceramic coating with up to 4 years protection.",
-    images: ["/logos/carspamarbellalogo.svg"],
+    images: ["/logos/carspamarbellalogo.jpg"],
   },
 };
 

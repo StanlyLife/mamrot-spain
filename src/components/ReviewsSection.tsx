@@ -171,14 +171,22 @@ export default function ReviewsSection() {
     >
       <div className="reviews-background" aria-hidden="true">
         <LoadingImage
-          src={cdn("/mamrot/transfer1/20250917_153410.jpg")}
+          src={cdn("/mamrot/transfer1/20250917_153410.jpg", {
+            width: 1920,
+            height: 1080,
+            quality: 80,
+          })}
           alt="Luxury detailing studio background"
           fill
           containerClassName="reviews-bg-image-container"
           className="reviews-bg-image"
         />
         <LoadingImage
-          src={cdn("/mamrot/transfer2/20250516_095019_0000.jpg")}
+          src={cdn("/mamrot/transfer2/20250516_095019_0000.jpg", {
+            width: 1920,
+            height: 1080,
+            quality: 80,
+          })}
           alt="Paint protection film project highlight"
           fill
           containerClassName="reviews-bg-image2-container"
