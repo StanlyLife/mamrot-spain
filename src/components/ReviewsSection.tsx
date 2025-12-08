@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import LoadingImage from "@/components/LoadingImage";
 import "../styles/reviews.scss";
 import { cdn } from "@/lib/cdn";
 
@@ -169,14 +170,18 @@ export default function ReviewsSection() {
       aria-labelledby="reviews-heading"
     >
       <div className="reviews-background" aria-hidden="true">
-        <img
+        <LoadingImage
           src={cdn("/mamrot/transfer1/20250917_153410.jpg")}
           alt="Luxury detailing studio background"
+          fill
+          containerClassName="reviews-bg-image-container"
           className="reviews-bg-image"
         />
-        <img
+        <LoadingImage
           src={cdn("/mamrot/transfer2/20250516_095019_0000.jpg")}
           alt="Paint protection film project highlight"
+          fill
+          containerClassName="reviews-bg-image2-container"
           className="reviews-bg-image2"
         />
         <div className="reviews-bg-overlay" />

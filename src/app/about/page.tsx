@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoadingImage from "@/components/LoadingImage";
 import QuoteRequest from "@/components/QuoteRequest";
 import RevealProvider from "@/components/RevealProvider";
 import "@/styles/about.scss";
@@ -77,7 +77,7 @@ export default function AboutPage() {
             className="founder-media about-animate"
             aria-label="Founder profile image"
           >
-            <Image
+            <LoadingImage
               src={cdn("/mamrot/transfer1/20250905_224202.jpg")}
               alt="Founder Patrik performing precision paint correction"
               width={640}

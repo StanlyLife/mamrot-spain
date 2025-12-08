@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import "../styles/service-sections.scss";
@@ -98,41 +99,53 @@ const ITEMS: ShowcaseItem[] = [
   },
 ];
 
+function ShowcaseItem({ item }: { item: ShowcaseItem }) {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <Link
+      href={item.href}
+      className={`services-showcase__item${
+        item.disableFilter ? " services-showcase__item--no-filter" : ""
+      }`}
+    >
+      <Image
+        src={item.image}
+        alt={item.alt}
+        fill
+        sizes="(max-width: 900px) 100vw, 25vw"
+        onLoad={() => setLoaded(true)}
+        className={`services-showcase__img${
+          item.mobileImage ? " services-showcase__img--desktop" : ""
+        }${loaded ? " loaded" : ""}`}
+      />
+      {item.mobileImage && (
+        <Image
+          src={item.mobileImage}
+          alt={item.alt}
+          fill
+          sizes="100vw"
+          onLoad={() => setLoaded(true)}
+          className={`services-showcase__img services-showcase__img--mobile${
+            loaded ? " loaded" : ""
+          }`}
+        />
+      )}
+      <div
+        className={`services-showcase__skeleton${loaded ? " hidden" : ""}`}
+      />
+      {!item.disableFilter && <div className="services-showcase__overlay" />}
+      <span className="services-showcase__title">{item.title}</span>
+    </Link>
+  );
+}
+
 export default function ServicesShowcase() {
   return (
     <div className="services-showcase">
       <div className="services-showcase__grid">
         {ITEMS.map((item) => (
-          <Link
-            key={item.key}
-            href={item.href}
-            className={`services-showcase__item${
-              item.disableFilter ? " services-showcase__item--no-filter" : ""
-            }`}
-          >
-            <Image
-              src={item.image}
-              alt={item.alt}
-              fill
-              sizes="(max-width: 900px) 100vw, 25vw"
-              className={`services-showcase__img${
-                item.mobileImage ? " services-showcase__img--desktop" : ""
-              }`}
-            />
-            {item.mobileImage && (
-              <Image
-                src={item.mobileImage}
-                alt={item.alt}
-                fill
-                sizes="100vw"
-                className="services-showcase__img services-showcase__img--mobile"
-              />
-            )}
-            {!item.disableFilter && (
-              <div className="services-showcase__overlay" />
-            )}
-            <span className="services-showcase__title">{item.title}</span>
-          </Link>
+          <ShowcaseItem key={item.key} item={item} />
         ))}
       </div>
     </div>

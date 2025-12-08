@@ -1,6 +1,6 @@
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
-import Image from "next/image";
+import LoadingImage from "@/components/LoadingImage";
 import "@/styles/boat-treatment.scss";
 import { cdn } from "@/lib/cdn";
 
@@ -181,7 +181,7 @@ export default function Page() {
             </div>
           </div>
           <div className="boat-interior__media" aria-hidden="true">
-            <Image
+            <LoadingImage
               src={BASE_IMAGE}
               alt="Detailing leather interior on a yacht in Marbella"
               fill
@@ -208,7 +208,7 @@ export default function Page() {
           <div className="gallery-grid">
             {GALLERY.map((img) => (
               <figure key={img} className="gallery-item">
-                <Image
+                <LoadingImage
                   src={img}
                   alt="Boat and yacht treatment project on the Costa del Sol"
                   width={400}

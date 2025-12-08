@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoadingImage from "@/components/LoadingImage";
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/ceramic.scss";
@@ -136,7 +136,7 @@ export default function Page() {
                   className="ceramic-media-item ceramic-animate"
                   style={{ ["--order" as any]: i }}
                 >
-                  <Image
+                  <LoadingImage
                     src={img}
                     alt="Ceramic coating gloss example"
                     width={520}
@@ -184,7 +184,7 @@ export default function Page() {
                 className="gallery-item ceramic-animate"
                 style={{ ["--order" as any]: i }}
               >
-                <Image
+                <LoadingImage
                   src={img}
                   alt="Ceramic coated vehicle"
                   width={640}

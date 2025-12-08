@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoadingImage from "@/components/LoadingImage";
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/truck-treatment.scss";
@@ -209,7 +209,7 @@ export default function Page() {
           <div className="gallery-grid">
             {GALLERY_IMAGES.map((img) => (
               <figure key={img} className="gallery-item">
-                <Image
+                <LoadingImage
                   src={img}
                   alt="Truck treatment example in Marbella"
                   width={640}

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoadingImage from "@/components/LoadingImage";
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/wrapping.scss";
@@ -119,7 +119,7 @@ export default function Page() {
             <div className="wrap-media-grid" aria-label="Finish examples">
               {MEDIA_IMAGES.map((img) => (
                 <figure key={img} className="wrap-media-item">
-                  <Image
+                  <LoadingImage
                     src={img}
                     alt="Wrapped vehicle finish example"
                     width={520}
@@ -211,7 +211,7 @@ export default function Page() {
           <div className="gallery-grid">
             {GALLERY_IMAGES.map((img) => (
               <figure key={img} className="gallery-item">
-                <Image
+                <LoadingImage
                   src={img}
                   alt="Wrapped vehicle"
                   width={640}

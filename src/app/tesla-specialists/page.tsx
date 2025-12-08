@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoadingImage from "@/components/LoadingImage";
 import "@/styles/tesla-specialists.scss";
 import { cdn } from "@/lib/cdn";
 
@@ -108,7 +108,7 @@ export default function Page() {
     <main className="tesla-page" data-page="tesla-specialists">
       <section className="tesla-hero" aria-labelledby="tesla-heading">
         <div className="tesla-hero__media" aria-hidden="true">
-          <Image
+          <LoadingImage
             src={cdn("/mamrot/tesla/tesla_showcase.webp")}
             alt="Abstract Tesla themed placeholder"
             fill
@@ -208,15 +208,13 @@ export default function Page() {
           <div className="tesla-masonry">
             {TESLA_GALLERY.map((media) => (
               <figure key={media.src} className="tesla-masonry__item">
-                <Image
+                <LoadingImage
                   src={media.src}
                   alt={media.alt}
                   width={800}
-                  height={0}
+                  height={600}
                   sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 33vw"
                   className="tesla-masonry__image"
-                  loading="lazy"
-                  priority={false}
                 />
               </figure>
             ))}

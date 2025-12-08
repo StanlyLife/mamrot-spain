@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoadingImage from "@/components/LoadingImage";
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/correction.scss";
@@ -145,7 +145,7 @@ export default function Page() {
                   className="correction-media-item correction-animate"
                   style={{ ["--order" as any]: i }}
                 >
-                  <Image
+                  <LoadingImage
                     src={img}
                     alt="Paint correction example"
                     width={520}
@@ -194,7 +194,7 @@ export default function Page() {
                 style={{ ["--order" as any]: i }}
                 title={isDev ? img.split("/").pop() : undefined}
               >
-                <Image
+                <LoadingImage
                   src={img}
                   alt="Corrected paint finish"
                   width={640}

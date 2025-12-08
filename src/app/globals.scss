@@ -112,3 +112,62 @@ a {
     }
   }
 }
+
+// Global loading image skeleton styles
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.loading-image-container {
+  position: relative;
+  overflow: hidden;
+
+  &.fill-mode {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.sized-mode {
+    width: 100%;
+  }
+}
+
+.loading-image {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+.loading-skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #1a1d21 0%, #252930 50%, #1a1d21 100%);
+  z-index: 1;
+  transition: opacity 0.4s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.04) 50%,
+      transparent 100%
+    );
+    animation: shimmer 1.5s infinite;
+  }
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

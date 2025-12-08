@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "../styles/service-sections.scss";
@@ -33,6 +34,7 @@ export function ServiceSection({
   darkOverlay = true,
   variant = "default",
 }: ServiceSectionProps) {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const desktopImage = backgroundImage
     ? cdn(backgroundImage)
     : backgroundImageMobile
@@ -69,11 +71,12 @@ export function ServiceSection({
                 alt=""
                 fill
                 priority
+                onLoad={() => setImageLoaded(true)}
                 className={`service-section__image${
                   showMobileAlternative
                     ? " service-section__image--desktop"
                     : ""
-                }`}
+                }${imageLoaded ? " loaded" : ""}`}
               />
             )}
             {showMobileAlternative && mobileImage && (
@@ -81,9 +84,17 @@ export function ServiceSection({
                 src={mobileImage}
                 alt=""
                 fill
-                className="service-section__image service-section__image--mobile"
+                onLoad={() => setImageLoaded(true)}
+                className={`service-section__image service-section__image--mobile${
+                  imageLoaded ? " loaded" : ""
+                }`}
               />
             )}
+            <div
+              className={`service-section__skeleton${
+                imageLoaded ? " hidden" : ""
+              }`}
+            />
           </>
         ) : null}
         {darkOverlay && <div className="service-section__overlay" />}

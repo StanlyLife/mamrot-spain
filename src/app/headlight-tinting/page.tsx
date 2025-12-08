@@ -1,6 +1,6 @@
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
-import Image from "next/image";
+import LoadingImage from "@/components/LoadingImage";
 import "@/styles/headlight-tinting.scss";
 import { cdn } from "@/lib/cdn";
 
@@ -170,7 +170,7 @@ export default function Page() {
             </ul>
           </div>
           <div className="tinting-sunroof__media" aria-hidden="true">
-            <Image
+            <LoadingImage
               src={SUNROOF_IMAGE}
               alt="Sunroof protection film being applied in Marbella"
               fill
@@ -229,7 +229,7 @@ export default function Page() {
           <div className="gallery-grid">
             {GALLERY.map((img) => (
               <figure key={img} className="gallery-item">
-                <Image
+                <LoadingImage
                   src={img}
                   alt="Headlight tinting and protection project in Marbella"
                   fill

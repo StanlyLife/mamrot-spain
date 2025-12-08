@@ -1,5 +1,5 @@
 import ServiceSection from "@/components/ServiceSection";
-import Image from "next/image";
+import LoadingImage from "@/components/LoadingImage";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/chrome-delete.scss";
 import { cdn } from "@/lib/cdn";
@@ -166,7 +166,7 @@ export default function Page() {
             {GALLERY.map((img, idx) => (
               <figure key={img} className="gallery-item">
                 <div className="gallery-item__image">
-                  <Image
+                  <LoadingImage
                     src={img}
                     alt={`Chrome delete transformation ${
                       idx + 1

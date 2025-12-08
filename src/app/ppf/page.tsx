@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoadingImage from "@/components/LoadingImage";
 import ServiceSection from "@/components/ServiceSection";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/ppf.scss";
@@ -134,7 +134,7 @@ export default function Page() {
                   className="ppf-media-item ppf-animate"
                   style={{ ["--order" as any]: i }}
                 >
-                  <Image
+                  <LoadingImage
                     src={img}
                     alt="PPF installation example"
                     width={520}
@@ -218,7 +218,7 @@ export default function Page() {
                 className="gallery-item ppf-animate"
                 style={{ ["--order" as any]: i }}
               >
-                <Image
+                <LoadingImage
                   src={img}
                   alt="Vehicle protected by PPF"
                   width={640}
