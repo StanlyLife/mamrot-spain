@@ -19,24 +19,40 @@ function shouldUseCdn(): boolean {
   return window.location.hostname === PRODUCTION_HOST;
 }
 
+interface CdnOptions {
+  width?: number;
+  height?: number;
+  quality?: number;
+}
+
 /**
  * Converts a local path to a CDN URL (only on production)
  * @param path - The local path starting with "/" (e.g., "/mamrot/image.jpg")
+ * @param options - Optional width, height, quality parameters for image optimization
  * @returns The full CDN URL on production, or the original path in development
  */
-export function cdn(path: string): string {
+export function cdn(path: string, options?: CdnOptions): string {
   if (!shouldUseCdn()) {
     // In development, return the original path
     return path;
   }
   // Remove leading slash if present to avoid double slashes
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
-  // Encode each path segment to handle spaces and special characters in filenames
-  const encodedPath = cleanPath
-    .split("/")
-    .map((segment) => encodeURIComponent(segment))
-    .join("/");
-  return `${CDN_BASE_URL}/${encodedPath}`;
+
+  let url = `${CDN_BASE_URL}/${cleanPath}`;
+
+  // Add query parameters for BunnyCDN optimization (sorted alphabetically for cache consistency)
+  if (options) {
+    const params: string[] = [];
+    if (options.height) params.push(`height=${options.height}`);
+    if (options.quality) params.push(`quality=${options.quality}`);
+    if (options.width) params.push(`width=${options.width}`);
+    if (params.length > 0) {
+      url += `?${params.join("&")}`;
+    }
+  }
+
+  return url;
 }
 
 // Alias for backward compatibility

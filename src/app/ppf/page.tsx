@@ -8,6 +8,26 @@ export const metadata = {
   title: "Paint Protection Film (PPF) | Premium PPF GSWF Marbella & Málaga",
   description:
     "Advanced GSWF Defender Platinum PPF with self-healing layer and lifetime warranty. Up to 45% more gloss with comprehensive protection packages.",
+  openGraph: {
+    title: "Paint Protection Film (PPF) | CarSpa Marbella",
+    description:
+      "Advanced GSWF Defender Platinum PPF with self-healing layer and lifetime warranty. Up to 45% more gloss.",
+    images: [
+      {
+        url: "/mamrot/ppf/20251021_231430.jpg",
+        width: 1200,
+        height: 630,
+        alt: "PPF Installation - CarSpa Marbella",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Paint Protection Film (PPF) | CarSpa Marbella",
+    description:
+      "Advanced GSWF Defender Platinum PPF with self-healing layer and lifetime warranty.",
+    images: ["/mamrot/ppf/20251021_231430.jpg"],
+  },
 };
 
 // Package definitions (adapted from Norwegian site content)
@@ -55,21 +75,29 @@ const FILM_VARIANTS: Array<{ title: string; note: string }> = [
 
 const HERO_IMAGE = "/mamrot/ppf/20251021_231430.jpg";
 
+// CDN dimensions for media grid (520x300 display size)
+const MEDIA_SIZE = { width: 520, height: 300 };
+// CDN dimensions for gallery (larger for lightbox)
+const GALLERY_SIZE = { width: 800, height: 600 };
+
 const MEDIA_IMAGES = [
-  cdn("/mamrot/ppf/20250902_155106.jpg"),
-  cdn("/mamrot/ppf/20250918_001006.jpg"),
+  cdn("/mamrot/ppf/20250902_155106.jpg", MEDIA_SIZE),
+  cdn("/mamrot/ppf/20250918_001006.jpg", MEDIA_SIZE),
   // cdn("/mamrot/ppf/20251021_231430.jpg"),
-  cdn("/mamrot/ppf/20250906_200515 (1).jpg"),
+  cdn("/mamrot/ppf/20250906_200515 (1).jpg", MEDIA_SIZE),
 ];
 
 const GALLERY_IMAGES = [
-  cdn("/mamrot/ppf/IMG_20251027_141229_861.jpg"),
-  cdn("/mamrot/ppf/20250117_203531.jpg"),
+  cdn("/mamrot/ppf/IMG_20251027_141229_861.jpg", GALLERY_SIZE),
+  cdn("/mamrot/ppf/20250117_203531.jpg", GALLERY_SIZE),
   // cdn("/mamrot/ppf/20250906_200515 (1).jpg"),
   // cdn("/mamrot/ppf/20250918_001006.jpg"),
   // cdn("/mamrot/ppf/20251021_231430.jpg"),
-  cdn("/mamrot/ppf/20251103_135933 (1).jpg"),
-  cdn("/mamrot/ppf/480488282_594748413412441_5599466613609433861_n.jpg"),
+  cdn("/mamrot/ppf/20251103_135933 (1).jpg", GALLERY_SIZE),
+  cdn(
+    "/mamrot/ppf/480488282_594748413412441_5599466613609433861_n.jpg",
+    GALLERY_SIZE
+  ),
 ];
 
 export default function Page() {

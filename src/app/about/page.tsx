@@ -9,6 +9,26 @@ export const metadata = {
   title: "About | Mamrot Car Spa & Detailing Studio",
   description:
     "Learn about Mamrot Car Spa: vision, craft standards, premium materials, clients served and why enthusiasts trust our wrap, PPF, correction & coating expertise.",
+  openGraph: {
+    title: "About Us | CarSpa Marbella",
+    description:
+      "Learn about Mamrot Car Spa: vision, craft standards, premium materials, and why enthusiasts trust our wrap, PPF, correction & coating expertise.",
+    images: [
+      {
+        url: "/mamrot/transfer1/20250905_224202.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About CarSpa Marbella",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | CarSpa Marbella",
+    description:
+      "Learn about Mamrot Car Spa: vision, craft standards, and premium materials.",
+    images: ["/mamrot/transfer1/20250905_224202.jpg"],
+  },
 };
 
 export default function AboutPage() {
@@ -32,7 +52,10 @@ export default function AboutPage() {
             loop
             playsInline
             preload="auto"
-            poster={cdn("/videos/vask-horisontal-f1.png")}
+            poster={cdn("/videos/vask-horisontal-f1.png", {
+              width: 1920,
+              height: 1080,
+            })}
           >
             <source src={cdn("/videos/vask-horisontal.mp4")} type="video/mp4" />
           </video>
@@ -78,7 +101,10 @@ export default function AboutPage() {
             aria-label="Founder profile image"
           >
             <LoadingImage
-              src={cdn("/mamrot/transfer1/20250905_224202.jpg")}
+              src={cdn("/mamrot/transfer1/20250905_224202.jpg", {
+                width: 640,
+                height: 820,
+              })}
               alt="Founder Patrik performing precision paint correction"
               width={640}
               height={820}

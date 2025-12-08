@@ -30,7 +30,11 @@ function GalleryImageItem({
   const [isLoaded, setIsLoaded] = useState(false);
   const basePath = img.folder === "galleri" ? "" : "/mamrot";
   const folder = img.folder || "transfer1";
-  const imagePath = cdn(`${basePath}/${folder}/${img.file}`);
+  // Use image dimensions for CDN caching optimization
+  const imagePath = cdn(`${basePath}/${folder}/${img.file}`, {
+    width: img.w,
+    height: img.h,
+  });
 
   // First 6 images load eagerly for better LCP
   const priority = index < 6;

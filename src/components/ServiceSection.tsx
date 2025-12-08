@@ -5,6 +5,10 @@ import Link from "next/link";
 import "../styles/service-sections.scss";
 import { cdn } from "@/lib/cdn";
 
+// Standard dimensions for CDN caching - full-width hero backgrounds
+const DESKTOP_SIZE = { width: 1920, height: 1080 };
+const MOBILE_SIZE = { width: 768, height: 1024 };
+
 export interface ServiceSectionProps {
   eyebrow?: string;
   title: string;
@@ -36,17 +40,17 @@ export function ServiceSection({
 }: ServiceSectionProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const desktopImage = backgroundImage
-    ? cdn(backgroundImage)
+    ? cdn(backgroundImage, DESKTOP_SIZE)
     : backgroundImageMobile
-    ? cdn(backgroundImageMobile)
+    ? cdn(backgroundImageMobile, MOBILE_SIZE)
     : undefined;
   const mobileImage = backgroundImageMobile
-    ? cdn(backgroundImageMobile)
+    ? cdn(backgroundImageMobile, MOBILE_SIZE)
     : undefined;
   const showMobileAlternative = Boolean(
     backgroundImage && backgroundImageMobile
   );
-  const videoPoster = poster ? cdn(poster) : undefined;
+  const videoPoster = poster ? cdn(poster, DESKTOP_SIZE) : undefined;
   const videoSrc = backgroundVideo ? cdn(backgroundVideo) : undefined;
 
   return (

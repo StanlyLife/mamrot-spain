@@ -8,6 +8,26 @@ export const metadata = {
   title: "Truck Treatment in Marbella & Málaga | Premium PPF & Polishing",
   description:
     "Comprehensive truck treatment for Scania, Volvo & heavy-duty fleets in Marbella, Málaga & Costa del Sol. Premium PPF, polishing, ceramic coatings & guidance.",
+  openGraph: {
+    title: "Truck Treatment | CarSpa Marbella",
+    description:
+      "Comprehensive truck treatment for Scania, Volvo & heavy-duty fleets. Premium PPF, polishing, and ceramic coatings.",
+    images: [
+      {
+        url: "/mamrot/truck/20250725_203730.webp",
+        width: 1200,
+        height: 630,
+        alt: "Truck Treatment - CarSpa Marbella",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Truck Treatment | CarSpa Marbella",
+    description:
+      "Comprehensive truck treatment for Scania, Volvo & heavy-duty fleets in Marbella & Málaga.",
+    images: ["/mamrot/truck/20250725_203730.webp"],
+  },
 };
 
 const POPULAR_PPF_PACKAGES = [
@@ -50,14 +70,17 @@ const PROCESS_STEPS = [
   "Final cure, quality control, and aftercare training for drivers or fleet managers",
 ];
 
+// CDN dimensions for gallery (larger for lightbox)
+const GALLERY_SIZE = { width: 800, height: 600 };
+
 const GALLERY_IMAGES = [
-  cdn("/mamrot/truck/20250509_143903_0000.webp"),
-  cdn("/mamrot/truck/20250526_122735_0000.webp"),
-  cdn("/mamrot/truck/20250526_122811_0000.webp"),
-  cdn("/mamrot/truck/20250712_210148.webp"),
+  cdn("/mamrot/truck/20250509_143903_0000.webp", GALLERY_SIZE),
+  cdn("/mamrot/truck/20250526_122735_0000.webp", GALLERY_SIZE),
+  cdn("/mamrot/truck/20250526_122811_0000.webp", GALLERY_SIZE),
+  cdn("/mamrot/truck/20250712_210148.webp", GALLERY_SIZE),
   // cdn("/mamrot/truck/20250725_203730.webp"),
-  cdn("/mamrot/truck/20250726_161956.webp"),
-  cdn("/mamrot/truck/20250920_201236 (1).webp"),
+  cdn("/mamrot/truck/20250726_161956.webp", GALLERY_SIZE),
+  cdn("/mamrot/truck/20250920_201236 (1).webp", GALLERY_SIZE),
 ];
 
 export default function Page() {

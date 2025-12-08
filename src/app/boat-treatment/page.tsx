@@ -9,6 +9,26 @@ export const metadata = {
     "Boat & Yacht Treatment in Marbella & Málaga | Marine Polishing & Ceramic",
   description:
     "Complete boat and yacht restoration on the Costa del Sol. Exterior polishing, interior deep cleaning, hardwaxing, and marine ceramic coating with Nordic-level expertise.",
+  openGraph: {
+    title: "Boat & Yacht Treatment | CarSpa Marbella",
+    description:
+      "Complete boat and yacht restoration on the Costa del Sol. Exterior polishing, interior deep cleaning, and marine ceramic coating.",
+    images: [
+      {
+        url: "/mamrot/boat/FB_IMG_1739710587447.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Boat & Yacht Treatment - CarSpa Marbella",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Boat & Yacht Treatment | CarSpa Marbella",
+    description:
+      "Complete boat and yacht restoration on the Costa del Sol with Nordic-level expertise.",
+    images: ["/mamrot/boat/FB_IMG_1739710587447.jpg"],
+  },
 };
 
 const RESTORATION_SERVICES = [
@@ -63,18 +83,22 @@ const PROCESS_STEPS = [
 ];
 
 const HERO_IMAGE = "/mamrot/boat/FB_IMG_1739710587447.jpg";
-const BASE_IMAGE = cdn("/mamrot/boat/FB_IMG_1763036073107.jpg");
+
+// CDN dimensions for gallery (larger for lightbox)
+const GALLERY_SIZE = { width: 800, height: 600 };
+
+const BASE_IMAGE = cdn("/mamrot/boat/FB_IMG_1763036073107.jpg", GALLERY_SIZE);
 
 const GALLERY = [
   BASE_IMAGE,
-  cdn("/mamrot/boat/FB_IMG_1739710589695.jpg"),
-  cdn("/mamrot/boat/FB_IMG_1739710592720.jpg"),
-  cdn("/mamrot/boat/FB_IMG_1739710595396.jpg"),
-  cdn("/mamrot/boat/FB_IMG_1763036064845.jpg"),
-  cdn("/mamrot/boat/FB_IMG_1763036067333.jpg"),
+  cdn("/mamrot/boat/FB_IMG_1739710589695.jpg", GALLERY_SIZE),
+  cdn("/mamrot/boat/FB_IMG_1739710592720.jpg", GALLERY_SIZE),
+  cdn("/mamrot/boat/FB_IMG_1739710595396.jpg", GALLERY_SIZE),
+  cdn("/mamrot/boat/FB_IMG_1763036064845.jpg", GALLERY_SIZE),
+  cdn("/mamrot/boat/FB_IMG_1763036067333.jpg", GALLERY_SIZE),
   // cdn("/mamrot/boat/FB_IMG_1763036073107.jpg"),
-  cdn("/mamrot/boat/FB_IMG_1763036077093.jpg"),
-  cdn("/mamrot/boat/FB_IMG_1763036079033.jpg"),
+  cdn("/mamrot/boat/FB_IMG_1763036077093.jpg", GALLERY_SIZE),
+  cdn("/mamrot/boat/FB_IMG_1763036079033.jpg", GALLERY_SIZE),
 ];
 
 export default function Page() {

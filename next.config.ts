@@ -17,6 +17,8 @@ const nextConfig: NextConfig = {
         pathname: "/**",
       },
     ],
+    // Skip Next.js image optimization for CDN images - serve directly from BunnyCDN
+    unoptimized: process.env.NODE_ENV === "production",
   },
 };
 

@@ -8,6 +8,26 @@ export const metadata = {
   title: "Paint Correction & Polishing | Cars Boats Marbella & Málaga",
   description:
     "Experience the art of high-end paint correction. One-Step, Two-Step, or Full Correction with up to 90% defect removal and premium GYEON ceramic coating.",
+  openGraph: {
+    title: "Paint Correction & Polishing | CarSpa Marbella",
+    description:
+      "Experience the art of high-end paint correction. One-Step, Two-Step, or Full Correction with up to 90% defect removal and premium GYEON ceramic coating.",
+    images: [
+      {
+        url: "/mamrot/correction/isimbqapnhwhfr9sruly.webp",
+        width: 1200,
+        height: 630,
+        alt: "Paint Correction - CarSpa Marbella",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Paint Correction & Polishing | CarSpa Marbella",
+    description:
+      "Experience the art of high-end paint correction with up to 90% defect removal.",
+    images: ["/mamrot/correction/isimbqapnhwhfr9sruly.webp"],
+  },
 };
 
 const BENEFITS: string[] = [
@@ -48,24 +68,29 @@ const STEPS: Array<[string, string]> = [
 
 const HERO_IMAGE = "/mamrot/correction/isimbqapnhwhfr9sruly.webp";
 
+// CDN dimensions for media grid (520x300 display size)
+const MEDIA_SIZE = { width: 520, height: 300 };
+// CDN dimensions for gallery (larger for lightbox)
+const GALLERY_SIZE = { width: 800, height: 600 };
+
 const MEDIA_IMAGES = [
-  cdn("/mamrot/correction/cp6tciodxzzldhjur4cb.webp"),
-  cdn("/mamrot/correction/eejegvgbyenkl5uwgvvj.webp"),
-  cdn("/mamrot/correction/fawcnfjqzahb74kuuljg.webp"),
+  cdn("/mamrot/correction/cp6tciodxzzldhjur4cb.webp", MEDIA_SIZE),
+  cdn("/mamrot/correction/eejegvgbyenkl5uwgvvj.webp", MEDIA_SIZE),
+  cdn("/mamrot/correction/fawcnfjqzahb74kuuljg.webp", MEDIA_SIZE),
 ];
 
 const GALLERY_IMAGES = [
-  cdn("/mamrot/correction/pc031225 (1).jpg"),
-  cdn("/mamrot/correction/pc031225 (2).jpg"),
-  cdn("/mamrot/correction/pc031225 (3).jpg"),
-  cdn("/mamrot/correction/pc031225 (4).jpg"),
-  cdn("/mamrot/correction/pc031225 (5).jpg"),
-  cdn("/mamrot/correction/pc031225 (6).jpg"),
-  cdn("/mamrot/correction/pc031225 (7).jpg"),
-  cdn("/mamrot/correction/pc031225 (8).jpg"),
-  cdn("/mamrot/correction/azyepp59txoodruwlyrb.webp"),
-  cdn("/mamrot/correction/uablfscoc1zspnaccbje.webp"),
-  cdn("/mamrot/correction/z2ldh2sxerh1fv9jrjv9.webp"),
+  cdn("/mamrot/correction/pc031225 (1).jpg", GALLERY_SIZE),
+  cdn("/mamrot/correction/pc031225 (2).jpg", GALLERY_SIZE),
+  cdn("/mamrot/correction/pc031225 (3).jpg", GALLERY_SIZE),
+  cdn("/mamrot/correction/pc031225 (4).jpg", GALLERY_SIZE),
+  cdn("/mamrot/correction/pc031225 (5).jpg", GALLERY_SIZE),
+  cdn("/mamrot/correction/pc031225 (6).jpg", GALLERY_SIZE),
+  cdn("/mamrot/correction/pc031225 (7).jpg", GALLERY_SIZE),
+  cdn("/mamrot/correction/pc031225 (8).jpg", GALLERY_SIZE),
+  cdn("/mamrot/correction/azyepp59txoodruwlyrb.webp", GALLERY_SIZE),
+  cdn("/mamrot/correction/uablfscoc1zspnaccbje.webp", GALLERY_SIZE),
+  cdn("/mamrot/correction/z2ldh2sxerh1fv9jrjv9.webp", GALLERY_SIZE),
 ];
 
 const isDev = process.env.NODE_ENV === "development";

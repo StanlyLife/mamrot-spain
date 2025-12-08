@@ -9,6 +9,26 @@ export const metadata = {
     "Full Car Wrapping & Color Change in Marbella & Málaga | Premium Vinyl Wrap",
   description:
     "Transform your car with exclusive wrap colors from PWF, 3M, HEXIS, and KPMF. Professional installation with 3-year warranty and premium materials.",
+  openGraph: {
+    title: "Car Wrapping & Color Change | CarSpa Marbella",
+    description:
+      "Transform your car with exclusive wrap colors from PWF, 3M, HEXIS, and KPMF. Professional installation with 3-year warranty.",
+    images: [
+      {
+        url: "/mamrot/wrapping/main.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Car Wrapping - CarSpa Marbella",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Car Wrapping & Color Change | CarSpa Marbella",
+    description:
+      "Transform your car with exclusive wrap colors from PWF, 3M, HEXIS, and KPMF.",
+    images: ["/mamrot/wrapping/main.jpg"],
+  },
 };
 
 const WRAP_VARIANTS = [
@@ -42,19 +62,24 @@ const WRAP_VARIANTS = [
 
 const HERO_IMAGE = "/mamrot/wrapping/main.jpg";
 
+// CDN dimensions for media grid (520x300 display size)
+const MEDIA_SIZE = { width: 520, height: 300 };
+// CDN dimensions for gallery (larger for lightbox)
+const GALLERY_SIZE = { width: 800, height: 600 };
+
 const MEDIA_IMAGES = [
-  cdn("/mamrot/wrapping/20250907_131915.jpg"),
-  cdn("/mamrot/wrapping/20250712_211653.jpg"),
-  cdn("/mamrot/wrapping/20250810_190720_0000.jpg"),
+  cdn("/mamrot/wrapping/20250907_131915.jpg", MEDIA_SIZE),
+  cdn("/mamrot/wrapping/20250712_211653.jpg", MEDIA_SIZE),
+  cdn("/mamrot/wrapping/20250810_190720_0000.jpg", MEDIA_SIZE),
 ];
 
 const GALLERY_IMAGES = [
-  cdn("/mamrot/wrapping/FB_IMG_1736778385159.jpg"),
-  cdn("/mamrot/wrapping/20250603_160042_0000.jpg"),
+  cdn("/mamrot/wrapping/FB_IMG_1736778385159.jpg", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20250603_160042_0000.jpg", GALLERY_SIZE),
   // cdn("/mamrot/wrapping/20250712_211653.jpg"),
-  cdn("/mamrot/wrapping/20250904_222522.jpg"),
+  cdn("/mamrot/wrapping/20250904_222522.jpg", GALLERY_SIZE),
   // cdn("/mamrot/wrapping/20250907_131915.jpg"),
-  cdn("/mamrot/wrapping/FB_IMG_1739710033030 (1).jpg"),
+  cdn("/mamrot/wrapping/FB_IMG_1739710033030 (1).jpg", GALLERY_SIZE),
   // cdn("/mamrot/wrapping/20250810_190720_0000.jpg"),
 ];
 

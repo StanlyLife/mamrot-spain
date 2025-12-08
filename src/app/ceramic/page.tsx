@@ -9,6 +9,26 @@ export const metadata = {
     "GYEON Ceramic Coating in Marbella & Málaga | Premium Paint Protection",
   description:
     "Professional GYEON ceramic coating with up to 4 years protection. Single or double-layer application with official certificate. Marine coatings available.",
+  openGraph: {
+    title: "GYEON Ceramic Coating | CarSpa Marbella",
+    description:
+      "Professional GYEON ceramic coating with up to 4 years protection. Single or double-layer application with official certificate.",
+    images: [
+      {
+        url: "/mamrot/transfer1/20250909_000951.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ceramic Coating - CarSpa Marbella",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GYEON Ceramic Coating | CarSpa Marbella",
+    description:
+      "Professional GYEON ceramic coating with up to 4 years protection.",
+    images: ["/mamrot/transfer1/20250909_000951.jpg"],
+  },
 };
 
 const STEPS: Array<[string, string]> = [
@@ -46,17 +66,22 @@ const BENEFITS: string[] = [
 
 const HERO_IMAGE = "/mamrot/transfer1/20250909_000951.jpg";
 
+// CDN dimensions for media grid (520x300 display size)
+const MEDIA_SIZE = { width: 520, height: 300 };
+// CDN dimensions for gallery (larger for lightbox)
+const GALLERY_SIZE = { width: 800, height: 600 };
+
 const MEDIA_IMAGES = [
-  cdn("/mamrot/ceramic/a9vdkipputny9ce5mhrp.webp"),
-  cdn("/mamrot/ceramic/f89tpgjzyqjybwpfrqpy.webp"),
-  cdn("/mamrot/ceramic/wvm16r0ugpejpuhkdslm.webp"),
+  cdn("/mamrot/ceramic/a9vdkipputny9ce5mhrp.webp", MEDIA_SIZE),
+  cdn("/mamrot/ceramic/f89tpgjzyqjybwpfrqpy.webp", MEDIA_SIZE),
+  cdn("/mamrot/ceramic/wvm16r0ugpejpuhkdslm.webp", MEDIA_SIZE),
 ];
 
 const GALLERY_IMAGES = [
-  cdn("/mamrot/ceramic/a5ntlofieoegxlswash1.webp"),
-  cdn("/mamrot/ceramic/salprq2kizloz32cuzda.webp"),
-  cdn("/mamrot/ceramic/uth2mwaqtma8t9tpjzuo.webp"),
-  cdn("/mamrot/ceramic/zhakd13l91vgwjw7sxqj.webp"),
+  cdn("/mamrot/ceramic/a5ntlofieoegxlswash1.webp", GALLERY_SIZE),
+  cdn("/mamrot/ceramic/salprq2kizloz32cuzda.webp", GALLERY_SIZE),
+  cdn("/mamrot/ceramic/uth2mwaqtma8t9tpjzuo.webp", GALLERY_SIZE),
+  cdn("/mamrot/ceramic/zhakd13l91vgwjw7sxqj.webp", GALLERY_SIZE),
 ];
 
 export default function Page() {

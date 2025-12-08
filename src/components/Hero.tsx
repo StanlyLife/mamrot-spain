@@ -57,7 +57,10 @@ export function Hero() {
           loop
           playsInline
           preload="auto"
-          poster={cdn("/videos/vask-front-horisontal_placeholder.webp")}
+          poster={cdn("/videos/vask-front-horisontal_placeholder.webp", {
+            width: 1920,
+            height: 1080,
+          })}
         >
           <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
@@ -105,29 +108,39 @@ export function Hero() {
           </p>
           <div className="hero__trust-logos">
             <img
-              src={cdn("/logos/gswf_logo_800.webp")}
+              src={cdn("/logos/gswf_logo_800.webp", { width: 120, height: 40 })}
               alt="GSWF - Global Standards Wrapping Films"
               className="hero__trust-logo"
+              width={120}
+              height={40}
             />
             <img
-              src={cdn("/logos/PWF-Logo.png")}
+              src={cdn("/logos/PWF-Logo.png", { width: 120, height: 40 })}
               alt="GSWF Professional Partner"
               className="hero__trust-logo"
+              width={120}
+              height={40}
             />
             <img
-              src={cdn("/logos/gyeon.png")}
+              src={cdn("/logos/gyeon.png", { width: 120, height: 40 })}
               alt="Gyeon - Premium Car Care Products"
               className="hero__trust-logo"
+              width={120}
+              height={40}
             />
             <img
-              src={cdn("/logos/3m.png")}
+              src={cdn("/logos/3m.png", { width: 120, height: 40 })}
               alt="3M - Premium Car Care Products"
               className="hero__trust-logo"
+              width={120}
+              height={40}
             />
             <img
-              src={cdn("/logos/swiss.svg")}
+              src={cdn("/logos/swiss.svg", { width: 120, height: 40 })}
               alt="swiss - Premium Car Care Products"
               className="hero__trust-logo"
+              width={120}
+              height={40}
             />
           </div>
         </div>

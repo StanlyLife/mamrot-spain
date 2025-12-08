@@ -27,7 +27,31 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "CarSpa Marbella | Wraps, PPF & Detailing",
   description:
-    "CarSpa Marbella delivers luxury paint protection film, bespoke vinyl wraps, correction and ceramic coatings for supercars, Teslas, trucks and marine projects across Marbella & Málaga.",
+    "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars, trucks, boats across Marbella & Málaga.",
+  metadataBase: new URL("https://www.carspamarbella.es"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "CarSpa Marbella",
+    title: "CarSpa Marbella | Wraps, PPF & Detailing",
+    description:
+      "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars, trucks, boats across Marbella & Málaga.",
+    images: [
+      {
+        url: "/videos/vask-front-horisontal_placeholder.webp",
+        width: 1920,
+        height: 1080,
+        alt: "CarSpa Marbella - Premium Car Detailing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CarSpa Marbella | Wraps, PPF & Detailing",
+    description:
+      "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars, trucks, boats across Marbella & Málaga.",
+    images: ["/videos/vask-front-horisontal_placeholder.webp"],
+  },
 };
 
 export default function RootLayout({

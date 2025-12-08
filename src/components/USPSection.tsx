@@ -27,7 +27,10 @@ export default function USPSection() {
           loop
           playsInline
           preload="auto"
-          poster={cdn("/mamrot/transfer1/20250603_160042_0000.jpg")}
+          poster={cdn("/mamrot/transfer1/20250603_160042_0000.jpg", {
+            width: 1920,
+            height: 1080,
+          })}
         >
           <source src={cdn("/usp.mp4")} type="video/mp4" />
         </video>
