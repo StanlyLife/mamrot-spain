@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import { Geist, Playfair_Display } from "next/font/google";
 import "./globals.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -12,17 +12,11 @@ const geistSans = Geist({
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const playfair = Playfair_Display({
   variable: "--font-luxury",
   subsets: ["latin"],
   style: ["normal"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
   display: "swap",
 });
 
@@ -64,13 +58,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Preconnect to Google Fonts for faster font loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         {/* Preconnect to CDN for faster image loading */}
         <link rel="preconnect" href="https://mamrotspain.b-cdn.net" />
         <link rel="dns-prefetch" href="https://mamrotspain.b-cdn.net" />
+        {/* Preload LCP image (hero video poster) */}
+        <link
+          rel="preload"
+          as="image"
+          href="https://mamrotspain.b-cdn.net/videos/vask-front-horisontal_placeholder.webp?width=1920&height=1080"
+          fetchPriority="high"
+        />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}`}
-      >
+      <body className={`${geistSans.variable} ${playfair.variable}`}>
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SQHZSKNE2Q"

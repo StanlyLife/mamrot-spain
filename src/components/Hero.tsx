@@ -48,16 +48,6 @@ export function Hero() {
   return (
     <section className="hero" aria-labelledby="hero-heading">
       <div className="hero__media" aria-hidden="true">
-        {/* Preload poster image for LCP optimization */}
-        <link
-          rel="preload"
-          as="image"
-          href={cdn("/videos/vask-front-horisontal_placeholder.webp", {
-            width: 1920,
-            height: 1080,
-          })}
-          fetchPriority="high"
-        />
         <video
           ref={videoRef}
           key={videoSrc} // Force re-render when source changes
