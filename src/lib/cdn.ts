@@ -31,7 +31,12 @@ export function cdn(path: string): string {
   }
   // Remove leading slash if present to avoid double slashes
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
-  return `${CDN_BASE_URL}/${cleanPath}`;
+  // Encode each path segment to handle spaces and special characters in filenames
+  const encodedPath = cleanPath
+    .split("/")
+    .map((segment) => encodeURIComponent(segment))
+    .join("/");
+  return `${CDN_BASE_URL}/${encodedPath}`;
 }
 
 // Alias for backward compatibility
