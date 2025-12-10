@@ -45,6 +45,16 @@ export function Hero() {
     ? cdn("/videos/vask-front-vertikal.mp4")
     : cdn("/videos/vask-front-horisontal.mp4");
 
+  const posterSrc = isPortrait
+    ? cdn("/videos/vask-front-vertikal-first-frame.webp", {
+        width: 1080,
+        height: 1920,
+      })
+    : cdn("/videos/vask-front-horisontal_placeholder.webp", {
+        width: 1920,
+        height: 1080,
+      });
+
   return (
     <section className="hero" aria-labelledby="hero-heading">
       <div className="hero__media" aria-hidden="true">
@@ -57,10 +67,7 @@ export function Hero() {
           loop
           playsInline
           preload="auto"
-          poster={cdn("/videos/vask-front-horisontal_placeholder.webp", {
-            width: 1920,
-            height: 1080,
-          })}
+          poster={posterSrc}
         >
           <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
