@@ -16,11 +16,11 @@
 .social-sidebar__inner {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
   border-radius: 12px 0 0 12px;
   overflow: hidden;
-  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .social-sidebar__link {

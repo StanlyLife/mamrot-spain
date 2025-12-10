@@ -77,6 +77,7 @@ export function ServiceSection({
                 alt={imageAlt}
                 fill
                 priority
+                fetchPriority="high"
                 onLoad={() => setImageLoaded(true)}
                 className={`service-section__image${
                   showMobileAlternative
@@ -90,6 +91,8 @@ export function ServiceSection({
                 src={mobileImage}
                 alt={imageAlt}
                 fill
+                priority
+                fetchPriority="high"
                 onLoad={() => setImageLoaded(true)}
                 className={`service-section__image service-section__image--mobile${
                   imageLoaded ? " loaded" : ""

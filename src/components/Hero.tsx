@@ -58,6 +58,7 @@ export function Hero() {
   return (
     <section className="hero" aria-labelledby="hero-heading">
       <div className="hero__media" aria-hidden="true">
+        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
         <video
           ref={videoRef}
           key={videoSrc} // Force re-render when source changes
@@ -68,6 +69,8 @@ export function Hero() {
           playsInline
           preload="auto"
           poster={posterSrc}
+          // @ts-expect-error - fetchPriority is valid HTML attribute for resource prioritization
+          fetchPriority="high"
         >
           <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.

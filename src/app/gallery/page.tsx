@@ -1,6 +1,3 @@
-"use client";
-
-import { useState, useCallback } from "react";
 import Image from "next/image";
 import QuoteRequest from "@/components/QuoteRequest";
 import "@/styles/gallery.scss";
@@ -15,19 +12,14 @@ interface GalleryImage {
   folder?: string;
 }
 
-// Individual gallery image with loading state
+// Individual gallery image
 function GalleryImageItem({
   img,
   index,
-  onCopy,
-  isCopied,
 }: {
   img: GalleryImage;
   index: number;
-  onCopy: (fileName: string) => void;
-  isCopied: boolean;
 }) {
-  const [isLoaded, setIsLoaded] = useState(false);
   const basePath = img.folder === "galleri" ? "" : "/mamrot";
   const folder = img.folder || "transfer1";
   // Use image dimensions for CDN caching optimization
@@ -41,26 +33,19 @@ function GalleryImageItem({
 
   return (
     <figure
-      className={`gallery-item ${isLoaded ? "is-loaded" : ""}`}
-      style={{ ["--order" as any]: index }}
-      onClick={() => onCopy(img.file)}
-      title={`Click to copy: ${img.file}`}
+      className="gallery-item"
+      style={{ ["--order" as string]: index }}
     >
-      <div className="gallery-skeleton">
-        <div className="gallery-skeleton__shimmer" />
-      </div>
       <Image
         src={imagePath}
         alt={img.alt}
         width={img.w}
         height={img.h}
-        className={`gallery-img ${isLoaded ? "is-visible" : ""}`}
+        className="gallery-img"
         loading={priority ? "eager" : "lazy"}
         priority={priority}
         sizes="(max-width: 600px) 100vw, (max-width: 950px) 50vw, 33vw"
-        onLoad={() => setIsLoaded(true)}
       />
-      <span className={`copy-toast ${isCopied ? "show" : ""}`}>Copied!</span>
     </figure>
   );
 }
@@ -398,18 +383,6 @@ const IMAGES: GalleryImage[] = [
 ];
 
 export default function Page() {
-  const [copiedFile, setCopiedFile] = useState<string | null>(null);
-
-  const handleCopyFileName = useCallback(async (fileName: string) => {
-    try {
-      await navigator.clipboard.writeText(fileName);
-      setCopiedFile(fileName);
-      setTimeout(() => setCopiedFile(null), 1500);
-    } catch (err) {
-      console.error("Failed to copy:", err);
-    }
-  }, []);
-
   return (
     <main
       className="gallery-page"
@@ -432,8 +405,6 @@ export default function Page() {
               key={`${img.folder || "transfer1"}/${img.file}`}
               img={img}
               index={i}
-              onCopy={handleCopyFileName}
-              isCopied={copiedFile === img.file}
             />
           ))}
         </div>
