@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Learn about Mamrot Car Spa: vision, craft standards, premium materials, clients served and why enthusiasts trust our wrap, PPF, correction & coating expertise.",
   openGraph: {
-    title: "About Us | CarSpa Marbella",
+    title: "About | Mamrot Car Spa & Detailing Studio",
     description:
       "Learn about Mamrot Car Spa: vision, craft standards, premium materials, and why enthusiasts trust our wrap, PPF, correction & coating expertise.",
     images: [
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Us | CarSpa Marbella",
+    title: "About | Mamrot Car Spa & Detailing Studio",
     description:
       "Learn about Mamrot Car Spa: vision, craft standards, and premium materials.",
     images: ["/logos/carspamarbellalogo.jpg"],
@@ -92,7 +92,7 @@ export default function AboutPage() {
               Film edges are wrapped for OEM stealth, correction passes are
               heat‑managed and tracked, and ceramic layers are sequenced for
               hard, slick resilience. Materials are selected for clarity,
-              longevity and predictable behaviour under Nordic climate
+              longevity, and predictable performance in all weather and climate
               conditions.
             </p>
             <p className="signature">— Patrik Mamrot</p>
@@ -102,7 +102,7 @@ export default function AboutPage() {
             aria-label="Founder profile image"
           >
             <LoadingImage
-              src={cdn("/mamrot/transfer1/20250905_224202.jpg", {
+              src={cdn("/mamrot/transfer1/20250905_224202-webp.webp", {
                 width: 640,
                 height: 820,
               })}

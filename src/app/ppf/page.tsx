@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Advanced GSWF Defender Platinum PPF with self-healing layer and lifetime warranty. Up to 45% more gloss with comprehensive protection packages.",
   openGraph: {
-    title: "Paint Protection Film (PPF) | CarSpa Marbella",
+    title: "Paint Protection Film (PPF) | Premium PPF GSWF Marbella & Málaga",
     description:
       "Advanced GSWF Defender Platinum PPF with self-healing layer and lifetime warranty. Up to 45% more gloss.",
     images: [
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Paint Protection Film (PPF) | CarSpa Marbella",
+    title: "Paint Protection Film (PPF) | Premium PPF GSWF Marbella & Málaga",
     description:
       "Advanced GSWF Defender Platinum PPF with self-healing layer and lifetime warranty.",
     images: ["/logos/carspamarbellalogo.jpg"],
@@ -73,7 +73,7 @@ const FILM_VARIANTS: Array<{ title: string; note: string }> = [
   },
 ];
 
-const HERO_IMAGE = "/mamrot/ppf/20251021_231430.jpg";
+const HERO_IMAGE = "/mamrot/ppf/20251021_231430-webp.webp";
 
 // CDN dimensions for media grid (520x300 display size)
 const MEDIA_SIZE = { width: 520, height: 300 };
@@ -81,21 +81,21 @@ const MEDIA_SIZE = { width: 520, height: 300 };
 const GALLERY_SIZE = { width: 800, height: 600 };
 
 const MEDIA_IMAGES = [
-  cdn("/mamrot/ppf/20250902_155106.jpg", MEDIA_SIZE),
-  cdn("/mamrot/ppf/20250918_001006.jpg", MEDIA_SIZE),
-  // cdn("/mamrot/ppf/20251021_231430.jpg"),
-  cdn("/mamrot/ppf/20250906_200515 (1).jpg", MEDIA_SIZE),
+  cdn("/mamrot/ppf/20250902_155106-webp.webp", MEDIA_SIZE),
+  cdn("/mamrot/ppf/20250918_001006-webp.webp", MEDIA_SIZE),
+  // cdn("/mamrot/ppf/20251021_231430-webp.webp"),
+  cdn("/mamrot/ppf/20250906_200515 (1)-webp.webp", MEDIA_SIZE),
 ];
 
 const GALLERY_IMAGES = [
-  cdn("/mamrot/ppf/IMG_20251027_141229_861.jpg", GALLERY_SIZE),
-  cdn("/mamrot/ppf/20250117_203531.jpg", GALLERY_SIZE),
-  // cdn("/mamrot/ppf/20250906_200515 (1).jpg"),
-  // cdn("/mamrot/ppf/20250918_001006.jpg"),
-  // cdn("/mamrot/ppf/20251021_231430.jpg"),
-  cdn("/mamrot/ppf/20251103_135933 (1).jpg", GALLERY_SIZE),
+  cdn("/mamrot/ppf/IMG_20251027_141229_861-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/ppf/20250117_203531-webp.webp", GALLERY_SIZE),
+  // cdn("/mamrot/ppf/20250906_200515 (1)-webp.webp"),
+  // cdn("/mamrot/ppf/20250918_001006-webp.webp"),
+  // cdn("/mamrot/ppf/20251021_231430-webp.webp"),
+  cdn("/mamrot/ppf/porche_and_bmw.webp", GALLERY_SIZE),
   cdn(
-    "/mamrot/ppf/480488282_594748413412441_5599466613609433861_n.jpg",
+    "/mamrot/ppf/480488282_594748413412441_5599466613609433861_n-webp.webp",
     GALLERY_SIZE
   ),
 ];
@@ -112,6 +112,7 @@ export default function Page() {
         backgroundImage={HERO_IMAGE}
         align="center"
         variant="luxury"
+        imageAlt="Premium paint protection film PPF installation in Marbella"
       />
 
       <section
@@ -165,8 +166,8 @@ export default function Page() {
                   <LoadingImage
                     src={img}
                     alt="PPF installation example"
-                    width={520}
-                    height={300}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </figure>
               ))}

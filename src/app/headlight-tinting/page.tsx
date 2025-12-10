@@ -10,7 +10,8 @@ export const metadata = {
   description:
     "GSWF smoke tint film, ImpactVue windshield protection, and UV-blocking sunroof film for Marbella & Málaga vehicles. Style upgrades with long-lasting clarity.",
   openGraph: {
-    title: "Headlight Tinting & Sunroof Protection | CarSpa Marbella",
+    title:
+      "Headlight Tinting & Sunroof Protection Film in Marbella & Málaga | Premium PPF",
     description:
       "GSWF smoke tint film, ImpactVue windshield protection, and UV-blocking sunroof film for Marbella & Málaga vehicles.",
     images: [
@@ -24,34 +25,38 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Headlight Tinting & Sunroof Protection | CarSpa Marbella",
+    title:
+      "Headlight Tinting & Sunroof Protection Film in Marbella & Málaga | Premium PPF",
     description:
       "GSWF smoke tint film and UV-blocking sunroof film for Marbella & Málaga vehicles.",
     images: ["/logos/carspamarbellalogo.jpg"],
   },
 };
 
-const HERO_IMAGE = "/mamrot/lighttint/20240417_223612.webp";
+const HERO_IMAGE = "/mamrot/lighttint/20240417_223612-webp.webp";
 
 // CDN dimensions for sunroof feature image
-const SUNROOF_IMAGE = cdn("/mamrot/lighttint/IMG_20241013_123356_912.webp", {
-  width: 600,
-  height: 400,
-});
+const SUNROOF_IMAGE = cdn(
+  "/mamrot/lighttint/IMG_20241013_123356_912-webp.webp",
+  {
+    width: 600,
+    height: 400,
+  }
+);
 
 // CDN dimensions for gallery (larger for lightbox)
 const GALLERY_SIZE = { width: 800, height: 600 };
 
 const GALLERY = [
   cdn(
-    "/mamrot/lighttint/600x600_Banner_SPF70_6b6b77db-046a-45d3-95a4-026811fd8716.webp",
+    "/mamrot/lighttint/600x600_Banner_SPF70_6b6b77db-046a-45d3-95a4-026811fd8716-webp.webp",
     GALLERY_SIZE
   ),
-  // cdn("/mamrot/lighttint/20240417_223612.webp"),
-  cdn("/mamrot/lighttint/FB_IMG_1727782717448.webp", GALLERY_SIZE),
-  cdn("/mamrot/lighttint/FB_IMG_1736778385159.webp", GALLERY_SIZE),
-  cdn("/mamrot/lighttint/IMG_20241013_123356_893.webp", GALLERY_SIZE),
-  // cdn("/mamrot/lighttint/IMG_20241013_123356_912.webp"),
+  // cdn("/mamrot/lighttint/20240417_223612-webp.webp"),
+  cdn("/mamrot/lighttint/FB_IMG_1727782717448-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/lighttint/FB_IMG_1736778385159-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/lighttint/IMG_20241013_123356_893-webp.webp", GALLERY_SIZE),
+  // cdn("/mamrot/lighttint/IMG_20241013_123356_912-webp.webp"),
 ];
 
 const PROTECTION_POINTS = [
@@ -122,6 +127,7 @@ export default function Page() {
         backgroundImage={HERO_IMAGE}
         align="left"
         variant="luxury"
+        imageAlt="Headlight tinting and sunroof protection film in Marbella"
       />
 
       <section className="tinting-overview">

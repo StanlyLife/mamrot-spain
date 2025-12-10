@@ -46,6 +46,7 @@ export default function Home() {
         backgroundImage="/mamrot/depthandclaritydesktop.webp"
         backgroundImageMobile="/mamrot/depthandclarity.webp"
         align="center"
+        imageAlt="Professional car paint correction and detailing in Marbella"
       />
       <ServiceSection
         eyebrow="PAINT PROTECTION"
@@ -55,6 +56,7 @@ export default function Home() {
         ctaHref="#services"
         backgroundImage="/mamrot/ppf/porche.jpg"
         align="left"
+        imageAlt="Paint protection film installation on Porsche in Marbella"
       />
       <ServiceSection
         eyebrow="CUSTOM WRAPS"
@@ -64,6 +66,7 @@ export default function Home() {
         ctaHref="/wrapping"
         backgroundImage="/mamrot/wrapping/20250810_190720_0000.jpg"
         align="right"
+        imageAlt="Custom vinyl car wrap color change in Marbella"
       />
 
       <USPSection />

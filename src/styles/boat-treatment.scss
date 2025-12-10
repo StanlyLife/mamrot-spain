@@ -199,24 +199,42 @@
 }
 
 .boat-gallery .gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  align-items: flex-start;
 }
 
 .boat-gallery .gallery-item {
+  position: relative;
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-  height: 300px;
+  aspect-ratio: 4 / 3;
+}
+
+.boat-gallery .gallery-item .loading-image-container {
+  position: absolute;
+  inset: 0;
 }
 
 .boat-gallery .gallery-item img {
-  height: 300px;
-  width: auto;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .boat-gallery .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .boat-gallery .gallery-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {

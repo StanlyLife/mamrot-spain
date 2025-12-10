@@ -10,7 +10,8 @@ export const metadata = {
   description:
     "Complete boat and yacht restoration on the Costa del Sol. Exterior polishing, interior deep cleaning, hardwaxing, and marine ceramic coating with Nordic-level expertise.",
   openGraph: {
-    title: "Boat & Yacht Treatment | CarSpa Marbella",
+    title:
+      "Boat & Yacht Treatment in Marbella & Málaga | Marine Polishing & Ceramic",
     description:
       "Complete boat and yacht restoration on the Costa del Sol. Exterior polishing, interior deep cleaning, and marine ceramic coating.",
     images: [
@@ -24,7 +25,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Boat & Yacht Treatment | CarSpa Marbella",
+    title:
+      "Boat & Yacht Treatment in Marbella & Málaga | Marine Polishing & Ceramic",
     description:
       "Complete boat and yacht restoration on the Costa del Sol with Nordic-level expertise.",
     images: ["/logos/carspamarbellalogo.jpg"],
@@ -82,23 +84,26 @@ const PROCESS_STEPS = [
   "Final walk-through, maintenance plan, and optional monthly care scheduling",
 ];
 
-const HERO_IMAGE = "/mamrot/boat/FB_IMG_1739710587447.jpg";
+const HERO_IMAGE = "/mamrot/boat/FB_IMG_1739710587447-webp.webp";
 
 // CDN dimensions for gallery (larger for lightbox)
 const GALLERY_SIZE = { width: 800, height: 600 };
 
-const BASE_IMAGE = cdn("/mamrot/boat/FB_IMG_1763036073107.jpg", GALLERY_SIZE);
+const BASE_IMAGE = cdn(
+  "/mamrot/boat/FB_IMG_1763036073107-webp.webp",
+  GALLERY_SIZE
+);
 
 const GALLERY = [
   BASE_IMAGE,
-  cdn("/mamrot/boat/FB_IMG_1739710589695.jpg", GALLERY_SIZE),
-  cdn("/mamrot/boat/FB_IMG_1739710592720.jpg", GALLERY_SIZE),
-  cdn("/mamrot/boat/FB_IMG_1739710595396.jpg", GALLERY_SIZE),
-  cdn("/mamrot/boat/FB_IMG_1763036064845.jpg", GALLERY_SIZE),
-  cdn("/mamrot/boat/FB_IMG_1763036067333.jpg", GALLERY_SIZE),
-  // cdn("/mamrot/boat/FB_IMG_1763036073107.jpg"),
-  cdn("/mamrot/boat/FB_IMG_1763036077093.jpg", GALLERY_SIZE),
-  cdn("/mamrot/boat/FB_IMG_1763036079033.jpg", GALLERY_SIZE),
+  cdn("/mamrot/boat/FB_IMG_1739710589695-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/boat/FB_IMG_1739710592720-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/boat/FB_IMG_1739710595396-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/boat/FB_IMG_1763036064845-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/boat/FB_IMG_1763036067333-webp.webp", GALLERY_SIZE),
+  // cdn("/mamrot/boat/FB_IMG_1763036073107-webp.webp"),
+  cdn("/mamrot/boat/FB_IMG_1763036077093-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/boat/FB_IMG_1763036079033-webp.webp", GALLERY_SIZE),
 ];
 
 export default function Page() {
@@ -113,6 +118,7 @@ export default function Page() {
         backgroundImage={HERO_IMAGE}
         align="left"
         variant="luxury"
+        imageAlt="Boat and yacht polishing and ceramic coating in Marbella marina"
       />
 
       <section className="boat-overview" aria-labelledby="boat-heading">
@@ -235,8 +241,8 @@ export default function Page() {
                 <LoadingImage
                   src={img}
                   alt="Boat and yacht treatment project on the Costa del Sol"
-                  width={400}
-                  height={300}
+                  fill
+                  sizes="(max-width: 500px) 100vw, (max-width: 900px) 50vw, 33vw"
                 />
               </figure>
             ))}

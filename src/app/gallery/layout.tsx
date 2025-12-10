@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Browse recent wrap, PPF, correction & ceramic coating projects showcasing finish quality & protection details.",
   openGraph: {
-    title: "Gallery | CarSpa Marbella",
+    title: "Gallery | Recent Projects & Finishes",
     description:
       "Browse recent wrap, PPF, correction & ceramic coating projects showcasing finish quality & protection details.",
     images: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gallery | CarSpa Marbella",
+    title: "Gallery | Recent Projects & Finishes",
     description:
       "Browse recent wrap, PPF, correction & ceramic coating projects.",
     images: ["/logos/carspamarbellalogo.jpg"],

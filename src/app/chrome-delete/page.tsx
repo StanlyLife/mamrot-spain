@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Modernize chrome trim across window surrounds, grilles, and badges with 3M 2080 gloss, satin, or matte films. Serving Marbella, Málaga & Costa del Sol.",
   openGraph: {
-    title: "Chrome Delete | CarSpa Marbella",
+    title: "Chrome Delete in Marbella & Málaga | Premium Vinyl Wrap",
     description:
       "Modernize chrome trim with 3M 2080 gloss, satin, or matte films. Professional installation in Marbella & Málaga.",
     images: [
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chrome Delete | CarSpa Marbella",
+    title: "Chrome Delete in Marbella & Málaga | Premium Vinyl Wrap",
     description:
       "Modernize chrome trim with 3M 2080 gloss, satin, or matte films.",
     images: ["/logos/carspamarbellalogo.jpg"],
@@ -71,18 +71,18 @@ const PROCESS_STEPS = [
   "Final quality check and care instructions for Marbella & Málaga climate",
 ];
 
-const HERO_IMAGE = "/mamrot/chromedelete/IMG_20241013_120636_838.webp";
+const HERO_IMAGE = "/mamrot/chromedelete/IMG_20241013_120636_838-webp.webp";
 
 // CDN dimensions for gallery (larger for lightbox)
 const GALLERY_SIZE = { width: 800, height: 600 };
 
 const GALLERY = [
-  cdn("/mamrot/chromedelete/20240710_001240.webp", GALLERY_SIZE),
-  cdn("/mamrot/chromedelete/20250423_202826.webp", GALLERY_SIZE),
-  cdn("/mamrot/chromedelete/FB_IMG_1763375967171.webp", GALLERY_SIZE),
-  cdn("/mamrot/chromedelete/FB_IMG_1763376073726.webp", GALLERY_SIZE),
-  cdn("/mamrot/chromedelete/FB_IMG_1763376103170.webp", GALLERY_SIZE),
-  // cdn("/mamrot/chromedelete/IMG_20241013_120636_838.webp"),
+  cdn("/mamrot/chromedelete/20240710_001240-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/chromedelete/20250423_202826-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/chromedelete/FB_IMG_1763375967171-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/chromedelete/FB_IMG_1763376073726-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/chromedelete/FB_IMG_1763376103170-webp.webp", GALLERY_SIZE),
+  // cdn("/mamrot/chromedelete/IMG_20241013_120636_838-webp.webp"),
 ];
 
 export default function Page() {
@@ -97,6 +97,7 @@ export default function Page() {
         backgroundImage={HERO_IMAGE}
         align="center"
         variant="luxury"
+        imageAlt="Chrome delete vinyl wrap upgrade on car in Marbella"
       />
 
       <section className="chrome-overview" aria-labelledby="chrome-heading">

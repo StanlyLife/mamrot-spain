@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Experience the art of high-end paint correction. One-Step, Two-Step, or Full Correction with up to 90% defect removal and premium GYEON ceramic coating.",
   openGraph: {
-    title: "Paint Correction & Polishing | CarSpa Marbella",
+    title: "Paint Correction & Polishing | Cars Boats Marbella & Málaga",
     description:
       "Experience the art of high-end paint correction. One-Step, Two-Step, or Full Correction with up to 90% defect removal and premium GYEON ceramic coating.",
     images: [
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Paint Correction & Polishing | CarSpa Marbella",
+    title: "Paint Correction & Polishing | Cars Boats Marbella & Málaga",
     description:
       "Experience the art of high-end paint correction with up to 90% defect removal.",
     images: ["/logos/carspamarbellalogo.jpg"],
@@ -111,6 +111,7 @@ export default function Page() {
         backgroundImage={HERO_IMAGE}
         align="center"
         variant="luxury"
+        imageAlt="Professional paint correction and polishing in Marbella"
       />
       <section
         className="correction-overview correction-animate"

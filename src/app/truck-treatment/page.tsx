@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Comprehensive truck treatment for Scania, Volvo & heavy-duty fleets in Marbella, Málaga & Costa del Sol. Premium PPF, polishing, ceramic coatings & guidance.",
   openGraph: {
-    title: "Truck Treatment | CarSpa Marbella",
+    title: "Truck Treatment in Marbella & Málaga | Premium PPF & Polishing",
     description:
       "Comprehensive truck treatment for Scania, Volvo & heavy-duty fleets. Premium PPF, polishing, and ceramic coatings.",
     images: [
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Truck Treatment | CarSpa Marbella",
+    title: "Truck Treatment in Marbella & Málaga | Premium PPF & Polishing",
     description:
       "Comprehensive truck treatment for Scania, Volvo & heavy-duty fleets in Marbella & Málaga.",
     images: ["/logos/carspamarbellalogo.jpg"],
@@ -99,6 +99,7 @@ export default function Page() {
         backgroundImage={HERO_IMAGE}
         align="center"
         variant="luxury"
+        imageAlt="Truck PPF and polishing treatment for Scania and Volvo in Marbella"
       />
 
       <section className="truck-overview" aria-labelledby="truck-heading">

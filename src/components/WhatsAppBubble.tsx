@@ -23,7 +23,7 @@ export default function WhatsAppBubble() {
     >
       <Image
         src={ICON_SRC}
-        alt=""
+        alt="WhatsApp"
         width={28}
         height={28}
         className="whatsapp-bubble__icon"

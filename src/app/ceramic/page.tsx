@@ -10,7 +10,8 @@ export const metadata = {
   description:
     "Professional GYEON ceramic coating with up to 4 years protection. Single or double-layer application with official certificate. Marine coatings available.",
   openGraph: {
-    title: "GYEON Ceramic Coating | CarSpa Marbella",
+    title:
+      "GYEON Ceramic Coating in Marbella & Málaga | Premium Paint Protection",
     description:
       "Professional GYEON ceramic coating with up to 4 years protection. Single or double-layer application with official certificate.",
     images: [
@@ -24,7 +25,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GYEON Ceramic Coating | CarSpa Marbella",
+    title:
+      "GYEON Ceramic Coating in Marbella & Málaga | Premium Paint Protection",
     description:
       "Professional GYEON ceramic coating with up to 4 years protection.",
     images: ["/logos/carspamarbellalogo.jpg"],
@@ -64,7 +66,7 @@ const BENEFITS: string[] = [
   "Easier maintenance: reduced need for aggressive polishing",
 ];
 
-const HERO_IMAGE = "/mamrot/transfer1/20250909_000951.jpg";
+const HERO_IMAGE = "/mamrot/transfer1/20250909_000951-webp.webp";
 
 // CDN dimensions for media grid (520x300 display size)
 const MEDIA_SIZE = { width: 520, height: 300 };
@@ -100,6 +102,7 @@ export default function Page() {
         backgroundImage={HERO_IMAGE}
         align="center"
         variant="luxury"
+        imageAlt="GYEON ceramic coating application on luxury car in Marbella"
       />
       <section
         className="ceramic-overview ceramic-animate"

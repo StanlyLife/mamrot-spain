@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Premium Tesla-focused PPF and wrapping studio in Marbella & Málaga. Showcase of recent Tesla PPF & wrap executions.",
   openGraph: {
-    title: "Tesla Specialists PPF & Wraps | CarSpa Marbella",
+    title: "Tesla Specialists PPF & Wraps | Marbella & Málaga",
     description:
       "Premium Tesla-focused PPF and wrapping studio in Marbella & Málaga. Experts in Model 3, Model Y, Model S, and Model X.",
     images: [
@@ -21,7 +21,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tesla Specialists PPF & Wraps | CarSpa Marbella",
+    title: "Tesla Specialists PPF & Wraps | Marbella & Málaga",
     description:
       "Premium Tesla-focused PPF and wrapping studio in Marbella & Málaga.",
     images: ["/logos/carspamarbellalogo.jpg"],
@@ -35,95 +35,95 @@ const HERO_SIZE = { width: 1920, height: 1080 };
 
 const TESLA_GALLERY = [
   {
-    src: cdn("/mamrot/tesla/tesla_showcase_mobile.webp", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/tesla_showcase_mobile-webp.webp", GALLERY_SIZE),
     alt: "Close-up Tesla detailing of PPF application",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (1).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (1)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 1",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (2).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (2)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 2",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (3).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (3)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 3",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (4).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (4)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 4",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (5).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (5)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 5",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (6).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (6)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 6",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (7).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (7)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 7",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (8).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (8)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 8",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (9).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (9)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 9",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (10).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (10)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 10",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (11).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (11)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 11",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (12).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (12)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 12",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (13).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (13)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 13",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (14).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (14)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 14",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (15).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (15)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 15",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (16).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (16)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 16",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (17).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (17)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 17",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (18).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (18)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 18",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (19).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (19)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 19",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (20).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (20)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 20",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (21).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (21)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 21",
   },
   {
-    src: cdn("/mamrot/tesla/wetransfer (22).jpg", GALLERY_SIZE),
+    src: cdn("/mamrot/tesla/wetransfer (22)-webp.webp", GALLERY_SIZE),
     alt: "Tesla PPF & wrap project 22",
   },
 ];
@@ -134,7 +134,7 @@ export default function Page() {
       <section className="tesla-hero" aria-labelledby="tesla-heading">
         <div className="tesla-hero__media" aria-hidden="true">
           <LoadingImage
-            src={cdn("/mamrot/tesla/tesla_showcase.webp", HERO_SIZE)}
+            src={cdn("/mamrot/tesla/tesla_showcase-webp.webp", HERO_SIZE)}
             alt="Abstract Tesla themed placeholder"
             fill
             priority

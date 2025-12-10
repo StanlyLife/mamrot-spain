@@ -91,7 +91,10 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "chrome-delete",
     title: "CHROME DELETE",
-    image: cdn("/mamrot/transfer1/20250905_224202.jpg", DESKTOP_CARD_SIZE),
+    image: cdn(
+      "/mamrot/transfer1/20250905_224202-webp.webp",
+      DESKTOP_CARD_SIZE
+    ),
     href: "/chrome-delete",
     alt: "Black finish applied over chrome trim",
   },
@@ -99,7 +102,10 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "tinting",
     title: "Headlight Tinting & Sunroof Protection Film",
-    image: cdn("/mamrot/transfer2/FB_IMG_1736778385159.jpg", DESKTOP_CARD_SIZE),
+    image: cdn(
+      "/mamrot/transfer2/FB_IMG_1736778385159-webp.webp",
+      DESKTOP_CARD_SIZE
+    ),
     href: "/headlight-tinting",
     alt: "Tint film being applied to vehicle window",
   },
@@ -107,7 +113,10 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "boat",
     title: "Boat & Yacht Treatment",
-    image: cdn("/mamrot/boat/FB_IMG_1739710587447.jpg", DESKTOP_CARD_SIZE),
+    image: cdn(
+      "/mamrot/boat/FB_IMG_1739710587447-webp.webp",
+      DESKTOP_CARD_SIZE
+    ),
     href: "/boat-treatment",
     alt: "Detailing interior leather seat cleaning",
   },

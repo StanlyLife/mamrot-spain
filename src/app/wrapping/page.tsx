@@ -10,7 +10,8 @@ export const metadata = {
   description:
     "Transform your car with exclusive wrap colors from PWF, 3M, HEXIS, and KPMF. Professional installation with 3-year warranty and premium materials.",
   openGraph: {
-    title: "Car Wrapping & Color Change | CarSpa Marbella",
+    title:
+      "Full Car Wrapping & Color Change in Marbella & Málaga | Premium Vinyl Wrap",
     description:
       "Transform your car with exclusive wrap colors from PWF, 3M, HEXIS, and KPMF. Professional installation with 3-year warranty.",
     images: [
@@ -24,7 +25,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Car Wrapping & Color Change | CarSpa Marbella",
+    title:
+      "Full Car Wrapping & Color Change in Marbella & Málaga | Premium Vinyl Wrap",
     description:
       "Transform your car with exclusive wrap colors from PWF, 3M, HEXIS, and KPMF.",
     images: ["/logos/carspamarbellalogo.jpg"],
@@ -60,7 +62,7 @@ const WRAP_VARIANTS = [
   },
 ];
 
-const HERO_IMAGE = "/mamrot/wrapping/main.jpg";
+const HERO_IMAGE = "/mamrot/wrapping/main-webp.webp";
 
 // CDN dimensions for media grid (520x300 display size)
 const MEDIA_SIZE = { width: 520, height: 300 };
@@ -68,19 +70,19 @@ const MEDIA_SIZE = { width: 520, height: 300 };
 const GALLERY_SIZE = { width: 800, height: 600 };
 
 const MEDIA_IMAGES = [
-  cdn("/mamrot/wrapping/20250907_131915.jpg", MEDIA_SIZE),
-  cdn("/mamrot/wrapping/20250712_211653.jpg", MEDIA_SIZE),
-  cdn("/mamrot/wrapping/20250810_190720_0000.jpg", MEDIA_SIZE),
+  cdn("/mamrot/wrapping/20250907_131915-webp.webp", MEDIA_SIZE),
+  cdn("/mamrot/wrapping/20250712_211653-webp.webp", MEDIA_SIZE),
+  cdn("/mamrot/wrapping/20250810_190720_0000-webp.webp", MEDIA_SIZE),
 ];
 
 const GALLERY_IMAGES = [
-  cdn("/mamrot/wrapping/FB_IMG_1736778385159.jpg", GALLERY_SIZE),
-  cdn("/mamrot/wrapping/20250603_160042_0000.jpg", GALLERY_SIZE),
-  // cdn("/mamrot/wrapping/20250712_211653.jpg"),
-  cdn("/mamrot/wrapping/20250904_222522.jpg", GALLERY_SIZE),
-  // cdn("/mamrot/wrapping/20250907_131915.jpg"),
-  cdn("/mamrot/wrapping/FB_IMG_1739710033030 (1).jpg", GALLERY_SIZE),
-  // cdn("/mamrot/wrapping/20250810_190720_0000.jpg"),
+  cdn("/mamrot/wrapping/FB_IMG_1736778385159-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20250603_160042_0000-webp.webp", GALLERY_SIZE),
+  // cdn("/mamrot/wrapping/20250712_211653-webp.webp"),
+  cdn("/mamrot/wrapping/20250904_222522-webp.webp", GALLERY_SIZE),
+  // cdn("/mamrot/wrapping/20250907_131915-webp.webp"),
+  cdn("/mamrot/wrapping/FB_IMG_1739710033030 (1)-webp.webp", GALLERY_SIZE),
+  // cdn("/mamrot/wrapping/20250810_190720_0000-webp.webp"),
 ];
 
 export default function Page() {
@@ -99,6 +101,7 @@ export default function Page() {
         align="center"
         variant="luxury"
         backgroundImage={HERO_IMAGE}
+        imageAlt="Full car vinyl wrap and color change in Marbella"
       />
 
       <section className="wrap-overview" aria-labelledby="wrap-heading">

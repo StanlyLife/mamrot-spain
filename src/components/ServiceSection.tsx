@@ -22,6 +22,7 @@ export interface ServiceSectionProps {
   align?: "left" | "center" | "right";
   darkOverlay?: boolean;
   variant?: "default" | "luxury";
+  imageAlt?: string; // alt text for background image (SEO)
 }
 
 export function ServiceSection({
@@ -37,6 +38,7 @@ export function ServiceSection({
   align = "left",
   darkOverlay = true,
   variant = "default",
+  imageAlt = "",
 }: ServiceSectionProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const desktopImage = backgroundImage
@@ -72,7 +74,7 @@ export function ServiceSection({
             {desktopImage && (
               <Image
                 src={desktopImage}
-                alt=""
+                alt={imageAlt}
                 fill
                 priority
                 onLoad={() => setImageLoaded(true)}
@@ -86,7 +88,7 @@ export function ServiceSection({
             {showMobileAlternative && mobileImage && (
               <Image
                 src={mobileImage}
-                alt=""
+                alt={imageAlt}
                 fill
                 onLoad={() => setImageLoaded(true)}
                 className={`service-section__image service-section__image--mobile${

@@ -27,7 +27,7 @@ export default function USPSection() {
           loop
           playsInline
           preload="auto"
-          poster={cdn("/mamrot/transfer1/20250603_160042_0000.jpg", {
+          poster={cdn("/mamrot/transfer1/20250603_160042_0000-webp.webp", {
             width: 1920,
             height: 1080,
           })}

@@ -4,6 +4,7 @@ import "./globals.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppBubble from "../components/WhatsAppBubble";
+import SocialSidebar from "../components/SocialSidebar";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -95,6 +96,7 @@ export default function RootLayout({
         <div className="app-shell">{children}</div>
         <Footer />
         <WhatsAppBubble />
+        <SocialSidebar />
       </body>
     </html>
   );

@@ -1,0 +1,83 @@
+.social-sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.social-sidebar__inner {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 12px 0 0 12px;
+  overflow: hidden;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.social-sidebar__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #fff;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, #c9a227, #e8c547);
+    color: #000;
+
+    svg {
+      transform: scale(1.15);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid #c9a227;
+    outline-offset: -2px;
+  }
+
+  // Facebook hover
+  &:nth-child(1):hover {
+    background: #1877f2;
+    color: #fff;
+  }
+
+  // Instagram hover
+  &:nth-child(2):hover {
+    background: linear-gradient(
+      45deg,
+      #f09433,
+      #e6683c,
+      #dc2743,
+      #cc2366,
+      #bc1888
+    );
+    color: #fff;
+  }
+
+  // TikTok hover
+  &:nth-child(3):hover {
+    background: #000;
+    color: #fff;
+
+    svg {
+      filter: drop-shadow(1px 0 0 #69c9d0) drop-shadow(-1px 0 0 #ee1d52);
+    }
+  }
+}
