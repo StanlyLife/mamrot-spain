@@ -32,10 +32,7 @@ function GalleryImageItem({
   const priority = index < 6;
 
   return (
-    <figure
-      className="gallery-item"
-      style={{ ["--order" as string]: index }}
-    >
+    <figure className="gallery-item" style={{ ["--order" as string]: index }}>
       <Image
         src={imagePath}
         alt={img.alt}
