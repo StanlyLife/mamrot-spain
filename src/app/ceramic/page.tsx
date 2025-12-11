@@ -167,8 +167,9 @@ export default function Page() {
                   <LoadingImage
                     src={img}
                     alt="Ceramic coating gloss example"
-                    width={520}
-                    height={300}
+                    fill
+                    sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
+                    style={{ objectFit: "cover" }}
                   />
                 </figure>
               ))}

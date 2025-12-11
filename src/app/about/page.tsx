@@ -6,11 +6,11 @@ import Link from "next/link";
 import { cdn } from "@/lib/cdn";
 
 export const metadata = {
-  title: "About | Mamrot Car Spa & Detailing Studio",
+  title: "About | Car Spa Marbella Wraps & PPF",
   description:
     "Learn about Mamrot Car Spa: vision, craft standards, premium materials, clients served and why enthusiasts trust our wrap, PPF, correction & coating expertise.",
   openGraph: {
-    title: "About | Mamrot Car Spa & Detailing Studio",
+    title: "About | Car Spa Marbella Wraps & PPF",
     description:
       "Learn about Mamrot Car Spa: vision, craft standards, premium materials, and why enthusiasts trust our wrap, PPF, correction & coating expertise.",
     images: [
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About | Mamrot Car Spa & Detailing Studio",
+    title: "About | Car Spa Marbella Wraps & PPF",
     description:
       "Learn about Mamrot Car Spa: vision, craft standards, and premium materials.",
     images: ["/logos/carspamarbellalogo.jpg"],

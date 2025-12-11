@@ -70,12 +70,24 @@
   border: 1px solid #dadada;
   background: #fafafa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  aspect-ratio: 9 / 16;
 }
 .ceramic-media-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.95) contrast(1.05);
+}
+
+.ceramic-media-item .loading-image-container {
+  position: absolute;
+  inset: 0;
+}
+
+.ceramic-media-item .loading-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .ceramic-pricing {

@@ -16,7 +16,7 @@ export default function Header() {
       <div className="info-bar">
         <div className="info-bar__inner">
           <span className="contact-item">
-            <a href="tel:+441234567890">Phone (+47) 939 91 633</a>
+            <a href="tel:+4793991633">Phone +47 93 99 16 33</a>
           </span>
           <span className="divider" />
           <span className="contact-item">

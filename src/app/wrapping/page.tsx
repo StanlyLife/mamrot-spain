@@ -64,8 +64,8 @@ const WRAP_VARIANTS = [
 
 const HERO_IMAGE = "/mamrot/wrapping/main-webp.webp";
 
-// CDN dimensions for media grid (520x300 display size)
-const MEDIA_SIZE = { width: 520, height: 300 };
+// CDN dimensions for media grid (portrait 520x930 display size)
+const MEDIA_SIZE = { width: 520, height: 930 };
 // CDN dimensions for gallery (larger for lightbox)
 const GALLERY_SIZE = { width: 800, height: 600 };
 
@@ -150,8 +150,9 @@ export default function Page() {
                   <LoadingImage
                     src={img}
                     alt="Wrapped vehicle finish example"
-                    width={520}
-                    height={300}
+                    fill
+                    sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
+                    style={{ objectFit: "cover" }}
                   />
                 </figure>
               ))}
