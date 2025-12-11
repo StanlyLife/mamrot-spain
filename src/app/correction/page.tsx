@@ -171,12 +171,7 @@ export default function Page() {
                   className="correction-media-item correction-animate"
                   style={{ ["--order" as any]: i }}
                 >
-                  <LoadingImage
-                    src={img}
-                    alt="Paint correction example"
-                    width={520}
-                    height={300}
-                  />
+                  <LoadingImage src={img} alt="Paint correction example" fill />
                 </figure>
               ))}
             </div>

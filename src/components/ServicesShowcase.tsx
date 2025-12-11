@@ -23,8 +23,11 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "tesla-specialists",
     title: "TESLA SPECIALISTS",
-    image: cdn("/mamrot/tesla/tesla_showcase.webp", DESKTOP_CARD_SIZE),
-    mobileImage: cdn("/mamrot/tesla/tesla_showcase_mobile.webp", MOBILE_SIZE),
+    image: cdn("/mamrot/tesla/tesla_showcase-webp.webp", DESKTOP_CARD_SIZE),
+    mobileImage: cdn(
+      "/mamrot/tesla/tesla_showcase_mobile-webp.webp",
+      MOBILE_SIZE
+    ),
     href: "/tesla-specialists",
     alt: "Tesla PPF and wrap specialist placeholder",
     disableFilter: true,
@@ -33,7 +36,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "wrapping",
     title: "CAR WRAPPING",
-    image: cdn("/mamrot/wrapping/main.jpg", DESKTOP_CARD_SIZE),
+    image: cdn("/mamrot/wrapping/main-webp.webp", DESKTOP_CARD_SIZE),
     href: "/wrapping",
     alt: "Full vehicle color change wrap installation",
   },
@@ -41,7 +44,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "ppf",
     title: "Paint protection film (PPF)",
-    image: cdn("/mamrot/ppf/20251021_231430.jpg", DESKTOP_CARD_SIZE),
+    image: cdn("/mamrot/ppf/20251021_231430-webp.webp", DESKTOP_CARD_SIZE),
     href: "/ppf",
     alt: "Paint protection film applied to front panel",
   },

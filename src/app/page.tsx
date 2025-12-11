@@ -54,7 +54,7 @@ export default function Home() {
         subheading="Shield. Preserve. Elevate."
         ctaLabel="PPF Services"
         ctaHref="#services"
-        backgroundImage="/mamrot/ppf/porche.jpg"
+        backgroundImage="/mamrot/ppf/porche-webp.webp"
         align="left"
         imageAlt="Paint protection film installation on Porsche in Marbella"
       />
@@ -64,7 +64,7 @@ export default function Home() {
         subheading="Precision color & finish changes"
         ctaLabel="Wrap Options"
         ctaHref="/wrapping"
-        backgroundImage="/mamrot/wrapping/20250810_190720_0000.jpg"
+        backgroundImage="/mamrot/wrapping/20250810_190720_0000-webp.webp"
         align="right"
         imageAlt="Custom vinyl car wrap color change in Marbella"
       />
