@@ -72,7 +72,7 @@ const GALLERY_SIZE = { width: 800, height: 600 };
 const MEDIA_IMAGES = [
   cdn("/mamrot/wrapping/20250907_131915-webp.webp", MEDIA_SIZE),
   cdn("/mamrot/wrapping/20250712_211653-webp.webp", MEDIA_SIZE),
-  cdn("/mamrot/wrapping/20250810_190720_0000-webp.webp", MEDIA_SIZE),
+  cdn("/mamrot/wrapping/20250716_121142.webp", MEDIA_SIZE),
 ];
 
 const GALLERY_IMAGES = [
@@ -82,7 +82,7 @@ const GALLERY_IMAGES = [
   cdn("/mamrot/wrapping/20250904_222522-webp.webp", GALLERY_SIZE),
   // cdn("/mamrot/wrapping/20250907_131915-webp.webp"),
   cdn("/mamrot/wrapping/FB_IMG_1739710033030 (1)-webp.webp", GALLERY_SIZE),
-  // cdn("/mamrot/wrapping/20250810_190720_0000-webp.webp"),
+  cdn("/mamrot/wrapping/20250810_190720_0000-webp.webp"),
 ];
 
 export default function Page() {
