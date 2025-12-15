@@ -160,7 +160,7 @@ export default function Page() {
               At CarSpa Marbella - Wraps &amp; PPF, we are proud to be Tesla
               specialists on the Costa del Sol, offering the highest standard of
               Paint Protection Film (PPF), car wraps, and detailing for all
-              Tesla models — Model 3, Model Y, Model S, and Model X.
+              Tesla models - Model 3, Model Y, Model S, and Model X.
             </p>
             <p>
               Teslas require precise, experience-based handling due to their
@@ -197,7 +197,7 @@ export default function Page() {
             </ul>
 
             <p>
-              Our most popular Tesla PPF package is the “ULTIMATE” — the most
+              Our most popular Tesla PPF package is the “ULTIMATE” - the most
               vulnerable areas are protected with PPF, and the remaining panels
               receive a high-quality Ceramic Coating.
             </p>
@@ -220,7 +220,7 @@ export default function Page() {
             </ul>
             <p>
               We can match your personal design or build a custom concept from
-              scratch. We use some of the best vinyl films available — from
+              scratch. We use some of the best vinyl films available - from
               staple colours to exclusive limited editions. Visit our studio to
               explore your next concept, share ideas, and get expert
               suggestions.

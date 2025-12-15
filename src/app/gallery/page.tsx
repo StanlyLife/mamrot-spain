@@ -388,7 +388,7 @@ export default function Page() {
     >
       <section className="gallery-hero" aria-labelledby="gallery-heading">
         <div className="gallery-hero__inner">
-          <h1 id="gallery-heading">Gallery — Recent Projects & Finishes</h1>
+          <h1 id="gallery-heading">Gallery - Recent Projects & Finishes</h1>
           <p className="lede">
             Browse our recent wraps, PPF installs, paint correction & ceramic
             coating projects in Marbella & Málaga.
@@ -409,7 +409,7 @@ export default function Page() {
       <div id="gallery-contact">
         <QuoteRequest
           heading="Request Project Quote"
-          intro="Interested in a similar result? Share vehicle & goals—we'll tailor recommendations."
+          intro="Interested in a similar result? Share vehicle & goals - we'll tailor recommendations."
         />
       </div>
     </main>

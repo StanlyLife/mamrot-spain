@@ -35,7 +35,7 @@ export default function QuoteRequest({
   intro = "Share a few details and we'll tailor protection & enhancement options for your vehicle.",
   showVehicleField = true,
   submitLabel = "Send Request",
-  successMessage = "Thanks — we'll respond shortly.",
+  successMessage = "Thanks - we'll respond shortly.",
   className = "",
   whatsappNumber = "+47 93 99 16 33",
   whatsappLabel = "Chat on WhatsApp",

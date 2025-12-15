@@ -66,7 +66,7 @@ export default function AboutPage() {
             About Mamrot Car Spa & Detailing Studio
           </h1>
           <p className="lede about-animate">
-            From the bottom to the top — the story of passion, persistence, and
+            From the bottom to the top - the story of passion, persistence, and
             rising to excellence through dedication and warrior spirit in
             Marbella & Málaga.
           </p>
@@ -83,7 +83,7 @@ export default function AboutPage() {
             <h2 id="founder-heading">Vision & Craft</h2>
             <p>
               Mamrot Car Spa originated from founder Patrik Mamrot’s drive for
-              exacting surface perfection—years of advanced courses,
+              exacting surface perfection - years of advanced courses,
               collaboration with experienced technicians and constant method
               refinement. The studio’s ethos: identify hidden potential in each
               panel, then elevate it through disciplined, documented process.
@@ -95,7 +95,7 @@ export default function AboutPage() {
               longevity, and predictable performance in all weather and climate
               conditions.
             </p>
-            <p className="signature">— Patrik Mamrot</p>
+            <p className="signature">- Patrik Mamrot</p>
           </div>
           <figure
             className="founder-media about-animate"
@@ -124,15 +124,15 @@ export default function AboutPage() {
           <h2 id="pillars-heading">Total Dedication</h2>
           <div className="dedication-content">
             <p>
-              <strong>Every aspect of his work</strong> — from using{" "}
+              <strong>Every aspect of his work</strong> - from using{" "}
               <strong>premium materials</strong> to{" "}
-              <strong>styling every part of the studio</strong> — reflects a
+              <strong>styling every part of the studio</strong> - reflects a
               deep commitment to quality and detail. Every day,{" "}
               <strong>Patrik puts his energy into design</strong>,{" "}
               <strong>
                 project planning, marketing, creativity, and photography
               </strong>{" "}
-              — <strong>building everything step by step</strong>.
+              - <strong>building everything step by step</strong>.
             </p>
             <p>
               From small{" "}
@@ -140,7 +140,7 @@ export default function AboutPage() {
               his dedication remains the same. Among his proudest achievements
               are some of the{" "}
               <strong>finest and most valuable Scania trucks in Norway</strong>,
-              each receiving <strong>nearly full PPF installations</strong> —{" "}
+              each receiving <strong>nearly full PPF installations</strong> -{" "}
               <strong>
                 around 100 painted panels wrapped and protected in just six days
               </strong>
@@ -171,11 +171,11 @@ export default function AboutPage() {
           <p>
             Now, with that <strong>same passion and experience,</strong>{" "}
             <strong>Patrik</strong> has established{" "}
-            <strong>his new studio</strong> —{" "}
+            <strong>his new studio</strong> -{" "}
             <strong>CarSpa Marbella – Wraps & PPF</strong>.
           </p>
           <p>
-            The <strong>studio welcomes projects of every kind</strong> —{" "}
+            The <strong>studio welcomes projects of every kind</strong> -{" "}
             <strong>cars, trucks, boats, and caravans</strong>. From{" "}
             <strong>older vehicles in need of new life</strong> to{" "}
             <strong>premium and luxury models</strong> seeking a finish beyond
@@ -206,12 +206,12 @@ export default function AboutPage() {
             <strong>
               completed specialist wrapping courses with true masters
             </strong>{" "}
-            — and along the way, has helped others in the field without ever
+            - and along the way, has helped others in the field without ever
             asking for anything in return.
           </p>
           <p>
             <strong>His goal is simple:</strong> to take the{" "}
-            <strong>market to the next level once again</strong> —{" "}
+            <strong>market to the next level once again</strong> -{" "}
             <strong>
               raising standards, inspiring others, and proving that passion
             </strong>{" "}
@@ -293,7 +293,7 @@ export default function AboutPage() {
       {/* CTA */}
       <QuoteRequest
         heading="Discuss Your Project"
-        intro="Share goals, usage & finish expectations—receive a tailored protection & enhancement plan."
+        intro="Share goals, usage & finish expectations - receive a tailored protection & enhancement plan."
         className="about-animate contact--about"
       />
     </main>

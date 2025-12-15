@@ -113,7 +113,7 @@ export default function Page() {
               Give your new truck the ultimate protection against stone chips
               and scratches. We provide professional guidance and expert advice
               on protective film wrapping (PPF) for trucks. As specialists, we
-              have wrapped many trucks in Norway — including models with over
+              have wrapped many trucks in Norway - including models with over
               100 individual body panels.
             </p>
             <p className="lede">

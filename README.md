@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CarSpa Marbella – Wraps & PPF
+
+Premium car detailing website for **CarSpa Marbella** (Marbella & Málaga, Spain). Built with **Next.js 14 App Router**, TypeScript, and SCSS modules.
+
+## Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** SCSS (per-page stylesheets in `src/styles/`)
+- **Image handling:** `next/image` via custom `<LoadingImage>` component; CDN helper in `src/lib/cdn.ts`
+- **Forms:** Formspark (`https://submit-form.com/b9JfFWthO`)
+
+## Project Structure
+
+```
+src/
+├── app/               # Next.js App Router pages
+│   ├── page.tsx       # Home
+│   ├── wrapping/      # Car wrapping service page
+│   ├── ceramic/       # Ceramic coating service page
+│   ├── ppf/           # Paint Protection Film page
+│   ├── correction/    # Paint correction page
+│   ├── headlight-tinting/
+│   ├── chrome-delete/
+│   ├── boat-treatment/
+│   ├── truck-treatment/
+│   ├── tesla-specialists/
+│   ├── gallery/
+│   └── about/
+├── components/        # Reusable React components
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   ├── Hero.tsx
+│   ├── LoadingImage.tsx   # Next/Image wrapper with skeleton
+│   ├── QuoteRequest.tsx   # Contact form (Formspark)
+│   ├── WhatsAppBubble.tsx
+│   └── ...
+├── lib/
+│   └── cdn.ts         # CDN URL builder for images
+└── styles/            # SCSS partials per page/component
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Key Patterns
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Images with `fill` mode
 
-## Learn More
+Service pages (wrapping, ceramic, etc.) use `<LoadingImage fill ... style={{ objectFit: "cover" }} />` inside aspect-ratio containers (e.g. `aspect-ratio: 9 / 16`). The container must have `position: relative` and the inner `.loading-image-container` is pinned with `position: absolute; inset: 0;`.
 
-To learn more about Next.js, take a look at the following resources:
+### Phone / WhatsApp Number
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All phone references use `+47 93 99 16 33`. Update in:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `components/Header.tsx`
+- `components/Footer.tsx`
+- `components/WhatsAppBubble.tsx`
+- `components/QuoteRequest.tsx` (default prop)
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy on Vercel or any Node.js host supporting Next.js:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm start
+```
+
+## License
+
+Private – Moderna Solutions AS.

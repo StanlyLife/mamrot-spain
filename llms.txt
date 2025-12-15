@@ -1,0 +1,56 @@
+# CarSpa Marbella – LLM Context
+
+> Quick-reference for AI assistants working on this codebase.
+
+## Overview
+Next.js 14 App Router website for a premium car detailing shop in Marbella, Spain. Services include wrapping, PPF, ceramic coating, paint correction, headlight tinting, chrome delete, boat/truck treatment, and Tesla specialist work.
+
+## Stack
+- Next.js 14 (App Router, `src/app/`)
+- TypeScript
+- SCSS (one stylesheet per page/component in `src/styles/`)
+- `next/image` via `<LoadingImage>` wrapper (`src/components/LoadingImage.tsx`)
+- CDN helper: `src/lib/cdn.ts`
+- Form backend: Formspark
+
+## Directory Layout
+```
+src/app/           – route pages (wrapping/, ceramic/, ppf/, etc.)
+src/components/    – shared React components
+src/lib/cdn.ts     – builds CDN URLs with optional width/height
+src/styles/        – SCSS files matching pages (wrapping.scss, ceramic.scss, …)
+```
+
+## Important Patterns
+
+### Fill-mode images
+Use `<LoadingImage fill sizes="..." style={{ objectFit: "cover" }} />` inside a container with:
+- `position: relative`
+- `aspect-ratio: 9 / 16` (or desired ratio)
+- `.loading-image-container { position: absolute; inset: 0; }`
+
+### Phone number
+All occurrences: `+47 93 99 16 33`
+Files:
+- `Header.tsx` (tel link + display)
+- `Footer.tsx` (tel link)
+- `WhatsAppBubble.tsx` (WHATSAPP_NUMBER)
+- `QuoteRequest.tsx` (whatsappNumber default prop)
+
+### CDN images
+`cdn(path, { width, height })` returns a Cloudinary URL with transformations. Define `MEDIA_SIZE` / `GALLERY_SIZE` constants per page.
+
+## Common Tasks
+
+| Task | Files |
+|------|-------|
+| Change phone number | Header, Footer, WhatsAppBubble, QuoteRequest |
+| Add new service page | Create `src/app/<slug>/page.tsx`, add stylesheet in `src/styles/`, import style in page |
+| Adjust media grid height | Change `aspect-ratio` in corresponding `.scss`, ensure LoadingImage uses `fill` + `objectFit: cover` |
+
+## Dev Commands
+```bash
+npm run dev      # start local server (port 3000)
+npm run build    # production build
+npm start        # run production build locally
+```

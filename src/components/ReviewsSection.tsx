@@ -20,7 +20,7 @@ const REVIEWS: Review[] = [
     name: "Hans Petter",
     location: "Norway",
     rating: 5,
-    text: "Had my car, an E63s AMG, wrapped here — very satisfied with the service, the result, and the guidance along the way. Highly recommended. Great communication throughout, and a clear agreement on both price and the changes I chose during the process. I'll definitely be stopping by more often for coating and updates. It was like getting a new car 😉",
+    text: "Had my car, an E63s AMG, wrapped here - very satisfied with the service, the result, and the guidance along the way. Highly recommended. Great communication throughout, and a clear agreement on both price and the changes I chose during the process. I'll definitely be stopping by more often for coating and updates. It was like getting a new car 😉",
     service: "Car Wrapping",
     date: "Recent",
   },
