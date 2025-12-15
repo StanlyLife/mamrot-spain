@@ -63,7 +63,7 @@ export default function AboutPage() {
         </div>
         <div className="about-hero__inner">
           <h1 id="about-heading" className="about-animate">
-            About Mamrot Car Spa & Detailing Studio
+            About Mamrot Car Spa & Foiling Studio
           </h1>
           <p className="lede about-animate">
             From the bottom to the top - the story of passion, persistence, and
