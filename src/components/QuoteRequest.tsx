@@ -37,7 +37,7 @@ export default function QuoteRequest({
   submitLabel = "Send Request",
   successMessage = "Thanks - we'll respond shortly.",
   className = "",
-  whatsappNumber = "+47 93 99 16 33",
+  whatsappNumber = "+34600663107",
   whatsappLabel = "Chat on WhatsApp",
   whatsappMessage = "Hi! I'd like to schedule detailing at Mamrot.",
 }: QuoteRequestProps) {
