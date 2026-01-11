@@ -83,8 +83,13 @@ export function Hero() {
         <p className="lede">
           Precision protection and perfection in every detail. Specialists in
           luxury car detailing, wrapping, and Paint Protection Film (PPF).
-          Delivering world-class protection and a flawless finish for cars,
-          trucks, boats, and motorhomes across Marbella & Málaga.
+          Delivering world-class protection and a flawless finish. Located on
+          the iconic Golden Mile, this is where luxury cars and premium
+          experiences meet. In collaboration with Imperial Cars Marbella, we
+          offer elite vehicles and refined services including detailing, wraps,
+          and PPF. All within an atmosphere designed for relaxed conversations -
+          finished with perfectly crafted coffee. This is not car care. This is
+          art.
         </p>
         <div className="hero__actions">
           <a
