@@ -51,7 +51,7 @@
     position: relative;
     @include container;
     padding: clamp(2rem, 10vh, 6rem) clamp(1rem, 4vw, 2rem) 3.25rem;
-    max-width: 1080px;
+    max-width: 1280px;
     z-index: 2;
   }
   &__eyebrow {
@@ -71,7 +71,7 @@
     color: transparent;
   }
   p.lede {
-    max-width: 64ch;
+    max-width: 80ch;
     margin: 0 auto 2.15rem;
     font-size: $text-lede;
     color: #d0d4d8;
@@ -188,6 +188,22 @@
     }
   }
 
+  // Medium laptop breakpoint
+  @media (max-width: 1200px) and (min-width: 1025px) {
+    .hero__content {
+      max-width: 95%;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+    }
+
+    p.lede {
+      font-size: clamp(1.05rem, 1.2vw + 0.25rem, 1.3rem);
+      max-width: 85%;
+    }
+  }
+
   // Large tablet / small laptop breakpoint
   @media (max-width: 1024px) {
     height: 100dvh;
@@ -198,16 +214,18 @@
 
     .hero__content {
       padding: clamp(1.5rem, 8vh, 4rem) clamp(1rem, 3vw, 1.5rem) 3rem;
+      max-width: 95%;
     }
 
     h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-size: clamp(2.2rem, 5.5vw, 3.5rem);
     }
 
     p.lede {
-      font-size: clamp(0.95rem, 1.1vw + 0.25rem, 1.2rem);
+      font-size: clamp(1rem, 1.2vw + 0.3rem, 1.25rem);
       margin-bottom: 1.5rem;
       line-height: 1.45;
+      max-width: 90%;
     }
   }
 
