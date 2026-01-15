@@ -85,11 +85,11 @@ export function Hero() {
           luxury car detailing, wrapping, and Paint Protection Film (PPF).
           Delivering world-class protection and a flawless finish. Located on
           the iconic Golden Mile, this is where luxury cars and premium
-          experiences meet. Partnering with a leading luxury automotive brand in Marbella, we
-          offer elite vehicles and refined services including detailing, wraps,
-          and PPF. All within an atmosphere designed for relaxed conversations -
-          finished with perfectly crafted coffee. This is not car care. This is
-          art.
+          experiences meet. Partnering with a leading luxury automotive brand in
+          Marbella, we offer elite vehicles and refined services including
+          detailing, wraps, and PPF. All within an atmosphere designed for
+          relaxed conversations - finished with perfectly crafted coffee. This
+          is not car care. This is art.
         </p>
         <div className="hero__actions">
           <a
