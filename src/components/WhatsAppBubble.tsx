@@ -4,12 +4,12 @@ import "@/styles/whatsapp-bubble.scss";
 import { cdn } from "@/lib/cdn";
 
 const WHATSAPP_NUMBER = "+34600663107";
-const DEFAULT_MESSAGE = "Hi! I'd like to book detailing at Mamrot.";
+const DEFAULT_MESSAGE = "Hi! I'd like to book detailing at Marbella carspa.";
 const ICON_SRC = cdn("/logos/WhatsApp.svg", { width: 28, height: 28 });
 
 const normalizedNumber = WHATSAPP_NUMBER.replace(/[^0-9]/g, "");
 const whatsappHref = `https://wa.me/${normalizedNumber}?text=${encodeURIComponent(
-  DEFAULT_MESSAGE
+  DEFAULT_MESSAGE,
 )}`;
 
 export default function WhatsAppBubble() {
