@@ -3,7 +3,7 @@
 > Quick-reference for AI assistants working on this codebase.
 
 ## Overview
-Next.js 14 App Router website for a premium car detailing shop in Marbella, Spain. Services include wrapping, PPF, ceramic coating, paint correction, headlight tinting, chrome delete, boat/truck treatment, and Tesla specialist work.
+Next.js 14 App Router website for a premium car detailing shop in Marbella, Spain. Services include wrapping, PPF, ceramic coating, paint correction, headlight tinting, chrome delete, boat treatment, and Tesla specialist work.
 
 ## Stack
 - Next.js 14 (App Router, `src/app/`)

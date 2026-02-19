@@ -68,7 +68,7 @@ const FILM_VARIANTS: Array<{ title: string; note: string }> = [
     note: "3D carbon weave texture ideal for roofs / accents. Hydrophobic & self-healing. 10yr warranty.",
   },
   {
-    title: "Piano Black Gloss",
+    title: "Colored PPF/Black Piano",
     note: "Ultra-deep high gloss black for trims, roofs & accent panels. 10yr warranty.",
   },
 ];
@@ -80,24 +80,40 @@ const MEDIA_SIZE = { width: 520, height: 300 };
 // CDN dimensions for gallery (larger for lightbox)
 const GALLERY_SIZE = { width: 800, height: 600 };
 
-const MEDIA_IMAGES = [
-  cdn("/mamrot/ppf/20250902_155106-webp.webp", MEDIA_SIZE),
-  cdn("/mamrot/ppf/20250918_001006-webp.webp", MEDIA_SIZE),
-  // cdn("/mamrot/ppf/20251021_231430-webp.webp"),
-  cdn("/mamrot/ppf/20250906_200515 (1)-webp.webp", MEDIA_SIZE),
+type PageImage = { src: string; hideOnMobile?: boolean };
+
+const MEDIA_IMAGES: PageImage[] = [
+  { src: cdn("/mamrot/ppf/20250902_155106-webp.webp", MEDIA_SIZE) },
+  {
+    src: cdn("/mamrot/ppf/ppf-page-new-feb-1.webp", MEDIA_SIZE),
+    hideOnMobile: true,
+  },
+  // { src: cdn("/mamrot/ppf/20251021_231430-webp.webp") },
+  {
+    src: cdn("/mamrot/ppf/ppf-page-new-feb-2.webp", MEDIA_SIZE),
+    hideOnMobile: true,
+  },
 ];
 
-const GALLERY_IMAGES = [
-  cdn("/mamrot/ppf/IMG_20251027_141229_861-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/ppf/20250117_203531-webp.webp", GALLERY_SIZE),
+const GALLERY_IMAGES: PageImage[] = [
+  {
+    src: cdn("/mamrot/ppf/ppf-page-new-feb-3.webp", GALLERY_SIZE),
+    hideOnMobile: true,
+  },
+  { src: cdn("/mamrot/ppf/20250117_203531-webp.webp", GALLERY_SIZE) },
   // cdn("/mamrot/ppf/20250906_200515 (1)-webp.webp"),
   // cdn("/mamrot/ppf/20250918_001006-webp.webp"),
   // cdn("/mamrot/ppf/20251021_231430-webp.webp"),
-  cdn("/mamrot/ppf/porche_and_bmw.webp", GALLERY_SIZE),
-  cdn(
-    "/mamrot/ppf/480488282_594748413412441_5599466613609433861_n-webp.webp",
-    GALLERY_SIZE
-  ),
+  {
+    src: cdn("/mamrot/ppf/ppf-page-new-feb-4.webp", GALLERY_SIZE),
+    hideOnMobile: true,
+  },
+  {
+    src: cdn(
+      "/mamrot/ppf/480488282_594748413412441_5599466613609433861_n-webp.webp",
+      GALLERY_SIZE,
+    ),
+  },
 ];
 
 export default function Page() {
@@ -130,8 +146,8 @@ export default function Page() {
             <p className="lede ppf-animate">
               We install the most advanced Paint Protection Films (PPF) on the
               market - GSWF - with a special self-healing layer and backed by
-              lifetime manufacturer warranty. Installation for cars, SUVs,
-              trucks across Marbella and Málaga.
+              lifetime manufacturer warranty. Installation for cars and SUVs
+              across Marbella and Málaga.
             </p>
             <p className="lede ppf-animate">
               This innovative technology keeps your paint flawless and free from
@@ -159,12 +175,14 @@ export default function Page() {
             >
               {MEDIA_IMAGES.map((img, i) => (
                 <figure
-                  key={img}
-                  className="ppf-media-item ppf-animate"
+                  key={img.src}
+                  className={`ppf-media-item ppf-animate ${
+                    img.hideOnMobile ? "ppf-hide-mobile" : ""
+                  }`}
                   style={{ ["--order" as any]: i }}
                 >
                   <LoadingImage
-                    src={img}
+                    src={img.src}
                     alt="PPF installation example"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -243,12 +261,14 @@ export default function Page() {
           <div className="gallery-grid ppf-stagger">
             {GALLERY_IMAGES.map((img, i) => (
               <figure
-                key={img}
-                className="gallery-item ppf-animate"
+                key={img.src}
+                className={`gallery-item ppf-animate ${
+                  img.hideOnMobile ? "ppf-hide-mobile" : ""
+                }`}
                 style={{ ["--order" as any]: i }}
               >
                 <LoadingImage
-                  src={img}
+                  src={img.src}
                   alt="Vehicle protected by PPF"
                   width={640}
                   height={480}

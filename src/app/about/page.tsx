@@ -139,8 +139,8 @@ export default function AboutPage() {
               <strong>detailing jobs to large-scale wrapping projects</strong>,
               his dedication remains the same. Among his proudest achievements
               are some of the{" "}
-              <strong>finest and most valuable Scania trucks in Norway</strong>,
-              each receiving <strong>nearly full PPF installations</strong> -{" "}
+              <strong>most demanding premium projects in Norway</strong>, each
+              receiving <strong>nearly full PPF installations</strong> -{" "}
               <strong>
                 around 100 painted panels wrapped and protected in just six days
               </strong>
@@ -153,8 +153,9 @@ export default function AboutPage() {
               </strong>
               , earning widespread recognition in record time.{" "}
               <strong>Mamrot CarSpa</strong> quickly became a respected name in
-              both the <strong>truck and car markets</strong>, attracting{" "}
-              <strong>customers</strong> who <strong>traveled</strong> more than{" "}
+              both the <strong>premium and enthusiast car markets</strong>,
+              attracting <strong>customers</strong> who{" "}
+              <strong>traveled</strong> more than{" "}
               <strong>1,000 km to experience his work first-hand.</strong>
             </p>
           </div>
@@ -176,7 +177,7 @@ export default function AboutPage() {
           </p>
           <p>
             The <strong>studio welcomes projects of every kind</strong> -{" "}
-            <strong>cars, trucks, boats, and caravans</strong>. From{" "}
+            <strong>cars, boats, and caravans</strong>. From{" "}
             <strong>older vehicles in need of new life</strong> to{" "}
             <strong>premium and luxury models</strong> seeking a finish beyond
             ordinary <strong>market standards</strong>, every assignment

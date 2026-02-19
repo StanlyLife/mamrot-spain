@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
 import "../styles/home.scss"; // ensure styles are available
 import { cdn } from "@/lib/cdn";
 
@@ -11,70 +10,26 @@ function instantScroll(id: string) {
 }
 
 export function Hero() {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [isPortrait, setIsPortrait] = useState(false);
-
-  useEffect(() => {
-    // Check orientation on mount and on resize
-    const checkOrientation = () => {
-      setIsPortrait(window.innerHeight > window.innerWidth);
-    };
-
-    checkOrientation();
-    window.addEventListener("resize", checkOrientation);
-
-    return () => window.removeEventListener("resize", checkOrientation);
-  }, []);
-
-  useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    // Attempt play in case autoplay policy delays it
-    const attempt = () => {
-      const p = v.play();
-      if (p && typeof p.then === "function") {
-        p.catch(() => {
-          // ignore autoplay rejection silently
-        });
-      }
-    };
-    attempt();
-  }, [isPortrait]); // Re-attempt play when video source changes
-
-  const videoSrc = isPortrait
-    ? cdn("/videos/vask-front-vertikal.mp4")
-    : cdn("/videos/vask-front-horisontal.mp4");
-
-  const posterSrc = isPortrait
-    ? cdn("/videos/vask-front-vertikal-first-frame.webp", {
-        width: 1080,
-        height: 1920,
-      })
-    : cdn("/videos/vask-front-horisontal_placeholder.webp", {
-        width: 1920,
-        height: 1080,
-      });
-
   return (
     <section className="hero" aria-labelledby="hero-heading">
       <div className="hero__media" aria-hidden="true">
-        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-        <video
-          ref={videoRef}
-          key={videoSrc} // Force re-render when source changes
-          className="hero__video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster={posterSrc}
-          // @ts-expect-error - fetchPriority is valid HTML attribute for resource prioritization
-          fetchPriority="high"
-        >
-          <source src={videoSrc} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        {/* To revert back to video: replace this <picture> block with the previous <video className="hero__video"> implementation. */}
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcSet={cdn(
+              "/mamrot/hero/car%20detailing%20in%20marbella-1%20mobile.webp",
+            )}
+          />
+          <img
+            src={cdn(
+              "/mamrot/hero/car%20detailing%20in%20marbella-2%20desktop.webp",
+            )}
+            alt=""
+            className="hero__video"
+            fetchPriority="high"
+          />
+        </picture>
         <div className="hero__overlay" />
       </div>
       <div className="hero__content">

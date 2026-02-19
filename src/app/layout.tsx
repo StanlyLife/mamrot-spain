@@ -24,7 +24,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "CarSpa Marbella | Wraps, PPF & Detailing",
   description:
-    "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars, trucks, boats across Marbella & Málaga.",
+    "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars and boats across Marbella & Málaga.",
   metadataBase: new URL("https://www.carspamarbella.es"),
   openGraph: {
     type: "website",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "CarSpa Marbella",
     title: "CarSpa Marbella | Wraps, PPF & Detailing",
     description:
-      "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars, trucks, boats across Marbella & Málaga.",
+      "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars and boats across Marbella & Málaga.",
     images: [
       {
         url: "/logos/carspamarbellalogo.jpg",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CarSpa Marbella | Wraps, PPF & Detailing",
     description:
-      "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars, trucks, boats across Marbella & Málaga.",
+      "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars and boats across Marbella & Málaga.",
     images: ["/logos/carspamarbellalogo.jpg"],
   },
 };

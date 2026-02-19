@@ -155,8 +155,8 @@ const IMAGES: GalleryImage[] = [
   },
   {
     file: "20250920_122216-webp.webp",
-    alt: "Truck treatment protection",
-    cat: "Truck",
+    alt: "Premium protection finish",
+    cat: "Protection",
     w: 1000,
     h: 680,
   },

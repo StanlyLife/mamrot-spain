@@ -134,8 +134,12 @@
     #cfa347 60%,
     #ffdd66 90%
   );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
@@ -169,8 +173,12 @@
   border-radius: inherit;
   padding: 2px;
   background: linear-gradient(135deg, #d8b25e, #f5e3b0, #cfa347 70%, #ffdd66);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
@@ -352,4 +360,10 @@
 }
 .gallery-item:hover img {
   scale: 1.05;
+}
+
+@media (max-width: 768px) {
+  .ppf-hide-mobile {
+    display: none !important;
+  }
 }

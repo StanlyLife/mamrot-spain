@@ -26,7 +26,7 @@ const ITEMS: ShowcaseItem[] = [
     image: cdn("/mamrot/tesla/tesla_showcase-webp.webp", DESKTOP_CARD_SIZE),
     mobileImage: cdn(
       "/mamrot/tesla/tesla_showcase_mobile-webp.webp",
-      MOBILE_SIZE
+      MOBILE_SIZE,
     ),
     href: "/tesla-specialists",
     alt: "Tesla PPF and wrap specialist placeholder",
@@ -54,11 +54,11 @@ const ITEMS: ShowcaseItem[] = [
     title: "CERAMIC COATING",
     mobileImage: cdn(
       "/mamrot/ceramic/ceramiccoating_service_showcase.webp",
-      MOBILE_SIZE
+      MOBILE_SIZE,
     ),
     image: cdn(
       "/mamrot/ceramic/ceramiccoating_service_showcase_mobile.webp",
-      DESKTOP_CARD_SIZE
+      DESKTOP_CARD_SIZE,
     ),
     href: "/ceramic",
     alt: "Water beading on ceramic coated surface",
@@ -70,24 +70,14 @@ const ITEMS: ShowcaseItem[] = [
     title: "Paint Correction & Polishing",
     mobileImage: cdn(
       "/mamrot/correction/paintcorrection_service_showcase_mobile.webp",
-      MOBILE_SIZE
+      MOBILE_SIZE,
     ),
     image: cdn(
       "/mamrot/correction/paintcorrection_service_showcase.webp",
-      DESKTOP_CARD_SIZE
+      DESKTOP_CARD_SIZE,
     ),
     href: "/correction",
     alt: "Machine polishing during paint correction",
-    disableFilter: true,
-  },
-  // Lastebilbehandling / Truck Treatment
-  {
-    key: "truck",
-    title: "TRUCK TREATMENT",
-    mobileImage: cdn("/mamrot/depthandclaritydesktop.webp", MOBILE_SIZE),
-    image: cdn("/mamrot/truck/20250725_203730.webp", DESKTOP_CARD_SIZE),
-    href: "/truck-treatment",
-    alt: "Protective treatment on truck exterior",
     disableFilter: true,
   },
   // Chrome Delete
@@ -96,7 +86,7 @@ const ITEMS: ShowcaseItem[] = [
     title: "CHROME DELETE",
     image: cdn(
       "/mamrot/transfer1/20250905_224202-webp.webp",
-      DESKTOP_CARD_SIZE
+      DESKTOP_CARD_SIZE,
     ),
     href: "/chrome-delete",
     alt: "Black finish applied over chrome trim",
@@ -107,7 +97,7 @@ const ITEMS: ShowcaseItem[] = [
     title: "Headlight Tinting & Sunroof Protection Film",
     image: cdn(
       "/mamrot/transfer2/FB_IMG_1736778385159-webp.webp",
-      DESKTOP_CARD_SIZE
+      DESKTOP_CARD_SIZE,
     ),
     href: "/headlight-tinting",
     alt: "Tint film being applied to vehicle window",
@@ -118,7 +108,7 @@ const ITEMS: ShowcaseItem[] = [
     title: "Boat & Yacht Treatment",
     image: cdn(
       "/mamrot/boat/FB_IMG_1739710587447-webp.webp",
-      DESKTOP_CARD_SIZE
+      DESKTOP_CARD_SIZE,
     ),
     href: "/boat-treatment",
     alt: "Detailing interior leather seat cleaning",

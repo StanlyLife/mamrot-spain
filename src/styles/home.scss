@@ -37,7 +37,8 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    filter: brightness(0.45) saturate(0.125);
+    //Uncomment below when adding back video
+    // filter: brightness(0.45) saturate(0.125);
     transform: scale(1.02);
   }
 
@@ -537,7 +538,9 @@
   height: clamp(24px, 3vw, 36px);
   width: auto;
   opacity: 0.8;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
   filter: brightness(1.1) contrast(1.1);
 
   &:hover {
@@ -625,13 +628,15 @@
     display: flex;
     flex-direction: column;
     min-height: 220px;
-    box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.4),
+    box-shadow:
+      0 2px 4px -2px rgba(0, 0, 0, 0.4),
       0 8px 24px -6px rgba(0, 0, 0, 0.55);
     transition: $transition;
 
     &:hover {
       transform: translateY(-4px);
-      box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.55),
+      box-shadow:
+        0 4px 10px -2px rgba(0, 0, 0, 0.55),
         0 16px 30px -10px rgba(0, 0, 0, 0.6);
     }
 

@@ -23,7 +23,6 @@ src/
 │   ├── headlight-tinting/
 │   ├── chrome-delete/
 │   ├── boat-treatment/
-│   ├── truck-treatment/
 │   ├── tesla-specialists/
 │   ├── gallery/
 │   └── about/
