@@ -362,6 +362,17 @@
       align-items: center;
     }
 
+    .hero__video {
+      filter: brightness(0.4) grayscale(0.35) saturate(0.55);
+    }
+
+    .hero__overlay {
+      background: linear-gradient(
+        rgba(10, 11, 13, 0.48),
+        rgba(10, 11, 13, 0.86)
+      );
+    }
+
     &__eyebrow {
       font-size: 0.62rem;
       letter-spacing: 0.12em;
