@@ -44,7 +44,7 @@ export default function Home() {
         subheading="Meticulous multi-stage refinement"
         ctaLabel="Detailing"
         backgroundImage="/mamrot/depthAndClarity/car detailing in marbella-2 desktop.webp"
-        backgroundImageMobile="/mamrot/depthAndClarity/mobile hero image marbella carspa.webp"
+        backgroundImageMobile="/mamrot/hero/hero image marbella carspa-mobile.webp"
         align="center"
         imageAlt="Professional car paint correction and detailing in Marbella"
       />
