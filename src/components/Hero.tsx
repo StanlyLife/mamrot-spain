@@ -18,12 +18,12 @@ export function Hero() {
           <source
             media="(max-width: 767px)"
             srcSet={cdn(
-              "/mamrot/depthAndClarity/mobile%20hero%20image%20marbella%20carspa.webp",
+              "/mamrot/hero/mobile%20hero%20image%20marbella%20carspa.webp",
             )}
           />
           <img
             src={cdn(
-              "/mamrot/hero/hero%20image%20marbella%20carspa-desktop.webp",
+              "/mamrot/hero/hero%20image%20marbella%20carspa%20-%20red%20-desktop.webp",
             )}
             alt=""
             className="hero__video"
