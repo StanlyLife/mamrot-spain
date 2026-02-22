@@ -14,7 +14,7 @@ export const metadata = {
       "Advanced GSWF Defender Platinum PPF with self-healing layer and lifetime warranty. Up to 45% more gloss.",
     images: [
       {
-        url: "/logos/carspamarbellalogo.jpg",
+        url: "/mamrot/depthAndClarity/hero image marbella carspa-desktop.webp",
         width: 1200,
         height: 630,
         alt: "CarSpa Marbella Logo",
@@ -26,7 +26,7 @@ export const metadata = {
     title: "Paint Protection Film (PPF) | Premium PPF GSWF Marbella & Málaga",
     description:
       "Advanced GSWF Defender Platinum PPF with self-healing layer and lifetime warranty.",
-    images: ["/logos/carspamarbellalogo.jpg"],
+    images: ["/mamrot/depthAndClarity/hero image marbella carspa-desktop.webp"],
   },
 };
 

@@ -14,7 +14,7 @@ export const metadata = {
       "Experience the art of high-end paint correction. One-Step, Two-Step, or Full Correction with up to 90% defect removal and premium GYEON ceramic coating.",
     images: [
       {
-        url: "/logos/carspamarbellalogo.jpg",
+        url: "/mamrot/depthAndClarity/hero image marbella carspa-desktop.webp",
         width: 1200,
         height: 630,
         alt: "CarSpa Marbella Logo",
@@ -26,7 +26,7 @@ export const metadata = {
     title: "Paint Correction & Polishing | Cars Boats Marbella & Málaga",
     description:
       "Experience the art of high-end paint correction with up to 90% defect removal.",
-    images: ["/logos/carspamarbellalogo.jpg"],
+    images: ["/mamrot/depthAndClarity/hero image marbella carspa-desktop.webp"],
   },
 };
 
