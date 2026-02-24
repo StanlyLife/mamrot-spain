@@ -16,7 +16,7 @@ export const metadata = {
       "Complete boat and yacht restoration on the Costa del Sol. Exterior polishing, interior deep cleaning, and marine ceramic coating.",
     images: [
       {
-        url: "/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.webp",
+        url: "/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.jpg",
         width: 1200,
         height: 630,
         alt: "CarSpa Marbella Logo",
@@ -29,7 +29,7 @@ export const metadata = {
       "Boat & Yacht Treatment in Marbella & Málaga | Marine Polishing & Ceramic",
     description:
       "Complete boat and yacht restoration on the Costa del Sol with Nordic-level expertise.",
-    images: ["/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.webp"],
+    images: ["/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.jpg"],
   },
 };
 
@@ -91,7 +91,7 @@ const GALLERY_SIZE = { width: 800, height: 600 };
 
 const BASE_IMAGE = cdn(
   "/mamrot/boat/FB_IMG_1763036073107-webp.webp",
-  GALLERY_SIZE
+  GALLERY_SIZE,
 );
 
 const GALLERY = [

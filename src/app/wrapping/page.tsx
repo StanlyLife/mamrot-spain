@@ -16,7 +16,7 @@ export const metadata = {
       "Transform your car with exclusive wrap colors from PWF, 3M, HEXIS, and KPMF. Professional installation with 3-year warranty.",
     images: [
       {
-        url: "/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.webp",
+        url: "/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.jpg",
         width: 1200,
         height: 630,
         alt: "CarSpa Marbella Logo",
@@ -29,7 +29,7 @@ export const metadata = {
       "Full Car Wrapping & Color Change in Marbella & Málaga | Premium Vinyl Wrap",
     description:
       "Transform your car with exclusive wrap colors from PWF, 3M, HEXIS, and KPMF.",
-    images: ["/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.webp"],
+    images: ["/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.jpg"],
   },
 };
 
