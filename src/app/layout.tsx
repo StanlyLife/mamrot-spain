@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import WhatsAppBubble from "../components/WhatsAppBubble";
 import SocialSidebar from "../components/SocialSidebar";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -97,6 +98,7 @@ export default function RootLayout({
         <Footer />
         <WhatsAppBubble />
         <SocialSidebar />
+        <Analytics />
       </body>
     </html>
   );
