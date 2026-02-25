@@ -12,12 +12,14 @@ export const metadata: Metadata = {
   description:
     "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars and boats across Marbella & Málaga.",
   openGraph: {
+    url: "https://www.carspamarbella.es/",
+    type: "website",
     title: "CarSpa Marbella | Luxury Wraps, PPF & Detailing",
     description:
       "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars and boats across Marbella & Málaga.",
     images: [
       {
-        url: "/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.jpg",
+        url: "/mamrot/some/somepreview.jpg",
         width: 1200,
         height: 630,
         alt: "CarSpa Marbella - Premium Car Detailing",
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
     title: "CarSpa Marbella | Luxury Wraps, PPF & Detailing",
     description:
       "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars and boats across Marbella & Málaga.",
-    images: ["/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.jpg"],
+    images: ["/mamrot/some/somepreview.jpg"],
   },
 };
 

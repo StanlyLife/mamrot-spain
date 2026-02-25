@@ -10,7 +10,7 @@ export const metadata: Metadata = {
       "Browse recent wrap, PPF, correction & ceramic coating projects showcasing finish quality & protection details.",
     images: [
       {
-        url: "/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.jpg",
+        url: "/mamrot/some/somepreview.jpg",
         width: 1200,
         height: 630,
         alt: "CarSpa Marbella Logo",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Gallery | Recent Projects & Finishes",
     description:
       "Browse recent wrap, PPF, correction & ceramic coating projects.",
-    images: ["/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.jpg"],
+    images: ["/mamrot/some/somepreview.jpg"],
   },
 };
 

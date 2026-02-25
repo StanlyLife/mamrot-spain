@@ -12,7 +12,7 @@ export const metadata = {
       "Premium Tesla-focused PPF and wrapping studio in Marbella & Málaga. Experts in Model 3, Model Y, Model S, and Model X.",
     images: [
       {
-        url: "/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.jpg",
+        url: "/mamrot/some/somepreview.jpg",
         width: 1200,
         height: 630,
         alt: "CarSpa Marbella Logo",
@@ -24,7 +24,7 @@ export const metadata = {
     title: "Tesla Specialists PPF & Wraps | Marbella & Málaga",
     description:
       "Premium Tesla-focused PPF and wrapping studio in Marbella & Málaga.",
-    images: ["/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.jpg"],
+    images: ["/mamrot/some/somepreview.jpg"],
   },
 };
 
