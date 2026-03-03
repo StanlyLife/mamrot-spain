@@ -17,9 +17,7 @@ export function Hero() {
         <picture>
           <source
             media="(max-width: 767px)"
-            srcSet={cdn(
-              "/mamrot/hero/mobile-hero-image-2.jpg",
-            )}
+            srcSet={cdn("/mamrot/hero/mobile-hero-image-2.jpg")}
           />
           <img
             src={cdn(
