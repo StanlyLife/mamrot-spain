@@ -7,7 +7,6 @@ import { cdn } from "@/lib/cdn";
 interface Review {
   id: string;
   name: string;
-  location: string;
   rating: number;
   text: string;
   service: string;
@@ -16,9 +15,40 @@ interface Review {
 
 const REVIEWS: Review[] = [
   {
+    id: "15",
+    name: "Anton Krasun",
+    rating: 5,
+    text: "Patrik is extremely professional. CarSpa Marbella picked up my GLC from the dealership, handled all the cleaning/ detailing and wrapping. Quality of finish is superior. It was super easy to handle everything via whatsapp. Appreciate the service and I will be back with new business car in the future.",
+    service: "Service",
+    date: "Recent",
+  },
+  {
+    id: "16",
+    name: "Tomasz Majewski",
+    rating: 5,
+    text: "Rewelacja. Profesjonalnie. Bardzo elastycznie. Auto wyglada jak nowe. Patrik to bardzo doswiadczony czlowiek w branzy detalingu i widac to po efektach jego pracy.",
+    service: "Service",
+    date: "Recent",
+  },
+  {
+    id: "17",
+    name: "Douglas Perez",
+    rating: 5,
+    text: "Excelente profesional! Quedei encantado coa súa atención aos detalles e a súa ética de traballo altamente profesional. Presta unha atención meticulosa a cada detalle e utiliza os mellores produtos para conseguir resultados impecables. A súa profesionalidade é evidente tanto no seu traballo como na súa atención ao cliente. Ao chegar, ofreceume café e unhas galletas caseiras. Tamén ten un compañeiro moi cariñoso chamado Monty (un can), e non puiden deixar de acaricialo porque é moi doce. 10 estrelas, e sen dúbida volverei. Grazas, Patrik.",
+    service: "Service",
+    date: "Recent",
+  },
+  {
+    id: "18",
+    name: "Garry Hall",
+    rating: 5,
+    text: "Extremely happy with the PPF job by Patrik on my wife’s new BMW X1M35i. He was professional and delivered as negotiated. I was more concerned with the quality of the job than it being done quickly. His attention to detail was exemplary.",
+    service: "Service",
+    date: "Recent",
+  },
+  {
     id: "1",
     name: "Hans Petter",
-    location: "Norway",
     rating: 5,
     text: "Had my car, an E63s AMG, wrapped here - very satisfied with the service, the result, and the guidance along the way. Highly recommended. Great communication throughout, and a clear agreement on both price and the changes I chose during the process. I'll definitely be stopping by more often for coating and updates. It was like getting a new car 😉",
     service: "Car Wrapping",
@@ -27,7 +57,6 @@ const REVIEWS: Review[] = [
   {
     id: "2",
     name: "Odin Bekken",
-    location: "Norway",
     rating: 5,
     text: "I recommend everyone to use Mamrot CarSpa & Foliering! Really skilled! I handed in my GLE for a thorough treatment/paint correction. The car is unrecognizable! It looks absolutely flawless now 💎 Excellent service and truly a magician when it comes to detailing. This is something you have to try 😊😊",
     service: "Paint Correction",
@@ -36,7 +65,6 @@ const REVIEWS: Review[] = [
   {
     id: "3",
     name: "John Joh",
-    location: "Norway",
     rating: 5,
     text: "Professionalism from A to Z. Patrik is a skilled guy who puts his heart and soul into taking care of other people's cars! The result is excellent, and I can truly recommend Mamrot CarSpa & Foliering. 10/10 from me!",
     service: "Full Service",
@@ -45,7 +73,6 @@ const REVIEWS: Review[] = [
   {
     id: "4",
     name: "Rene Håheim",
-    location: "Norway",
     rating: 5,
     text: "We've been using Patrik regularly for several jobs. Polishing, plastic restoration, wrapping, new car preparation, and used car renewal! Brilliant results and exactly what we were looking for! We wanted to see what a dedicated car care specialist could do with details to make our customers even more satisfied! Highly recommend having a chat with Patrik if you need anything.",
     service: "Multiple Services",
@@ -54,7 +81,6 @@ const REVIEWS: Review[] = [
   {
     id: "5",
     name: "Svein Ivar Marthinsen",
-    location: "Norway",
     rating: 5,
     text: "Good at providing advice to achieve a professional result. Flexible when it comes to delivery.",
     service: "Consultation",
@@ -63,25 +89,14 @@ const REVIEWS: Review[] = [
   {
     id: "6",
     name: "Marthe Johnsen Wilhelmsen",
-    location: "Norway",
     rating: 5,
     text: "Knows exactly what he's doing - excellent service and great results. Highly recommended.",
     service: "Detailing",
     date: "Recent",
   },
   {
-    id: "7",
-    name: "Tone Pedersen",
-    location: "Norway",
-    rating: 5,
-    text: "Good communication, punctual, and the job was done exactly as agreed. Highly recommended.",
-    service: "Service",
-    date: "Recent",
-  },
-  {
     id: "8",
     name: "Trond Erik Grådal",
-    location: "Norway",
     rating: 5,
     text: "Punctual, fair price, and an excellent result. Highly recommended 👏👏😃👍",
     service: "Service",
@@ -90,7 +105,6 @@ const REVIEWS: Review[] = [
   {
     id: "9",
     name: "Monika & Thomas",
-    location: "Oslo",
     rating: 5,
     text: "Absolutely insane effect from the color change wrap on our Tesla. Thanks again for visiting Oslo - we just had to write this. You're incredibly skilled. Greetings from Monika and Thomas.",
     service: "Color Change Wrap",
@@ -99,7 +113,6 @@ const REVIEWS: Review[] = [
   {
     id: "10",
     name: "Frode Løkstad Ham",
-    location: "Norway",
     rating: 5,
     text: "Absolutely fantastic job done on my car - interior cleaning and polishing made it look practically brand new. Can highly recommend!",
     service: "Interior & Polishing",
@@ -108,25 +121,14 @@ const REVIEWS: Review[] = [
   {
     id: "11",
     name: "Håkon Hauge Enga",
-    location: "Norway",
     rating: 5,
     text: "Very good company! Organized, precise, and thorough. The boat looked like new after a 3-step treatment. Highly recommended.",
     service: "Marine Detailing",
     date: "Recent",
   },
   {
-    id: "12",
-    name: "Almar Nordby",
-    location: "Norway",
-    rating: 5,
-    text: "Came to my home and did a very good and detailed job. Patrik is very meticulous and gives 110% in his work.",
-    service: "Mobile Service",
-    date: "Recent",
-  },
-  {
     id: "13",
     name: "Aleksander Engelbrecht",
-    location: "Norway",
     rating: 5,
     text: "I got a full wrap with PPF, the result was fantastic. Both faster and cheaper than other companies. Highly recommend him 😊",
     service: "Full Wrap + PPF",
@@ -135,7 +137,6 @@ const REVIEWS: Review[] = [
   {
     id: "14",
     name: "Ole Anders Dyfrin",
-    location: "Norway",
     rating: 5,
     text: "I've had my car treated and I'm very satisfied! I chose the \"Ultimate Package,\" which includes PPF on the most exposed areas and ceramic coating on the rest of the car. The job was done as agreed, and the PPF is practically invisible. Highly recommended!",
     service: "Ultimate Package",
@@ -223,7 +224,6 @@ export default function ReviewsSection() {
                   <div className="review-meta">
                     <div className="review-author">
                       <div className="author-name">{review.name}</div>
-                      <div className="author-location">{review.location}</div>
                     </div>
                     <div className="review-details">
                       <div className="review-service">{review.service}</div>
