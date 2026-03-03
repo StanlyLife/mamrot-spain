@@ -18,7 +18,7 @@ export function Hero() {
           <source
             media="(max-width: 767px)"
             srcSet={cdn(
-              "/mamrot/depthAndClarity/hero%20image%20marbella%20carspa-mobile.webp",
+              "/mamrot/hero/mobile-hero-image-2.jpg",
             )}
           />
           <img
