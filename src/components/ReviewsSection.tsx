@@ -173,7 +173,7 @@ export default function ReviewsSection() {
       <div className="reviews-background" aria-hidden="true">
         <LoadingImage
           src={cdn(
-            "/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.webp",
+            "/mamrot/transfer1/20250917_153410-webp.webp",
             {
               width: 1920,
               height: 1080,
