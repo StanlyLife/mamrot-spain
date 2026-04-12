@@ -36,7 +36,14 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "wrapping",
     title: "CAR WRAPPING",
-    image: cdn("/mamrot/wrapping/main-webp.webp", DESKTOP_CARD_SIZE),
+    image: cdn(
+      "/mamrot/wrapping/transform-aesthetics-mobile-and-desktop.webp",
+      DESKTOP_CARD_SIZE,
+    ),
+    mobileImage: cdn(
+      "/mamrot/wrapping/car-wrapping-mobile-and-desktop.webp",
+      MOBILE_SIZE,
+    ),
     href: "/wrapping",
     alt: "Full vehicle color change wrap installation",
   },
@@ -44,7 +51,14 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "ppf",
     title: "Paint protection film (PPF)",
-    image: cdn("/mamrot/ppf/20251021_231430-webp.webp", DESKTOP_CARD_SIZE),
+    image: cdn(
+      "/mamrot/ppf/paint-protection-film-desktop.webp",
+      DESKTOP_CARD_SIZE,
+    ),
+    mobileImage: cdn(
+      "/mamrot/ppf/paint-protection-film-mobile-and-desktop.webp",
+      MOBILE_SIZE,
+    ),
     href: "/ppf",
     alt: "Paint protection film applied to front panel",
   },
@@ -53,11 +67,11 @@ const ITEMS: ShowcaseItem[] = [
     key: "ceramic",
     title: "CERAMIC COATING",
     mobileImage: cdn(
-      "/mamrot/ceramic/ceramiccoating_service_showcase.webp",
+      "/mamrot/ceramic/ceramic-coating-mobile-and-desktop.webp",
       MOBILE_SIZE,
     ),
     image: cdn(
-      "/mamrot/ceramic/ceramiccoating_service_showcase_mobile.webp",
+      "/mamrot/ceramic/ceramic-coating-mobile-and-desktop.webp",
       DESKTOP_CARD_SIZE,
     ),
     href: "/ceramic",
@@ -69,11 +83,11 @@ const ITEMS: ShowcaseItem[] = [
     key: "correction",
     title: "Paint Correction & Polishing",
     mobileImage: cdn(
-      "/mamrot/correction/paintcorrection_service_showcase_mobile.webp",
+      "/mamrot/correction/paint-correction-and-polishing-mobile-and-desktop.webp",
       MOBILE_SIZE,
     ),
     image: cdn(
-      "/mamrot/correction/paintcorrection_service_showcase.webp",
+      "/mamrot/correction/paint-correction-and-polishing-mobile-and-desktop.webp",
       DESKTOP_CARD_SIZE,
     ),
     href: "/correction",
@@ -96,8 +110,12 @@ const ITEMS: ShowcaseItem[] = [
     key: "tinting",
     title: "Headlight Tinting & Sunroof Protection Film",
     image: cdn(
-      "/mamrot/transfer2/FB_IMG_1736778385159-webp.webp",
+      "/mamrot/lighttint/headlight-tinting-mobile-and-desktop.webp",
       DESKTOP_CARD_SIZE,
+    ),
+    mobileImage: cdn(
+      "/mamrot/lighttint/headlight-tinting-mobile-and-desktop.webp",
+      MOBILE_SIZE,
     ),
     href: "/headlight-tinting",
     alt: "Tint film being applied to vehicle window",
@@ -107,8 +125,12 @@ const ITEMS: ShowcaseItem[] = [
     key: "boat",
     title: "Boat & Yacht Treatment",
     image: cdn(
-      "/mamrot/boat/FB_IMG_1739710587447-webp.webp",
+      "/mamrot/boat/boat-treatment-desktop.webp",
       DESKTOP_CARD_SIZE,
+    ),
+    mobileImage: cdn(
+      "/mamrot/boat/boat-and-yacht-mobile-and-desktop.webp",
+      MOBILE_SIZE,
     ),
     href: "/boat-treatment",
     alt: "Detailing interior leather seat cleaning",

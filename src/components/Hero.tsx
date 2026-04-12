@@ -17,7 +17,7 @@ export function Hero() {
         <picture>
           <source
             media="(max-width: 767px)"
-            srcSet={cdn("/mamrot/hero/mobile-hero-image-2.jpg")}
+            srcSet={cdn("/mamrot/hero/hero-mobile.webp")}
           />
           <img
             src={cdn(
@@ -34,15 +34,28 @@ export function Hero() {
         <div className="hero__eyebrow">CarSpa Marbella Wraps & PPF</div>
         <h1 id="hero-heading">Luxury Wraps, PPF & Detailing in Marbella</h1>
         <p className="lede">
-          Precision protection and perfection in every detail. Specialists in
-          luxury car detailing, wrapping, and Paint Protection Film (PPF).
-          Delivering world-class protection and a flawless finish. Located on
-          the iconic Golden Mile, this is where luxury cars and premium
-          experiences meet. Partnering with a leading luxury automotive brand in
-          Marbella, we offer elite vehicles and refined services including
-          detailing, wraps, and PPF. All within an atmosphere designed for
-          relaxed conversations - finished with perfectly crafted coffee. This
-          is not car care. This is art.
+          Precision, Protection and Perfection in every detail. Specialists in
+          car detailing, wrapping, and Paint Protection Film (PPF). We deliver
+          world-class protection in gloss, matte, satin, and colour finishes.
+          Premium vinyl wraps from standard colours to the most exclusive
+          materials available. With 15 years of experience, certified installer
+          known for unmatched quality and attention to detail.
+          <br />
+          <br />
+          Inspired Norway's with PPF on heavy trucks projects with around 100
+          painted and protected elements - we bring that same level of
+          precision and dedication to Marbella, creating exceptional results
+          and premium services.
+          <br />
+          <br />
+          Located on the iconic Golden Mile, between Puerto Banus and Puente
+          Romano, our modern, exclusive facility offers private parking and
+          full camera security.
+          <br />
+          <br />
+          Feel passion with us.
+          <br />
+          Feel the difference.
         </p>
         <div className="hero__actions">
           <a

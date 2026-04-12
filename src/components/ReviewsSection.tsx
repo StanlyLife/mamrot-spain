@@ -24,14 +24,6 @@ const REVIEWS: Review[] = [
   },
   {
     id: "16",
-    name: "Tomasz Majewski",
-    rating: 5,
-    text: "Rewelacja. Profesjonalnie. Bardzo elastycznie. Auto wyglada jak nowe. Patrik to bardzo doswiadczony czlowiek w branzy detalingu i widac to po efektach jego pracy.",
-    service: "Service",
-    date: "Recent",
-  },
-  {
-    id: "17",
     name: "Douglas Perez",
     rating: 5,
     text: "Excelente profesional! Quedei encantado coa súa atención aos detalles e a súa ética de traballo altamente profesional. Presta unha atención meticulosa a cada detalle e utiliza os mellores produtos para conseguir resultados impecables. A súa profesionalidade é evidente tanto no seu traballo como na súa atención ao cliente. Ao chegar, ofreceume café e unhas galletas caseiras. Tamén ten un compañeiro moi cariñoso chamado Monty (un can), e non puiden deixar de acaricialo porque é moi doce. 10 estrelas, e sen dúbida volverei. Grazas, Patrik.",
