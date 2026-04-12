@@ -164,14 +164,11 @@ export default function ReviewsSection() {
     >
       <div className="reviews-background" aria-hidden="true">
         <LoadingImage
-          src={cdn(
-            "/mamrot/transfer1/20250917_153410-webp.webp",
-            {
-              width: 1920,
-              height: 1080,
-              quality: 80,
-            },
-          )}
+          src={cdn("/mamrot/transfer1/20250917_153410-webp.webp", {
+            width: 1920,
+            height: 1080,
+            quality: 80,
+          })}
           alt="Professional car detailing studio in Marbella"
           fill
           containerClassName="reviews-bg-image-container"

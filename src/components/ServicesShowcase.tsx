@@ -124,10 +124,7 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "boat",
     title: "Boat & Yacht Treatment",
-    image: cdn(
-      "/mamrot/boat/boat-treatment-desktop.webp",
-      DESKTOP_CARD_SIZE,
-    ),
+    image: cdn("/mamrot/boat/boat-treatment-desktop.webp", DESKTOP_CARD_SIZE),
     mobileImage: cdn(
       "/mamrot/boat/boat-and-yacht-mobile-and-desktop.webp",
       MOBILE_SIZE,

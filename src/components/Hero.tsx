@@ -43,14 +43,14 @@ export function Hero() {
           <br />
           <br />
           Inspired Norway's with PPF on heavy trucks projects with around 100
-          painted and protected elements - we bring that same level of
-          precision and dedication to Marbella, creating exceptional results
-          and premium services.
+          painted and protected elements - we bring that same level of precision
+          and dedication to Marbella, creating exceptional results and premium
+          services.
           <br />
           <br />
           Located on the iconic Golden Mile, between Puerto Banus and Puente
-          Romano, our modern, exclusive facility offers private parking and
-          full camera security.
+          Romano, our modern, exclusive facility offers private parking and full
+          camera security.
           <br />
           <br />
           Feel passion with us.
