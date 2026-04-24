@@ -136,6 +136,24 @@ const GALLERY_IMAGES: PageImage[] = [
   },
 ];
 
+const GALLERY_IMAGES_V2: PageImage[] = [
+  { src: cdn("/mamrot/ppf/20241024_122413-v2-webp.webp", GALLERY_SIZE) },
+  { src: cdn("/mamrot/ppf/20250212_215720-v2-webp.webp", GALLERY_SIZE) },
+  {
+    src: cdn("/mamrot/ppf/20250414_103947_0000-v2-webp.webp", GALLERY_SIZE),
+  },
+  { src: cdn("/mamrot/ppf/20260316_155449-v2-webp.webp", GALLERY_SIZE) },
+  {
+    src: cdn("/mamrot/ppf/FB_IMG_1745441756672-v2-webp.webp", GALLERY_SIZE),
+  },
+  {
+    src: cdn("/mamrot/ppf/FB_IMG_1772478799209-v2-webp.webp", GALLERY_SIZE),
+  },
+  {
+    src: cdn("/mamrot/ppf/IMG_20241223_113050_908-v2-webp.webp", GALLERY_SIZE),
+  },
+];
+
 export default function Page() {
   return (
     <main className="ppf-page" aria-labelledby="ppf-heading" data-page="ppf">
@@ -279,7 +297,7 @@ export default function Page() {
             Recent PPF Projects
           </h2>
           <div className="gallery-grid ppf-stagger">
-            {GALLERY_IMAGES.map((img, i) => (
+            {[...GALLERY_IMAGES_V2, ...GALLERY_IMAGES].map((img, i) => (
               <figure
                 key={img.src}
                 className={`gallery-item ppf-animate ${

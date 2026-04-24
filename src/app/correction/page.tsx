@@ -93,6 +93,20 @@ const GALLERY_IMAGES = [
   cdn("/mamrot/correction/z2ldh2sxerh1fv9jrjv9.webp", GALLERY_SIZE),
 ];
 
+const GALLERY_IMAGES_V2 = [
+  cdn("/mamrot/correction/20250527_230824-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/correction/1000071039-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/correction/1000132968-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/correction/FB_IMG_1739709349432-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/correction/FB_IMG_1772478831054-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/correction/IMG_20260302_203758_626-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/correction/IMG_20260302_203758_644-v2-webp.webp", GALLERY_SIZE),
+  cdn(
+    "/mamrot/correction/korekta-lakieru-powloka-ceramiczna-ferrari-f430-4-v2-webp.webp",
+    GALLERY_SIZE,
+  ),
+];
+
 const isDev = process.env.NODE_ENV === "development";
 
 export default function Page() {
@@ -208,7 +222,7 @@ export default function Page() {
             Recent Correction Projects
           </h2>
           <div className="gallery-grid correction-stagger">
-            {GALLERY_IMAGES.map((img, i) => (
+            {[...GALLERY_IMAGES_V2, ...GALLERY_IMAGES].map((img, i) => (
               <figure
                 key={img}
                 className="gallery-item correction-animate"

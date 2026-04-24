@@ -86,6 +86,14 @@ const GALLERY_IMAGES = [
   cdn("/mamrot/ceramic/zhakd13l91vgwjw7sxqj.webp", GALLERY_SIZE),
 ];
 
+const GALLERY_IMAGES_V2 = [
+  cdn("/mamrot/ceramic/1000071039-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/ceramic/1000123285-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/ceramic/FB_IMG_1739709349432-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/ceramic/IMG_20260302_203758_626-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/ceramic/IMG_20260302_203758_644-v2-webp.webp", GALLERY_SIZE),
+];
+
 export default function Page() {
   return (
     <main
@@ -207,7 +215,7 @@ export default function Page() {
             Recent Ceramic Projects
           </h2>
           <div className="gallery-grid ceramic-stagger">
-            {GALLERY_IMAGES.map((img, i) => (
+            {[...GALLERY_IMAGES_V2, ...GALLERY_IMAGES].map((img, i) => (
               <figure
                 key={img}
                 className="gallery-item ceramic-animate"

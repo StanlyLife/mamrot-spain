@@ -85,6 +85,17 @@ const GALLERY_IMAGES = [
   cdn("/mamrot/wrapping/20250810_190720_0000-webp.webp"),
 ];
 
+const GALLERY_IMAGES_V2 = [
+  cdn("/mamrot/wrapping/20250423_202826-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20250603_160042_0000-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20250719_095438-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20260129_181739-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20260202_144200-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20260323_173211-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/FB_IMG_1771499488085-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/IMG-20260325-WA0040-v2-webp.webp", GALLERY_SIZE),
+];
+
 export default function Page() {
   return (
     <main
@@ -238,7 +249,7 @@ export default function Page() {
         <div className="wrap-gallery__inner">
           <h2 id="wrap-gallery-heading">Recent Projects</h2>
           <div className="gallery-grid">
-            {GALLERY_IMAGES.map((img) => (
+            {[...GALLERY_IMAGES_V2, ...GALLERY_IMAGES].map((img) => (
               <figure key={img} className="gallery-item">
                 <LoadingImage
                   src={img}

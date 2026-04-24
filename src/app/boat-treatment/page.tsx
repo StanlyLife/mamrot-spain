@@ -106,6 +106,16 @@ const GALLERY = [
   cdn("/mamrot/boat/FB_IMG_1763036079033-webp.webp", GALLERY_SIZE),
 ];
 
+const GALLERY_V2 = [
+  cdn("/mamrot/boat/20260324_143121-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/boat/20260324_171140-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/boat/20260325_182058-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/boat/20260326_192741-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/boat/20260327_192750-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/boat/FB_IMG_1739710587447-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/boat/FB_IMG_1739710595396-v2-webp.webp", GALLERY_SIZE),
+];
+
 export default function Page() {
   return (
     <main className="boat-page" aria-labelledby="boat-heading">
@@ -236,7 +246,7 @@ export default function Page() {
         <div className="boat-gallery__inner">
           <h2 id="boat-gallery-heading">Marine Detailing Highlights</h2>
           <div className="gallery-grid">
-            {GALLERY.map((img) => (
+            {[...GALLERY_V2, ...GALLERY].map((img) => (
               <figure key={img} className="gallery-item">
                 <LoadingImage
                   src={img}

@@ -85,6 +85,14 @@ const GALLERY = [
   // cdn("/mamrot/chromedelete/IMG_20241013_120636_838-webp.webp"),
 ];
 
+const GALLERY_V2 = [
+  cdn("/mamrot/chromedelete/20260323_173211-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/chromedelete/20260323_173303-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/chromedelete/20260411_160503-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/chromedelete/20260411_163601-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/chromedelete/IMG-20260325-WA0040-v2-webp.webp", GALLERY_SIZE),
+];
+
 export default function Page() {
   return (
     <main className="chrome-page" aria-labelledby="chrome-heading">
@@ -187,7 +195,7 @@ export default function Page() {
             </p>
           </header>
           <div className="gallery-grid">
-            {GALLERY.map((img, idx) => (
+            {[...GALLERY_V2, ...GALLERY].map((img, idx) => (
               <figure key={img} className="gallery-item">
                 <div className="gallery-item__image">
                   <LoadingImage
