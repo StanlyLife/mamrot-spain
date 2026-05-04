@@ -41,7 +41,7 @@ const ITEMS: ShowcaseItem[] = [
       DESKTOP_CARD_SIZE,
     ),
     mobileImage: cdn(
-      "/mamrot/wrapping/car-wrapping-mobile-and-desktop.webp",
+      "/mamrot/wrapping/FostlaMB_50-1024x682-webp.webp",
       MOBILE_SIZE,
     ),
     href: "/wrapping",
@@ -124,13 +124,16 @@ const ITEMS: ShowcaseItem[] = [
   {
     key: "boat",
     title: "Boat & Yacht Treatment",
-    image: cdn("/mamrot/boat/boat-treatment-desktop.webp", DESKTOP_CARD_SIZE),
+    image: cdn(
+      "/mamrot/boat/20260413_104250-webp.webp",
+      DESKTOP_CARD_SIZE,
+    ),
     mobileImage: cdn(
-      "/mamrot/boat/boat-and-yacht-mobile-and-desktop.webp",
+      "/mamrot/boat/20260413_104250-webp.webp",
       MOBILE_SIZE,
     ),
     href: "/boat-treatment",
-    alt: "Detailing interior leather seat cleaning",
+    alt: "CarSpa Marbella boat care van parked in a Marbella marina beside yachts",
   },
 ];
 

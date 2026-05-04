@@ -67,10 +67,10 @@ export default function Home() {
         subheading="Precision color & finish changes"
         ctaLabel="Wrap Options"
         ctaHref="/wrapping"
-        backgroundImage="/mamrot/wrapping/car-wrapping-mobile-and-desktop.webp"
-        backgroundImageMobile="/mamrot/wrapping/transform-aesthetics-mobile-and-desktop.webp"
+        backgroundImage="/mamrot/wrapping/FostlaMB_50-1024x682-webp.webp"
+        backgroundImageMobile="/mamrot/wrapping/FostlaMB_50-1024x682-webp.webp"
         align="right"
-        imageAlt="Custom vinyl car wrap color change in Marbella"
+        imageAlt="Premium car wrapping project in Marbella"
       />
 
       <USPSection />
