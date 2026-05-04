@@ -91,6 +91,8 @@ const GALLERY_IMAGES_V2 = [
   cdn("/mamrot/wrapping/20251216_171232-webp.webp", GALLERY_SIZE),
   cdn("/mamrot/wrapping/20260420_095834-webp.webp", GALLERY_SIZE),
   cdn("/mamrot/wrapping/20260420_164959-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20260423_205946-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20260424_141316-webp.webp", GALLERY_SIZE),
   cdn("/mamrot/wrapping/20260427_223221-webp.webp", GALLERY_SIZE),
   cdn("/mamrot/wrapping/20260427_233950-webp.webp", GALLERY_SIZE),
   cdn("/mamrot/wrapping/20260428_140341-webp.webp", GALLERY_SIZE),
