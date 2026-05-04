@@ -78,13 +78,12 @@ const MEDIA_IMAGES = [
   cdn("/mamrot/wrapping/20260323_173211-v2-webp.webp", MEDIA_SIZE),
 ];
 
+const getImageAssetKey = (src: string) => src.split("?")[0];
+
 const GALLERY_IMAGES = [
   cdn("/mamrot/wrapping/FB_IMG_1736778385159-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/wrapping/foiled_mercedes-webp.webp", GALLERY_SIZE),
   // cdn("/mamrot/wrapping/20250712_211653-webp.webp"),
-  cdn("/mamrot/wrapping/20250904_222522-webp.webp", GALLERY_SIZE),
   // cdn("/mamrot/wrapping/20250907_131915-webp.webp"),
-  cdn("/mamrot/wrapping/FB_IMG_1739710033030 (1)-webp.webp", GALLERY_SIZE),
   cdn("/mamrot/wrapping/20250810_190720_0000-webp.webp"),
 ];
 
@@ -107,6 +106,14 @@ const GALLERY_IMAGES_V2 = [
   cdn("/mamrot/wrapping/FB_IMG_1771499488085-v2-webp.webp", GALLERY_SIZE),
   cdn("/mamrot/wrapping/IMG-20260325-WA0040-v2-webp.webp", GALLERY_SIZE),
 ];
+
+const MEDIA_IMAGE_KEYS = new Set(MEDIA_IMAGES.map(getImageAssetKey));
+
+const WRAPPING_GALLERY_IMAGES = [...GALLERY_IMAGES_V2, ...GALLERY_IMAGES].filter(
+  (img, index, all) =>
+    !MEDIA_IMAGE_KEYS.has(getImageAssetKey(img)) &&
+    index === all.findIndex((candidate) => getImageAssetKey(candidate) === getImageAssetKey(img))
+);
 
 export default function Page() {
   return (
@@ -270,7 +277,7 @@ export default function Page() {
         <div className="wrap-gallery__inner">
           <h2 id="wrap-gallery-heading">Recent Projects</h2>
           <div className="gallery-grid">
-            {[...GALLERY_IMAGES_V2, ...GALLERY_IMAGES].map((img) => (
+            {WRAPPING_GALLERY_IMAGES.map((img) => (
               <figure key={img} className="gallery-item">
                 <LoadingImage
                   src={img}
