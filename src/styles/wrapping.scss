@@ -79,6 +79,29 @@
   max-width: 70ch;
 }
 
+.wrap-intro-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #dadada;
+  background: #fafafa;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.wrap-intro-image .loading-image-container {
+  position: absolute;
+  inset: 0;
+}
+
+.wrap-intro-image .loading-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .wrap-feature-list {
   list-style: none;
   margin: 1.4rem 0 0;
@@ -212,6 +235,12 @@
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin-bottom: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .wrap-intro-image {
+    aspect-ratio: 4 / 5;
+  }
 }
 
 .process-duration {

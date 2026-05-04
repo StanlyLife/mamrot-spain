@@ -1,3 +1,4 @@
+import DevImageCopy from "../components/DevImageCopy";
 import type { Metadata } from "next";
 import { Geist, Playfair_Display } from "next/font/google";
 import "./globals.scss";
@@ -79,6 +80,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${geistSans.variable} ${playfair.variable}`}>
+        <DevImageCopy />
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SQHZSKNE2Q"

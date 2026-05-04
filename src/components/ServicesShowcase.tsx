@@ -37,7 +37,7 @@ const ITEMS: ShowcaseItem[] = [
     key: "wrapping",
     title: "CAR WRAPPING",
     image: cdn(
-      "/mamrot/wrapping/transform-aesthetics-mobile-and-desktop.webp",
+      "/mamrot/wrapping/FostlaMB_50-1024x682-webp.webp",
       DESKTOP_CARD_SIZE,
     ),
     mobileImage: cdn(
@@ -45,7 +45,7 @@ const ITEMS: ShowcaseItem[] = [
       MOBILE_SIZE,
     ),
     href: "/wrapping",
-    alt: "Full vehicle color change wrap installation",
+    alt: "Premium car wrapping project in Marbella",
   },
   // Lakkbeskyttelse / PPF
   {

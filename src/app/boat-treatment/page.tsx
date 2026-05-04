@@ -84,36 +84,97 @@ const PROCESS_STEPS = [
   "Final walk-through, maintenance plan, and optional monthly care scheduling",
 ];
 
-const HERO_IMAGE = "/mamrot/boat/FB_IMG_1739710587447-webp.webp";
+const HERO_IMAGE = "/mamrot/boat/20260413_104250-webp.webp";
 
-// CDN dimensions for gallery (larger for lightbox)
-const GALLERY_SIZE = { width: 800, height: 600 };
+interface GalleryImage {
+  path: string;
+  width: number;
+  height: number;
+}
 
 const BASE_IMAGE = cdn(
-  "/mamrot/boat/FB_IMG_1763036073107-webp.webp",
-  GALLERY_SIZE,
+  "/mamrot/boat/20260413_104250-webp.webp",
 );
 
-const GALLERY = [
-  BASE_IMAGE,
-  cdn("/mamrot/boat/FB_IMG_1739710589695-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/boat/FB_IMG_1739710592720-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/boat/FB_IMG_1739710595396-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/boat/FB_IMG_1763036064845-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/boat/FB_IMG_1763036067333-webp.webp", GALLERY_SIZE),
-  // cdn("/mamrot/boat/FB_IMG_1763036073107-webp.webp"),
-  cdn("/mamrot/boat/FB_IMG_1763036077093-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/boat/FB_IMG_1763036079033-webp.webp", GALLERY_SIZE),
+const GALLERY: GalleryImage[] = [
+  {
+    path: "/mamrot/boat/20260413_104250-webp.webp",
+    width: 4000,
+    height: 2252,
+  },
+  {
+    path: "/mamrot/boat/FB_IMG_1739710589695-webp.webp",
+    width: 1080,
+    height: 720,
+  },
+  {
+    path: "/mamrot/boat/FB_IMG_1739710592720-webp.webp",
+    width: 1080,
+    height: 1920,
+  },
+  {
+    path: "/mamrot/boat/FB_IMG_1739710595396-webp.webp",
+    width: 1080,
+    height: 720,
+  },
+  {
+    path: "/mamrot/boat/FB_IMG_1763036064845-webp.webp",
+    width: 1153,
+    height: 2048,
+  },
+  {
+    path: "/mamrot/boat/FB_IMG_1763036067333-webp.webp",
+    width: 2048,
+    height: 1152,
+  },
+  {
+    path: "/mamrot/boat/FB_IMG_1739710587447-webp.webp",
+    width: 1080,
+    height: 720,
+  },
+  {
+    path: "/mamrot/boat/FB_IMG_1763036079033-webp.webp",
+    width: 2048,
+    height: 1152,
+  },
 ];
 
-const GALLERY_V2 = [
-  cdn("/mamrot/boat/20260324_143121-v2-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/boat/20260324_171140-v2-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/boat/20260325_182058-v2-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/boat/20260326_192741-v2-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/boat/20260327_192750-v2-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/boat/FB_IMG_1739710587447-v2-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/boat/FB_IMG_1739710595396-v2-webp.webp", GALLERY_SIZE),
+const GALLERY_V2: GalleryImage[] = [
+  {
+    path: "/mamrot/boat/20260324_143121-v2-webp.webp",
+    width: 2160,
+    height: 3840,
+  },
+  {
+    path: "/mamrot/boat/20260324_171140-v2-webp.webp",
+    width: 2252,
+    height: 4000,
+  },
+  {
+    path: "/mamrot/boat/20260325_182058-v2-webp.webp",
+    width: 2029,
+    height: 2704,
+  },
+  {
+    path: "/mamrot/boat/20260326_192741-v2-webp.webp",
+    width: 4000,
+    height: 2252,
+  },
+  {
+    path: "/mamrot/boat/20260327_192750-v2-webp.webp",
+    width: 2252,
+    height: 4000,
+  },
+  {
+    path: "/mamrot/boat/FB_IMG_1739710587447-v2-webp.webp",
+    width: 1080,
+    height: 720,
+  },
+  {
+    path: "/mamrot/boat/FB_IMG_1739710595396-v2-webp.webp",
+    width: 1080,
+    height: 720,
+  },
 ];
 
 export default function Page() {
@@ -128,7 +189,7 @@ export default function Page() {
         backgroundImage={HERO_IMAGE}
         align="left"
         variant="luxury"
-        imageAlt="Boat and yacht polishing and ceramic coating in Marbella marina"
+        imageAlt="CarSpa Marbella boat care van parked in a Marbella marina beside yachts"
       />
 
       <section className="boat-overview" aria-labelledby="boat-heading">
@@ -223,7 +284,7 @@ export default function Page() {
           <div className="boat-interior__media" aria-hidden="true">
             <LoadingImage
               src={BASE_IMAGE}
-              alt="Detailing leather interior on a yacht in Marbella"
+              alt="CarSpa Marbella boat care van parked in a Marbella marina beside yachts"
               fill
               sizes="(max-width: 900px) 100vw, 45vw"
             />
@@ -247,12 +308,14 @@ export default function Page() {
           <h2 id="boat-gallery-heading">Marine Detailing Highlights</h2>
           <div className="gallery-grid">
             {[...GALLERY_V2, ...GALLERY].map((img) => (
-              <figure key={img} className="gallery-item">
+              <figure key={img.path} className="gallery-item">
                 <LoadingImage
-                  src={img}
+                  src={cdn(img.path)}
                   alt="Boat and yacht treatment project on the Costa del Sol"
-                  fill
+                  width={img.width}
+                  height={img.height}
                   sizes="(max-width: 500px) 100vw, (max-width: 900px) 50vw, 33vw"
+                  style={{ width: "100%", height: "auto" }}
                 />
               </figure>
             ))}

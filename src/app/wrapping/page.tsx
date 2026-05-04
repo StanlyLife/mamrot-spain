@@ -62,22 +62,25 @@ const WRAP_VARIANTS = [
   },
 ];
 
-const HERO_IMAGE = "/mamrot/wrapping/main-webp.webp";
+const FEATURE_WRAP_IMAGE = "/mamrot/wrapping/FostlaMB_50-1024x682-webp.webp";
+const HERO_IMAGE = FEATURE_WRAP_IMAGE;
+const WRAP_INTRO_IMAGE = "/mamrot/wrapping/20260430_132417-webp.webp";
 
 // CDN dimensions for media grid (portrait 520x930 display size)
 const MEDIA_SIZE = { width: 520, height: 930 };
+const WRAP_INTRO_IMAGE_SIZE = { width: 700, height: 1243 };
 // CDN dimensions for gallery (larger for lightbox)
 const GALLERY_SIZE = { width: 800, height: 600 };
 
 const MEDIA_IMAGES = [
-  cdn("/mamrot/wrapping/20250907_131915-webp.webp", MEDIA_SIZE),
-  cdn("/mamrot/wrapping/20250712_211653-webp.webp", MEDIA_SIZE),
-  cdn("/mamrot/wrapping/20250716_121142.webp", MEDIA_SIZE),
+  cdn("/mamrot/wrapping/FB_IMG_1736778520854-webp.webp", MEDIA_SIZE),
+  cdn("/mamrot/wrapping/20260202_144200-v2-webp.webp", MEDIA_SIZE),
+  cdn("/mamrot/wrapping/20260323_173211-v2-webp.webp", MEDIA_SIZE),
 ];
 
 const GALLERY_IMAGES = [
   cdn("/mamrot/wrapping/FB_IMG_1736778385159-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/wrapping/20250603_160042_0000-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/foiled_mercedes-webp.webp", GALLERY_SIZE),
   // cdn("/mamrot/wrapping/20250712_211653-webp.webp"),
   cdn("/mamrot/wrapping/20250904_222522-webp.webp", GALLERY_SIZE),
   // cdn("/mamrot/wrapping/20250907_131915-webp.webp"),
@@ -86,8 +89,17 @@ const GALLERY_IMAGES = [
 ];
 
 const GALLERY_IMAGES_V2 = [
+  cdn("/mamrot/wrapping/20251216_171232-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20260420_095834-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20260420_164959-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20260427_223221-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20260427_233950-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20260428_140341-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/20260430_132417-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/FB_IMG_1736778520854-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/FB_IMG_1736778526403-webp.webp", GALLERY_SIZE),
   cdn("/mamrot/wrapping/20250423_202826-v2-webp.webp", GALLERY_SIZE),
-  cdn("/mamrot/wrapping/20250603_160042_0000-v2-webp.webp", GALLERY_SIZE),
+  cdn("/mamrot/wrapping/IMG-20260325-WA0040-v2-webp.webp", GALLERY_SIZE),
   cdn("/mamrot/wrapping/20250719_095438-v2-webp.webp", GALLERY_SIZE),
   cdn("/mamrot/wrapping/20260129_181739-v2-webp.webp", GALLERY_SIZE),
   cdn("/mamrot/wrapping/20260202_144200-v2-webp.webp", GALLERY_SIZE),
@@ -112,7 +124,7 @@ export default function Page() {
         align="center"
         variant="luxury"
         backgroundImage={HERO_IMAGE}
-        imageAlt="Full car vinyl wrap and color change in Marbella"
+        imageAlt="Premium car wrapping project in Marbella"
       />
 
       <section className="wrap-overview" aria-labelledby="wrap-heading">
@@ -128,6 +140,15 @@ export default function Page() {
               classics to unique, custom-imported finishes that elevate your
               car&rsquo;s visual identity.
             </p>
+            <figure className="wrap-intro-image">
+              <LoadingImage
+                src={cdn(WRAP_INTRO_IMAGE, WRAP_INTRO_IMAGE_SIZE)}
+                alt="Exclusive wrap color finish shown on a premium vehicle"
+                fill
+                sizes="(max-width: 768px) min(100vw - 2.4rem, 28rem), 100vw"
+                style={{ objectFit: "cover", objectPosition: "center" }}
+              />
+            </figure>
             <ul
               className="wrap-feature-list"
               aria-label="Available finish types"
