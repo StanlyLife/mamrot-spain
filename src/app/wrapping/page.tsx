@@ -73,7 +73,7 @@ const WRAP_INTRO_IMAGE_SIZE = { width: 700, height: 1243 };
 const GALLERY_SIZE = { width: 800, height: 600 };
 
 const MEDIA_IMAGES = [
-  cdn("/mamrot/wrapping/FB_IMG_1736778520854-webp.webp", MEDIA_SIZE),
+  cdn("/mamrot/wrapping/IMG-20260325-WA0040-v2-webp.webp", MEDIA_SIZE),
   cdn("/mamrot/wrapping/20260202_144200-v2-webp.webp", MEDIA_SIZE),
   cdn("/mamrot/wrapping/20260323_173211-v2-webp.webp", MEDIA_SIZE),
 ];
@@ -189,7 +189,7 @@ export default function Page() {
                 <figure key={img} className="wrap-media-item">
                   <LoadingImage
                     src={img}
-                    alt="Wrapped vehicle finish example"
+                    alt="Wrapped vehicle"
                     fill
                     sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
                     style={{ objectFit: "cover" }}

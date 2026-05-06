@@ -103,21 +103,6 @@ const GALLERY: GalleryImage[] = [
     height: 2252,
   },
   {
-    path: "/mamrot/boat/FB_IMG_1739710589695-webp.webp",
-    width: 1080,
-    height: 720,
-  },
-  {
-    path: "/mamrot/boat/FB_IMG_1739710592720-webp.webp",
-    width: 1080,
-    height: 1920,
-  },
-  {
-    path: "/mamrot/boat/FB_IMG_1739710595396-webp.webp",
-    width: 1080,
-    height: 720,
-  },
-  {
     path: "/mamrot/boat/FB_IMG_1763036064845-webp.webp",
     width: 1153,
     height: 2048,
@@ -167,11 +152,6 @@ const GALLERY_V2: GalleryImage[] = [
   },
   {
     path: "/mamrot/boat/FB_IMG_1739710587447-v2-webp.webp",
-    width: 1080,
-    height: 720,
-  },
-  {
-    path: "/mamrot/boat/FB_IMG_1739710595396-v2-webp.webp",
     width: 1080,
     height: 720,
   },
