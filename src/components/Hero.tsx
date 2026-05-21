@@ -17,7 +17,7 @@ export function Hero() {
         <picture>
           <source
             media="(max-width: 767px)"
-            srcSet={cdn("/mamrot/hero/hero-mobile.webp")}
+            srcSet={cdn("/mamrot/hero/hero-mobile-carspa-svr.webp")}
           />
           <img
             src={cdn(
@@ -42,15 +42,13 @@ export function Hero() {
           known for unmatched quality and attention to detail.
           <br />
           <br />
-          Inspired Norway's with PPF on heavy trucks projects with around 100
-          painted and protected elements - we bring that same level of precision
-          and dedication to Marbella, creating exceptional results and premium
-          services.
+          Patrik, owner of CarSpa Marbella, is known for unmatched precision
+          inspired by the Norwegian detailing market. With a focus on
+          exceptional results and 100% positive feedback, we bring premium
+          craftsmanship and dedication to every car in Marbella.
           <br />
           <br />
-          Located on the iconic Golden Mile, between Puerto Banus and Puente
-          Romano, our modern, exclusive facility offers private parking and full
-          camera security.
+Located on the iconic Golden Mile, between Puerto Banús and Puente Romano - directly opposite Momento. Visit us today or book now to receive a special discount!
           <br />
           <br />
           Feel passion with us.
