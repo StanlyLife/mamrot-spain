@@ -34,12 +34,14 @@ export function Hero() {
         <div className="hero__eyebrow">CarSpa Marbella Wraps & PPF</div>
         <h1 id="hero-heading">Luxury Wraps, PPF & Detailing in Marbella</h1>
         <p className="lede">
-          Precision, Protection and Perfection in every detail. Specialists in
-          car detailing, wrapping, and Paint Protection Film (PPF). We deliver
-          world-class protection in gloss, matte, satin, and colour finishes.
-          Premium vinyl wraps from standard colours to the most exclusive
-          materials available. With 15 years of experience, certified installer
-          known for unmatched quality and attention to detail.
+          <span className="hero__mobile-bold">
+            Precision, Protection and Perfection in every detail. Specialists in
+            car detailing, wrapping, and Paint Protection Film (PPF). We deliver
+            world-class protection in gloss, matte, satin, and colour finishes.
+            Premium vinyl wraps from standard colours to the most exclusive
+            materials available. With 15 years of experience, certified installer
+            known for unmatched quality and attention to detail.
+          </span>
           <br />
           <br />
           Patrik, owner of CarSpa Marbella, is known for unmatched precision
