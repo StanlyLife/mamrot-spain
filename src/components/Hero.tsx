@@ -20,9 +20,7 @@ export function Hero() {
             srcSet={cdn("/mamrot/hero/hero-mobile-carspa-workshop.webp")}
           />
           <img
-            src={cdn(
-              "/mamrot/depthAndClarity/hero-image-marbella-carspa-desktop.webp",
-            )}
+            src={cdn("/mamrot/hero/hero-desktop-carspa-svr.webp")}
             alt=""
             className="hero__video"
             fetchPriority="high"
@@ -35,22 +33,33 @@ export function Hero() {
         <h1 id="hero-heading">Luxury Wraps, PPF & Detailing in Marbella</h1>
         <p className="lede">
           <span className="hero__mobile-bold">
-            Precision, Protection and Perfection in every detail. Specialists in
-            car detailing, wrapping, and Paint Protection Film (PPF). We deliver
-            world-class protection in gloss, matte, satin, and colour finishes.
+            Precision, Protection and Perfection in every detail. 
+            <br></br>
+            Specialists in
+            <strong className="hero__lede-strong">
+              Car Detailing, Wrapping
+            </strong>
+            , and Paint Protection Film (PPF). <br />
+            We deliver world-class protection in gloss, matte, satin, and colour finishes.
             Premium vinyl wraps from standard colours to the most exclusive
             materials available. With 15 years of experience, certified installer
             known for unmatched quality and attention to detail.
           </span>
           <br />
           <br />
-          Patrik, owner of CarSpa Marbella, is known for unmatched precision
-          inspired by the Norwegian detailing market. With a focus on
-          exceptional results and 100% positive feedback, we bring premium
-          craftsmanship and dedication to every car in Marbella.
+          <strong className="hero__lede-strong">
+            Patrik, owner of CarSpa Marbella
+          </strong>
+          , is known for unmatched precision inspired by the Norwegian detailing
+          market. With a focus on exceptional results and 100% positive feedback,
+          we bring premium craftsmanship and dedication to every car in Marbella.
           <br />
           <br />
-Located on the iconic Golden Mile, between Puerto Banús and Puente Romano - directly opposite Momento. Visit us today or book now to receive a special discount!
+          <strong className="hero__lede-strong">
+            Located on the iconic Golden Mile
+          </strong>
+          , between Puerto Banús and Puente Romano - directly opposite Momento.
+          Visit us today or book now to receive a special discount!
           <br />
           <br />
           Feel passion with us.

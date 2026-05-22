@@ -19,10 +19,10 @@ export const metadata: Metadata = {
       "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars and boats across Marbella & Málaga.",
     images: [
       {
-        url: "/mamrot/some/somepreview.jpg",
-        width: 1200,
-        height: 630,
-        alt: "CarSpa Marbella - Premium Car Detailing",
+        url: "/mamrot/hero/hero-desktop-carspa-svr.webp",
+        width: 2252,
+        height: 1266,
+        alt: "CarSpa Marbella premium car wrap and detailing project",
       },
     ],
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "CarSpa Marbella | Luxury Wraps, PPF & Detailing",
     description:
       "Premium Wraps, Self-Healing PPF, Polishing and Ceramic Coating for all type of cars and boats across Marbella & Málaga.",
-    images: ["/mamrot/some/somepreview.jpg"],
+    images: ["/mamrot/hero/hero-desktop-carspa-svr.webp"],
   },
 };
 
@@ -45,8 +45,8 @@ export default function Home() {
         title="Depth & Clarity"
         subheading="Meticulous multi-stage refinement"
         ctaLabel="Detailing"
-        backgroundImage="/mamrot/depthAndClarity/depth-and-clarity-desktop.webp"
-        backgroundImageMobile="/mamrot/depthAndClarity/depthandclarity-mobile.webp"
+        backgroundImage="/mamrot/depthAndClarity/depth-and-clarity-range-rover.webp"
+        backgroundImageMobile="/mamrot/depthAndClarity/depth-and-clarity-range-rover.webp"
         align="center"
         imageAlt="Professional car paint correction and detailing in Marbella"
       />

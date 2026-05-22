@@ -78,6 +78,10 @@
     color: #d0d4d8;
     line-height: 1.42;
   }
+  .hero__lede-strong {
+    font-weight: 700;
+    color: inherit;
+  }
   .hero__actions {
     @include flex-center(row, 1rem);
     flex-wrap: wrap;
