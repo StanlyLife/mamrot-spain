@@ -31,41 +31,44 @@ export function Hero() {
       <div className="hero__content">
         <div className="hero__eyebrow">CarSpa Marbella Wraps & PPF</div>
         <h1 id="hero-heading">Luxury Wraps, PPF & Detailing in Marbella</h1>
-        <p className="lede">
-          <span className="hero__mobile-bold">
-            Precision, Protection and Perfection in every detail. 
-            <br></br>
-            Specialists in
+        <div className="lede hero__lede">
+          <p className="hero__mobile-bold">
+            Precision, Protection and Perfection in every detail.
+            <br />
+            Specialists in{" "}
             <strong className="hero__lede-strong">
               Car Detailing, Wrapping
             </strong>
-            , and Paint Protection Film (PPF). <br />
-            We deliver world-class protection in gloss, matte, satin, and colour finishes.
-            Premium vinyl wraps from standard colours to the most exclusive
-            materials available. With 15 years of experience, certified installer
-            known for unmatched quality and attention to detail.
-          </span>
-          <br />
-          <br />
-          <strong className="hero__lede-strong">
-            Patrik, owner of CarSpa Marbella
-          </strong>
-          , is known for unmatched precision inspired by the Norwegian detailing
-          market. With a focus on exceptional results and 100% positive feedback,
-          we bring premium craftsmanship and dedication to every car in Marbella.
-          <br />
-          <br />
-          <strong className="hero__lede-strong">
-            Located on the iconic Golden Mile
-          </strong>
-          , between Puerto Banús and Puente Romano - directly opposite Momento.
-          Visit us today or book now to receive a special discount!
-          <br />
-          <br />
-          Feel passion with us.
-          <br />
-          Feel the difference.
-        </p>
+            , and Paint Protection Film (PPF).
+            <br />
+            We deliver world-class protection in gloss, matte, satin, and colour
+            finishes. Premium vinyl wraps from standard colours to the most
+            exclusive materials available. With 15 years of experience,
+            certified installer known for unmatched quality and attention to
+            detail.
+          </p>
+          <p>
+            <strong className="hero__lede-strong">
+              Patrik - owner of CarSpa Marbella
+            </strong>
+            , is known for unmatched precision inspired by the Norwegian
+            detailing market. With a focus on exceptional results and 100%
+            positive feedback, we bring premium craftsmanship and dedication to
+            every car in Marbella.
+          </p>
+          <p>
+            <strong className="hero__lede-strong">
+              Located on the iconic Golden Mile
+            </strong>
+            , between Puerto Banús and Puente Romano - directly opposite
+            Momento. Visit us today or book now to receive a special discount!
+          </p>
+          <p>
+            Feel passion with us.
+            <br />
+            Feel the difference.
+          </p>
+        </div>
         <div className="hero__actions">
           <a
             href="#services"

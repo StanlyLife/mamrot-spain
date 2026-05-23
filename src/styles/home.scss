@@ -78,9 +78,27 @@
     color: #d0d4d8;
     line-height: 1.42;
   }
+  .hero__lede {
+    max-width: 92ch;
+    margin: 0 auto 2.15rem;
+    font-size: clamp(0.95rem, 0.5vw + 0.75rem, 1.18rem);
+    color: #d0d4d8;
+    line-height: 1.42;
+
+    p {
+      margin: 0 0 1.1em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
   .hero__lede-strong {
     font-weight: 700;
     color: inherit;
+  }
+  .hero__mobile-bold {
+    font-weight: 700;
   }
   .hero__actions {
     @include flex-center(row, 1rem);
@@ -397,10 +415,6 @@
       line-height: 1.35;
       margin-bottom: 0.95rem;
       max-width: 98%;
-    }
-
-    .hero__mobile-bold {
-      font-weight: 700;
     }
 
     .hero__actions {
