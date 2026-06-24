@@ -56,10 +56,10 @@ export default function Home() {
         subheading="Shield. Preserve. Elevate."
         ctaLabel="PPF Services"
         ctaHref="#services"
-        backgroundImage="/mamrot/ppf/paint-protection-film-mobile-and-desktop.webp"
+        backgroundImage="/mamrot/ppf/ppf-redefined-mobile-and-desktop.webp"
         backgroundImageMobile="/mamrot/ppf/ppf-redefined-mobile-and-desktop.webp"
         align="left"
-        imageAlt="Paint protection film installation on Porsche in Marbella"
+        imageAlt="Paint protection film installation on Rolls-Royce in Marbella"
       />
       <ServiceSection
         eyebrow="CUSTOM WRAPS"
@@ -67,8 +67,8 @@ export default function Home() {
         subheading="Precision color & finish changes"
         ctaLabel="Wrap Options"
         ctaHref="/wrapping"
-        backgroundImage="/mamrot/wrapping/FostlaMB_50-1024x682-webp.webp"
-        backgroundImageMobile="/mamrot/wrapping/FostlaMB_50-1024x682-webp.webp"
+        backgroundImage="/mamrot/wrapping/transform-aesthetics-mobile-and-desktop.webp"
+        backgroundImageMobile="/mamrot/wrapping/transform-aesthetics-mobile-and-desktop.webp"
         align="right"
         imageAlt="Premium car wrapping project in Marbella"
       />

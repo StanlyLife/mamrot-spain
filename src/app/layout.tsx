@@ -5,6 +5,7 @@ import "./globals.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppBubble from "../components/WhatsAppBubble";
+import InstagramBubble from "../components/InstagramBubble";
 import SocialSidebar from "../components/SocialSidebar";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
@@ -99,6 +100,7 @@ export default function RootLayout({
         <div className="app-shell">{children}</div>
         <Footer />
         <WhatsAppBubble />
+        <InstagramBubble />
         <SocialSidebar />
         <Analytics />
       </body>

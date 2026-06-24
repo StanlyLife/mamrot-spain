@@ -1,0 +1,49 @@
+@use "./variables" as *;
+
+.instagram-bubble {
+  position: fixed;
+  // Stack above the WhatsApp bubble (56px tall) with a gap.
+  bottom: calc(clamp(1rem, 4vw, 2.2rem) + 56px + 14px);
+  right: clamp(1rem, 4vw, 2.2rem);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  z-index: 999;
+}
+
+.instagram-bubble:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.instagram-bubble__icon {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+@media (max-width: 640px) {
+  .instagram-bubble {
+    bottom: calc(clamp(1rem, 4vw, 2.2rem) + 52px + 12px);
+    width: 52px;
+    height: 52px;
+  }
+  .instagram-bubble__icon {
+    width: 25px;
+    height: 25px;
+  }
+}
