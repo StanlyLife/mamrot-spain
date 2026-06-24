@@ -32,41 +32,88 @@ export function Hero() {
         <div className="hero__eyebrow">CarSpa Marbella Wraps & PPF</div>
         <h1 id="hero-heading">Luxury Wraps, PPF & Detailing in Marbella</h1>
         <div className="lede hero__lede">
-          <p className="hero__mobile-bold">
-            Precision, Protection and Perfection in every detail.
-            <br />
-            Specialists in{" "}
+          <ul className="hero__points">
+            <li className="hero__point">
+              <span className="hero__point-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M5 13l4 4L19 7"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+              <p>
+                Highest quality{" "}
+                <strong className="hero__lede-strong">GSWF</strong> PPF films —
+                renowned for excellent paint protection, durability and a
+                premium finish in gloss, matte, satin and colour.
+              </p>
+            </li>
+            <li className="hero__point">
+              <span className="hero__point-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M5 13l4 4L19 7"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+              <p>
+                Premium vinyl wraps from standard colours to the most exclusive
+                materials, including{" "}
+                <strong className="hero__lede-strong">
+                  PWF Platinum Wrapping Film
+                </strong>{" "}
+                — available only through authorised studios.
+              </p>
+            </li>
+            <li className="hero__point">
+              <span className="hero__point-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M5 13l4 4L19 7"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+              <p>
+                <strong className="hero__lede-strong">
+                  15 years of experience
+                </strong>{" "}
+                and certified installers. Professional advice, year-round
+                maintenance and premium washing for wrapped vehicles.
+              </p>
+            </li>
+            <li className="hero__point">
+              <span className="hero__point-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M5 13l4 4L19 7"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+              <p>
+                Our customers are not only satisfied, but often{" "}
+                <strong className="hero__lede-strong">amazed</strong> by the
+                results.
+              </p>
+            </li>
+          </ul>
+          <p className="hero__points-cta">
+            Visit us on{" "}
             <strong className="hero__lede-strong">
-              Car Detailing, Wrapping
-            </strong>
-            , and Paint Protection Film (PPF).
-            <br />
-            We deliver world-class protection in gloss, matte, satin, and colour
-            finishes. Premium vinyl wraps from standard colours to the most
-            exclusive materials available. With 15 years of experience,
-            certified installer known for unmatched quality and attention to
-            detail.
-          </p>
-          <p>
-            <strong className="hero__lede-strong">
-              Patrik - owner of CarSpa Marbella
-            </strong>
-            , is known for unmatched precision inspired by the Norwegian
-            detailing market. With a focus on exceptional results and 100%
-            positive feedback, we bring premium craftsmanship and dedication to
-            every car in Marbella.
-          </p>
-          <p>
-            <strong className="hero__lede-strong">
-              Located on the iconic Golden Mile
-            </strong>
-            , between Puerto Banús and Puente Romano - directly opposite
-            Momento. Visit us today or book now to receive a special discount!
-          </p>
-          <p>
-            Feel passion with us.
-            <br />
-            Feel the difference.
+              Marbella&rsquo;s Golden Mile
+            </strong>{" "}
+            to discuss details, prices and available discounts.
           </p>
         </div>
         <div className="hero__actions">
