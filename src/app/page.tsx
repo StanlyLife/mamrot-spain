@@ -45,8 +45,8 @@ export default function Home() {
         title="Depth & Clarity"
         subheading="Meticulous multi-stage refinement"
         ctaLabel="Detailing"
-        backgroundImage="/mamrot/depthAndClarity/depth-and-clarity-range-rover.webp"
-        backgroundImageMobile="/mamrot/depthAndClarity/depth-and-clarity-range-rover.webp"
+        backgroundImage="/mamrot/depthAndClarity/depth-and-clarity-new.webp"
+        backgroundImageMobile="/mamrot/depthAndClarity/depth-and-clarity-new.webp"
         align="center"
         imageAlt="Professional car paint correction and detailing in Marbella"
       />
@@ -56,8 +56,8 @@ export default function Home() {
         subheading="Shield. Preserve. Elevate."
         ctaLabel="PPF Services"
         ctaHref="#services"
-        backgroundImage="/mamrot/ppf/ppf-redefined-mobile-and-desktop.webp"
-        backgroundImageMobile="/mamrot/ppf/ppf-redefined-mobile-and-desktop.webp"
+        backgroundImage="/mamrot/ppf/ppf-redefined-new.webp"
+        backgroundImageMobile="/mamrot/ppf/ppf-redefined-new.webp"
         align="left"
         imageAlt="Paint protection film installation on Rolls-Royce in Marbella"
       />
@@ -67,8 +67,8 @@ export default function Home() {
         subheading="Precision color & finish changes"
         ctaLabel="Wrap Options"
         ctaHref="/wrapping"
-        backgroundImage="/mamrot/wrapping/transform-aesthetics-mobile-and-desktop.webp"
-        backgroundImageMobile="/mamrot/wrapping/transform-aesthetics-mobile-and-desktop.webp"
+        backgroundImage="/mamrot/wrapping/transform-aesthetics-new.webp"
+        backgroundImageMobile="/mamrot/wrapping/transform-aesthetics-new.webp"
         align="right"
         imageAlt="Premium car wrapping project in Marbella"
       />

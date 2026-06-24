@@ -1,8 +1,7 @@
 import Link from "next/link";
 import "@/styles/instagram-bubble.scss";
 
-const INSTAGRAM_URL =
-  "https://www.instagram.com/carspa_marbella_wraps_ppf/";
+const INSTAGRAM_URL = "https://www.instagram.com/carspa_marbella_wraps_ppf/";
 
 export default function InstagramBubble() {
   return (

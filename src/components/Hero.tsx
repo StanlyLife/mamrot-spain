@@ -17,10 +17,10 @@ export function Hero() {
         <picture>
           <source
             media="(max-width: 767px)"
-            srcSet={cdn("/mamrot/hero/hero-mobile-carspa-workshop.webp")}
+            srcSet={cdn("/mamrot/hero/hero-desktop-carspa-ai.webp")}
           />
           <img
-            src={cdn("/mamrot/hero/hero-desktop-carspa-svr.webp")}
+            src={cdn("/mamrot/hero/hero-desktop-carspa-ai.webp")}
             alt=""
             className="hero__video"
             fetchPriority="high"
