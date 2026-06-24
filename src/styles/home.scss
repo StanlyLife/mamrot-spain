@@ -459,6 +459,8 @@
     @supports (min-height: 100dvh) {
       min-height: 100dvh;
     }
+    flex-direction: column;
+    justify-content: flex-start;
 
     .hero__content {
       padding: clamp(4.5rem, 12vh, 6rem) 1rem 2.5rem;
@@ -544,6 +546,16 @@
         padding: 0.75rem 1.1rem;
         font-size: 0.85rem;
       }
+    }
+
+    // Let the trust badges flow below the content instead of overlapping it
+    .hero__trust-badges {
+      position: relative;
+      margin-top: 1.5rem;
+    }
+
+    .hero__trust-fade {
+      display: none;
     }
   }
 

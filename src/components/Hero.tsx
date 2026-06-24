@@ -45,7 +45,7 @@ export function Hero() {
                 </svg>
               </span>
               <p>
-                Highest quality{" "}
+                The highest-quality{" "}
                 <strong className="hero__lede-strong">GSWF</strong> PPF films —
                 renowned for excellent paint protection, durability and a
                 premium finish in gloss, matte, satin and colour.
@@ -113,7 +113,7 @@ export function Hero() {
             <strong className="hero__lede-strong">
               Marbella&rsquo;s Golden Mile
             </strong>{" "}
-            to discuss details, prices and available discounts.
+            to discuss details, prices and current offers.
           </p>
         </div>
         <div className="hero__actions">
