@@ -46,7 +46,7 @@ export function Hero() {
               </span>
               <p>
                 The highest-quality{" "}
-                <strong className="hero__lede-strong">GSWF</strong> PPF films —
+                <strong className="hero__lede-strong">GSWF</strong> PPF films -
                 renowned for excellent paint protection, durability and a
                 premium finish in gloss, matte, satin and colour.
               </p>
@@ -68,7 +68,7 @@ export function Hero() {
                 <strong className="hero__lede-strong">
                   PWF Platinum Wrapping Film
                 </strong>{" "}
-                — available only through authorised studios.
+                - available only through authorised studios.
               </p>
             </li>
             <li className="hero__point">
