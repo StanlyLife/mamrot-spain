@@ -45,7 +45,7 @@ export default function Home() {
         title="Depth & Clarity"
         subheading="Meticulous multi-stage refinement"
         ctaLabel="Detailing"
-        backgroundImage="/mamrot/depthAndClarity/depth-and-clarity-range-rover.webp"
+        backgroundImage="/mamrot/depthAndClarity/depth-and-clarity-desktop.webp"
         backgroundImageMobile="/mamrot/depthAndClarity/depth-and-clarity-new.webp"
         align="center"
         imageAlt="Professional car paint correction and detailing in Marbella"
