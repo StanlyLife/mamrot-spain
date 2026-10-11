@@ -6,6 +6,7 @@ import ServicesShowcase from "../components/ServicesShowcase";
 import USPSection from "../components/USPSection";
 import ReviewsSection from "../components/ReviewsSection";
 import QuoteRequest from "../components/QuoteRequest";
+import ProofSection from "../components/ProofSection";
 
 export const metadata: Metadata = {
   title: "CarSpa Marbella | Luxury Wraps, PPF & Detailing",
@@ -39,7 +40,10 @@ export default function Home() {
   return (
     <div className="home-page">
       <Hero />
-      <ReviewsSection />
+      <header className="services-intro">
+        <h2>Our Services</h2>
+        <p>Protection &middot; Transformation &middot; Perfection</p>
+      </header>
       <ServiceSection
         eyebrow="DETAILING & CORRECTION"
         title="Depth & Clarity"
@@ -72,16 +76,60 @@ export default function Home() {
         align="right"
         imageAlt="Premium car wrapping project in Marbella"
       />
+      <ProofSection
+        id="norway"
+        eyebrow="Our Story"
+        title="From Norway to Marbella"
+        image="/mamrot/truck/norway-truck-ppf.webp"
+        imageAlt="CarSpa team protecting trucks with PPF in Norway"
+        imageWidth={1024}
+        imageHeight={1536}
+        ctaLabel="Our Story"
+        ctaHref="/about"
+      >
+        <p className="proof-section__lead">
+          <strong>15+ years</strong> of hands-on experience in vehicle
+          protection.
+        </p>
+        <p className="proof-section__lead">
+          From demanding projects in Norway to premium vehicles in Marbella.
+        </p>
+        <p className="proof-section__note">
+          Same precision. Quality beyond standards across the whole Costa del
+          Sol.
+        </p>
+      </ProofSection>
+      <ProofSection
+        id="tesla"
+        title="Tesla Specialists"
+        image="/mamrot/tesla/tesla-50-wrapped-2025.webp"
+        imageAlt="Tesla cars wrapped and protected with PPF by CarSpa Marbella in 2025"
+        imageWidth={1024}
+        imageHeight={1536}
+        ctaLabel="Tesla Projects"
+        ctaHref="/tesla-specialists"
+        reverse
+      >
+        <p className="proof-section__lead">
+          <strong>50+</strong> Tesla vehicles wrapped &amp; protected in 2025
+        </p>
+        <p className="proof-section__tags">
+          PPF &middot; Wrapping &middot; Colour Change
+        </p>
+      </ProofSection>
 
       <USPSection />
-      <section
-        id="services"
-        className="services"
-        aria-labelledby="services-heading"
-      >
+      <ReviewsSection />
+      <section id="services" className="services" aria-label="All services">
         <ServicesShowcase />
       </section>
-      <QuoteRequest />
+      <QuoteRequest
+        className="contact--home"
+        heading="Ready to Protect Your Car?"
+        intro="Tell us what you drive and what you need."
+        submitLabel="Get a Quote"
+        whatsappLabel="WhatsApp"
+      />
     </div>
   );
 }

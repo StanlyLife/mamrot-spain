@@ -29,93 +29,60 @@ export function Hero() {
         <div className="hero__overlay" />
       </div>
       <div className="hero__content">
-        <div className="hero__eyebrow">CarSpa Marbella Wraps & PPF</div>
+        <div className="hero__eyebrow">
+          CarSpa Marbella
+          <span className="hero__eyebrow-dot" aria-hidden="true" />
+          La Cala de Mijas Area &middot; Near La Cala Resort Golf &amp; Santana
+          Golf
+        </div>
         <h1 id="hero-heading">Luxury Wraps, PPF & Detailing in Marbella</h1>
-        <div className="lede hero__lede">
-          <ul className="hero__points">
-            <li className="hero__point">
-              <span className="hero__point-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path
-                    d="M5 13l4 4L19 7"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-              <p>
-                The highest-quality{" "}
-                <strong className="hero__lede-strong">GSWF</strong> PPF films -
-                renowned for excellent paint protection, durability and a
-                premium finish in gloss, matte, satin and colour.
-              </p>
-            </li>
-            <li className="hero__point">
-              <span className="hero__point-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path
-                    d="M5 13l4 4L19 7"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-              <p>
-                Premium vinyl wraps from standard colours to the most exclusive
-                materials, including{" "}
-                <strong className="hero__lede-strong">
-                  PWF Platinum Wrapping Film
-                </strong>{" "}
-                - available only through authorised studios.
-              </p>
-            </li>
-            <li className="hero__point">
-              <span className="hero__point-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path
-                    d="M5 13l4 4L19 7"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-              <p>
-                <strong className="hero__lede-strong">
-                  15 years of experience
-                </strong>{" "}
-                and certified installers. Professional advice, year-round
-                maintenance and premium washing for wrapped vehicles.
-              </p>
-            </li>
-            <li className="hero__point">
-              <span className="hero__point-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path
-                    d="M5 13l4 4L19 7"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-              <p>
-                Our customers are not only satisfied, but often{" "}
-                <strong className="hero__lede-strong">amazed</strong> by the
-                results.
-              </p>
-            </li>
-          </ul>
-          <p className="hero__points-cta">
-            Visit us on{" "}
-            <strong className="hero__lede-strong">
-              Marbella&rsquo;s Golden Mile
-            </strong>{" "}
-            to discuss details, prices and current offers.
+        <p className="hero__subtitle">
+          Premium protection, precision wrapping &amp; detailing for
+          exceptional vehicles.
+        </p>
+        <p className="hero__proof">
+          15+ Years Experience &middot; Certified Installers &middot; Premium
+          Materials
+        </p>
+
+        <div className="hero__parking">
+          <p className="hero__parking-types">
+            Cars &middot; Boats &middot; Caravans
+          </p>
+          <h2 className="hero__parking-title">
+            Long-Term Parking &amp; Vehicle Care
+          </h2>
+          <p className="hero__parking-text">
+            Secure long-term parking for cars, boats and caravans in Marbella -
+            La Cala de Mijas, Costa del Sol.
+          </p>
+          <p className="hero__parking-badge">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"
+                strokeWidth="2"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M9 12l2 2 4-4"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            24/7 Security Monitoring
+          </p>
+          <p className="hero__parking-lead">
+            Protection, care and storage solutions for your vehicle with peace
+            of mind while you&rsquo;re away.
           </p>
         </div>
+
         <div className="hero__actions">
           <a
             href="#services"
@@ -125,7 +92,7 @@ export function Hero() {
               instantScroll("#services");
             }}
           >
-            Explore Services
+            Explore Services <span aria-hidden="true">&rarr;</span>
           </a>
           <a
             href="#contact"
@@ -135,7 +102,7 @@ export function Hero() {
               instantScroll("#contact");
             }}
           >
-            Request Quote
+            Get a Quote <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </div>
@@ -144,20 +111,11 @@ export function Hero() {
       <div className="hero__trust-badges">
         <div className="hero__trust-fade"></div>
         <div className="hero__trust-content">
-          <p className="hero__trust-label">
-            Trusted by professionals worldwide
-          </p>
+          <p className="hero__trust-label">Certified &amp; Premium Brands</p>
           <div className="hero__trust-logos">
             <img
               src={cdn("/logos/gswf_logo_800.webp", { width: 120, height: 40 })}
               alt="GSWF - Global Standards Wrapping Films"
-              className="hero__trust-logo"
-              width={120}
-              height={40}
-            />
-            <img
-              src={cdn("/logos/PWF-Logo.png", { width: 120, height: 40 })}
-              alt="GSWF Professional Partner"
               className="hero__trust-logo"
               width={120}
               height={40}
@@ -177,8 +135,15 @@ export function Hero() {
               height={40}
             />
             <img
+              src={cdn("/logos/PWF-Logo.png", { width: 120, height: 40 })}
+              alt="PWF - Platinum Wrapping Film"
+              className="hero__trust-logo"
+              width={120}
+              height={40}
+            />
+            <img
               src={cdn("/logos/swiss.svg", { width: 120, height: 40 })}
-              alt="swiss - Premium Car Care Products"
+              alt="Swissvax - Premium Car Care Products"
               className="hero__trust-logo"
               width={120}
               height={40}

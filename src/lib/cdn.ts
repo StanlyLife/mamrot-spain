@@ -12,8 +12,12 @@ const PRODUCTION_HOST = "carspamarbella.es";
  */
 function shouldUseCdn(): boolean {
   if (typeof window === "undefined") {
-    // Server-side: check for production environment
-    return process.env.NODE_ENV === "production";
+    // Server-side: check for production environment. Vercel preview builds
+    // serve their own /public files, since the CDN pulls from the live site.
+    return (
+      process.env.NODE_ENV === "production" &&
+      process.env.VERCEL_ENV !== "preview"
+    );
   }
   // Client-side: check the hostname
   return window.location.hostname === PRODUCTION_HOST;

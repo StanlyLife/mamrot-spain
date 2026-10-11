@@ -37,23 +37,21 @@ export default function USPSection() {
         <div className="usp-section__overlay" />
       </div>
       <div className="usp-section__inner">
-        <div className="eyebrow">OUR STANDARD</div>
+        <div className="eyebrow">The CarSpa Standard</div>
         <h2 id="usp-heading" className="usp-title">
-          Uncompromising Quality. Unrivaled Precision.
+          <span>Protection without compromise.</span>
+          <span>Quality you can see.</span>
+          <span>Standards you can trust.</span>
         </h2>
         <p className="usp-lede">
-          Every project is executed with OEM-level craftsmanship - from
-          surgically clean preparation and seamless, edge-wrapped film
-          installation to multi-stage paint correction and advanced ceramic
-          layering. The result: lasting clarity, depth, and brilliance.
+          Experience, precision and attention to detail - in every vehicle we
+          work on.
         </p>
-        <ul className="usp-points" aria-label="Quality highlights">
-          <li>Paint correction maps & measured defect removal</li>
-          <li>Precision cut & wrapped PPF edges (no lift, no haze)</li>
-          <li>
-            Multi-layer ceramic synergy: gloss, slickness & chemical resistance
-          </li>
-          <li>Aftercare guidance for sustained showroom presence</li>
+        <ul className="usp-points" aria-label="The CarSpa standard">
+          <li>Certified Installers</li>
+          <li>Premium Materials</li>
+          <li>Precision Installation</li>
+          <li>Professional Aftercare</li>
         </ul>
       </div>
     </section>
