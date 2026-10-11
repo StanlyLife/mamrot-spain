@@ -504,6 +504,26 @@
     }
   }
 
+  // Mobile: the portrait collage shown whole at the top, fading into the page
+  @media (max-width: 767px) {
+    background: $brand-dark;
+
+    .hero__video {
+      bottom: auto;
+      height: auto;
+      transform: none;
+      filter: none;
+    }
+
+    .hero__overlay {
+      background: linear-gradient(
+        rgba(10, 11, 13, 0.55) 0,
+        rgba(10, 11, 13, 0.7) 100vw,
+        rgba(10, 11, 13, 1) calc(100vw * 16 / 9)
+      );
+    }
+  }
+
   // Small mobile breakpoint
   @media (max-width: 375px) {
     .hero__content {

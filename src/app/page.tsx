@@ -80,10 +80,10 @@ export default function Home() {
         id="norway"
         eyebrow="Our Story"
         title="From Norway to Marbella"
-        image="/mamrot/truck/norway-truck-ppf.webp"
+        image="/mamrot/truck/norway-truck-ppf-poster.webp"
         imageAlt="CarSpa team protecting trucks with PPF in Norway"
         imageWidth={1024}
-        imageHeight={1536}
+        imageHeight={1458}
         ctaLabel="Our Story"
         ctaHref="/about"
       >
@@ -102,10 +102,10 @@ export default function Home() {
       <ProofSection
         id="tesla"
         title="Tesla Specialists"
-        image="/mamrot/tesla/tesla-50-wrapped-2025.webp"
+        image="/mamrot/tesla/tesla-specialists-poster.webp"
         imageAlt="Tesla cars wrapped and protected with PPF by CarSpa Marbella in 2025"
         imageWidth={1024}
-        imageHeight={1536}
+        imageHeight={1163}
         ctaLabel="Tesla Projects"
         ctaHref="/tesla-specialists"
         reverse

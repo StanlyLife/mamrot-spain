@@ -17,7 +17,7 @@ export function Hero() {
         <picture>
           <source
             media="(max-width: 767px)"
-            srcSet={cdn("/mamrot/hero/hero-desktop-carspa-ai.webp")}
+            srcSet={cdn("/mamrot/hero/hero-mobile-carspa.webp")}
           />
           <img
             src={cdn("/mamrot/hero/hero-desktop-carspa-ai.webp")}
