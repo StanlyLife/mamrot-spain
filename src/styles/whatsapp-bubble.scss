@@ -28,13 +28,16 @@
   fill: currentColor;
 }
 
+// Smaller and tucked into the corner so it clears content and CTAs
 @media (max-width: 640px) {
   .whatsapp-bubble {
-    width: 52px;
-    height: 52px;
+    bottom: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
   }
   .whatsapp-bubble__icon {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
   }
 }

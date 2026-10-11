@@ -41,70 +41,43 @@ export function Hero() {
           exceptional vehicles.
         </p>
         <p className="hero__proof">
-          15+ Years Experience &middot; Certified Installers &middot; Premium
-          Materials
+          <span>15+ Years Experience</span>
+          <span className="hero__proof-sep" aria-hidden="true">
+            &middot;
+          </span>
+          <span>Certified Installers</span>
+          <span
+            className="hero__proof-sep hero__proof-sep--wrap"
+            aria-hidden="true"
+          >
+            &middot;
+          </span>
+          <span className="hero__proof-last">Premium Materials</span>
         </p>
+        <p className="hero__types">Cars &middot; Boats &middot; Caravans</p>
+      </div>
 
-        <div className="hero__parking">
-          <p className="hero__parking-types">
-            Cars &middot; Boats &middot; Caravans
-          </p>
-          <h2 className="hero__parking-title">
-            Long-Term Parking &amp; Vehicle Care
-          </h2>
-          <p className="hero__parking-text">
-            Secure long-term parking for cars, boats and caravans in Marbella -
-            La Cala de Mijas, Costa del Sol.
-          </p>
-          <p className="hero__parking-badge">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"
-                strokeWidth="2"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M9 12l2 2 4-4"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            24/7 Security Monitoring
-          </p>
-          <p className="hero__parking-lead">
-            Protection, care and storage solutions for your vehicle with peace
-            of mind while you&rsquo;re away.
-          </p>
-        </div>
-
-        <div className="hero__actions">
-          <a
-            href="#services"
-            className="btn"
-            onClick={(e) => {
-              e.preventDefault();
-              instantScroll("#services");
-            }}
-          >
-            Explore Services <span aria-hidden="true">&rarr;</span>
-          </a>
-          <a
-            href="#contact"
-            className="btn outline"
-            onClick={(e) => {
-              e.preventDefault();
-              instantScroll("#contact");
-            }}
-          >
-            Get a Quote <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
+      <div className="hero__actions">
+        <a
+          href="#services"
+          className="btn"
+          onClick={(e) => {
+            e.preventDefault();
+            instantScroll("#services");
+          }}
+        >
+          Explore Services <span aria-hidden="true">&rarr;</span>
+        </a>
+        <a
+          href="#contact"
+          className="btn outline"
+          onClick={(e) => {
+            e.preventDefault();
+            instantScroll("#contact");
+          }}
+        >
+          Get a Quote <span aria-hidden="true">&rarr;</span>
+        </a>
       </div>
 
       {/* Trust badges */}

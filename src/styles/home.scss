@@ -53,10 +53,8 @@
     padding: clamp(2rem, 10vh, 6rem) clamp(1rem, 4vw, 2rem) 3.25rem;
     max-width: 1280px;
     z-index: 2;
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: auto;
+    padding-bottom: 1.75rem;
   }
   &__eyebrow {
     letter-spacing: 0.15em;
@@ -65,7 +63,8 @@
     font-weight: 600;
   }
   h1 {
-    margin: 1rem 0 0.75rem;
+    margin: 1rem 0 0.9rem;
+    text-wrap: balance;
     font-size: clamp(2.2rem, 6.2vw, 4rem);
     line-height: 1.05;
     font-weight: 700;
@@ -83,87 +82,49 @@
     background: $brand-accent;
     vertical-align: middle;
   }
-  .hero__proof {
-    margin: 0 auto;
-    font-size: clamp(0.68rem, 0.25vw + 0.62rem, 0.8rem);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: $brand-accent-alt;
-  }
-  // Large lines from the brief: one theme per line
   .hero__subtitle {
     max-width: 42ch;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.1rem;
     font-size: clamp(1.15rem, 1.1vw + 0.8rem, 1.65rem);
     line-height: 1.3;
     font-weight: 600;
     color: #fff;
+    text-wrap: balance;
   }
-  .hero__parking {
-    max-width: 760px;
-    margin: clamp(1.25rem, 3vh, 2rem) auto;
-    padding-top: clamp(1.1rem, 2.6vh, 1.6rem);
-    border-top: 1px solid rgba($brand-accent, 0.35);
+  .hero__proof {
+    margin: 0 auto;
+    font-size: clamp(0.68rem, 0.25vw + 0.62rem, 0.8rem);
+    letter-spacing: 0.18em;
+    line-height: 1.7;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $brand-accent-alt;
 
-    p {
-      margin: 0;
+    span {
+      white-space: nowrap;
     }
   }
-  .hero__parking-types,
-  .hero__parking-title {
+  .hero__proof-sep {
+    margin-inline: 0.5em;
+  }
+  .hero__types {
+    max-width: 760px;
+    margin: 1.1rem auto 0;
+    padding-top: 1.1rem;
+    border-top: 1px solid rgba($brand-accent, 0.35);
     font-size: clamp(1.25rem, 1.6vw + 0.75rem, 2rem);
     line-height: 1.2;
-    text-transform: uppercase;
-  }
-  .hero__parking-types {
     letter-spacing: 0.14em;
-    font-weight: 600;
-    color: #fff;
-  }
-  .hero__parking-title {
-    margin: 0.4rem 0 0.75rem;
-    letter-spacing: 0.06em;
-    font-weight: 700;
-    color: $brand-accent;
-  }
-  .hero__parking .hero__parking-lead {
-    max-width: 42ch;
-    margin: 0.5rem auto 0;
-    font-size: clamp(1.1rem, 1vw + 0.8rem, 1.5rem);
-    line-height: 1.3;
-    font-weight: 600;
-    color: #fff;
-  }
-  .hero__parking-text {
-    font-size: clamp(0.85rem, 0.3vw + 0.78rem, 0.98rem);
-    line-height: 1.45;
-    color: #d0d4d8;
-  }
-  .hero__parking .hero__parking-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    margin: 0.6rem 0;
-    padding: 0.35rem 0.85rem;
-    border-radius: $radius-pill;
-    border: 1px solid rgba($brand-accent, 0.4);
-    background: rgba($brand-accent, 0.12);
-    font-size: 0.72rem;
-    letter-spacing: 0.12em;
     text-transform: uppercase;
     font-weight: 600;
     color: #fff;
-
-    svg {
-      width: 15px;
-      height: 15px;
-      color: $brand-accent-alt;
-    }
   }
   .hero__actions {
     @include flex-center(row, 1rem);
     flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    padding: 0 1rem clamp(2rem, 6vh, 3.5rem);
     a.btn {
       position: relative;
       display: inline-flex;
@@ -417,15 +378,9 @@
 
     .hero__proof {
       letter-spacing: 0.1em;
-      line-height: 1.6;
     }
 
-    .hero__parking {
-      margin: 1.1rem auto 1.25rem;
-      padding-top: 1rem;
-    }
-
-    .hero__parking-types {
+    .hero__types {
       letter-spacing: 0.1em;
     }
 
@@ -504,12 +459,27 @@
     }
   }
 
-  // Mobile: the portrait collage shown whole at the top, fading into the page
+  // Mobile: the portrait collage shown whole, text on its top panels and the
+  // van + G-Class panel left clear. Buttons and logos follow below the photo.
   @media (max-width: 767px) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "stack"
+      "actions"
+      "badges";
+    min-height: 0;
     background: $brand-dark;
 
+    .hero__media {
+      grid-area: stack;
+      position: relative;
+      height: auto;
+    }
+
     .hero__video {
-      bottom: auto;
+      position: relative;
+      display: block;
       height: auto;
       transform: none;
       filter: none;
@@ -517,10 +487,55 @@
 
     .hero__overlay {
       background: linear-gradient(
-        rgba(10, 11, 13, 0.55) 0,
-        rgba(10, 11, 13, 0.7) 100vw,
-        rgba(10, 11, 13, 1) calc(100vw * 16 / 9)
+        rgba(10, 11, 13, 0) 90%,
+        $brand-dark 100%
       );
+    }
+
+    .hero__content {
+      grid-area: stack;
+      align-self: start;
+      margin-top: 0;
+      padding: 1.25rem 1rem 2.75rem;
+      background: linear-gradient(
+        rgba(10, 11, 13, 0.86) 0,
+        rgba(10, 11, 13, 0.82) calc(100% - 2.75rem),
+        rgba(10, 11, 13, 0) 100%
+      );
+    }
+
+    &__eyebrow {
+      text-wrap: balance;
+    }
+
+    h1 {
+      margin: 0.75rem 0 0.9rem;
+    }
+
+    .hero__proof-sep--wrap {
+      display: none;
+    }
+
+    .hero__proof-last {
+      display: block;
+    }
+
+    .hero__types {
+      margin-top: 0.9rem;
+      padding-top: 0.9rem;
+    }
+
+    .hero__actions {
+      grid-area: actions;
+      width: 100%;
+      max-width: 260px;
+      margin-inline: auto;
+      padding: 1.25rem 0 0;
+    }
+
+    .hero__trust-badges {
+      grid-area: badges;
+      margin-top: 0.25rem;
     }
   }
 
@@ -788,5 +803,12 @@
     text-transform: uppercase;
     font-weight: 600;
     color: $brand-accent;
+
+    // One line on phones instead of a dangling separator
+    @media (max-width: 640px) {
+      font-size: 2.9vw;
+      letter-spacing: 0.14em;
+      white-space: nowrap;
+    }
   }
 }

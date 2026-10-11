@@ -42,12 +42,14 @@
 
 @media (max-width: 640px) {
   .instagram-bubble {
-    bottom: calc(clamp(1rem, 4vw, 2.2rem) + 52px + 12px);
-    width: 52px;
-    height: 52px;
+    // Stack above the 44px WhatsApp bubble with a 10px gap.
+    bottom: calc(12px + 44px + 10px);
+    right: 12px;
+    width: 44px;
+    height: 44px;
   }
   .instagram-bubble__icon {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
   }
 }
