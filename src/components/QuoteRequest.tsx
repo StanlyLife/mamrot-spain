@@ -39,7 +39,7 @@ export default function QuoteRequest({
   className = "",
   whatsappNumber = "+34600663107",
   whatsappLabel = "Chat on WhatsApp",
-  whatsappMessage = "Hi! I'd like to schedule detailing at Mamrot.",
+  whatsappMessage = "Hi! I’m interested in your services at CarSpa Marbella. Could you please assist me? Thank you!",
 }: QuoteRequestProps) {
   const [data, setData] = useState<QuoteFormState>(initialState);
   const [submitted, setSubmitted] = useState(false);

@@ -4,7 +4,8 @@ import "@/styles/whatsapp-bubble.scss";
 import { cdn } from "@/lib/cdn";
 
 const WHATSAPP_NUMBER = "+34600663107";
-const DEFAULT_MESSAGE = "Hi! I'd like to book detailing at CarSpa Marbella.";
+const DEFAULT_MESSAGE =
+  "Hi! I’m interested in your services at CarSpa Marbella. Could you please assist me? Thank you!";
 const ICON_SRC = cdn("/logos/WhatsApp.svg", { width: 28, height: 28 });
 
 const normalizedNumber = WHATSAPP_NUMBER.replace(/[^0-9]/g, "");

@@ -90,15 +90,14 @@ export default function Home() {
         ctaHref="/about"
       >
         <p className="proof-section__lead">
-          <strong>15+ years</strong> of hands-on experience in vehicle
-          protection.
+          <strong>15+ years</strong>{" "}
+          of hands-on experience in vehicle protection.
         </p>
         <p className="proof-section__lead">
           From demanding projects in Norway to premium vehicles in Marbella.
         </p>
         <p className="proof-section__note">
-          Same precision. Quality beyond standards across the whole Costa del
-          Sol.
+          Same precision. Exceptional standards across the Costa del Sol.
         </p>
       </ProofSection>
       <ProofSection
@@ -113,7 +112,8 @@ export default function Home() {
         reverse
       >
         <p className="proof-section__lead">
-          <strong>50+</strong> Tesla vehicles wrapped &amp; protected in 2025
+          <strong>50+</strong>{" "}
+          Tesla vehicles wrapped &amp; protected in 2025
         </p>
         <p className="proof-section__tags">
           PPF &middot; Wrapping &middot; Colour Change

@@ -73,11 +73,15 @@
     background-clip: text;
     color: transparent;
   }
+  // Location parts never split; a wrap happens before a gold dot
+  &__eyebrow-part {
+    white-space: nowrap;
+  }
   &__eyebrow-dot {
     display: inline-block;
     width: 0.5em;
     height: 0.5em;
-    margin: 0 0.7em 0.1em;
+    margin: 0 0.6em 0.1em 0.3em;
     border-radius: 50%;
     background: $brand-accent;
     vertical-align: middle;

@@ -30,10 +30,15 @@ export function Hero() {
       </div>
       <div className="hero__content">
         <div className="hero__eyebrow">
-          CarSpa Marbella
-          <span className="hero__eyebrow-dot" aria-hidden="true" />
-          La Cala de Mijas Area &middot; Near La Cala Resort Golf &amp; Santana
-          Golf
+          <span className="hero__eyebrow-part">CarSpa Marbella</span>{" "}
+          <span className="hero__eyebrow-part">
+            <span className="hero__eyebrow-dot" aria-hidden="true" />
+            La Cala de Mijas
+          </span>{" "}
+          <span className="hero__eyebrow-part">
+            <span className="hero__eyebrow-dot" aria-hidden="true" />
+            La Cala Golf Resort &amp; Santana Golf
+          </span>
         </div>
         <h1 id="hero-heading">Luxury Wraps, PPF & Detailing in Marbella</h1>
         <p className="hero__subtitle">
