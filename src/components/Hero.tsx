@@ -33,11 +33,7 @@ export function Hero() {
           <span className="hero__eyebrow-part">CarSpa Marbella</span>{" "}
           <span className="hero__eyebrow-part">
             <span className="hero__eyebrow-dot" aria-hidden="true" />
-            La Cala de Mijas
-          </span>{" "}
-          <span className="hero__eyebrow-part">
-            <span className="hero__eyebrow-dot" aria-hidden="true" />
-            La Cala Golf Resort &amp; Santana Golf
+            San Pedro Alcántara
           </span>
         </div>
         <h1 id="hero-heading">Luxury Wraps, PPF & Detailing in Marbella</h1>

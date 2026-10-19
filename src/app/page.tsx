@@ -7,7 +7,7 @@ import USPSection from "../components/USPSection";
 import ReviewsSection from "../components/ReviewsSection";
 import QuoteRequest from "../components/QuoteRequest";
 import ProofSection from "../components/ProofSection";
-import ParkingSection from "../components/ParkingSection";
+import HomeAbout from "../components/HomeAbout";
 
 export const metadata: Metadata = {
   title: "CarSpa Marbella | Luxury Wraps, PPF & Detailing",
@@ -41,7 +41,6 @@ export default function Home() {
   return (
     <div className="home-page">
       <Hero />
-      <ParkingSection />
       <header className="services-intro">
         <h2>Our Services</h2>
         <p>Protection &middot; Transformation &middot; Perfection</p>
@@ -125,6 +124,7 @@ export default function Home() {
       <section id="services" className="services" aria-label="All services">
         <ServicesShowcase />
       </section>
+      <HomeAbout />
       <QuoteRequest
         className="contact--home"
         heading="Ready to Protect Your Car?"
